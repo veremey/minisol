@@ -1,0 +1,239 @@
+// Normally header styles
+.header
+	// position: relative
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	background-color: #FFF
+	z-index: 5
+	.layout
+		display: flex
+		align-items: center
+		flex-wrap: nowrap
+		justify-content: space-between
+		height: 88px
+		+r(1360)
+			padding-right: 30px
+	.btn__close
+		display: none
+		position: relative
+		+r(1360)
+			display: block
+			height: 40px
+			width: 40px
+			order: -1
+	&__nav
+		height: 100%
+	&__hide
+		width: 80%
+		display: flex
+		align-items: center
+		flex-wrap: nowrap
+		justify-content: space-between
+		height: 88px
+		+r(1360)
+			display: none
+	&__menu
+		display: flex
+		justify-content: space-between
+		flex: 0 0 80%
+		font-size: 0
+		height: 100%
+		position: relative
+		z-index: 200
+		&_list
+			position: relative
+			// display: inline-flex/////
+			display: flex
+			align-items: center
+			height: 100%
+			white-space: nowrap
+			margin: 0 20px
+			&.has_subnav
+				&:after
+					// display: none
+					content: ''
+					position: absolute
+					bottom: 0
+					left: 50%
+					transform: translateX(-50%)
+					opacity: 0
+					+arr(22, 11, $fiolet, t)
+					// transition: opacity .4s
+			&:hover
+				&:after
+					opacity: 1
+					transition: opacity .4s .2s
+				.header__menu_link
+					opacity: .7
+					&:after
+						left: 0
+						transition: left .2s
+				.subWrapper
+					height: auto
+					top: 88px
+					opacity: 1
+		&_list.has_subnav &_link
+			position: relative
+			padding-right: 15px
+			&:before
+				content: ''
+				position: absolute
+				top: 50%
+				right: 0
+				transform: translateY(-50%)
+				+s(icon-bird)
+		&_link
+			display: flex
+			height: 100%
+			align-items: center
+			font-size: 1.7rem
+			+rr
+			position: relative
+			overflow: hidden
+			&:after
+				content: ''
+				position: absolute
+				bottom: 26px
+				left: -100%
+				width: 100%
+				height: 2px
+				background-color: $fiolet
+	&__submenu
+		display: flex
+		flex-wrap: wrap
+		justify-content: center
+		max-width: 1200px
+		width: 86vw
+		margin: 0 auto
+		transform: translaeteX(-50%)
+		font-size: 0
+		padding: 10px
+		z-index: 20
+		text-align: center
+		&_list
+			display: inline-block
+			margin: 0 13px
+		&_link
+			display: block
+			font-size: 1.6rem
+			color: #fff
+			line-height: 3rem
+			margin-bottom: 2px
+			+rr
+			transition: color .2s
+			&:hover
+				color: #ccc
+	.hotLine
+		&__tel
+			color: #000
+
+.subWrapper
+	height: 0
+	position: fixed
+	top: 88px
+	left: 0
+	right: 0
+	opacity: 0
+	background-color: $fiolet
+	transition: opacity .4s .2s, height .4s .2s
+	overflow: hidden
+
+.logo
+	display: flex
+	align-items: center
+	height: 38px
+	height: 100%
+	width: 16%
+	transition: background-color .4s
+	&:hover
+		background-color: #f6f6f6
+	+r(1300)
+		width: 200px
+	&__pic
+		max-width: 100%
+
+.lang
+	display: inline-block
+	border: none
+	vertical-align: middle
+	text-transform: underline
+	&__img
+		margin-right: 6px
+.select
+	position: relative
+	cursor: pointer
+	font-size: 14px
+	padding: 0 16px
+	white-space: nowrap
+	z-index: 20
+
+
+	&:before
+		content: ""
+		position: absolute
+		top: 50%
+		right: 0px
+		transform: translateY(-50%)
+		+s(icon-bird)
+.select__text
+	position: relative
+	height: 34px
+	color: #000
+	line-height: 34px
+	-webkit-touch-callout: none
+	-webkit-user-select: none
+	-khtml-user-select: none
+	-moz-user-select: none
+	-ms-user-select: none
+	user-select: none
+	text-transform: uppercase
+	+box
+	+rr
+.select__list
+	position: absolute
+	display: none
+	left: 1px
+	right: 1px
+	top: 34px
+	z-index: 100
+	background: #fff
+.select__list li
+	width: 100%
+	font-size: 14px
+	line-height: 30px
+	color: #000
+	text-align: center
+	cursor: pointer
+	-webkit-transition: background 0.2s linear
+	-moz-transition: background 0.2s linear
+	-o-transition: background 0.2s linear
+	transition: background 0.2s linear
+	text-transform: uppercase
+	+rr
+	&:hover
+		background-color: #ccc
+
+.qustion
+	display: flex
+	position: relative
+	color: #fff
+	background-color: $fiolet
+	height: 100%
+	align-items: center
+	padding: 0 20px
+	text-transform: uppercase
+	+rb
+	&:before,
+	&:after
+		content: ''
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+	&:before
+		+arr(9, 16, #fff, r)
+		left: 0
+	&:after
+		+arr(9, 16, #fff, l)
+		right: 0

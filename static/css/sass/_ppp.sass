@@ -1,0 +1,257 @@
+.ui-dialog
+	position: absolute
+	z-index: 5001
+	top: 0
+	left: 0
+	outline: none
+	.ui-dialog-titlebar
+		display: none
+	.ui-dialog-content
+		a
+			outline: none
+
+.ui-widget-overlay
+	position: absolute
+	z-index: 5000
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	width: 100%
+	min-height: 100%
+	height: 100vh
+	opacity: 0
+	transition: opacity ease-in .2s
+
+	&.mod_bg
+		opacity: .94
+		// background-color: $color__green1
+
+.popup
+	display: none
+	position: fixed
+	top: 0
+	left: 50%
+	width: 100vw !important
+
+	margin: 0
+	// padding: 50px 0 0
+	transform: translate(-50%, 0)
+	&-wrap
+		position: relative
+		padding: 10vh
+		height: 100vh !important
+		background-color: #fff
+		+clr
+
+	&-controls
+		position: absolute
+		top: 50px
+		right: 10px
+		width: 64px
+
+	&-btn__next
+		display: block
+		width: 64px
+		height: 64px
+		opacity: .8
+		background: rgba(255, 203, 5, .8) url(../img/icon-arrow-right.svg) 50% 50% no-repeat
+		cursor: pointer
+		text-indent: -9999px
+		transition: background-color ease-out .2s
+
+		&:hover
+			opacity: 1
+			background-color: rgba(255, 203, 5, 1)
+
+
+	&-btn__prev
+		display: block
+		width: 64px
+		height: 64px
+		opacity: .8
+		background: rgba(255, 203, 5, .8) url(../img/icon-arrow-left.svg) 50% 50% no-repeat
+		cursor: pointer
+		text-indent: -9999px
+		transition: background-color ease-out .2s
+
+		&:hover
+			opacity: 1
+			background-color: rgba(255, 203, 5, 1)
+
+
+	&-btn__close
+		display: block
+		width: 64px
+		height: 64px
+		opacity: 1
+		background: rgba(255, 203, 5, 1) url(../img/icon-close.svg) 50% 50% no-repeat
+		cursor: pointer
+		text-indent: -9999px
+		transition: background-color ease-out .2s
+
+		&:hover
+			opacity: 0.8
+			background-color: #fff
+
+.subject,
+.preview
+	position: relative
+	margin: 0 auto
+	&__pic
+		position: relative
+		width: 600px
+		max-width: 80%
+		height: 300px
+		margin: 0 auto 10px
+		overflow: hidden
+		img
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			min-width: 100%
+			width: 100%
+			min-height: 100%
+			max-width: none
+.preview
+	text-align: center
+	margin-top: 20px
+	&__pic
+		display: inline-block
+		width: 100px
+		height: 100px
+		margin: 0 10px
+		cursor: pointer
+
+.popup
+	&__fieldset
+		position: relative
+		width: 49%
+		height: 49px
+		text-align: left
+		&:not(:last-of-type)
+			margin-right: 2%
+		+r(800)
+			width: 100%
+			margin: 0
+
+		&_tel
+			height: 100%
+			margin-left: 15px
+			border: none
+			outline: none
+			+placeholder
+				color: #000
+				+rl
+
+		&_label
+			font-size: 15px
+			text-align: left
+			padding-left: 18px
+			display: inline-block
+
+		&_file
+			all: unset
+			position: relative
+			height: 100%
+			width: 100%
+			cursor: pointer
+			font-size: 0
+			padding: 0
+			margin: 0
+			border: none
+			background-color: #f9f8f7
+			border-radius: 50px
+			overflow: hidden
+		&_inner
+			position: absolute
+			top: 0
+			bottom: 0
+			left: 0
+			right: 0
+			font-size: 1.6rem
+
+			background-color: #f9f8f7
+			border-radius: 50px
+			overflow: hidden
+			pointer-events: none
+		&_desc
+			line-height: 50px
+			padding-left: 26px
+			+rl
+		&_img
+			position: absolute
+			top: 50%
+			right: 20px
+			+try(-50%)
+
+
+
+.popup__question
+	display: none
+	position: relative
+	text-align: center
+	padding-top: 60px
+	border-top: 1px solid #000
+	&.is_opened
+		display: block
+	.layout
+		position: relative
+		height: auto
+		flex-direction: column
+	&_desc
+		font-size: 1.8rem
+		letter-spacing: .05em
+		color: #000
+		text-transform: uppercase
+		text-align: center
+		+rr
+	&_form
+		width: 96%
+		max-width: 580px
+		margin: 0 auto
+		font-size: 0
+	&_item,
+	&_data
+		width: 100%
+		height: 50px
+		border: 1px solid #cfc4b6
+		padding: 0 20px
+		margin-bottom: 8px
+		+placeholder
+			font-size: 1.6rem
+			color: #000
+			+rl
+		&:active,
+		&:focus
+			outline: none
+			box-shadow: 0 0 4px 0 rgba(0, 0, 0, .2)
+	&_data
+		width: 49%
+		&:not(:last-of-type)
+			margin-right: 2%
+		+r(800)
+			width: 100%
+			margin-right: 0
+	&_wrp
+		display: flex
+		flex-wrap: wrap
+
+	&_footer
+		font-size: 2.4rem
+		color: #000
+		line-height: 100px
+		margin-top: 4rem
+		background-color: #f9f8f7
+		+rl
+	.btn
+		margin-top: 5rem
+
+	.btn__close
+		position: absolute
+		right: 0
+		+r(1360)
+			right: 30px
+		+r(800)
+			top: -40px

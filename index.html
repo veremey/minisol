@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="utf-8">
+    <title>Minison</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="icon" type="image/png" href="static/img/favicon.png">
+    <link rel="stylesheet" media="all" href="static/css/style.css">
+    <script src="static/js/lib/jquery.js"></script>
+    <script src="static/js/lib/jquery-ui.min.js"></script>
+    <script src="static/js/lib/slick.min.js"></script>
+    <script src="static/js/common.js"></script>
+    <script src="static/js/popup.js"></script>
+    <script src="static/js/init__popup.js"></script>
+  </head>
+  <body>
+    <!--BEGIN outs-->
+    <div class="out popupPeople-btnWrap__open">
+      <header class="header">
+        <div class="layout"><a class="logo" href="/"><img class="logo__pic" src="/static/img/logo.svg" alt="Технониколь"></a>
+          <div class="select js-select"><span class="select__text js-select-text"></span>
+            <input class="js-select-input" type="hidden" value="">
+            <ul class="select__list js-select-list">
+              <li data-id="0"><img class="lang__img" src="/static/img/flag-ru.jpg" alt="ru">ru</li>
+              <li data-id="1"><img class="lang__img" src="/static/img/flag-de.png" alt="ru">de</li>
+              <li data-id="2"><img class="lang__img" src="/static/img/flag_en.png" alt="ru">en</li>
+            </ul>
+          </div><a class="btn__close" href="#"></a>
+          <div class="header__hide">
+            <nav class="header__nav">
+              <ul class="header__menu">
+                <li class="header__menu_list has_subnav"><a class="header__menu_link" href="#">Каталог</a>
+                  <div class="subWrapper">
+                    <ul class="header__submenu">
+                      <li class="header__submenu_list"><a class="header__submenu_link" href="#">Документы</a></li>
+                      <li class="header__submenu_list"><a class="header__submenu_link" href="#">Сертификаты</a></li>
+                      <li class="header__submenu_list"><a class="header__submenu_link" href="#">Получить гарантийный сертификат</a></li>
+                      <li class="header__submenu_list"><a class="header__submenu_link" href="#">Получить гарантийный сертификат</a></li>
+                      <li class="header__submenu_list"><a class="header__submenu_link" href="#">Получить гарантийный сертификат</a></li>
+                      <li class="header__submenu_list"><a class="header__submenu_link" href="#">Получить гарантийный сертификат</a></li>
+                      <li class="header__submenu_list"><a class="header__submenu_link" href="#">Получить гарантийный сертификат</a></li>
+                      <li class="header__submenu_list"><a class="header__submenu_link" href="#">Получить гарантийный сертификат</a></li>
+                      <li class="header__submenu_list"><a class="header__submenu_link" href="#">Получить гарантийный сертификат</a></li>
+                      <li class="header__submenu_list"><a class="header__submenu_link" href="#">Получить гарантийный сертификат</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="header__menu_list"><a class="header__menu_link" href="#">Монтаж</a></li>
+                <li class="header__menu_list"><a class="header__menu_link" href="#">Фотогалерея</a></li>
+                <li class="header__menu_list has_subnav"><a class="header__menu_link" href="#">Документация</a>
+                  <div class="subWrapper">
+                    <ul class="header__submenu">
+                      <li class="header__submenu_list"><a class="header__submenu_link" href="#">Документы</a></li>
+                      <li class="header__submenu_list"><a class="header__submenu_link" href="#">Сертификаты</a></li>
+                      <li class="header__submenu_list"><a class="header__submenu_link" href="#">Получить гарантийный сертификат</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="header__menu_list"><a class="header__menu_link" href="#">Где купить?</a></li>
+              </ul>
+            </nav>
+            <div class="hotLine"><small class="hotLine__label">горячая линия</small><a class="hotLine__tel" href="tel:8800200565" title="Звонки со стационарного телефона бесплатны">8 800 200-05-65</a></div><a class="qustion js-question" href="#">Задать <br> вопрос</a>
+          </div>
+        </div>
+        <div class="popup__question js_close">
+          <div class="layout">
+            <button class="btn__close is_active"></button>
+            <h3 class="title__popup">у вас есть вопрос?</h3>
+            <p class="popup__question_desc">наши специалисты рады будут помочь</p>
+            <form class="popup__question_form" method="post" action="" name="question" autocomplete="on">
+              <input class="popup__question_item" type="text" autocomplete="on" name="yourQuestion" placeholder="Ваш вопрос">
+              <input class="popup__question_data" type="text" autocomplete="on" name="name" placeholder="Ваше имя">
+              <input class="popup__question_data" type="mail" name="mails" autocomplete="on" placeholder="Эл. почта" requred>
+              <div class="popup__question_wrp">
+                <fieldset class="popup__fieldset">
+                  <label class="popup__fieldset_label" for="tel">Телефон</label>
+                  <input class="popup__fieldset_tel" type="tel" autocomplete="on" name="tel" placeholder="+7 (___) ___ - __ - __">
+                </fieldset>
+                <fieldset class="popup__fieldset">
+                  <input class="popup__fieldset_file" type="file">
+                  <div class="popup__fieldset_inner">
+                    <p class="popup__fieldset_desc">Прикрепить файл</p><img class="popup__fieldset_img" src="/static/img/index/skoba.png" alt="изображение">
+                  </div>
+                </fieldset>
+              </div>
+              <button class="btn" type="submit">отправить</button>
+            </form>
+          </div>
+          <footer class="popup__question_footer">Ваш вопрос успешно отправлен!</footer>
+        </div>
+      </header>
+      <div class="jumbotron">
+        <div class="jumbotron__wrap"><img class="jumbotron__img" src="/static/img/index/jumb-01.jpg" alt="изображение">
+          <div class="jumbotron__content">
+            <div class="jumbotron__figure"><img src="/static/img/index/jumbSmall-01.png" alt="изображение"></div>
+            <div class="jumbotron__mark">
+              <div class="jumbotron__mark_border"></div>
+              <div class="jumbotron__mark_border mod_bottom"></div>
+              <p class="jumbotron__mark_desc">Композитная черепица<strong>технониколь luxard</strong></p>
+            </div>
+            <h2 class="jumbotron__title">трёхмерный цвет <br> и фактура</h2>
+            <div class="jumbotron__footer"><a class="jumbotron__link" href="#">где купить</a><a class="jumbotron__link" href="#">найти подрядчика</a></div>
+          </div>
+        </div>
+        <div class="jumbotron__wrap"><img class="jumbotron__img" src="/static/img/index/jumb-01.jpg" alt="изображение">
+          <div class="jumbotron__content">
+            <div class="jumbotron__figure"><img src="/static/img/index/jumbSmall-01.png" alt="изображение"></div>
+            <div class="jumbotron__mark">
+              <div class="jumbotron__mark_border"></div>
+              <div class="jumbotron__mark_border mod_bottom"></div>
+              <p class="jumbotron__mark_desc">Композитная черепица<strong>технониколь luxard</strong></p>
+            </div>
+            <h2 class="jumbotron__title">трёхмерный цвет <br> и фактура</h2>
+            <div class="jumbotron__footer"><a class="jumbotron__link" href="#">где купить</a><a class="jumbotron__link" href="#">найти подрядчика</a></div>
+          </div>
+        </div>
+      </div>
+      <article class="info">
+        <div class="info__header">
+          <div class="info__item"><img class="info__icon" src="/static/img/icon-layouts.png" alt="изображение"><span class="info__label">многослойность</span></div>
+          <div class="info__item"><img class="info__icon" src="/static/img/icon-3d.png" alt="изображение"><span class="info__label">трёхмерный <br> цвет и фактура</span></div>
+          <div class="info__item"><img class="info__icon" src="/static/img/icon-infinity.png" alt="изображение"><span class="info__label">долговечность</span></div>
+          <div class="info__item"><img class="info__icon" src="/static/img/icon-rock.png" alt="изображение"><span class="info__label">на основе <br> базальта</span></div>
+        </div>
+        <div class="info__content">
+          <p class="info__desc"><strong>Композитная черепица ТЕХНОНИКОЛЬ LUXARD®</strong>– это новое слово в кровельной индустрии. Неповторимое сочетание технологичной композиции из алюцинка c гранулами натурального камня – для тех, кто ценит престиж и надёжность.</p>
+        </div><a class="btn" href="#">узнать больше</a>
+      </article>
+      <article class="collection">
+        <h3 class="title__article">Коллекции</h3>
+        <section class="collection__wrap mod_normal">
+          <div class="propose" dir="rtl">
+            <div class="propose__item" data-thumb="/static/img/index/collection/01.jpg">
+              <div class="propose__wrap"><img class="propose__pic" src="/static/img/index/collection/06.png" alt="изображение">
+                <div class="propose__box">
+                  <h5 class="propose__title"> classic</h5>
+                  <p class="propose__desc">коллекция</p><a class="btn btn__article" href="#">перейти в каталог</a>
+                </div>
+              </div>
+            </div>
+            <div class="propose__item" data-thumb="/static/img/index/collection/02.jpg">
+              <div class="propose__wrap"><img class="propose__pic" src="/static/img/index/collection/05.png" alt="изображение">
+                <div class="propose__box">
+                  <h5 class="propose__title"> classic</h5>
+                  <p class="propose__desc">коллекция</p><a class="btn btn__article" href="#">перейти в каталог</a>
+                </div>
+              </div>
+            </div>
+            <div class="propose__item" data-thumb="/static/img/index/collection/03.jpg">
+              <div class="propose__wrap"><img class="propose__pic" src="/static/img/index/collection/04.png" alt="изображение">
+                <div class="propose__box">
+                  <h5 class="propose__title"> classic</h5>
+                  <p class="propose__desc">коллекция</p><a class="btn btn__article" href="#">перейти в каталог</a>
+                </div>
+              </div>
+            </div>
+            <div class="propose__item" data-thumb="/static/img/index/collection/04.jpg">
+              <div class="propose__wrap"><img class="propose__pic" src="/static/img/index/collection/03.png" alt="изображение">
+                <div class="propose__box">
+                  <h5 class="propose__title"> classic</h5>
+                  <p class="propose__desc">коллекция</p><a class="btn btn__article" href="#">перейти в каталог</a>
+                </div>
+              </div>
+            </div>
+            <div class="propose__item" data-thumb="/static/img/index/collection/05.jpg">
+              <div class="propose__wrap"><img class="propose__pic" src="/static/img/index/collection/02.png" alt="изображение">
+                <div class="propose__box">
+                  <h5 class="propose__title"> classic</h5>
+                  <p class="propose__desc">коллекция</p><a class="btn btn__article" href="#">перейти в каталог</a>
+                </div>
+              </div>
+            </div>
+            <div class="propose__item" data-thumb="/static/img/index/collection/06.jpg">
+              <div class="propose__wrap"><img class="propose__pic" src="/static/img/index/collection/01.png" alt="изображение">
+                <div class="propose__box">
+                  <h5 class="propose__title"> classic</h5>
+                  <p class="propose__desc">коллекция</p><a class="btn btn__article" href="#">перейти в каталог</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="present">
+            <div class="present__item"><img class="present__pic" src="/static/img/index/gallery/07.jpg" alt="изображение"><strong class="present__label">Цвет:  коралл</strong>
+              <div class="present__text">
+                <p class="present__text_desc">Форма LUXARD Classic создана для искушённых ценителей лучшего. Изящество деталей и плавная форма панели LUXARD Classic идеально дополняет архитектурный ансамбль загородного дома, под крышей которого проходят тихие и уютные семейные вечера, дружеские встречи и званые ужины.</p>
+              </div>
+            </div>
+            <div class="present__item"><img class="present__pic" src="/static/img/index/gallery/04.jpg" alt="изображение"><strong class="present__label">Цвет:  коралл</strong>
+              <div class="present__text">
+                <p class="present__text_desc">Форма LUXARD Classic создана для искушённых ценителей лучшего. Изящество деталей и плавная форма панели LUXARD Classic идеально дополняет архитектурный ансамбль загородного дома, под крышей которого проходят тихие и уютные семейные вечера, дружеские встречи и званые ужины.</p>
+              </div>
+            </div>
+            <div class="present__item"><img class="present__pic" src="/static/img/index/gallery/01.jpg" alt="изображение"><strong class="present__label">Цвет:  коралл</strong>
+              <div class="present__text">
+                <p class="present__text_desc">Форма LUXARD Classic создана для искушённых ценителей лучшего. Изящество деталей и плавная форма панели LUXARD Classic идеально дополняет архитектурный ансамбль загородного дома, под крышей которого проходят тихие и уютные семейные вечера, дружеские встречи и званые ужины.</p>
+              </div>
+            </div>
+            <div class="present__item"><img class="present__pic" src="/static/img/index/gallery/02.jpg" alt="изображение"><strong class="present__label">Цвет:  коралл</strong>
+              <div class="present__text">
+                <p class="present__text_desc">Форма LUXARD Classic создана для искушённых ценителей лучшего. Изящество деталей и плавная форма панели LUXARD Classic идеально дополняет архитектурный ансамбль загородного дома, под крышей которого проходят тихие и уютные семейные вечера, дружеские встречи и званые ужины.</p>
+              </div>
+            </div>
+            <div class="present__item"><img class="present__pic" src="/static/img/index/gallery/08.jpg" alt="изображение"><strong class="present__label">Цвет:  коралл</strong>
+              <div class="present__text">
+                <p class="present__text_desc">Форма LUXARD Classic создана для искушённых ценителей лучшего. Изящество деталей и плавная форма панели LUXARD Classic идеально дополняет архитектурный ансамбль загородного дома, под крышей которого проходят тихие и уютные семейные вечера, дружеские встречи и званые ужины.</p>
+              </div>
+            </div>
+            <div class="present__item"><img class="present__pic" src="/static/img/index/gallery/03.jpg" alt="изображение"><strong class="present__label">Цвет:  коралл</strong>
+              <div class="present__text">
+                <p class="present__text_desc">Форма LUXARD Classic создана для искушённых ценителей лучшего. Изящество деталей и плавная форма панели LUXARD Classic идеально дополняет архитектурный ансамбль загородного дома, под крышей которого проходят тихие и уютные семейные вечера, дружеские встречи и званые ужины.</p>
+              </div>
+            </div>
+          </div>
+          <div class="present js-roof">
+            <div class="present__item"><img class="present__pic" src="/static/img/index/collection/01.jpg" alt="изображение"><strong class="present__label">Цвет:  коралл</strong>
+              <div class="present__text">
+                <p class="present__text_desc">Форма LUXARD Classic создана для искушённых ценителей лучшего. Изящество деталей и плавная форма панели LUXARD Classic идеально дополняет архитектурный ансамбль загородного дома, под крышей которого проходят тихие и уютные семейные вечера, дружеские встречи и званые ужины.</p>
+              </div>
+            </div>
+            <div class="present__item"><img class="present__pic" src="/static/img/index/collection/02.jpg" alt="изображение"><strong class="present__label">Цвет:  коралл</strong>
+              <div class="present__tips">
+                <div class="present__tip">
+                  <div class="present__tip_pic"><img class="present__tip_img" src="/static/img/index/collection/icon-roof.png" alt="черепица"></div>
+                  <div class="present__tip_desc">текстура черепицы</div>
+                </div>
+                <div class="present__tip present_house">
+                  <div class="present__tip_pic"><img class="present__tip_img" src="/static/img/index/collection/icon-house.png" alt="черепица на объекте"></div>
+                  <div class="present__tip_desc">черепица на объекте</div>
+                </div>
+              </div>
+              <div class="present__text">
+                <p class="present__text_desc">Форма LUXARD Classic создана для искушённых ценителей лучшего. Изящество деталей и плавная форма панели LUXARD Classic идеально дополняет архитектурный ансамбль загородного дома, под крышей которого проходят тихие и уютные семейные вечера, дружеские встречи и званые ужины.</p>
+              </div>
+            </div>
+            <div class="present__item"><img class="present__pic" src="/static/img/index/collection/03.jpg" alt="изображение"><strong class="present__label">Цвет:  коралл</strong>
+              <div class="present__tips">
+                <div class="present__tip">
+                  <div class="present__tip_pic"><img class="present__tip_img" src="/static/img/index/collection/icon-roof.png" alt="черепица"></div>
+                  <div class="present__tip_desc">текстура черепицы</div>
+                </div>
+                <div class="present__tip present_house">
+                  <div class="present__tip_pic"><img class="present__tip_img" src="/static/img/index/collection/icon-house.png" alt="черепица на объекте"></div>
+                  <div class="present__tip_desc">черепица на объекте</div>
+                </div>
+              </div>
+              <div class="present__text">
+                <p class="present__text_desc">Форма LUXARD Classic создана для искушённых ценителей лучшего. Изящество деталей и плавная форма панели LUXARD Classic идеально дополняет архитектурный ансамбль загородного дома, под крышей которого проходят тихие и уютные семейные вечера, дружеские встречи и званые ужины.</p>
+              </div>
+            </div>
+            <div class="present__item"><img class="present__pic" src="/static/img/index/collection/04.jpg" alt="изображение"><strong class="present__label">Цвет:  коралл</strong>
+              <div class="present__tips">
+                <div class="present__tip">
+                  <div class="present__tip_pic"><img class="present__tip_img" src="/static/img/index/collection/icon-roof.png" alt="черепица"></div>
+                  <div class="present__tip_desc">текстура черепицы</div>
+                </div>
+                <div class="present__tip present_house">
+                  <div class="present__tip_pic"><img class="present__tip_img" src="/static/img/index/collection/icon-house.png" alt="черепица на объекте"></div>
+                  <div class="present__tip_desc">черепица на объекте</div>
+                </div>
+              </div>
+              <div class="present__text">
+                <p class="present__text_desc">Форма LUXARD Classic создана для искушённых ценителей лучшего. Изящество деталей и плавная форма панели LUXARD Classic идеально дополняет архитектурный ансамбль загородного дома, под крышей которого проходят тихие и уютные семейные вечера, дружеские встречи и званые ужины.</p>
+              </div>
+            </div>
+            <div class="present__item"><img class="present__pic" src="/static/img/index/collection/05.jpg" alt="изображение"><strong class="present__label">Цвет:  коралл</strong>
+              <div class="present__tips">
+                <div class="present__tip">
+                  <div class="present__tip_pic"><img class="present__tip_img" src="/static/img/index/collection/icon-roof.png" alt="черепица"></div>
+                  <div class="present__tip_desc">текстура черепицы</div>
+                </div>
+                <div class="present__tip present_house">
+                  <div class="present__tip_pic"><img class="present__tip_img" src="/static/img/index/collection/icon-house.png" alt="черепица на объекте"></div>
+                  <div class="present__tip_desc">черепица на объекте</div>
+                </div>
+              </div>
+              <div class="present__text">
+                <p class="present__text_desc">Форма LUXARD Classic создана для искушённых ценителей лучшего. Изящество деталей и плавная форма панели LUXARD Classic идеально дополняет архитектурный ансамбль загородного дома, под крышей которого проходят тихие и уютные семейные вечера, дружеские встречи и званые ужины.</p>
+              </div>
+            </div>
+            <div class="present__item"><img class="present__pic" src="/static/img/index/collection/06.jpg" alt="изображение"><strong class="present__label">Цвет:  коралл</strong>
+              <div class="present__tips">
+                <div class="present__tip">
+                  <div class="present__tip_pic"><img class="present__tip_img" src="/static/img/index/collection/icon-roof.png" alt="черепица"></div>
+                  <div class="present__tip_desc">текстура черепицы</div>
+                </div>
+                <div class="present__tip present_house">
+                  <div class="present__tip_pic"><img class="present__tip_img" src="/static/img/index/collection/icon-house.png" alt="черепица на объекте"></div>
+                  <div class="present__tip_desc">черепица на объекте</div>
+                </div>
+              </div>
+              <div class="present__text">
+                <p class="present__text_desc">Форма LUXARD Classic создана для искушённых ценителей лучшего. Изящество деталей и плавная форма панели LUXARD Classic идеально дополняет архитектурный ансамбль загородного дома, под крышей которого проходят тихие и уютные семейные вечера, дружеские встречи и званые ужины.</p>
+              </div>
+            </div>
+          </div>
+          <div class="tips">
+            <div class="tip js-filter-roof">
+              <div class="tip_pic"><img class="tip_img" src="/static/img/index/collection/icon-roof.png" alt="черепица"></div>
+              <div class="tip_desc">текстура черепицы</div>
+            </div>
+            <div class="tip tip_house js-filter-house">
+              <div class="tip_pic"><img class="tip_img" src="/static/img/index/collection/icon-house.png" alt="черепица на объекте"></div>
+              <div class="tip_desc">черепица на объекте</div>
+            </div>
+          </div>
+        </section>
+        <section class="collection__wrap mod_reverse">
+          <div class="propose">
+            <div class="propose__item" data-thumb="/static/img/index/collection/01.jpg">
+              <div class="propose__wrap"><img class="propose__pic" src="/static/img/index/collection/01.png" alt="изображение">
+                <div class="propose__box">
+                  <h5 class="propose__title"> classic</h5>
+                  <p class="propose__desc">коллекция</p><a class="btn btn__article" href="#">перейти в каталог</a>
+                </div>
+              </div>
+            </div>
+            <div class="propose__item" data-thumb="/static/img/index/collection/02.jpg">
+              <div class="propose__wrap"><img class="propose__pic" src="/static/img/index/collection/02.png" alt="изображение">
+                <div class="propose__box">
+                  <h5 class="propose__title"> classic</h5>
+                  <p class="propose__desc">коллекция</p><a class="btn btn__article" href="#">перейти в каталог</a>
+                </div>
+              </div>
+            </div>
+            <div class="propose__item" data-thumb="/static/img/index/collection/03.jpg">
+              <div class="propose__wrap"><img class="propose__pic" src="/static/img/index/collection/03.png" alt="изображение">
+                <div class="propose__box">
+                  <h5 class="propose__title"> classic</h5>
+                  <p class="propose__desc">коллекция</p><a class="btn btn__article" href="#">перейти в каталог</a>
+                </div>
+              </div>
+            </div>
+            <div class="propose__item" data-thumb="/static/img/index/collection/04.jpg">
+              <div class="propose__wrap"><img class="propose__pic" src="/static/img/index/collection/04.png" alt="изображение">
+                <div class="propose__box">
+                  <h5 class="propose__title"> classic</h5>
+                  <p class="propose__desc">коллекция</p><a class="btn btn__article" href="#">перейти в каталог</a>
+                </div>
+              </div>
+            </div>
+            <div class="propose__item" data-thumb="/static/img/index/collection/05.jpg">
+              <div class="propose__wrap"><img class="propose__pic" src="/static/img/index/collection/05.png" alt="изображение">
+                <div class="propose__box">
+                  <h5 class="propose__title"> classic</h5>
+                  <p class="propose__desc">коллекция</p><a class="btn btn__article" href="#">перейти в каталог</a>
+                </div>
+              </div>
+            </div>
+            <div class="propose__item" data-thumb="/static/img/index/collection/06.jpg">
+              <div class="propose__wrap"><img class="propose__pic" src="/static/img/index/collection/06.png" alt="изображение">
+                <div class="propose__box">
+                  <h5 class="propose__title"> classic</h5>
+                  <p class="propose__desc">коллекция</p><a class="btn btn__article" href="#">перейти в каталог</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="present">
+            <div class="present__item"><img class="present__pic" src="/static/img/index/gallery/07.jpg" alt="изображение"><strong class="present__label">Цвет:  коралл</strong>
+              <div class="present__text">
+                <p class="present__text_desc">Форма LUXARD Classic создана для искушённых ценителей лучшего. Изящество деталей и плавная форма панели LUXARD Classic идеально дополняет архитектурный ансамбль загородного дома, под крышей которого проходят тихие и уютные семейные вечера, дружеские встречи и званые ужины.</p>
+              </div>
+            </div>
+            <div class="present__item"><img class="present__pic" src="/static/img/index/gallery/04.jpg" alt="изображение"><strong class="present__label">Цвет:  коралл</strong>
+              <div class="present__text">
+                <p class="present__text_desc">Форма LUXARD Classic создана для искушённых ценителей лучшего. Изящество деталей и плавная форма панели LUXARD Classic идеально дополняет архитектурный ансамбль загородного дома, под крышей которого проходят тихие и уютные семейные вечера, дружеские встречи и званые ужины.</p>
+              </div>
+            </div>
+            <div class="present__item"><img class="present__pic" src="/static/img/index/gallery/01.jpg" alt="изображение"><strong class="present__label">Цвет:  коралл</strong>
+              <div class="present__text">
+                <p class="present__text_desc">Форма LUXARD Classic создана для искушённых ценителей лучшего. Изящество деталей и плавная форма панели LUXARD Classic идеально дополняет архитектурный ансамбль загородного дома, под крышей которого проходят тихие и уютные семейные вечера, дружеские встречи и званые ужины.</p>
+              </div>
+            </div>
+            <div class="present__item"><img class="present__pic" src="/static/img/index/gallery/02.jpg" alt="изображение"><strong class="present__label">Цвет:  коралл</strong>
+              <div class="present__text">
+                <p class="present__text_desc">Форма LUXARD Classic создана для искушённых ценителей лучшего. Изящество деталей и плавная форма панели LUXARD Classic идеально дополняет архитектурный ансамбль загородного дома, под крышей которого проходят тихие и уютные семейные вечера, дружеские встречи и званые ужины.</p>
+              </div>
+            </div>
+            <div class="present__item"><img class="present__pic" src="/static/img/index/gallery/08.jpg" alt="изображение"><strong class="present__label">Цвет:  коралл</strong>
+              <div class="present__text">
+                <p class="present__text_desc">Форма LUXARD Classic создана для искушённых ценителей лучшего. Изящество деталей и плавная форма панели LUXARD Classic идеально дополняет архитектурный ансамбль загородного дома, под крышей которого проходят тихие и уютные семейные вечера, дружеские встречи и званые ужины.</p>
+              </div>
+            </div>
+            <div class="present__item"><img class="present__pic" src="/static/img/index/gallery/03.jpg" alt="изображение"><strong class="present__label">Цвет:  коралл</strong>
+              <div class="present__text">
+                <p class="present__text_desc">Форма LUXARD Classic создана для искушённых ценителей лучшего. Изящество деталей и плавная форма панели LUXARD Classic идеально дополняет архитектурный ансамбль загородного дома, под крышей которого проходят тихие и уютные семейные вечера, дружеские встречи и званые ужины.</p>
+              </div>
+            </div>
+          </div>
+          <div class="present js-roof">
+            <div class="present__item"><img class="present__pic" src="/static/img/index/collection/01.jpg" alt="изображение"><strong class="present__label">Цвет:  коралл</strong>
+              <div class="present__text">
+                <p class="present__text_desc">Форма LUXARD Classic создана для искушённых ценителей лучшего. Изящество деталей и плавная форма панели LUXARD Classic идеально дополняет архитектурный ансамбль загородного дома, под крышей которого проходят тихие и уютные семейные вечера, дружеские встречи и званые ужины.</p>
+              </div>
+            </div>
+            <div class="present__item"><img class="present__pic" src="/static/img/index/collection/02.jpg" alt="изображение"><strong class="present__label">Цвет:  коралл</strong>
+              <div class="present__tips">
+                <div class="present__tip">
+                  <div class="present__tip_pic"><img class="present__tip_img" src="/static/img/index/collection/icon-roof.png" alt="черепица"></div>
+                  <div class="present__tip_desc">текстура черепицы</div>
+                </div>
+                <div class="present__tip present_house">
+                  <div class="present__tip_pic"><img class="present__tip_img" src="/static/img/index/collection/icon-house.png" alt="черепица на объекте"></div>
+                  <div class="present__tip_desc">черепица на объекте</div>
+                </div>
+              </div>
+              <div class="present__text">
+                <p class="present__text_desc">Форма LUXARD Classic создана для искушённых ценителей лучшего. Изящество деталей и плавная форма панели LUXARD Classic идеально дополняет архитектурный ансамбль загородного дома, под крышей которого проходят тихие и уютные семейные вечера, дружеские встречи и званые ужины.</p>
+              </div>
+            </div>
+            <div class="present__item"><img class="present__pic" src="/static/img/index/collection/03.jpg" alt="изображение"><strong class="present__label">Цвет:  коралл</strong>
+              <div class="present__tips">
+                <div class="present__tip">
+                  <div class="present__tip_pic"><img class="present__tip_img" src="/static/img/index/collection/icon-roof.png" alt="черепица"></div>
+                  <div class="present__tip_desc">текстура черепицы</div>
+                </div>
+                <div class="present__tip present_house">
+                  <div class="present__tip_pic"><img class="present__tip_img" src="/static/img/index/collection/icon-house.png" alt="черепица на объекте"></div>
+                  <div class="present__tip_desc">черепица на объекте</div>
+                </div>
+              </div>
+              <div class="present__text">
+                <p class="present__text_desc">Форма LUXARD Classic создана для искушённых ценителей лучшего. Изящество деталей и плавная форма панели LUXARD Classic идеально дополняет архитектурный ансамбль загородного дома, под крышей которого проходят тихие и уютные семейные вечера, дружеские встречи и званые ужины.</p>
+              </div>
+            </div>
+            <div class="present__item"><img class="present__pic" src="/static/img/index/collection/04.jpg" alt="изображение"><strong class="present__label">Цвет:  коралл</strong>
+              <div class="present__tips">
+                <div class="present__tip">
+                  <div class="present__tip_pic"><img class="present__tip_img" src="/static/img/index/collection/icon-roof.png" alt="черепица"></div>
+                  <div class="present__tip_desc">текстура черепицы</div>
+                </div>
+                <div class="present__tip present_house">
+                  <div class="present__tip_pic"><img class="present__tip_img" src="/static/img/index/collection/icon-house.png" alt="черепица на объекте"></div>
+                  <div class="present__tip_desc">черепица на объекте</div>
+                </div>
+              </div>
+              <div class="present__text">
+                <p class="present__text_desc">Форма LUXARD Classic создана для искушённых ценителей лучшего. Изящество деталей и плавная форма панели LUXARD Classic идеально дополняет архитектурный ансамбль загородного дома, под крышей которого проходят тихие и уютные семейные вечера, дружеские встречи и званые ужины.</p>
+              </div>
+            </div>
+            <div class="present__item"><img class="present__pic" src="/static/img/index/collection/05.jpg" alt="изображение"><strong class="present__label">Цвет:  коралл</strong>
+              <div class="present__tips">
+                <div class="present__tip">
+                  <div class="present__tip_pic"><img class="present__tip_img" src="/static/img/index/collection/icon-roof.png" alt="черепица"></div>
+                  <div class="present__tip_desc">текстура черепицы</div>
+                </div>
+                <div class="present__tip present_house">
+                  <div class="present__tip_pic"><img class="present__tip_img" src="/static/img/index/collection/icon-house.png" alt="черепица на объекте"></div>
+                  <div class="present__tip_desc">черепица на объекте</div>
+                </div>
+              </div>
+              <div class="present__text">
+                <p class="present__text_desc">Форма LUXARD Classic создана для искушённых ценителей лучшего. Изящество деталей и плавная форма панели LUXARD Classic идеально дополняет архитектурный ансамбль загородного дома, под крышей которого проходят тихие и уютные семейные вечера, дружеские встречи и званые ужины.</p>
+              </div>
+            </div>
+            <div class="present__item"><img class="present__pic" src="/static/img/index/collection/06.jpg" alt="изображение"><strong class="present__label">Цвет:  коралл</strong>
+              <div class="present__tips">
+                <div class="present__tip">
+                  <div class="present__tip_pic"><img class="present__tip_img" src="/static/img/index/collection/icon-roof.png" alt="черепица"></div>
+                  <div class="present__tip_desc">текстура черепицы</div>
+                </div>
+                <div class="present__tip present_house">
+                  <div class="present__tip_pic"><img class="present__tip_img" src="/static/img/index/collection/icon-house.png" alt="черепица на объекте"></div>
+                  <div class="present__tip_desc">черепица на объекте</div>
+                </div>
+              </div>
+              <div class="present__text">
+                <p class="present__text_desc">Форма LUXARD Classic создана для искушённых ценителей лучшего. Изящество деталей и плавная форма панели LUXARD Classic идеально дополняет архитектурный ансамбль загородного дома, под крышей которого проходят тихие и уютные семейные вечера, дружеские встречи и званые ужины.</p>
+              </div>
+            </div>
+          </div>
+          <div class="tips">
+            <div class="tip js-filter-roof">
+              <div class="tip_pic"><img class="tip_img" src="/static/img/index/collection/icon-roof.png" alt="черепица"></div>
+              <div class="tip_desc">текстура черепицы</div>
+            </div>
+            <div class="tip tip_house js-filter-house">
+              <div class="tip_pic"><img class="tip_img" src="/static/img/index/collection/icon-house.png" alt="черепица на объекте"></div>
+              <div class="tip_desc">черепица на объекте</div>
+            </div>
+          </div>
+        </section>
+      </article>
+      <article class="gallery popup_class">
+        <h3 class="title__article">ФОТОгалерея</h3>
+        <div class="gallery__row">
+          <div class="gallery__item popupPeople-btn__open"><img class="gallery__pic" src="/static/img/index/gallery/01.jpg" alt="изображение"></div>
+          <div class="gallery__item popupPeople-btn__open"><img class="gallery__pic" src="/static/img/index/gallery/02.jpg" alt="изображение"></div>
+          <div class="gallery__item popupPeople-btn__open"><img class="gallery__pic" src="/static/img/index/gallery/03.jpg" alt="изображение"></div>
+          <div class="gallery__item popupPeople-btn__open"><img class="gallery__pic" src="/static/img/index/gallery/04.jpg" alt="изображение"></div>
+        </div>
+        <div class="gallery__row">
+          <div class="gallery__item popupPeople-btn__open"><img class="gallery__pic" src="/static/img/index/gallery/05.jpg" alt="изображение"></div>
+          <div class="gallery__item popupPeople-btn__open"><img class="gallery__pic" src="/static/img/index/gallery/06.jpg" alt="изображение"></div>
+          <div class="gallery__item popupPeople-btn__open"><img class="gallery__pic" src="/static/img/index/gallery/07.jpg" alt="изображение"></div>
+          <div class="gallery__item popupPeople-btn__open"><img class="gallery__pic" src="/static/img/index/gallery/08.jpg" alt="изображение"></div>
+        </div><a class="btn" href="#">перейти в галерею</a>
+      </article>
+      <article class="magazin">
+        <div class="magazin__pic"><img class="magazin__img" src="static/img/index/magzin-items.png" alt="изображение"></div>
+        <div class="magazin__content">
+          <h3 class="magazin__title">интернет-<br>магазин<br>технониколь</h3>
+          <p class="magazin__desc">Изучите полный ассортимент композитной черепицы и комплектующих элементов от ТЕХНОНИКОЛЬ LUXARD в нашем официальном интернет-магазине.</p><a class="btn btn__article" href="#">перейти в магазин</a>
+        </div>
+      </article>
+      <article class="news">
+        <h3 class="title__article">новости</h3>
+        <section class="news__section"><a class="news__link" href="#">
+            <div class="news__pic"><img class="news__img" src="/static/img/index/news/01.jpg" alt="изображение"></div>
+            <div class="news__content">
+              <h4 class="news__title">Новая форма композитной черепицы  LUXARD – ROMAN</h4>
+              <p class="news__desc">В сентябре 2012 г. Корпорация ТехноНИКОЛЬ представила новую форму композитной черепицы LUXARD – ROMAN.</p>
+              <time class="news__time">01.01.2016</time>
+            </div></a><a class="news__link" href="#">
+            <div class="news__pic"><img class="news__img" src="/static/img/index/news/02.jpg" alt="изображение">
+              <h5 class="news__pic_title">ROMAN</h5>
+            </div>
+            <div class="news__content">
+              <h4 class="news__title">Многоцветная палитра LUXARD Roman</h4>
+              <p class="news__desc">Корпорация ТехноНИКОЛЬ представила многоцветную палитру композитной черепицы LUXARD.</p>
+              <time class="news__time">01.01.2016</time>
+            </div></a><a class="news__link" href="#">
+            <div class="news__pic"><img class="news__img" src="/static/img/index/news/03.jpg" alt="изображение"></div>
+            <div class="news__content">
+              <h4 class="news__title"> Гарантия на LUXARD теперь в онлайн режиме</h4>
+              <p class="news__desc">На нашем сайте запущен сервис для формирования гарантийного сертификата на материал LUXARD</p>
+              <time class="news__time">01.01.2016</time>
+            </div></a><a class="news__link" href="#">
+            <div class="news__pic"><img class="news__img" src="/static/img/index/news/04.jpg" alt="изображение"></div>
+            <div class="news__content">
+              <h4 class="news__title">Композитная черепица ТЕХНОНИКОЛЬ LUXARD по специальным ценам</h4>
+              <p class="news__desc">ТЕХНОНИКОЛЬ LUXARD — надежная и долговечная композитная черепица.</p>
+              <time class="news__time">01.01.2016</time>
+            </div></a></section><a class="btn" href="#" role="button">архив новостей</a>
+      </article>
+      <footer class="footer">
+        <div class="footer__wrapper">
+          <div class="footer__company"><a class="footer__company_logo" href="/"><img class="footer__company_logo_img" src="/static/img/logo-footer.svg" alt="Технониколь"><small class="footer__company_label">Официальный сайт корпорации ТЕХНОНИКОЛЬ tn.ru</small></a></div><a class="btn__close" href="#"></a>
+          <div class="footer__info">
+            <div class="footer__line">
+              <nav class="footerNav">
+                <ul class="footerMenu">
+                  <li class="footerMenu__list"><a class="footerMenu__link" href="#">Каталог</a></li>
+                  <li class="footerMenu__list"><a class="footerMenu__link" href="#">Монтаж</a></li>
+                  <li class="footerMenu__list"><a class="footerMenu__link" href="#">Фотогалерея</a></li>
+                  <li class="footerMenu__list"><a class="footerMenu__link" href="#">Документация</a></li>
+                  <li class="footerMenu__list"><a class="footerMenu__link" href="#">Где купить?</a></li>
+                </ul>
+              </nav>
+              <div class="hotLine"><small class="hotLine__label">горячая линия</small><a class="hotLine__tel" href="tel:8800200565" title="Звонки со стационарного телефона бесплатны">8 800 200-05-65</a></div>
+            </div>
+            <div class="footer__dev">
+              <div class="footer__copy">© Композитная черепица ТЕХНОНИКОЛЬ LUXARD, 2017</div>
+              <div class="footer__design">Дизайн сайта<a class="footer__design_link" href="/"><strong>MINISOL</strong></a></div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <div class="popup popupPeople">
+        <div class="popup-wrap">
+          <section class="subject">
+            <div class="subject__pic"><img src="static/img/index/gallery/01.jpg" alt=""></div>
+          </section>
+          <section class="preview">
+            <div class="preview__pic"><img src="static/img/index/gallery/01.jpg" alt=""></div>
+            <div class="preview__pic"><img src="static/img/index/gallery/03.jpg" alt=""></div>
+            <div class="preview__pic"><img src="static/img/index/gallery/02.jpg" alt=""></div>
+            <div class="preview__pic"><img src="static/img/index/gallery/04.jpg" alt=""></div>
+          </section>
+        </div>
+        <div class="popup-controls">
+          <div class="popupPeople-btnWrap__open"><span class="popup-btn__prev">Назад</span><span class="popup-btn__next">Вперед</span></div><span class="popup-btn__close popupPeople-btn__close">Закрыть</span>
+        </div>
+      </div>
+      <div class="popup popupPeople">
+        <div class="popup-wrap">
+          <section class="subject">
+            <div class="subject__pic"><img src="static/img/index/gallery/02.jpg" alt=""></div>
+          </section>
+          <section class="preview">
+            <div class="preview__pic"><img src="static/img/index/gallery/02.jpg" alt=""></div>
+            <div class="preview__pic"><img src="static/img/index/gallery/01.jpg" alt=""></div>
+            <div class="preview__pic"><img src="static/img/index/gallery/06.jpg" alt=""></div>
+            <div class="preview__pic"><img src="static/img/index/gallery/04.jpg" alt=""></div>
+          </section>
+        </div>
+        <div class="popup-controls">
+          <div class="popupPeople-btnWrap__open"><span class="popup-btn__prev">Назад</span><span class="popup-btn__next">Вперед</span></div><span class="popup-btn__close popupPeople-btn__close">Закрыть</span>
+        </div>
+      </div>
+      <div class="popup popupPeople">
+        <div class="popup-wrap">
+          <section class="subject">
+            <div class="subject__pic"><img src="static/img/index/gallery/03.jpg" alt=""></div>
+          </section>
+          <section class="preview">
+            <div class="preview__pic"><img src="static/img/index/gallery/03.jpg" alt=""></div>
+            <div class="preview__pic"><img src="static/img/index/gallery/01.jpg" alt=""></div>
+            <div class="preview__pic"><img src="static/img/index/gallery/02.jpg" alt=""></div>
+            <div class="preview__pic"><img src="static/img/index/gallery/04.jpg" alt=""></div>
+          </section>
+        </div>
+        <div class="popup-controls">
+          <div class="popupPeople-btnWrap__open"><span class="popup-btn__prev">Назад</span><span class="popup-btn__next">Вперед</span></div><span class="popup-btn__close popupPeople-btn__close">Закрыть</span>
+        </div>
+      </div>
+      <div class="popup popupPeople">
+        <div class="popup-wrap">
+          <section class="subject">
+            <div class="subject__pic"><img src="static/img/index/gallery/04.jpg" alt=""></div>
+          </section>
+          <section class="preview">
+            <div class="preview__pic"><img src="static/img/index/gallery/04.jpg" alt=""></div>
+            <div class="preview__pic"><img src="static/img/index/gallery/01.jpg" alt=""></div>
+            <div class="preview__pic"><img src="static/img/index/gallery/02.jpg" alt=""></div>
+            <div class="preview__pic"><img src="static/img/index/gallery/04.jpg" alt=""></div>
+          </section>
+        </div>
+        <div class="popup-controls">
+          <div class="popupPeople-btnWrap__open"><span class="popup-btn__prev">Назад</span><span class="popup-btn__next">Вперед</span></div><span class="popup-btn__close popupPeople-btn__close">Закрыть</span>
+        </div>
+      </div>
+      <div class="popup popupPeople">
+        <div class="popup-wrap">
+          <section class="subject">
+            <div class="subject__pic"><img src="static/img/index/gallery/05.jpg" alt=""></div>
+          </section>
+          <section class="preview">
+            <div class="preview__pic"><img src="static/img/index/gallery/05.jpg" alt=""></div>
+            <div class="preview__pic"><img src="static/img/index/gallery/01.jpg" alt=""></div>
+            <div class="preview__pic"><img src="static/img/index/gallery/02.jpg" alt=""></div>
+            <div class="preview__pic"><img src="static/img/index/gallery/04.jpg" alt=""></div>
+          </section>
+        </div>
+        <div class="popup-controls">
+          <div class="popupPeople-btnWrap__open"><span class="popup-btn__prev">Назад</span><span class="popup-btn__next">Вперед</span></div><span class="popup-btn__close popupPeople-btn__close">Закрыть</span>
+        </div>
+      </div>
+      <div class="popup popupPeople">
+        <div class="popup-wrap">
+          <section class="subject">
+            <div class="subject__pic"><img src="static/img/index/gallery/06.jpg" alt=""></div>
+          </section>
+          <section class="preview">
+            <div class="preview__pic"><img src="static/img/index/gallery/06.jpg" alt=""></div>
+            <div class="preview__pic"><img src="static/img/index/gallery/01.jpg" alt=""></div>
+            <div class="preview__pic"><img src="static/img/index/gallery/02.jpg" alt=""></div>
+            <div class="preview__pic"><img src="static/img/index/gallery/04.jpg" alt=""></div>
+          </section>
+        </div>
+        <div class="popup-controls">
+          <div class="popupPeople-btnWrap__open"><span class="popup-btn__prev">Назад</span><span class="popup-btn__next">Вперед</span></div><span class="popup-btn__close popupPeople-btn__close">Закрыть</span>
+        </div>
+      </div>
+      <div class="popup popupPeople">
+        <div class="popup-wrap">
+          <section class="subject">
+            <div class="subject__pic"><img src="static/img/index/gallery/07.jpg" alt=""></div>
+          </section>
+          <section class="preview">
+            <div class="preview__pic"><img src="static/img/index/gallery/07.jpg" alt=""></div>
+            <div class="preview__pic"><img src="static/img/index/gallery/01.jpg" alt=""></div>
+            <div class="preview__pic"><img src="static/img/index/gallery/02.jpg" alt=""></div>
+            <div class="preview__pic"><img src="static/img/index/gallery/04.jpg" alt=""></div>
+          </section>
+        </div>
+        <div class="popup-controls">
+          <div class="popupPeople-btnWrap__open"><span class="popup-btn__prev">Назад</span><span class="popup-btn__next">Вперед</span></div><span class="popup-btn__close popupPeople-btn__close">Закрыть</span>
+        </div>
+      </div>
+      <div class="popup popupPeople">
+        <div class="popup-wrap">
+          <section class="subject">
+            <div class="subject__pic"><img src="static/img/index/gallery/08.jpg" alt=""></div>
+          </section>
+          <section class="preview">
+            <div class="preview__pic"><img src="static/img/index/gallery/08.jpg" alt=""></div>
+            <div class="preview__pic"><img src="static/img/index/gallery/01.jpg" alt=""></div>
+            <div class="preview__pic"><img src="static/img/index/gallery/02.jpg" alt=""></div>
+            <div class="preview__pic"><img src="static/img/index/gallery/04.jpg" alt=""></div>
+          </section>
+        </div>
+        <div class="popup-controls">
+          <div class="popupPeople-btnWrap__open"><span class="popup-btn__prev">Назад</span><span class="popup-btn__next">Вперед</span></div><span class="popup-btn__close popupPeople-btn__close">Закрыть</span>
+        </div>
+      </div>
+    </div>
+    <!--END out-->
+  </body>
+</html>

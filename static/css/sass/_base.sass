@@ -1,0 +1,94 @@
++font('Roboto-Medium', 'Roboto-Medium')
++font('Roboto-Bold', 'Roboto-Bold')
++font('Roboto-Regular', 'Roboto-Regular')
++font('Roboto-Light', 'Roboto-Light')
++font('CenturyGothic', 'CenturyGothic')
++font('DINProCondBold', 'DINProCondBold')
++font('proxima_nova_bold-webfont', 'proxima_nova_bold-webfont')
++font('proxima_nova_extrabold-webfont', 'proxima_nova_extrabold-webfont')
++font('proxima_nova_semibold-webfont', 'proxima_nova_semibold-webfont')
+
+=ps
+	font-family: 'proxima_nova_semibold-webfont', Arial, sans-serif
+=pe
+	font-family: 'proxima_nova_extrabold-webfont', Arial, sans-serif
+=pb
+	font-family: 'proxima_nova_bold-webfont', Arial, sans-serif
+=din
+	font-family: 'DINProCondBold', Arial, sans-serif
+=cg
+	font-family: 'CenturyGothic', Arial, sans-serif
+=rl
+	font-family: 'Roboto-Light', Arial, sans-serif
+=rm
+	font-family: 'Roboto-Regular', Arial, sans-serif
+=rb
+	font-family: 'Roboto-Bold', Arial, sans-serif
+=rr
+	font-family: 'Roboto-Medium', Arial, sans-serif
+
+
+// colors
+$n: transparent
+$fiolet: #672146
+$gold: #754c24
+$gray: #8f8787
+
+
+// size
+$max-width: 1290px
+
+html
+	font-size: 62.5%
+	+r(800)
+		font-size: 80%
+	+selection
+		background: rgba(0, 0, 0, .2)
+		color: #fff
+
+
+body
+	min-width: 300px
+	font-family:  Arial, sans-serif
+	font-size: 1.6rem
+	line-height: 1.5
+	color: #000
+	background-color: #fff
+	+rl
+
+
+// common blocks
+
+.out
+	position: relative
+	background-color: #fff
+	+clr
+
+.layout
+	max-width: 1402px
+	padding-left: 6.1rem
+	margin: 0 auto
+
+h1, h2, h3, h4, h5, h6
+	margin: 0 0 .8em
+	font-weight: normal
+	line-height: 1.1
+h1
+	font-size: 2em
+h2
+	font-size: 1.8em
+h3
+	font-size: 1.6em
+h4
+	font-size: 1.5em
+h5
+	font-size: 1.4em
+h6
+	font-size: 1.3em
+a
+	text-decoration: none
+	color: inherit
+ul
+	margin: 0
+li
+	list-style: none

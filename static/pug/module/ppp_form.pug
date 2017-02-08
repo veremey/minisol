@@ -1,0 +1,23 @@
+div.popup__question.js_close
+	.layout
+		button.btn__close.is_active
+		h3.title__popup у вас есть вопрос?
+		p.popup__question_desc наши специалисты рады будут помочь
+		form(method='post', action='', name='question', autocomplete='on').popup__question_form
+			input(type='text', autocomplete='on', name='yourQuestion', placeholder='Ваш вопрос').popup__question_item
+			input(type='text', autocomplete='on', name='name', placeholder='Ваше имя').popup__question_data
+			input(type='mail', name='mails', autocomplete='on', placeholder='Эл. почта', requred).popup__question_data
+			.popup__question_wrp
+				fieldset.popup__fieldset
+					label(for='tel').popup__fieldset_label Телефон
+					input(type='tel', autocomplete='on', name="tel" placeholder='+7 (___) ___ - __ - __').popup__fieldset_tel
+				fieldset.popup__fieldset
+					input(type='file').popup__fieldset_file
+					.popup__fieldset_inner
+						p.popup__fieldset_desc Прикрепить файл
+						img(src='/static/img/index/skoba.png', alt='изображение').popup__fieldset_img
+			button(type='submit').btn отправить
+
+
+
+	footer.popup__question_footer Ваш вопрос успешно отправлен!

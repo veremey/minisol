@@ -1,0 +1,66 @@
+header.header
+	.layout
+		a(href='/').logo
+			img(src='/static/img/logo.svg', alt='Технониколь').logo__pic
+		div.select.js-select
+			span.select__text.js-select-text
+			input(type="hidden", value="").js-select-input
+			ul.select__list.js-select-list
+				li(data-id="0")
+					img(src='/static/img/flag-ru.jpg', alt='ru').lang__img
+					| ru
+				li(data-id="1")
+					img(src='/static/img/flag-de.png', alt='ru').lang__img
+					| de
+				li(data-id="2")
+					img(src='/static/img/flag_en.png', alt='ru').lang__img
+					| en
+		a(href='#').btn__close
+		.header__hide
+			nav.header__nav
+				ul.header__menu
+					li.header__menu_list.has_subnav
+						a(href='#').header__menu_link Каталог
+						.subWrapper
+							ul.header__submenu
+								li.header__submenu_list
+									a(href='#').header__submenu_link Документы
+								li.header__submenu_list
+									a(href='#').header__submenu_link Сертификаты
+								li.header__submenu_list
+									a(href='#').header__submenu_link Получить гарантийный сертификат
+								li.header__submenu_list
+									a(href='#').header__submenu_link Получить гарантийный сертификат
+								li.header__submenu_list
+									a(href='#').header__submenu_link Получить гарантийный сертификат
+								li.header__submenu_list
+									a(href='#').header__submenu_link Получить гарантийный сертификат
+								li.header__submenu_list
+									a(href='#').header__submenu_link Получить гарантийный сертификат
+								li.header__submenu_list
+									a(href='#').header__submenu_link Получить гарантийный сертификат
+								li.header__submenu_list
+									a(href='#').header__submenu_link Получить гарантийный сертификат
+								li.header__submenu_list
+									a(href='#').header__submenu_link Получить гарантийный сертификат
+					li.header__menu_list
+						a(href='#').header__menu_link Монтаж
+					li.header__menu_list
+						a(href='#').header__menu_link Фотогалерея
+					li.header__menu_list.has_subnav
+						a(href='#').header__menu_link Документация
+						.subWrapper
+							ul.header__submenu
+								li.header__submenu_list
+									a(href='#').header__submenu_link Документы
+								li.header__submenu_list
+									a(href='#').header__submenu_link Сертификаты
+								li.header__submenu_list
+									a(href='#').header__submenu_link Получить гарантийный сертификат
+					li.header__menu_list
+						a(href='#').header__menu_link Где купить?
+			.hotLine
+				small.hotLine__label горячая линия
+				a(href='tel:8800200565', title='Звонки со стационарного телефона бесплатны').hotLine__tel 8 800 200-05-65
+			a(href='#').qustion.js-question Задать <br> вопрос
+	include ../module/ppp_form.pug
