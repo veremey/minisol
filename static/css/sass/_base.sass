@@ -27,6 +27,14 @@
 =rr
 	font-family: 'Roboto-Medium', Arial, sans-serif
 
+@function get-vh($target)
+	$vh-context: (1000*.008) * 1px
+	@return ($target/$vh-context) * 1vh
+
+@function get-vw($target)
+	$vw-context: (1000*.0145) * 1px
+	@return ($target/$vw-context) * 1vw
+
 
 // colors
 $n: transparent
@@ -68,6 +76,7 @@ body
 	max-width: 1402px
 	padding-left: 6.1rem
 	margin: 0 auto
+
 
 h1, h2, h3, h4, h5, h6
 	margin: 0 0 .8em

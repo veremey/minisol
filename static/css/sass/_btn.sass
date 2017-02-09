@@ -13,6 +13,8 @@
 	max-width: 100%
 	+tr(.4s)
 	+rm
+	+r(650)
+		width: 90%
 	&:hover
 		background-color: $gold
 		color: #fff
@@ -23,7 +25,8 @@
 		line-height: 4.6rem
 		margin-top: 5.5rem
 		font-size: 1.2rem
-	&__close
+	&__close,
+	&__open
 		width: 62px
 		height: 62px
 		position: absolute
@@ -41,19 +44,19 @@
 			height: 50%
 		&:before
 			top: 0
-			border-top: 2px solid $fiolet
-			border-bottom: 1px solid $fiolet
-			+tr(.2)
+			border-top: 4px solid $fiolet
+			border-bottom: 2px solid $fiolet
+			+tr(.2s)
 		&:after
 			bottom: 0
-			border-top: 1px solid $fiolet
-			border-bottom: 2px solid $fiolet
-			+tr(.2)
+			border-top: 2px solid $fiolet
+			border-bottom: 4px solid $fiolet
+			+tr(.2s)
 		&.is_active:before
 			+rotate(45)
-			transform-origin: -10% 50%
+			transform-origin: -6% 50%
 			border-bottom-color: $n
 		&.is_active:after
 			+rotate(-45)
-			transform-origin: -10% 50%
+			transform-origin: -6% 50%
 			border-top-color: $n

@@ -1,10 +1,11 @@
 footer.footer
 	.footer__wrapper
 		.footer__company
-			a(href='/').footer__company_logo
-				img(src='/static/img/logo-footer.svg', alt='Технониколь').footer__company_logo_img
+			.footer__company_logo
+				.footer__company_logo_link
+					img(src='/static/img/logo-footer.svg', alt='Технониколь').footer__company_logo_img
 				small.footer__company_label Официальный сайт корпорации ТЕХНОНИКОЛЬ tn.ru
-		a(href='#').btn__close
+		a(href='#').btn__open
 		.footer__info
 			.footer__line
 				nav.footerNav

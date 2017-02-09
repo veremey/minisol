@@ -13,23 +13,35 @@
 		margin: 0 auto
 		+r(1000)
 			align-items: center
+			width: 100%
 	&__company
 		display: flex
 		align-content: space-between
 		flex-wrap: wrap
 		width: 23.77777%
 		margin-right: 4%
+		+r(1000)
+			width: 80%
+			margin-right: 0
+			margin-left: 30px
+		+r(650)
+			display: block
+			width: 55%
+			// margin-right: 100px
 		&_logo
 			display: flex
 			flex-wrap: wrap
 			align-content: space-between
 			+rr
+			+r(1000)
+				display: inline-block
 			&:hover
 				opacity: .7
 			&_img
 				max-height: 100%
 				width: 100%
 		&_label
+			display: block
 			padding-left: 20%
 			color: $gray
 			font-size: 1.4rem
@@ -74,14 +86,20 @@
 			+pb
 			&:hover
 				color: #ccc
-	.btn__close
+	.btn__open
 		display: none
 		+r(1000)
 			position: relative
 			display: inline-block
-			&:before,
+			// &:before,
+			// &:after
+			// 	border-color: #fff
+		&.is_active
+			z-index: 200
 			&:after
-				border-color: #fff
+				border-bottom-color: #fff
+			&:before
+				border-top-color: #fff
 
 .footerNav
 	width: calc(100% - 200px)

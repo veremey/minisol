@@ -46,7 +46,7 @@
 
 	&-controls
 		position: absolute
-		top: 50px
+		top: 10vh
 		right: 10px
 		width: 64px
 
@@ -94,15 +94,14 @@
 			opacity: 0.8
 			background-color: #fff
 
-.subject,
-.preview
+.subject
 	position: relative
 	margin: 0 auto
 	&__pic
 		position: relative
-		width: 600px
+		width: 800px
 		max-width: 80%
-		height: 300px
+		height: 400px
 		margin: 0 auto 10px
 		overflow: hidden
 		img
@@ -111,18 +110,30 @@
 			left: 50%
 			transform: translate(-50%, -50%)
 			min-width: 100%
-			width: 100%
 			min-height: 100%
 			max-width: none
 .preview
 	text-align: center
 	margin-top: 20px
+	position: relative
+	margin: 0 auto
 	&__pic
+		position: relative
 		display: inline-block
-		width: 100px
-		height: 100px
+		max-width: 80%
+		width: 120px
+		height: 120px
 		margin: 0 10px
 		cursor: pointer
+		overflow: hidden
+		img
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			width: 100%
+			height: auto
+			max-width: none
 
 .popup
 	&__fieldset
@@ -255,3 +266,12 @@
 			right: 30px
 		+r(800)
 			top: -40px
+	.btn__close
+		&:after
+			border-top: .5px solid $n
+			border-bottom: .5px solid $fiolet
+		&:before
+			border-bottom: .5px solid $n
+			border-top: .5px solid $fiolet
+		&.is_active:after
+			transform-origin: -13% 50%

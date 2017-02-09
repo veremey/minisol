@@ -9,20 +9,20 @@
 		+clr
 		+r(1360)
 			height: 1450px
+			margin-bottom: 20px
 
 		&.mod_reverse
 			.propose
 				float: right
-				// &__item
-				// 	background: #f9f8f7 url('../img/index/magzin-arrow-rev.jpg') 200px center no-repeat
-				// 	background-size: cover
+				&__item
+					background: #f9f8f7 url('../img/index/magzin-arrow-111.jpg') 84% center no-repeat
+					background-size: cover
 			.present
 				float: left
 			.tips
 				left: auto
 				right: calc(53% + 30px)
 				+r(1360)
-					top: 60%
 					right: 30px
 					left: auto
 			.tip
@@ -50,6 +50,9 @@
 		background: #f9f8f7 url('../img/index/magzin-arrow.jpg') -200px center no-repeat
 		background-size: cover
 		overflow: hidden
+		+r(1360)
+			background: #f9f8f7 url('../img/index/magzin-arrow-111.jpg') 84% center no-repeat
+			background-size: cover
 
 	&__wrap
 		position: absolute
@@ -112,6 +115,7 @@
 		bottom: 0
 		left: 0
 		width: 100%
+		text-align: left
 		background-color: rgba(51, 31, 28, .7)
 		padding: 4rem 2rem 4rem 6rem
 		+rl
@@ -121,6 +125,8 @@
 			font-size: 1.6rem
 			line-height: 2.4rem
 			color: #fff
+			+r(1360)
+				float: left
 
 .tips
 	position: absolute
@@ -128,7 +134,7 @@
 	left: calc(53% + 30px)
 	+try(-50%)
 	+r(1360)
-		top: 60%
+		top: 70%
 		right: 30px
 		left: auto
 .tip
