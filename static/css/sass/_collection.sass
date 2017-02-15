@@ -1,6 +1,10 @@
 .collection
 	padding-top: 80px
 	+clr
+	.btn
+		background-color: $n
+		&:hover
+			background-color: $gold
 	&__wrap
 		position: relative
 		height: 725px
@@ -15,8 +19,20 @@
 			.propose
 				float: right
 				&__item
-					background: #f9f8f7 url('../img/index/magzin-arrow-111.jpg') 84% center no-repeat
-					background-size: cover
+					background: #f9f8f7 url('../img/index/arr-r.png') 0 center no-repeat
+					// background-size: cover
+					transition: background-position .4s ease
+					&.slick-active
+						background-position: 143% center
+						transition: background-position .0s ease
+						+r(1600)
+							background-position: 163% center
+						+r(1360)
+							background-position: 128% center
+				&__wrap
+					left: 40%
+					+r(1600)
+						left: 50%
 			.present
 				float: left
 			.tips
@@ -27,14 +43,20 @@
 					left: auto
 			.tip
 				&:hover
+					background-color: $n
 					.tip_desc
 						width: 29rem
 						padding: 0 100px 0 38px
 						color: inherit
+						line-height: 84px
+						height: 84px
+						+r(400)
+							width: 84px
+							padding: 0
+							color: $n
 				&_desc
 					left: auto
 					right: 0
-
 
 .propose
 	width: 53%
@@ -47,19 +69,21 @@
 	&__item
 		height: 725px
 		position: relative
-		background: #f9f8f7 url('../img/index/magzin-arrow.jpg') -200px center no-repeat
-		background-size: cover
+		background: #f9f8f7 url('../img/index/arr.png') -215px center no-repeat
+		// background-size: cover
 		overflow: hidden
 		+r(1360)
-			background: #f9f8f7 url('../img/index/magzin-arrow-111.jpg') 84% center no-repeat
-			background-size: cover
+			background: #f9f8f7 url('../img/index/arr-r.png') 128% center no-repeat
+			// background-size: cover
 
 	&__wrap
 		position: absolute
 		top: 50%
-		left: 50%
+		left: 60%
 		transform: translate(-50%, -50%)
 		width: 100%
+		+r(1600)
+			left: 50%
 	&__pic
 		margin: 0 auto
 	&__title
@@ -70,6 +94,8 @@
 		text-transform: uppercase
 		letter-spacing: .1em
 		+cg
+		+r(650)
+			font-size: 2.4em
 	&__desc
 		text-transform: uppercase
 		font-size: 1.8rem
@@ -88,7 +114,6 @@
 		height: 725px
 		position: relative
 		overflow: hidden
-
 	&__pic
 		position: absolute
 		top: 50%
@@ -117,8 +142,10 @@
 		width: 100%
 		text-align: left
 		background-color: rgba(51, 31, 28, .7)
-		padding: 4rem 2rem 4rem 6rem
+		padding: 4rem 6rem
 		+rl
+		+r(650)
+			padding: 2rem 3rem
 		&_desc
 			max-width: 53rem
 			width: 100%
@@ -127,25 +154,28 @@
 			color: #fff
 			+r(1360)
 				float: left
+			+r(650)
+				line-height: 1.2
 
 .tips
 	position: absolute
 	top: 50%
 	left: calc(53% + 30px)
 	+try(-50%)
+	+tr(.1s .4s)
 	+r(1360)
 		top: 70%
 		right: 30px
 		left: auto
+	+r(400)
+		top: 62%
 .tip
 	position: relative
 	width: 84px
 	height: 84px
 	border-radius: 84px
 	margin: 10px 0
-	background-color: rgba(255, 255, 255, .8)
 	cursor: pointer
-	// overflow: hidden
 	+rm
 	&:hover
 		.tip_desc
@@ -153,8 +183,16 @@
 			width: 29rem
 			padding: 0 38px 0 100px
 			color: inherit
+			line-height: 84px
+			height: 84px
+			transition: width .8s, color .2s .3s, padding .2s .2s
 			+r(1360)
 				padding: 0 100px 0 38px
+			+r(400)
+				width: 84px
+				padding: 0
+				color: $n
+
 	&_pic
 		position: relative
 		overflow: hidden
@@ -167,20 +205,22 @@
 		transform: translate(-50%, -50%)
 	&_desc
 		position: absolute
-		top: 0
+		top: 50%
 		left: 0
-		width: 0
+		width: 84px
 		padding: 0
 		overflow: hidden
 		color: $n
 		white-space: nowrap
 		border-radius: 84px
 		background-color: rgba(255, 255, 255, .7)
-		// padding: 0 38px
 		font-size: 1.2rem
 		line-height: 84px
+		letter-spacing: .05em
 		text-transform: uppercase
 		z-index: -1
+		transition: width .8s, color .1s .1s, padding .2s .2s
+		transform: translateY(-50%)
 		+rm
 		// transition: width cubic-bezier(0,0,1,1.47) .8s, color .0s .2s
 		+r(1360)
@@ -188,7 +228,7 @@
 			right: 0
 
 	&_house
-		background-color: rgba(51, 31, 28, .7)
+		// background-color: rgba(51, 31, 28, .7)
 		color: #fff
 		.tip
 			&_desc

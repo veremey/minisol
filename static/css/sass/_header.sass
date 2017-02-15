@@ -1,7 +1,7 @@
 // Normally header styles
 .header
-	// position: relative
-	position: absolute
+	position: fixed
+	// position: absolute
 	top: 0
 	left: 0
 	right: 0
@@ -15,19 +15,20 @@
 		height: 88px
 		+r(1360)
 			padding-right: 30px
+		+r(1250)
+			padding: 0 15px
 		+r(650)
 			position: relative
 			padding: 0
 	.btn__open
 		display: none
 		position: relative
-		+r(1360)
+		+r(1000)//1360
 			display: block
 			height: 40px
 			width: 40px
+			right: -15px
 			order: -1
-		+r(650)
-			right: -3rem
 		&.is_active
 			z-index: 200
 			&:after
@@ -36,14 +37,19 @@
 				border-top-color: #fff
 	&__nav
 		height: 100%
+		+r(1250)
+			width: 72%
+		+r(1000)
+			width: 100%
 	&__hide
-		width: 80%
 		display: flex
 		align-items: center
 		flex-wrap: nowrap
 		justify-content: space-between
 		height: 88px
 		+r(1360)
+			width: 85%
+		+r(1000)//1360
 			display: none
 		&.is_opened
 			display: block
@@ -57,18 +63,22 @@
 	&__menu
 		display: flex
 		justify-content: space-between
-		flex: 0 0 80%
 		font-size: 0
 		height: 100%
 		position: relative
+		// min-width: 540px//
 		z-index: 200
-		+r(1360)
+		+r(1250)
+			justify-content: space-around
+		+r(1000)//1360
 			display: block
 			width: 100vw
 			position: absolute
 			top: 50%
 			+try(-50%)
 			height: auto
+			// max-height: 60vh
+			// overflow-y: scroll
 
 		&_list
 			position: relative
@@ -78,7 +88,9 @@
 			height: 100%
 			white-space: nowrap
 			margin: 0 20px
-			+r(1360)
+			+r(1250)
+				margin: 0 5px
+			+r(1000)//1360
 				position: static
 				display: block
 				height: auto
@@ -95,7 +107,7 @@
 					transform: translateX(-50%)
 					opacity: 0
 					+arr(22, 11, $fiolet, t)
-					// transition: opacity .4s
+					// transition: opacity .4s .2s
 			&:hover
 				&:after
 					opacity: 1
@@ -109,7 +121,7 @@
 					height: auto
 					top: 88px
 					opacity: 1
-					+r(1360)
+					+r(1000)//1360
 						top: 0
 
 		&_list.has_subnav &_link
@@ -127,10 +139,11 @@
 			height: 100%
 			align-items: center
 			font-size: 1.7rem
-			+rr
 			position: relative
 			overflow: hidden
-			+r(1360)
+			// transition: left .2s
+			+rr
+			+r(1000)//1360
 				display: inline-block
 				font-size: 40px
 			+r(400)
@@ -143,8 +156,24 @@
 				width: 100%
 				height: 2px
 				background-color: $fiolet
-				+r(1360)
+				+r(1000)//1360
 					content: none
+	&_back
+		display: none
+		+r(1000)
+			position: fixed
+			top: 25px
+			right: 15px
+			line-height: 40px
+			padding: 0 10px
+			text-transform: uppercase
+			color: #fff
+			font-size: 20px
+			letter-spacing: .1em
+			z-index: 200
+			border: none
+			background: none
+			+rl
 	&__submenu
 		display: flex
 		flex-wrap: wrap
@@ -152,22 +181,22 @@
 		max-width: 1200px
 		width: 86vw
 		margin: 0 auto
-		transform: translaeteX(-50%)
+		// transform: translateX(-50%)
 		font-size: 0
 		padding: 10px
 		z-index: 20
 		text-align: center
-		+r(1360)
+		+r(1000)//1360
 			display: block
 			width: 100%
-
 
 		&_list
 			display: inline-block
 			margin: 0 13px
-			+r(1360)
+			+r(1000)//1360
 				display: block
 				width: 100%
+				margin: 0 0 14px
 		&_link
 			display: block
 			font-size: 1.6rem
@@ -178,6 +207,9 @@
 			transition: color .2s
 			&:hover
 				color: #ccc
+			+r(1000)
+				line-height: 1.2
+
 	.hotLine
 		&__tel
 			color: #000
@@ -192,7 +224,9 @@
 	background-color: $fiolet
 	transition: opacity .4s .2s, height .4s .2s
 	overflow: hidden
-	+r(1360)
+	// max-height: 60vh
+	// overflow-y: auto
+	+r(1000)//1360
 		// overflow: visible
 		top: 0
 		left: 100%
@@ -201,16 +235,20 @@
 		text-align: center
 		opacity: 1
 		z-index: 50
-
+	&.is_open
+		overflow-y: auto
+		max-height: 77vw
+		height: auto
 
 .logo
 	display: flex
 	align-items: center
-	height: 38px
 	height: 100%
 	width: 16%
 	transition: background-color .4s
 	+r(1360)
+		width: 50px
+	+r(1000)//1360
 		width: 400px
 		justify-content: center
 	+r(650)
@@ -220,10 +258,24 @@
 		transform: translate(-50%, -50%)
 		width: 40vw
 		align-items: center
+	+r(500)
+		height: 74px
 	&:hover
 		background-color: #f6f6f6
 	&__pic
-		max-width: 100%
+		max-height: 100%
+		width: 100%
+		+r(500)
+			width: auto
+			height: 100%
+		img
+			width: 100%
+			max-width: 100%
+			max-height: 100%
+			vertical-align: middle
+			+r(500)
+				width: auto
+				height: 100%
 
 .lang
 	display: inline-block
@@ -293,8 +345,13 @@
 	background-color: $fiolet
 	height: 100%
 	align-items: center
+	font-size: 1.4rem
+
+	letter-spacing: .1em
+	line-height: 1.3
 	padding: 0 20px
 	text-transform: uppercase
+	transition: background-color .4s
 	+rb
 	&:before,
 	&:after
@@ -308,3 +365,5 @@
 	&:after
 		+arr(9, 16, #fff, l)
 		right: 0
+	&:hover
+		background-color: darken($fiolet, 5%)

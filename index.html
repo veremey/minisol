@@ -2,36 +2,44 @@
 <html lang="ru-RU">
   <head>
     <meta charset="utf-8">
-    <title>Minison</title>
+    <title>Minisol</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <link rel="icon" type="image/png" href="static/img/favicon.png">
     <link rel="stylesheet" media="all" href="static/css/style.css">
+    <link rel="stylesheet" media="all" href="static/css/jquery.fancybox.css">
     <script src="static/js/lib/jquery.js"></script>
-    <script src="static/js/lib/jquery-ui.min.js"></script>
+    <script src="static/js/lib/picturefill.min.js"></script>
+    <script src="static/js/lib/jquery.fancybox.js"></script>
     <script src="static/js/lib/slick.min.js"></script>
     <script src="static/js/common.js"></script>
-    <script src="static/js/popup.js"></script>
-    <script src="static/js/init__popup.js"></script>
   </head>
   <body>
     <!--BEGIN outs-->
     <div class="out popupPeople-btnWrap__open">
       <header class="header">
-        <div class="layout"><a class="logo" href="/"><img class="logo__pic" src="/static/img/logo.svg" alt="Технониколь"></a>
+        <div class="layout"><a class="logo" href="/">
+            <picture class="logo__pic">
+              <source srcset="/static/img/logo.svg" media="(min-width: 1361px)">
+              <source srcset="/static/img/logo-min.svg" media="(min-width: 1000px)">
+              <source srcset="/static/img/logo.svg" media="(min-width: 501px)">
+              <source srcset="/static/img/logo-min.svg" media="(min-width: 300px)"><img srcset="/static/img/logo.svg" alt="…">
+            </picture></a>
           <div class="select js-select"><span class="select__text js-select-text"></span>
             <input class="js-select-input" type="hidden" value="">
             <ul class="select__list js-select-list">
               <li data-id="0"><img class="lang__img" src="/static/img/flag-ru.jpg" alt="ru">ru</li>
-              <li data-id="1"><img class="lang__img" src="/static/img/flag-de.png" alt="ru">de</li>
-              <li data-id="2"><img class="lang__img" src="/static/img/flag_en.png" alt="ru">en</li>
+              <li data-id="1"><img class="lang__img" src="/static/img/flag_en.png" alt="ru">en</li>
             </ul>
-          </div><a class="btn__open" href="#"></a>
+          </div><a class="btn__open" href="#"><span></span><span></span><span></span></a>
+          <button class="header_back js-back">назад</button>
           <div class="header__hide js_open">
             <nav class="header__nav">
               <ul class="header__menu">
                 <li class="header__menu_list has_subnav"><a class="header__menu_link" href="#">Каталог</a>
                   <div class="subWrapper">
                     <ul class="header__submenu">
+                      <li class="header__submenu_list"><a class="header__submenu_link" href="#">Документы</a></li>
+                      <li class="header__submenu_list"><a class="header__submenu_link" href="#">Сертификаты</a></li>
+                      <li class="header__submenu_list"><a class="header__submenu_link" href="#">Получить гарантийный сертификат</a></li>
                       <li class="header__submenu_list"><a class="header__submenu_link" href="#">Документы</a></li>
                       <li class="header__submenu_list"><a class="header__submenu_link" href="#">Сертификаты</a></li>
                       <li class="header__submenu_list"><a class="header__submenu_link" href="#">Получить гарантийный сертификат</a></li>
@@ -433,18 +441,8 @@
       </article>
       <article class="gallery popup_class">
         <h3 class="title__article">ФОТОгалерея</h3>
-        <div class="gallery__row">
-          <div class="gallery__item popupPeople-btn__open"><img class="gallery__pic" src="/static/img/index/gallery/01.jpg" alt="изображение"></div>
-          <div class="gallery__item popupPeople-btn__open"><img class="gallery__pic" src="/static/img/index/gallery/02.jpg" alt="изображение"></div>
-          <div class="gallery__item popupPeople-btn__open"><img class="gallery__pic" src="/static/img/index/gallery/03.jpg" alt="изображение"></div>
-          <div class="gallery__item popupPeople-btn__open"><img class="gallery__pic" src="/static/img/index/gallery/04.jpg" alt="изображение"></div>
-        </div>
-        <div class="gallery__row">
-          <div class="gallery__item popupPeople-btn__open"><img class="gallery__pic" src="/static/img/index/gallery/05.jpg" alt="изображение"></div>
-          <div class="gallery__item popupPeople-btn__open"><img class="gallery__pic" src="/static/img/index/gallery/06.jpg" alt="изображение"></div>
-          <div class="gallery__item popupPeople-btn__open"><img class="gallery__pic" src="/static/img/index/gallery/07.jpg" alt="изображение"></div>
-          <div class="gallery__item popupPeople-btn__open"><img class="gallery__pic" src="/static/img/index/gallery/08.jpg" alt="изображение"></div>
-        </div><a class="btn" href="#">перейти в галерею</a>
+        <div class="gallery__row"><a class="gallery__item" rel="fancybox-thumb" href="/static/img/index/gallery/01.jpg"><img class="gallery__pic" src="/static/img/index/gallery/01.jpg" alt="изображение"></a><a class="gallery__item" rel="fancybox-thumb" href="/static/img/index/gallery/02.jpg"><img class="gallery__pic" src="/static/img/index/gallery/02.jpg" alt="изображение"></a><a class="gallery__item" rel="fancybox-thumb" href="/static/img/index/gallery/03.jpg"><img class="gallery__pic" src="/static/img/index/gallery/03.jpg" alt="изображение"></a><a class="gallery__item" rel="fancybox-thumb" href="/static/img/index/gallery/04.jpg"><img class="gallery__pic" src="/static/img/index/gallery/04.jpg" alt="изображение"></a></div>
+        <div class="gallery__row"><a class="gallery__item" rel="fancybox-thumb" href="/static/img/index/gallery/05.jpg"><img class="gallery__pic" src="/static/img/index/gallery/05.jpg" alt="изображение"></a><a class="gallery__item" rel="fancybox-thumb" href="/static/img/index/gallery/06.jpg"><img class="gallery__pic" src="/static/img/index/gallery/06.jpg" alt="изображение"></a><a class="gallery__item" rel="fancybox-thumb" href="/static/img/index/gallery/07.jpg"><img class="gallery__pic" src="/static/img/index/gallery/07.jpg" alt="изображение"></a><a class="gallery__item" rel="fancybox-thumb" href="/static/img/index/gallery/08.jpg"><img class="gallery__pic" src="/static/img/index/gallery/08.jpg" alt="изображение"></a></div><a class="btn" href="#">перейти в галерею</a>
       </article>
       <article class="magazin">
         <div class="magazin__pic"><img class="magazin__img" src="static/img/index/magzin-items.png" alt="изображение"></div>
@@ -486,10 +484,14 @@
       <footer class="footer">
         <div class="footer__wrapper">
           <div class="footer__company">
-            <div class="footer__company_logo">
-              <div class="footer__company_logo_link"><img class="footer__company_logo_img" src="/static/img/logo-footer.svg" alt="Технониколь"></div><small class="footer__company_label">Официальный сайт корпорации ТЕХНОНИКОЛЬ tn.ru</small>
-            </div>
-          </div><a class="btn__open" href="#"></a>
+            <div class="footer__company_logo"><a class="footer__company_logo_link" href="#">
+                <picture class="footer__company_logo_img">
+                  <source srcset="/static/img/logo-footer.svg" media="(min-width: 1361px)">
+                  <source srcset="/static/img/logo-min.svg" media="(min-width: 1000px)">
+                  <source srcset="/static/img/logo-footer.svg" media="(min-width: 501px)">
+                  <source srcset="/static/img/logo-min.svg" media="(min-width: 300px)"><img srcset="/static/img/logo.svg" alt="…">
+                </picture></a><small class="footer__company_label">Официальный сайт корпорации ТЕХНОНИКОЛЬ tn.ru</small></div>
+          </div><a class="btn__open" href="#"><span></span><span></span><span></span></a>
           <div class="footer__info">
             <div class="footer__line">
               <nav class="footerNav">
@@ -510,134 +512,6 @@
           </div>
         </div>
       </footer>
-      <div class="popup popupPeople">
-        <div class="popup-wrap">
-          <section class="subject">
-            <div class="subject__pic"><img src="static/img/index/gallery/01.jpg" alt=""></div>
-          </section>
-          <section class="preview">
-            <div class="preview__pic"><img src="static/img/index/gallery/01.jpg" alt=""></div>
-            <div class="preview__pic"><img src="static/img/index/gallery/03.jpg" alt=""></div>
-            <div class="preview__pic"><img src="static/img/index/gallery/02.jpg" alt=""></div>
-            <div class="preview__pic"><img src="static/img/index/gallery/04.jpg" alt=""></div>
-          </section>
-        </div>
-        <div class="popup-controls">
-          <div class="popupPeople-btnWrap__open"><span class="popup-btn__prev">Назад</span><span class="popup-btn__next">Вперед</span></div><span class="popup-btn__close popupPeople-btn__close">Закрыть</span>
-        </div>
-      </div>
-      <div class="popup popupPeople">
-        <div class="popup-wrap">
-          <section class="subject">
-            <div class="subject__pic"><img src="static/img/index/gallery/02.jpg" alt=""></div>
-          </section>
-          <section class="preview">
-            <div class="preview__pic"><img src="static/img/index/gallery/02.jpg" alt=""></div>
-            <div class="preview__pic"><img src="static/img/index/gallery/01.jpg" alt=""></div>
-            <div class="preview__pic"><img src="static/img/index/gallery/06.jpg" alt=""></div>
-            <div class="preview__pic"><img src="static/img/index/gallery/04.jpg" alt=""></div>
-          </section>
-        </div>
-        <div class="popup-controls">
-          <div class="popupPeople-btnWrap__open"><span class="popup-btn__prev">Назад</span><span class="popup-btn__next">Вперед</span></div><span class="popup-btn__close popupPeople-btn__close">Закрыть</span>
-        </div>
-      </div>
-      <div class="popup popupPeople">
-        <div class="popup-wrap">
-          <section class="subject">
-            <div class="subject__pic"><img src="static/img/index/gallery/03.jpg" alt=""></div>
-          </section>
-          <section class="preview">
-            <div class="preview__pic"><img src="static/img/index/gallery/03.jpg" alt=""></div>
-            <div class="preview__pic"><img src="static/img/index/gallery/01.jpg" alt=""></div>
-            <div class="preview__pic"><img src="static/img/index/gallery/02.jpg" alt=""></div>
-            <div class="preview__pic"><img src="static/img/index/gallery/04.jpg" alt=""></div>
-          </section>
-        </div>
-        <div class="popup-controls">
-          <div class="popupPeople-btnWrap__open"><span class="popup-btn__prev">Назад</span><span class="popup-btn__next">Вперед</span></div><span class="popup-btn__close popupPeople-btn__close">Закрыть</span>
-        </div>
-      </div>
-      <div class="popup popupPeople">
-        <div class="popup-wrap">
-          <section class="subject">
-            <div class="subject__pic"><img src="static/img/index/gallery/04.jpg" alt=""></div>
-          </section>
-          <section class="preview">
-            <div class="preview__pic"><img src="static/img/index/gallery/04.jpg" alt=""></div>
-            <div class="preview__pic"><img src="static/img/index/gallery/01.jpg" alt=""></div>
-            <div class="preview__pic"><img src="static/img/index/gallery/02.jpg" alt=""></div>
-            <div class="preview__pic"><img src="static/img/index/gallery/04.jpg" alt=""></div>
-          </section>
-        </div>
-        <div class="popup-controls">
-          <div class="popupPeople-btnWrap__open"><span class="popup-btn__prev">Назад</span><span class="popup-btn__next">Вперед</span></div><span class="popup-btn__close popupPeople-btn__close">Закрыть</span>
-        </div>
-      </div>
-      <div class="popup popupPeople">
-        <div class="popup-wrap">
-          <section class="subject">
-            <div class="subject__pic"><img src="static/img/index/gallery/05.jpg" alt=""></div>
-          </section>
-          <section class="preview">
-            <div class="preview__pic"><img src="static/img/index/gallery/05.jpg" alt=""></div>
-            <div class="preview__pic"><img src="static/img/index/gallery/01.jpg" alt=""></div>
-            <div class="preview__pic"><img src="static/img/index/gallery/02.jpg" alt=""></div>
-            <div class="preview__pic"><img src="static/img/index/gallery/04.jpg" alt=""></div>
-          </section>
-        </div>
-        <div class="popup-controls">
-          <div class="popupPeople-btnWrap__open"><span class="popup-btn__prev">Назад</span><span class="popup-btn__next">Вперед</span></div><span class="popup-btn__close popupPeople-btn__close">Закрыть</span>
-        </div>
-      </div>
-      <div class="popup popupPeople">
-        <div class="popup-wrap">
-          <section class="subject">
-            <div class="subject__pic"><img src="static/img/index/gallery/06.jpg" alt=""></div>
-          </section>
-          <section class="preview">
-            <div class="preview__pic"><img src="static/img/index/gallery/06.jpg" alt=""></div>
-            <div class="preview__pic"><img src="static/img/index/gallery/01.jpg" alt=""></div>
-            <div class="preview__pic"><img src="static/img/index/gallery/02.jpg" alt=""></div>
-            <div class="preview__pic"><img src="static/img/index/gallery/04.jpg" alt=""></div>
-          </section>
-        </div>
-        <div class="popup-controls">
-          <div class="popupPeople-btnWrap__open"><span class="popup-btn__prev">Назад</span><span class="popup-btn__next">Вперед</span></div><span class="popup-btn__close popupPeople-btn__close">Закрыть</span>
-        </div>
-      </div>
-      <div class="popup popupPeople">
-        <div class="popup-wrap">
-          <section class="subject">
-            <div class="subject__pic"><img src="static/img/index/gallery/07.jpg" alt=""></div>
-          </section>
-          <section class="preview">
-            <div class="preview__pic"><img src="static/img/index/gallery/07.jpg" alt=""></div>
-            <div class="preview__pic"><img src="static/img/index/gallery/01.jpg" alt=""></div>
-            <div class="preview__pic"><img src="static/img/index/gallery/02.jpg" alt=""></div>
-            <div class="preview__pic"><img src="static/img/index/gallery/04.jpg" alt=""></div>
-          </section>
-        </div>
-        <div class="popup-controls">
-          <div class="popupPeople-btnWrap__open"><span class="popup-btn__prev">Назад</span><span class="popup-btn__next">Вперед</span></div><span class="popup-btn__close popupPeople-btn__close">Закрыть</span>
-        </div>
-      </div>
-      <div class="popup popupPeople">
-        <div class="popup-wrap">
-          <section class="subject">
-            <div class="subject__pic"><img src="static/img/index/gallery/08.jpg" alt=""></div>
-          </section>
-          <section class="preview">
-            <div class="preview__pic"><img src="static/img/index/gallery/08.jpg" alt=""></div>
-            <div class="preview__pic"><img src="static/img/index/gallery/01.jpg" alt=""></div>
-            <div class="preview__pic"><img src="static/img/index/gallery/02.jpg" alt=""></div>
-            <div class="preview__pic"><img src="static/img/index/gallery/04.jpg" alt=""></div>
-          </section>
-        </div>
-        <div class="popup-controls">
-          <div class="popupPeople-btnWrap__open"><span class="popup-btn__prev">Назад</span><span class="popup-btn__next">Вперед</span></div><span class="popup-btn__close popupPeople-btn__close">Закрыть</span>
-        </div>
-      </div>
     </div>
     <!--END out-->
   </body>

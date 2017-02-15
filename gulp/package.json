@@ -32,7 +32,6 @@
     "lodash": "^4.17.4",
     "postcss-svg": "^1.0.4",
     "require-dir": "^0.3.0",
-    "rimraf": "^2.4.3",
-    "smart-grid": "^1.0.0"
+    "rimraf": "^2.4.3"
   }
 }

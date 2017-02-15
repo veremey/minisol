@@ -6,7 +6,7 @@ var config = require('../config');
 gulp.task('watch', [
     'sprite:watch',
     'sass:watch',
-    'smartgrid',
+    // 'smartgrid',
     // 'copy:watch',
     'pug:watch',
     'font:watch',

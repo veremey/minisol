@@ -3,7 +3,9 @@
 	display: flex
 	flex-direction: column
 	align-self: flex-start
-	margin-top: 15px
+	margin: 15px
+	+r(1250)
+		margin-top: 22px
 	&__label
 		color: $gray
 		font-size: 1.4rem
@@ -14,3 +16,5 @@
 		cursor: pointer
 		white-space: nowrap
 		+rb
+		+r(1250)
+			font-size: 2rem

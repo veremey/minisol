@@ -24,7 +24,6 @@
 		background: white
 	&.dragging
 		cursor: pointer
-		cursor: hand
 
 .slick-slider .slick-list,
 .slick-track,
@@ -107,24 +106,25 @@
 	+try(-50%)
 	+r(800)
 		width: 100%
-		top: 90%
+		top: 94%
 		+try(0)
 	li
 		position: relative
 		display: inline-block
-		padding: 0 3px
+		// padding: 0 3px
+		padding: 12px
 		margin: 0 4px
+		cursor: pointer
 		&.slick-active
 			button
 				background: #672146
 	button
 		border: none
 		display: block
-		width: 16px
-		height: 16px
+		width: 8px
+		height: 8px
 		background: #fff
 		box-shadow: 0 1px 5px rgba(0,0,0,.25)
-		cursor: pointer
 		+hide-text
 		border-radius: 50%
 		&:active,
@@ -150,16 +150,32 @@
 			top: 88%
 			+trx(-50%)
 		.slick-active
-			box-shadow: 0 0 10px 0 rgba(0, 0, 0, .8)
+			// box-shadow: 0 0 10px 0 rgba(0, 0, 0, .8)
+			&:after
+				content: '\002B'
 		li
 			text-align: center
 			margin: 2px 0
 			padding: 0
 			width: 50px
 			height: 50px
-			border-radius: 50px
+			border-radius: 100%
+			&:after
+				content: none
+				// display: none
+				color: #fff
+				font-size: 12px
+				text-transform: uppercase
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+				+cg
 			+r(1360)
 				margin: 0 5px
+			+r(650)
+				width: 30px
+				height: 30px
 		a
 			position: relative
 			display: block
@@ -168,6 +184,10 @@
 			cursor: pointer
 			overflow: hidden
 			border-radius: 100%
+			+r(650)
+				width: 30px
+				height: 30px
+				// padding: 8px
 		img
 			position: absolute
 			top: 50%
