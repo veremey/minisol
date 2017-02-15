@@ -3,10 +3,10 @@ div.popup__question.js_close
 		button.btn__close.is_active
 		h3.title__popup у вас есть вопрос?
 		p.popup__question_desc наши специалисты рады будут помочь
-		form(method='post', action='', name='question', autocomplete='on').popup__question_form
+		form(method='post', action='/', name='question', autocomplete='on').popup__question_form
 			input(type='text', autocomplete='on', name='yourQuestion', placeholder='Ваш вопрос').popup__question_item
 			input(type='text', autocomplete='on', name='name', placeholder='Ваше имя').popup__question_data
-			input(type='mail', name='mails', autocomplete='on', placeholder='Эл. почта', requred).popup__question_data
+			input(type='email', autocomplete='on', name='mail', placeholder='Эл. почта', required).popup__question_data
 			.popup__question_wrp
 				fieldset.popup__fieldset
 					label(for='tel').popup__fieldset_label Телефон
@@ -18,6 +18,4 @@ div.popup__question.js_close
 						img(src='/static/img/index/skoba.png', alt='изображение').popup__fieldset_img
 			button(type='submit').btn отправить
 
-
-
-	footer.popup__question_footer Ваш вопрос успешно отправлен!
+	div.popup__question_footer Ваш вопрос успешно отправлен!
