@@ -113,6 +113,7 @@
 						top: 0
 						//height: 0//todo
 						overflow: hidden
+
 		&_list.has_subnav &_link
 			position: relative
 			padding-right: 15px
@@ -153,6 +154,9 @@
 		display: flex
 		flex: 0 0 400px
 		height: 100%
+		+r(1360)
+			justify-content: flex-end
+			flex: 0 0 320px
 		+r(1000)
 			position: absolute
 			top: 0
@@ -296,6 +300,7 @@
 		overflow: hidden
 	&.is_open
 		transform: rotateX(0deg)
+		opacity: 1
 		height: auto //!important
 
 .logo

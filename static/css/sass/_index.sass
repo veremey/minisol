@@ -199,6 +199,10 @@
 			+rm
 	.btn
 		margin-top: 5rem
+		+r(800)
+			height: 45px
+			border-width: 2px
+			line-height: 45px
 
 .gallery
 	padding: 80px 0
@@ -207,8 +211,8 @@
 		margin-top: 50px
 		+r(650)
 			font-size: 12px
-			height: 4.6rem
-			line-height: 4.3rem
+			height: 46px
+			line-height: 43px
 	&__row
 		display: flex
 		flex-wrap: nowrap
@@ -256,20 +260,25 @@
 	display: flex
 	align-items: stretch
 	height: auto
+	min-height: 610px
 	margin-bottom: 80px
 	flex-wrap: nowrap
-	background: #f9f8f7 url('../img/index/magzin-arrow.jpg') 0 center no-repeat
-	background-size: cover
+	background: #f9f8f7 url('../img/index/arr.png') 0 center no-repeat
+	// background-size: cover
 	overflow: hidden
 	+tr(1s)
+	+r(1000)
+		flex-wrap: wrap
+		background-position: 0 top
+		background-size: auto 350px
+	+r(650)
+		background-position: 00% top
 	&:hover
-		background-position: -40% center
+		background-position: 20% center
 		+r(1000)
-			background-position: -30% center
-		+r(800)
-			background-position: -4% center
+			background-position: 20% top
 		+r(650)
-			background-position: -1% center
+			background-position: 70% top
 	.btn
 		background-color: $n
 		&:hover
@@ -278,10 +287,15 @@
 		position: relative
 		// background-color: #396
 		width: 50%
-		flex: 1
 		overflow: hidden
 		+r(1000)
-			display: none
+			position: absolute
+			width: 100%
+			top: 130px
+			left: 50%
+			+trx(-50%)
+			height: 170px
+
 	&__img
 		position: absolute
 		right: 2%
@@ -289,6 +303,11 @@
 		+try(-50%)
 
 		min-width: 100%
+		+r(1000)
+			height: 100%
+			min-width: auto
+			right: 50%
+			transform: translate(50%, -50%)
 
 	&__content
 		margin: 0
@@ -296,24 +315,40 @@
 		width: 50%
 		+r(1000)
 			width: 100%
+			padding: 30px 20px 70px
 	&__title
 		font-size: 5.6rem
 		line-height: 1.15
 		letter-spacing: .05em
 		text-transform: uppercase
 		+cg
-		+r(800)
-			font-size: 9vmin
+		+r(1000)
+			position: absolute
+			width: 100%
+			top: 30px
+			left: 20px
+			right: 20px
+			text-align: center
+			font-size: 24px
+
+			max-height: 80px
+			overflow: hidden
+			text-overflow: ellipsis
 	&__desc
 		width: 66.6666%
 		font-size: 1.6rem
 		line-height: 1.5em
-		+r(650)
-			width: 90%
+		+r(1000)
+			margin: 330px 20px 150px
+			text-align: center
+			width: auto
 	.btn
 		margin: 5.5rem auto 0
-		+r(650)
-			display: block
+		+r(1000)
+			position: absolute
+			bottom: 70px
+			left: 50%
+			+trx(-50%)
 
 .news
 	text-align: center

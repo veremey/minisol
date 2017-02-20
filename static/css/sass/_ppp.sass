@@ -29,33 +29,41 @@
 			display: inline-block
 
 		&_file
-			all: unset
-			position: relative
-			height: 100%
-			width: 100%
-			cursor: pointer
-			font-size: 0
-			background-color: #f9f8f7
-			border-radius: 50px
-			overflow: hidden
+			width: 0
+			height: 0
 			opacity: 0
-		&_inner
+			overflow: hidden
+			position: absolute
+			z-index: -1
+
+		&_pic
 			position: absolute
 			top: 0
 			bottom: 0
-			left: 0
 			right: 0
-			font-size: 1.6rem
-
-			background-color: #f9f8f7
+			width: 70px
+			height: 50px
 			border-radius: 50px
-			overflow: hidden
+			+tr(.4s)
 			pointer-events: none
 		&_desc
+			display: block
+			border-radius: 50px
+			height: 50px
+			cursor: pointer
+			background-color: #f9f8f7
+			text-align: left
 			line-height: 50px
 			padding-left: 26px
 			font-size: 16px
 			+rl
+			+r(1000)
+				background-color: #FFF
+			&:hover
+				.popup__fieldset_pic
+					background-color: #efeae4
+					+r(1000)
+						background-color: #FFF
 		&_img
 			position: absolute
 			top: 50%
@@ -151,7 +159,7 @@
 	.btn
 		margin-top: 5rem
 		+r(650)
-			height: 50px
+			height: 45px
 			line-height: 1
 			font-size: 12px
 			width: 100%
@@ -166,6 +174,10 @@
 		+tr(.3s)
 		&:hover
 			+scale(.9)
+			+r(800)
+				width: 28px
+				height: 28px
+				+trx(-50%)
 		+r(1360)
 			right: 30px
 		+r(800)

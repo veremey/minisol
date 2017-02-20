@@ -90,10 +90,10 @@
                   <input class="popup__fieldset_tel" type="tel" autocomplete="on" name="tel" placeholder="+7 (___) ___ - __ - __">
                 </fieldset>
                 <fieldset class="popup__fieldset">
-                  <input class="popup__fieldset_file" type="file">
-                  <div class="popup__fieldset_inner">
-                    <p class="popup__fieldset_desc">Прикрепить файл</p><img class="popup__fieldset_img" src="/static/img/index/skoba.png" alt="изображение">
-                  </div>
+                  <input class="popup__fieldset_file" type="file" name="file" id="file" data-multiple-caption="Выбрано {count} файла" multiple>
+                  <label class="popup__fieldset_desc" for="file">
+                    <div class="popup__fieldset_pic"><img class="popup__fieldset_img" src="/static/img/index/skoba.png" alt="изображение"></div><span>Прикрепить файл</span>
+                  </label>
                 </fieldset>
               </div>
               <button class="btn" type="submit">отправить</button>
@@ -462,7 +462,7 @@
               <div class="tip_desc">черепица на объекте</div>
             </div>
           </div>
-        </section>
+        </section><a class="btn btn__hide" href="#">подбор цвета черепицы</a>
       </article>
       <article class="gallery popup_class is_animated">
         <h3 class="title__article">ФОТОгалерея</h3>
@@ -472,7 +472,7 @@
       <article class="magazin is_animated">
         <div class="magazin__pic"><img class="magazin__img" src="static/img/index/magzin-items.png" alt="изображение"></div>
         <div class="magazin__content">
-          <h3 class="magazin__title">интернет-<br>магазин<br>технониколь</h3>
+          <h3 class="magazin__title">интернет- магазин технониколь</h3>
           <p class="magazin__desc">Изучите полный ассортимент композитной черепицы и комплектующих элементов от ТЕХНОНИКОЛЬ LUXARD в нашем официальном интернет-магазине.</p><a class="btn btn__article" href="#">перейти в магазин</a>
         </div>
       </article>
@@ -509,7 +509,7 @@
           <div class="footer__company">
             <div class="footer__company_logo"><a class="footer__company_logo_link" href="#">
                 <picture class="footer__company_logo_img">
-                  <source srcset="/static/img/logo-footer.svg" media="(min-width: 1361px)">
+                  <source srcset="/static/img/logo-footer.svg" media="(min-width: 1001px)">
                   <source srcset="/static/img/logo-min.svg" media="(min-width: 1000px)">
                   <source srcset="/static/img/logo-footer.svg" media="(min-width: 501px)">
                   <source srcset="/static/img/logo-footer.svg" media="(min-width: 300px)"><img srcset="/static/img/logo-footer.svg" alt="…">
@@ -530,7 +530,7 @@
             </div>
             <div class="footer__dev">
               <div class="footer__copy">© Композитная черепица ТЕХНОНИКОЛЬ LUXARD, 2017</div>
-              <div class="footer__design">Дизайн сайта<a class="footer__design_link" href="/">
+              <div class="footer__design">Дизайн сайта<a class="footer__design_link" href="/" target="_blank">
                   <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 101.59 37.39">
                     <path d="M15.09 37.08V25L10.21 37.08H8.6L3.72 25V37.08H0V19.76H5.2L9.4 30.23l4.21-10.47H18.8V37.08Z" fill="#fff"></path>
                     <path d="M22.29 37.08V19.76H26V37.08Z" fill="#fff"></path>

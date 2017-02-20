@@ -1,4 +1,16 @@
 .btn
+	position: relative
+	&:before
+		content: ''
+		position: absolute
+		top: 50%
+		left: 0
+		right: 0
+		height: 2px
+		+try(-50%)
+		background-color: red
+
+
 	display: inline-block
 	width: 360px
 	border: 2px solid #c7b299
@@ -20,12 +32,12 @@
 		background-color: #c7b299
 		color: #fff
 	&__article
-		height: 4.6rem
+		height: 46px
 		width: 250px
 		text-align: center
-		line-height: 4.3rem
+		line-height: 43px
 		margin-top: 5.5rem
-		font-size: 1.2rem
+		font-size: 12px
 	&__close,
 	&__open
 		width: 62px
@@ -97,3 +109,17 @@
 				transform-origin: left center
 				margin-top: -2px
 
+	&__hide
+		display: none
+		height: 45px
+		line-height: 43px
+		border: 2px solid #c7b299
+		background-color: #c7b299
+		color: #fff
+		text-transform: uppercase
+		font-size: 12px
+		letter-spacing: .1em
+		text-align: center
+		margin: 40px auto 0
+		+r(650)
+			display: block
