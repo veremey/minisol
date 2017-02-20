@@ -81,6 +81,7 @@ $(document).ready(function() {
 	$('.btn__open').on('click', function () {
 		$(this).toggleClass('is_active');
 		$('.js_open').toggleClass('is_opened');
+		$('.subWrapper').removeClass('is_open')
 		$('.js-back').hide();
 		$('.header__menu, .subWrapper').css({
 			'left': ''
@@ -97,20 +98,14 @@ $(document).ready(function() {
 			var $this = $(this);
 			var childSubMenu = $this.children('.subWrapper');
 
+			$('.has_subnav, .subWrapper').removeClass('is_open');
 			childSubMenu.toggleClass('is_open');
+			$this.toggleClass('is_open');
 
 			return false;
 		});
-	};
+	}
 
-	$('.js-back').on('click', function(){
-		$moveLeft = 0;
-		$('.header__menu').css({
-			'left': $moveLeft+'vw'
-		});
-		$('.subWrapper').removeClass('is_open');
-		$(this).hide();
-	});
 
 	// submenu scroll
 	// ----------------
@@ -145,7 +140,6 @@ $(document).ready(function() {
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		speed: 1000,
-		// cssEase: 'cubic-bezier(0.600, -0.280, 0.735, 0.045)',
 		rtl: true,
 		dots: true,
 		arrows: false,
@@ -155,19 +149,6 @@ $(document).ready(function() {
 			return '<a><img src="'+thumb+'"></a>';
 		},
 		asNavFor: '.mod_normal .present',
-		// responsive: [
-		// 	{
-		// 		breakpoint: 1000,
-		// 		settings: {
-		// 			rtl: false,
-		// 			customPaging : function(slider, i) {
-		// 				var itm = $(slider.$slides).length - 1;
-		// 				var thumb = $(slider.$slides[itm - i]).data('thumb');
-		// 				return '<a><img src="'+thumb+'"></a>';
-		// 			}
-		// 		}
-		// 	}
-		// ]
 	});
 
 
@@ -177,7 +158,6 @@ $(document).ready(function() {
 	});
 
 	if($(document).width() < 1000){
-		// $('.mod_normal .propose').removeAttr('dir');
 
 		$('.mod_normal .present').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
 			var activeSlide = $('.mod_normal .propose__item').length - nextSlide - 2;

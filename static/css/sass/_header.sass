@@ -65,7 +65,7 @@
 		+r(1000)
 			display: block
 			width: 100vw
-			padding: 0 20px
+			padding: 0 20px 60px
 			height: auto
 		&_list
 			position: relative
@@ -92,9 +92,11 @@
 					+arr(22, 11, $fiolet, t)
 					border-bottom: 0 solid $n
 					transition: .4s .2s
-			&:hover
-				+r(1000)
+				&.is_open
 					height: auto
+			&:hover
+				// +r(1000)
+				// 	height: auto
 				&:after
 					opacity: 1
 					border-bottom: 11px solid $fiolet
@@ -109,7 +111,7 @@
 					opacity: 1
 					+r(1000)
 						top: 0
-						height: 0
+						//height: 0//todo
 						overflow: hidden
 		&_list.has_subnav &_link
 			position: relative
@@ -294,7 +296,7 @@
 		overflow: hidden
 	&.is_open
 		transform: rotateX(0deg)
-		height: auto !important
+		height: auto //!important
 
 .logo
 	display: flex
@@ -338,7 +340,7 @@
 	font-size: 14px
 	padding: 0 16px
 	white-space: nowrap
-	z-index: 20
+	z-index: 500
 	+r(1000)
 		display: inline-block
 		padding: 0 20px

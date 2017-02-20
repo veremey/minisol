@@ -22,12 +22,17 @@
 					background: #f9f8f7 url('../img/index/arr-r.png') 0 center no-repeat
 					// background-size: cover
 					transition: background-position .2s ease
+					+r(800)
+						background-image: none
 					&.slick-active
 						background-position: 143% center
 						+r(1600)
 							background-position: 163% center
 						+r(1000)
 							background-position: 180% center
+						+r(800)
+							background-position: 280% center
+							background-image: none
 				&__wrap
 					left: 40%
 					+r(1600)
@@ -73,10 +78,14 @@
 		+r(1000)
 			background: #f9f8f7 url('../img/index/arr-r.png') 0% center no-repeat
 			transition: background-position .6s ease
+		+r(800)
+			background-image: none
 		&.yes-slick-current
 			background-position: 200% center
 			+r(1000)
 				background-position: 180% center
+			+r(800)
+				background-image: none
 
 	&__wrap
 		position: absolute
