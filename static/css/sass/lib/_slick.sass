@@ -112,7 +112,7 @@
 		position: relative
 		display: inline-block
 		// padding: 0 3px
-		padding: 12px
+		padding: 5px
 		margin: 0 4px
 		cursor: pointer
 		&.slick-active
@@ -142,7 +142,10 @@
 		left: auto
 		width: 50px
 		+try(-50%)
+
 		+r(1360)
+			right: 20px
+		+r(1000)//todo 1360
 			width: auto
 			white-space: nowrap
 			left: 50%
@@ -164,18 +167,19 @@
 				content: none
 				// display: none
 				color: #fff
-				font-size: 12px
+				font-size: 22px
 				text-transform: uppercase
 				position: absolute
 				top: 50%
 				left: 50%
 				transform: translate(-50%, -50%)
+				+tr(.5s)
 				+cg
-			+r(1360)
+			+r(1000)//todo 1360
 				margin: 0 5px
 			+r(650)
-				width: 30px
-				height: 30px
+				width: 38px
+				height: 38px
 		a
 			position: relative
 			display: block
@@ -185,8 +189,8 @@
 			overflow: hidden
 			border-radius: 100%
 			+r(650)
-				width: 30px
-				height: 30px
+				width: 38px
+				height: 38px
 				// padding: 8px
 		img
 			position: absolute
@@ -201,5 +205,33 @@
 			right: auto
 			left: 35px
 			+r(1360)
+				left: 20px
+			+r(1000)//todo 1360
 				left: 50%
 				+trx(-50%)
+
+.news__section
+	padding-top: 50px
+	.slick-prev,
+	.slick-next
+		top: 0
+		right: auto
+		left: 50%
+
+		width: 36px
+		height: 36px
+		background-color: $n
+		border: 1px solid #cebba5
+		border-radius: 100%
+		&:hover
+			background-color: #cebba5
+		+r(400)
+			top: 20px
+	.slick-prev
+		+trx(-120%)
+		&:before
+			+s(arrow-prev)
+	.slick-next
+		+trx(20%)
+		&:before
+			+s(arrow-next)

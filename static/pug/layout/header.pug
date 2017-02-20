@@ -1,28 +1,28 @@
-header.header
+header.header.is_animated
 	.layout
 		a(href='/').logo
 			picture.logo__pic
 				source(srcset="/static/img/logo.svg" media="(min-width: 1361px)")
 				source(srcset="/static/img/logo-min.svg" media="(min-width: 1000px)")
-				source(srcset="/static/img/logo.svg" media="(min-width: 501px)")
-				source(srcset="/static/img/logo-min.svg" media="(min-width: 300px)")
 				img(srcset="/static/img/logo.svg" alt="…")
-		div.select.js-select
-			span.select__text.js-select-text
-			input(type="hidden", value="").js-select-input
-			ul.select__list.js-select-list
-				li(data-id="0")
-					img(src='/static/img/flag-ru.jpg', alt='ru').lang__img
-					| ru
-				li(data-id="1")
-					img(src='/static/img/flag_en.png', alt='ru').lang__img
-					| en
 		a(href='#').btn__open
-			span
-			span
-			span
+			b меню
+			.btn__open_wrap
+				span
+				span
+				span
 		button.header_back.js-back назад
 		.header__hide.js_open
+			div.select.js-select
+				span.select__text.js-select-text
+				input(type="hidden", value="").js-select-input
+				ul.select__list.js-select-list
+					li(data-id="0")
+						img(src='/static/img/flag-ru.jpg', alt='ru').lang__img
+						| ru
+					li(data-id="1")
+						img(src='/static/img/flag_en.png', alt='ru').lang__img
+						| en
 			nav.header__nav
 				ul.header__menu
 					li.header__menu_list.has_subnav
@@ -72,8 +72,9 @@ header.header
 									a(href='#').header__submenu_link Получить гарантийный сертификат
 					li.header__menu_list
 						a(href='#').header__menu_link Где купить?
-			.hotLine
-				small.hotLine__label горячая линия
-				a(href='tel:8800200565', title='Звонки со стационарного телефона бесплатны').hotLine__tel 8 800 200-05-65
-			a(href='#').qustion.js-question Задать <br> вопрос
+			.header__info
+				.hotLine
+					small.hotLine__label горячая линия
+					a(href='tel:8800200565', title='Звонки со стационарного телефона бесплатны').hotLine__tel 8 800 200-05-65
+				a(href='#').qustion.js-question Задать <br> вопрос
 	include ../module/ppp_form.pug

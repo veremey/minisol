@@ -27,21 +27,11 @@
 =rm
 	font-family: 'Roboto-Medium', Arial, sans-serif
 
-@function get-vh($target)
-	$vh-context: (1000*.008) * 1px
-	@return ($target/$vh-context) * 1vh
-
-@function get-vw($target)
-	$vw-context: (1000*.0145) * 1px
-	@return ($target/$vw-context) * 1vw
-
-
 // colors
 $n: transparent
 $fiolet: #672146
 $gold: #754c24
 $gray: #8f8787
-
 
 // size
 $max-width: 1290px
@@ -54,7 +44,6 @@ html
 		background: rgba(0, 0, 0, .2)
 		color: #fff
 
-
 body
 	min-width: 300px
 	font-size: 1.6rem
@@ -62,7 +51,6 @@ body
 	color: #000
 	background-color: #fff
 	+rl
-
 
 // common blocks
 
@@ -100,6 +88,8 @@ th,
 a
 	text-decoration: none
 	color: inherit
+	&:focus
+		outline: none
 ul
 	margin: 0
 li

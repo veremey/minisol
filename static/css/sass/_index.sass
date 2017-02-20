@@ -6,13 +6,18 @@
 	width: 100%
 	background-color: $fiolet
 	color: #fff
+	+r(1000)
+		padding-top: 50px
 	&__wrap
 		position: relative
 		top: 0
 		left: 0
+		min-height: 640px
 		height: calc(100vh - 88px)
 		width: 100%
 		overflow: hidden
+		+r(1000)
+			height: calc(100vh - 50px)
 	&__img
 		position: absolute
 		top: 50%
@@ -36,26 +41,20 @@
 		position: relative
 		width: 62vmin
 		margin: 0 auto
-		// height: get-vw(280px)
-		// height: 19.3vw
 		&:before
 			content: ''
 			position: absolute
 			top: 0
-			left: 50%
+			left: 0
 			width: 15vmin
 			height: 15vmin
 			background-image: url('../img/stamp.png')
 			background-size: contain
 			background-repeat: no-repeat
-			margin-left: -18vmin
-			margin-left: -(get-vw(300px))
-			transform: translateX(-15vmin)
 			z-index: 10
 			+r(1360)
 				width: 12vmin
 				height: 12vmin
-				left: 60%
 		img
 			margin: 0 auto
 			max-width: 100%
@@ -63,11 +62,13 @@
 	&__mark
 		display: inline-block
 		position: relative
-		padding: 0 1em
+		padding: 0 15px
 		line-height: 43px
-		// background-color: $fiolet
-		+r(650)
-			line-height: 1.5em
+		white-space: nowrap
+		text-align: center
+		+r(800)
+			line-height: 1.3em
+			padding: 4px 30px
 		&:before
 			content: ''
 			position: absolute
@@ -92,14 +93,7 @@
 				line-height: 1.3
 		strong
 			font-weight: normal
-			margin: 0 0 0 0.5em
 			+pe
-			& + span,
-			& + a,
-			& + p,
-			& + em
-				margin-right: .5em
-
 
 		&_border
 			position: absolute
@@ -107,33 +101,27 @@
 			right: 0
 			background-color: $fiolet
 			width: calc( 100% - 15px)
-			height: calc( 100% - 15px)
+			height: calc( 100% - 14px)
 			z-index: -1
 			&.mod_bottom
 				top: 15px
-				right: 15px
+				right: 14px
 	&__title
-		font-size: 5vh
+		font-size: 7.5vh
 		letter-spacing: .2em
 		text-transform: uppercase
 		margin-top: .48em
 		+cg
-		+r(1360)
-			font-size: 7.5vh
 		+r(650)
 			font-size: 5vh
 		+rh(900)
 			margin: .5em 0
-
 	&__footer
 		display: inline-block
 		margin: 0 auto
 		background-color: $fiolet
 		border-radius: 50px
 		overflow: hidden
-		+r(650)
-			background-color: $n
-			border-radius: 0
 	&__link
 		display: inline-block
 		position: relative
@@ -141,9 +129,13 @@
 		line-height: 50px
 		text-transform: uppercase
 		font-size: 1.4rem
+		+tr(.4s)
 		+rm
 		+r(650)
-			border-radius: 50px
+			font-size: 1.2rem
+		+r(400)
+			font-size: 1rem
+			padding: 0 15px
 		+r(400)
 			line-height: 40px
 		&:not(:last-child)
@@ -155,16 +147,8 @@
 				bottom: 10px
 				width: 1px
 				background-color: #FFF
-			+r(650)
-				margin-bottom: 20px
-				&:after
-					content: none
 		&:hover
-			background-color: darken($fiolet, 4%)
-			+tr(.4s)
-		+r(650)
-			display: block
-			background-color: $fiolet
+			background-color: #9d0667
 
 .info
 	text-align: center
@@ -217,9 +201,12 @@
 	text-align: center
 	.btn
 		margin-top: 50px
+		+r(650)
+			font-size: 12px
+			height: 4.6rem
+			line-height: 4.3rem
 	&__row
 		display: flex
-		// flex-direction: column
 		flex-wrap: nowrap
 		align-items: flex-start
 		+r(800)
@@ -257,7 +244,7 @@
 		top: 50%
 		left: 50%
 		transform: translate(-50%, -50%)
-		min-width: 100%
+		width: 100%
 		min-height: 100%
 
 .magazin
@@ -270,10 +257,19 @@
 	background: #f9f8f7 url('../img/index/magzin-arrow.jpg') 0 center no-repeat
 	background-size: cover
 	overflow: hidden
+	+tr(1s)
+	&:hover
+		background-position: -40% center
+		+r(1000)
+			background-position: -30% center
+		+r(800)
+			background-position: -4% center
+		+r(650)
+			background-position: -1% center
 	.btn
 		background-color: $n
 		&:hover
-			background-color: $gold
+			background-color: #c7b299
 	&__pic
 		position: relative
 		// background-color: #396
@@ -318,57 +314,52 @@
 .news
 	text-align: center
 	padding-bottom: 80px
+	.btn
+		+r(650)
+			font-size: 12px
+			height: 4.6rem
+			line-height: 4.3rem
 	&__section
-		display: flex
-		flex-direction: row
-		flex-wrap: nowrap
-		height: 100%
+		text-align: left
+		height: 540px
 		margin-bottom: 30px
+	&__row
+		display: inline-block
+		width: calc(50% - 2px)
 		+r(1000)
-			flex-wrap: wrap
-			display: block//
+			margin-bottom: 10px
+			height: 515px
 	&__link
 		position: relative
-		height: 100%
-		width: 25%
+		display: inline-block
+		vertical-align: top
+		width: calc(25% - 1px)
+		margin-right: 1px
 		text-align: left
-		border-right: 1px solid #fff
-		border-bottom: 70px solid #fff
 		background-color: #f4f0eb
+		overflow: hidden
 		+r(1000)
-			display: inline-block//
-			vertical-align: top//
-			width: 50%
+			// width: calc(50% - 1px)
+			margin-bottom: 70px
+			+tr(.4s)
 		+r(650)
 			width: 100%
+			margin-right: 0
 		&:hover
 			box-shadow: 0 0 32px rgba(0, 0, 0, .4)
 			border-bottom: 10px solid #c7b299
+			margin-bottom: 10px
 			z-index: 2
-			+r(1000)
-				border-bottom: 10px solid #c7b299
-				margin-bottom: 60px
 			.news
 				&__pic
-					height: 20vmax
-					+r(1000)
-						height: 14vw
-					+r(800)
-						height: 20vw
-					+r(650)
-						height: 30vw
-				// &__content
-					// height: 46%
+					height: 260px
 	&__pic
 		position: relative
 		width: 100%
-		height: 14vw
+		height: 200px
 		overflow: hidden
-		transition: padding-top linear .2s, height linear .2s
-		+r(800)
-			height: 20vw
-		+r(650)
-			height: 30vw
+		transition: height linear .4s
+
 		&_title
 			position: absolute
 			top: 50%
@@ -390,25 +381,47 @@
 		min-height: 100%
 	&__content
 		padding: 7% 10%
-		// height: 64%
+		height: 240px
 		display: flex
 		flex-direction: column
 		background-color: #f4f0eb
 		transition: padding-top linear .2s
-		// flex-wrap: wrap
-		// align-content: space-between
 	&__title
+		height: 5.9rem
+		white-space: nowrap
+		text-overflow: ellipsis
+		overflow: hidden
 		color: $gold
 		font-size: 1.8rem
-		flex-basis: 50px
 		+rr
+		+r(760)
+			height: 5.6rem
+		+r(650)
+			height: 6.7rem
+		+r(400)
+			height: 5.7rem
 	&__desc
+		white-space: nowrap
+		text-overflow: ellipsis
+		overflow: hidden
+		margin-bottom: 0
 		font-size: 1.4rem
 		line-height: 1.3
 		+rr
+		+r(850)
+			height: 73px
+		+r(650)
+			height: 49px
 	&__time
 		display: inline-block
 		font-size: 1.1rem
 		color: #000
 		margin-top: 2em
 		+rr
+		+r(850)
+			position: absolute
+			bottom: 24px
+			left: 10%
+			margin-top: 0
+		// +r(650)
+		// 	margin-top: 1.4em

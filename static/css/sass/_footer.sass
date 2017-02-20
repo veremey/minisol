@@ -12,6 +12,7 @@
 		width: 96%
 		margin: 0 auto
 		+r(1000)
+			flex-wrap: wrap
 			align-items: center
 			width: 100%
 	&__company
@@ -20,26 +21,27 @@
 		flex-wrap: wrap
 		width: 23.77777%
 		+r(1000)
-			width: 50%
-			margin-left: 30px
-		+r(650)
-			display: block
-			width: 55%
-			// margin-right: 100px
+			width: 100%
 		&_logo
 			display: flex
 			flex-wrap: wrap
-			align-content: space-around
 			+rr
-			&:hover
-				opacity: .7
+			+r(1000)
+				width: 100%
 
 			&_link
 				width: 100%
 				max-height: 75px
 				text-align: center
+				padding-bottom: 24px
+				+tr(.4s)
+				&:hover
+					opacity: .7
 				+r(800)
 					margin-bottom: 20px
+				+r(400)
+					width: 92%
+					margin: 0 auto
 			&_img
 				max-height: 100%
 				width: 100%
@@ -52,12 +54,23 @@
 						width: auto
 						height: 100%
 		&_label
-			display: block
 			padding-left: 20%
 			color: $gray
-			font-size: 1.4rem
+			font-size: 14px
 			letter-spacing: .025em
-			// line-height: 1.78em
+			align-self: flex-end
+			+r(1000)
+				display: block
+				width: 100%
+				padding: 0
+				text-align: center
+			// +r(501)
+			// 	padding-left: 0
+			a
+				margin-left: .5em
+				+tr(.4s)
+				&:hover
+					opacity: .8
 	&__info
 		width: 72%
 		display: flex
@@ -66,14 +79,20 @@
 		+r(1250)
 			width: 75%
 		+r(1000)
-			display: none
-
+			width: 100%
 	&__line
 		position: relative
 		display: flex
 		justify-content: space-between
 		border-bottom: 1px solid #524949
 		padding-bottom: 26px
+		+r(1000)
+			justify-content: center
+			align-items: center
+			padding: 20px 0
+			margin-top: 16px
+			text-align: center
+			border-top: 1px solid #524949
 		&:after
 			content: ''
 			position: absolute
@@ -85,6 +104,9 @@
 	&__dev
 		padding: 26px 0 0
 		display: flex
+		align-items: center
+		+r(1000)
+			padding: 26px 20px 0
 	&__copy
 		width: calc(100% - 200px)
 		font-size: 14px
@@ -92,21 +114,48 @@
 		padding-right: 10%
 		color: $gray
 		+rr
+		+r(650)
+			width: auto
 	&__design
-		display: flex
 		color: #fbf4f6
-		align-items: center
 		font-size: 13px
 		letter-spacing: 0.025em
+		padding-bottom: 11px
+		margin-left: auto
 		+rr
+		+r(650)
+			display: flex
+			flex-wrap: wrap
+			width: 90px
+			justify-content: flex-end
 		&_link
+			display: inline-block
+			width: 70px
+			vertical-align: bottom
+			line-height: .8
 			margin-left: 10px
 			font-size: 20px
 			letter-spacing: .025em
 			text-transform: uppercase
 			+pb
+			+r(650)
+				width: 90px
+				margin: 0
+				order: -1
 			&:hover
 				color: #ccc
+				.svg_line
+					fill: #f7941d
+				.svg_duga
+					fill: #f7941d
+				.svg_wndw
+					fill: #9ea0a1
+				.svg_mdl
+					fill: #f15a29
+				.svg_top
+					fill: #c54a20
+				.svg_topest
+					fill: #9a3711
 	.btn__open
 		top: 50%
 		right: 15px
@@ -126,6 +175,33 @@
 				border-bottom-color: #fff
 			&:before
 				border-top-color: #fff
+	.hotLine
+		margin: 0 15px 15px
+		&__tel
+			+r(1000)
+				font-size: 24px
+				margin-top: 4px
+		+r(1000)
+			margin: 0
+
+.svg_topest
+	fill: $n
+	+tr(1.4s)
+.svg_top
+	fill: $n
+	+tr(1.2s)
+.svg_mdl
+	fill: $n
+	+tr(1s)
+.svg_wndw
+	fill: $n
+	+tr(.8s)
+.svg_duga
+	fill: $n
+	+tr(.6s)
+.svg_line
+	fill: $n
+	+tr(.4s)
 
 .footerNav
 	width: calc(100% - 200px)
@@ -133,6 +209,8 @@
 	+r(1300)
 		width: 100%
 		padding-right: 20px
+	+r(1000)
+		display: none
 .footerMenu
 	display: flex
 	justify-content: space-between
@@ -146,4 +224,4 @@
 		+rr
 		+tr(.4s)
 		&:hover
-			color: $gray
+			color: #c7b299

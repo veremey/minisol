@@ -1,0 +1,55 @@
+@mixin fromTop
+	opacity: 0
+	transform: translateY(-100px)
+	transition: transform .5s .3s, opacity .5s .3s
+	&.is_animated
+		opacity: 1
+		transform: translateY(0)
+
+
+@mixin fromBottom
+	opacity: 0
+	transform: translateY(50px)
+	transition: transform .5s .3s, opacity .5s .3s
+	&.is_animated
+		opacity: 1
+		transform: translateY(0)
+
+
+@mixin fromRight
+	opacity: 0
+	transform: translateX(50px)
+	transition: transform .5s .3s, opacity .5s .3s
+	&.is_animated
+		opacity: 1
+		transform: translateY(0)
+
+@mixin fromLeft
+	opacity: 0
+	transform: translateY(-50px)
+	transition: transform .5s .3s, opacity .5s .3s
+	&.is_animated
+		opacity: 1
+		transform: translateY(0)
+
+
+.header,
+.jumbotron__figure,
+.info__item,
+.info__content,
+.gallery__item,
+.magazin__content,
+.news__link
+	@include fromTop
+
+.jumbotron,
+.jumbotron__mark,
+.jumbotron__footer,
+.btn,
+.collection__wrap
+	@include fromBottom
+
+.jumbotron__title,
+.title__article,
+.magazin__pic
+	@include fromLeft

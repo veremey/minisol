@@ -1,12 +1,15 @@
 // Normally header styles
 .header
 	position: fixed
-	// position: absolute
 	top: 0
 	left: 0
 	right: 0
+	height: 88px
 	background-color: #FFF
+	box-shadow: 0 0 20px rgba(0,0,0,0.2)
 	z-index: 5
+	+r(1000)
+		height: 50px
 	.layout
 		display: flex
 		align-items: center
@@ -16,31 +19,18 @@
 		+r(1360)
 			padding-right: 30px
 		+r(1250)
-			padding: 0 15px
-		+r(650)
-			position: relative
-			padding: 0
-	.btn__open
-		display: none
-		position: relative
-		+r(1000)//1360
-			display: block
-			height: 40px
-			width: 40px
-			right: -15px
-			order: -1
-		&.is_active
-			z-index: 200
-			&:after
-				border-bottom-color: #fff
-			&:before
-				border-top-color: #fff
+			padding: 0 20px
+		+r(1000)
+			height: 50px
+
 	&__nav
 		height: 100%
 		+r(1250)
 			width: 72%
 		+r(1000)
 			width: 100%
+			border-top: 1px solid #dbdbdb
+
 	&__hide
 		display: flex
 		align-items: center
@@ -48,17 +38,20 @@
 		justify-content: space-between
 		height: 88px
 		+r(1360)
-			width: 85%
-		+r(1000)//1360
-			display: none
-		&.is_opened
+			width: 93%
+		+r(1000)
+			display: none//todo
+			overflow-y: scroll
+
+		&.is_opened //todo
 			display: block
 			position: fixed
-			top: 0
+			top: 50px
 			left: 0
 			width: 100vw
 			height: 100vh
-			background-color: $fiolet
+			background-color: #fff
+			border-top: 1px solid #dbdbdb
 			z-index: 100
 	&__menu
 		display: flex
@@ -66,23 +59,16 @@
 		font-size: 0
 		height: 100%
 		position: relative
-		// min-width: 540px//
 		z-index: 200
 		+r(1250)
 			justify-content: space-around
-		+r(1000)//1360
+		+r(1000)
 			display: block
 			width: 100vw
-			position: absolute
-			top: 50%
-			+try(-50%)
+			padding: 0 20px
 			height: auto
-			// max-height: 60vh
-			// overflow-y: scroll
-
 		&_list
 			position: relative
-			// display: inline-flex/////
 			display: flex
 			align-items: center
 			height: 100%
@@ -90,40 +76,41 @@
 			margin: 0 20px
 			+r(1250)
 				margin: 0 5px
-			+r(1000)//1360
-				position: static
+			+r(1000)
 				display: block
-				height: auto
-				text-align: center
+				height: 60px
 				white-space: normal
 				margin: 0
 			&.has_subnav
 				&:after
-					// display: none
 					content: ''
 					position: absolute
 					bottom: 0
 					left: 50%
-					transform: translateX(-50%)
+					transform: translate(-50%, 0)
 					opacity: 0
 					+arr(22, 11, $fiolet, t)
-					// transition: opacity .4s .2s
+					border-bottom: 0 solid $n
+					transition: .4s .2s
 			&:hover
+				+r(1000)
+					height: auto
 				&:after
 					opacity: 1
-					transition: opacity .4s .2s
+					border-bottom: 11px solid $fiolet
+					+r(1000)
+						content: none
 				.header__menu_link
 					opacity: .7
 					&:after
 						left: 0
-						transition: left .2s
 				.subWrapper
-					height: auto
-					top: 88px
+					transform: rotateX(0deg)
 					opacity: 1
-					+r(1000)//1360
+					+r(1000)
 						top: 0
-
+						height: 0
+						overflow: hidden
 		&_list.has_subnav &_link
 			position: relative
 			padding-right: 15px
@@ -134,6 +121,8 @@
 				right: 0
 				transform: translateY(-50%)
 				+s(icon-bird)
+				+r(1000)
+					top: 57%
 		&_link
 			display: flex
 			height: 100%
@@ -141,9 +130,8 @@
 			font-size: 1.7rem
 			position: relative
 			overflow: hidden
-			// transition: left .2s
 			+rr
-			+r(1000)//1360
+			+r(1000)
 				display: inline-block
 				font-size: 40px
 			+r(400)
@@ -156,8 +144,18 @@
 				width: 100%
 				height: 2px
 				background-color: $fiolet
-				+r(1000)//1360
+				transition: left .2s
+				+r(1000)
 					content: none
+	&__info
+		display: flex
+		flex: 0 0 400px
+		height: 100%
+		+r(1000)
+			position: absolute
+			top: 0
+			right: 0
+			height: 50px
 	&_back
 		display: none
 		+r(1000)
@@ -181,64 +179,122 @@
 		max-width: 1200px
 		width: 86vw
 		margin: 0 auto
-		// transform: translateX(-50%)
 		font-size: 0
 		padding: 10px
 		z-index: 20
 		text-align: center
-		+r(1000)//1360
+		+r(1000)
 			display: block
 			width: 100%
-
+			text-align: left
 		&_list
 			display: inline-block
 			margin: 0 13px
-			+r(1000)//1360
+			+r(1000)
 				display: block
 				width: 100%
-				margin: 0 0 14px
+				margin: 0
+				padding: 0
 		&_link
 			display: block
+			position: relative
 			font-size: 1.6rem
 			color: #fff
 			line-height: 3rem
 			margin-bottom: 2px
-			+rr
 			transition: color .2s
+			overflow: hidden
+			+rr
+			+r(1000)
+				color: #000
+				font-size: 1.8rem
+				line-height: 1.5
+			&:after
+				content: ''
+				position: absolute
+				bottom: 0
+				left: -100%
+				width: 100%
+				height: 2px
+				background-color: #ccc
+				transition: left .2s
+				+r(1000)
+					content: none
 			&:hover
 				color: #ccc
-			+r(1000)
-				line-height: 1.2
-
+				&:after
+					left: 0
+	.btn__open
+		display: none
+		position: relative
+		text-align: right
+		+r(1000)
+			display: block
+			height: 20px
+			right: 24px
+			span
+				background-color: #dc1c23
+				&:nth-child(2)
+					top: 50%
+					-webkit-transform-origin: left center
+					-moz-transform-origin: left center
+					-o-transform-origin: left center
+					transform-origin: left center
+					margin-top: -1px
+		&.is_active
+			z-index: 200
+			.btn__open_wrap
+				height: 20px
+			&:after
+				border-bottom-color: #fff
+			&:before
+				border-top-color: #fff
+		&_wrap
+			position: relative
+			width: 20px
+			height: 16px
+			margin-left: 64px
+		b
+			position: absolute
+			top: 50%
+			left: 4px
+			text-transform: uppercase
+			font-size: 16px
+			color: #959595
+			+try(-50%)
+			+rr
 	.hotLine
+		+r(1000)
+			margin: 0
+			&__label
+				display: none
+			&__tel
+				line-height: 50px
+				margin-right: 8px
 		&__tel
 			color: #000
+			+r(650)
+				font-size: 1.4rem
 
 .subWrapper
-	height: 0
 	position: fixed
 	top: 88px
 	left: 0
 	right: 0
 	opacity: 0
 	background-color: $fiolet
-	transition: opacity .4s .2s, height .4s .2s
-	overflow: hidden
-	// max-height: 60vh
-	// overflow-y: auto
-	+r(1000)//1360
-		// overflow: visible
-		top: 0
-		left: 100%
-		// height: auto
-		width: 100%
-		text-align: center
-		opacity: 1
-		z-index: 50
+	transition: opacity .4s .2s
+	transform-origin: top center
+	transform: rotateX(90deg)
+	+tr(.5s)
+	+r(1000)
+		position: static
+		background: #F5F5F5
+		height: 0
+		overflow: hidden
 	&.is_open
-		overflow-y: auto
-		max-height: 77vw
-		height: auto
+		transform: rotateX(0deg)
+		height: auto !important
 
 .logo
 	display: flex
@@ -248,24 +304,16 @@
 	transition: background-color .4s
 	+r(1360)
 		width: 50px
-	+r(1000)//1360
-		width: 400px
+	+r(1000)
+		width: 132px
+		height: 30px
 		justify-content: center
-	+r(650)
-		position: absolute
-		top: 50%
-		left: 50%
-		transform: translate(-50%, -50%)
-		width: 40vw
-		align-items: center
-	+r(500)
-		height: 74px
 	&:hover
 		background-color: #f6f6f6
 	&__pic
 		max-height: 100%
 		width: 100%
-		+r(500)
+		+r(1000)
 			width: auto
 			height: 100%
 		img
@@ -281,7 +329,7 @@
 	display: inline-block
 	border: none
 	vertical-align: middle
-	text-transform: underline
+	text-transform: uppercase
 	&__img
 		margin-right: 6px
 .select
@@ -291,6 +339,9 @@
 	padding: 0 16px
 	white-space: nowrap
 	z-index: 20
+	+r(1000)
+		display: inline-block
+		padding: 0 20px
 	+r(650)
 		margin-right: 20px
 	&:before
@@ -314,12 +365,17 @@
 	text-transform: uppercase
 	+box
 	+rr
+	+r(1000)
+		height: 50px
+		line-height: 50px
 .select__list
 	position: absolute
 	display: none
 	left: 1px
 	right: 1px
 	top: 34px
+	padding-bottom: 5px
+	border-radius: 0 0 3px 3px
 	z-index: 100
 	background: #fff
 .select__list li
@@ -346,13 +402,19 @@
 	height: 100%
 	align-items: center
 	font-size: 1.4rem
-
 	letter-spacing: .1em
 	line-height: 1.3
 	padding: 0 20px
 	text-transform: uppercase
 	transition: background-color .4s
 	+rb
+	+r(650)
+		padding: 0 2px
+		letter-spacing: 0em
+		font-size: 1.2rem
+		&:before,
+		&:after
+			content: none
 	&:before,
 	&:after
 		content: ''
@@ -366,4 +428,4 @@
 		+arr(9, 16, #fff, l)
 		right: 0
 	&:hover
-		background-color: darken($fiolet, 5%)
+		background-color: #9d0667

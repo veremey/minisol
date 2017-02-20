@@ -4,14 +4,14 @@
 	.btn
 		background-color: $n
 		&:hover
-			background-color: $gold
+			background-color: #c7b299
 	&__wrap
 		position: relative
 		height: 725px
 		overflow: hidden
 		margin-bottom: 10px
 		+clr
-		+r(1360)
+		+r(1000)
 			height: 1450px
 			margin-bottom: 20px
 
@@ -21,14 +21,13 @@
 				&__item
 					background: #f9f8f7 url('../img/index/arr-r.png') 0 center no-repeat
 					// background-size: cover
-					transition: background-position .4s ease
+					transition: background-position .2s ease
 					&.slick-active
 						background-position: 143% center
-						transition: background-position .0s ease
 						+r(1600)
 							background-position: 163% center
-						+r(1360)
-							background-position: 128% center
+						+r(1000)
+							background-position: 180% center
 				&__wrap
 					left: 40%
 					+r(1600)
@@ -38,7 +37,7 @@
 			.tips
 				left: auto
 				right: calc(53% + 30px)
-				+r(1360)
+				+r(1000)
 					right: 30px
 					left: auto
 			.tip
@@ -62,19 +61,22 @@
 	width: 53%
 	text-align: center
 	background-color: #f9f8f7
-
 	float: left//
-	+r(1360)
+	+r(1000)
 		width: 100%
 	&__item
 		height: 725px
 		position: relative
 		background: #f9f8f7 url('../img/index/arr.png') -215px center no-repeat
-		// background-size: cover
 		overflow: hidden
-		+r(1360)
-			background: #f9f8f7 url('../img/index/arr-r.png') 128% center no-repeat
-			// background-size: cover
+		transition: background-position .4s ease
+		+r(1000)
+			background: #f9f8f7 url('../img/index/arr-r.png') 0% center no-repeat
+			transition: background-position .6s ease
+		&.yes-slick-current
+			background-position: 200% center
+			+r(1000)
+				background-position: 180% center
 
 	&__wrap
 		position: absolute
@@ -108,7 +110,7 @@
 	width: 47%
 	overflow: hidden
 	float: right//
-	+r(1360)
+	+r(1000)
 		width: 100%
 	&__item
 		height: 725px
@@ -152,7 +154,7 @@
 			font-size: 1.6rem
 			line-height: 2.4rem
 			color: #fff
-			+r(1360)
+			+r(1000)
 				float: left
 			+r(650)
 				line-height: 1.2
@@ -163,7 +165,7 @@
 	left: calc(53% + 30px)
 	+try(-50%)
 	+tr(.1s .4s)
-	+r(1360)
+	+r(1000)
 		top: 70%
 		right: 30px
 		left: auto
@@ -186,7 +188,7 @@
 			line-height: 84px
 			height: 84px
 			transition: width .8s, color .2s .3s, padding .2s .2s
-			+r(1360)
+			+r(1000)
 				padding: 0 100px 0 38px
 			+r(400)
 				width: 84px
@@ -223,7 +225,7 @@
 		transform: translateY(-50%)
 		+rm
 		// transition: width cubic-bezier(0,0,1,1.47) .8s, color .0s .2s
-		+r(1360)
+		+r(1000)
 			left: auto
 			right: 0
 
