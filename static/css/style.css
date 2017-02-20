@@ -378,8 +378,7 @@ li { list-style: none; }
 .hotLine__label { color: #8f8787; font-size: 14px; line-height: 0.8; }
 .hotLine__tel { font-size: 2.4rem; color: #fff; cursor: pointer; white-space: nowrap; font-family: "Roboto-Bold", Arial, sans-serif; }
 
-.btn { position: relative; display: inline-block; width: 360px; border: 2px solid #c7b299; color: #000; font-size: 1.5rem; letter-spacing: 0.1em; line-height: 6.2rem; text-transform: uppercase; margin: 0 auto; border-radius: 6.2rem; background-color: #FFF; outline: none; max-width: 100%; -o-transition: 0.4s; transition: 0.4s; font-family: "Roboto-Medium", Arial, sans-serif; }
-.btn:before { content: ""; position: absolute; top: 50%; left: 0; right: 0; height: 2px; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); -o-transform: translateY(-50%); transform: translateY(-50%); background-color: red; }
+.btn { display: inline-block; width: 360px; border: 2px solid #c7b299; color: #000; font-size: 1.5rem; letter-spacing: 0.1em; line-height: 6.2rem; text-transform: uppercase; margin: 0 auto; border-radius: 6.2rem; background-color: #FFF; outline: none; max-width: 100%; -o-transition: 0.4s; transition: 0.4s; font-family: "Roboto-Medium", Arial, sans-serif; }
 .btn:hover { background-color: #c7b299; color: #fff; }
 .btn__article { height: 46px; width: 250px; text-align: center; line-height: 43px; margin-top: 5.5rem; font-size: 12px; }
 .btn__close, .btn__open { width: 62px; height: 62px; position: absolute; top: 0; right: 3rem; background-color: transparent; border: none; outline: none; }
