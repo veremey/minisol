@@ -38,11 +38,9 @@
 				+tr(.4s)
 				&:hover
 					opacity: .7
-				+r(800)
-					margin-bottom: 20px
-				+r(400)
-					width: 92%
-					margin: 0 auto
+				+r(1000)
+					height: 50px
+					padding-bottom: 7px
 			&_img
 				max-height: 100%
 				width: 100%
@@ -62,7 +60,8 @@
 			align-self: flex-end
 			+r(1000)
 				display: block
-				width: 100%
+				width: 226px
+				margin: 0 auto
 				padding: 0
 				text-align: center
 			// +r(501)
@@ -108,55 +107,82 @@
 		align-items: center
 		+r(1000)
 			padding: 26px 20px 0
+			justify-content: space-between
+		+r(650)
+			padding-top: 7px
+			align-items: flex-start
+		&_wrap
+			display: flex
+			align-items: center
+			+r(650)
+				flex-wrap: wrap
+				width: 88px
 	&__copy
-		width: calc(100% - 200px)
+		width: calc(100% - 230px)
+		align-self: center
 		font-size: 14px
 		letter-spacing: .025em
 		padding-right: 10%
 		color: $gray
 		+rr
+		+r(1000)
+			width: 180px
+			padding: 0
+			text-indent: -1em
+			margin-left: 1em
 		+r(650)
-			width: auto
-	&__design
+			padding-top: 8px
+	&__design_link
 		color: #fbf4f6
 		font-size: 13px
 		letter-spacing: 0.025em
-		padding-bottom: 11px
 		margin-left: auto
+		line-height: 1.2
 		+rr
 		+r(650)
 			display: flex
 			flex-wrap: wrap
 			width: 90px
-			justify-content: flex-end
-		&_link
-			display: inline-block
-			width: 70px
-			vertical-align: bottom
-			line-height: .8
-			margin-left: 10px
-			font-size: 20px
-			letter-spacing: .025em
+			font-size: 8px
 			text-transform: uppercase
-			+pb
-			+r(650)
-				width: 90px
-				margin: 0
-				order: -1
-			&:hover
-				color: #ccc
-				.svg_line
-					fill: #f7941d
-				.svg_duga
-					fill: #f7941d
-				.svg_wndw
-					fill: #9ea0a1
-				.svg_mdl
-					fill: #f15a29
-				.svg_top
-					fill: #c54a20
-				.svg_topest
-					fill: #9a3711
+			letter-spacing: .05em
+			text-align: left
+			order: 1
+	&__design_logo
+		display: inline-block
+		width: 82px
+		vertical-align: bottom
+		line-height: .8
+		margin-left: 10px
+		padding-bottom: 19px
+		font-size: 20px
+		letter-spacing: .025em
+		text-transform: uppercase
+		+pb
+		+r(650)
+			padding-bottom: 4px
+			margin: 0
+
+		&:hover
+			color: #ccc
+			.svg_line
+				fill: #f7941d
+				transition: $svg_line
+			.svg_duga
+				fill: #f7941d
+				transition: $svg_line
+			.svg_wndw
+				fill: #9ea0a1
+				transition: $svg_wndw
+			.svg_mdl
+				fill: #f15a29
+				transition: $svg_mdl
+			.svg_top
+				fill: #c54a20
+				transition: $svg_top
+			.svg_topest
+				fill: #9a3711
+				transition: $svg_topest
 	.btn__open
 		top: 50%
 		right: 15px
@@ -185,24 +211,31 @@
 		+r(1000)
 			margin: 0
 
+.svg_topest,
+.svg_top,
+.svg_mdl,
+.svg_wndw,
+.svg_duga,
+.svg_line
+	transition-timing-function: linear
 .svg_topest
 	fill: $n
-	+tr(1.4s)
+	transition: $svg_line
 .svg_top
 	fill: $n
-	+tr(1.2s)
+	transition: $svg_duga
 .svg_mdl
 	fill: $n
-	+tr(1s)
+	transition: $svg_wndw
 .svg_wndw
 	fill: $n
-	+tr(.8s)
+	transition: $svg_mdl
 .svg_duga
 	fill: $n
-	+tr(.6s)
+	transition: $svg_top
 .svg_line
 	fill: $n
-	+tr(.4s)
+	transition: $svg_top
 
 .footerNav
 	width: calc(100% - 200px)

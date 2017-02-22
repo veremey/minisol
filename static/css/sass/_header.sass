@@ -37,22 +37,23 @@
 		flex-wrap: nowrap
 		justify-content: space-between
 		height: 88px
+		width: calc(100% - 16%)
 		+r(1360)
-			width: 93%
+			width: calc(100% - 50px)
 		+r(1000)
 			display: none//todo
 			overflow-y: scroll
 
-		&.is_opened //todo
-			display: block
-			position: fixed
-			top: 50px
-			left: 0
-			width: 100vw
-			height: 100vh
-			background-color: #fff
-			border-top: 1px solid #dbdbdb
-			z-index: 100
+			&.is_opened //todo
+				display: block
+				position: fixed
+				top: 50px
+				left: 0
+				width: 100vw
+				height: 100vh
+				background-color: #fff
+				border-top: 1px solid #dbdbdb
+				z-index: 100
 	&__menu
 		display: flex
 		justify-content: space-between
@@ -152,11 +153,11 @@
 					content: none
 	&__info
 		display: flex
-		flex: 0 0 400px
+		flex: 0 0 320px
 		height: 100%
 		+r(1360)
 			justify-content: flex-end
-			flex: 0 0 320px
+			flex: 0 0 290px
 		+r(1000)
 			position: absolute
 			top: 0
@@ -232,12 +233,14 @@
 					left: 0
 	.btn__open
 		display: none
-		position: relative
+		position: absolute
+		top: 14px
+		right: 42px
 		text-align: right
 		+r(1000)
 			display: block
 			height: 20px
-			right: 24px
+			// right: 24px
 			span
 				background-color: #dc1c23
 				&:nth-child(2)
@@ -318,11 +321,11 @@
 	&:hover
 		background-color: #f6f6f6
 	&__pic
+		font-size: 0
 		max-height: 100%
 		width: 100%
 		+r(1000)
-			width: auto
-			height: 100%
+			height: 30px
 		img
 			width: 100%
 			max-width: 100%
@@ -408,6 +411,7 @@
 	background-color: $fiolet
 	height: 100%
 	align-items: center
+	justify-content: center
 	font-size: 1.4rem
 	letter-spacing: .1em
 	line-height: 1.3

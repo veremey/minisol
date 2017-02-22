@@ -2,8 +2,11 @@
 <html lang="ru-RU">
   <head>
     <meta charset="utf-8">
-    <title>Minisol</title>
+    <title>ТЕХНОНИКОЛЬ LUXARD</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
+    <meta content="telephone=no" name="format-detection">
+    <link rel="icon" href="static/img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" media="all" href="static/css/jquery.fancybox.min.css">
     <link rel="stylesheet" media="all" href="static/css/style.css">
     <script src="static/js/lib/jquery.js"></script>
@@ -26,7 +29,6 @@
               <source srcset="/static/img/logo-min.svg" media="(min-width: 1000px)"><img srcset="/static/img/logo.svg" alt="…">
             </picture></a><a class="btn__open" href="#"><b>меню</b>
             <div class="btn__open_wrap"><span></span><span></span><span></span></div></a>
-          <button class="header_back js-back">назад</button>
           <div class="header__hide js_open">
             <div class="select js-select"><span class="select__text js-select-text"></span>
               <input class="js-select-input" type="hidden" value="">
@@ -40,30 +42,28 @@
                 <li class="header__menu_list has_subnav"><a class="header__menu_link" href="#">Каталог</a>
                   <div class="subWrapper">
                     <ul class="header__submenu">
-                      <li class="header__submenu_list"><a class="header__submenu_link" href="#">Документы</a></li>
-                      <li class="header__submenu_list"><a class="header__submenu_link" href="#">Сертификаты</a></li>
-                      <li class="header__submenu_list"><a class="header__submenu_link" href="#">Получить гарантийный сертификат</a></li>
-                      <li class="header__submenu_list"><a class="header__submenu_link" href="#">Документы</a></li>
-                      <li class="header__submenu_list"><a class="header__submenu_link" href="#">Сертификаты</a></li>
-                      <li class="header__submenu_list"><a class="header__submenu_link" href="#">Получить гарантийный сертификат</a></li>
-                      <li class="header__submenu_list"><a class="header__submenu_link" href="#">Получить гарантийный сертификат</a></li>
-                      <li class="header__submenu_list"><a class="header__submenu_link" href="#">Получить гарантийный сертификат</a></li>
-                      <li class="header__submenu_list"><a class="header__submenu_link" href="#">Получить гарантийный сертификат</a></li>
-                      <li class="header__submenu_list"><a class="header__submenu_link" href="#">Получить гарантийный сертификат</a></li>
-                      <li class="header__submenu_list"><a class="header__submenu_link" href="#">Получить гарантийный сертификат</a></li>
-                      <li class="header__submenu_list"><a class="header__submenu_link" href="#">Получить гарантийный сертификат</a></li>
-                      <li class="header__submenu_list"><a class="header__submenu_link" href="#">Получить гарантийный сертификат</a></li>
+                      <li class="header__submenu_list"><a class="header__submenu_link" href="#">Коллекция Classic</a></li>
+                      <li class="header__submenu_list"><a class="header__submenu_link" href="#">Коллекция Roman</a></li>
+                      <li class="header__submenu_list"><a class="header__submenu_link" href="#">Комплектующие</a></li>
                     </ul>
                   </div>
                 </li>
-                <li class="header__menu_list"><a class="header__menu_link" href="#">Монтаж</a></li>
                 <li class="header__menu_list"><a class="header__menu_link" href="#">Фотогалерея</a></li>
-                <li class="header__menu_list has_subnav"><a class="header__menu_link" href="#">Документация</a>
+                <li class="header__menu_list has_subnav"><a class="header__menu_link" href="#">Монтаж</a>
                   <div class="subWrapper">
                     <ul class="header__submenu">
-                      <li class="header__submenu_list"><a class="header__submenu_link" href="#">Документы</a></li>
-                      <li class="header__submenu_list"><a class="header__submenu_link" href="#">Сертификаты</a></li>
-                      <li class="header__submenu_list"><a class="header__submenu_link" href="#">Получить гарантийный сертификат</a></li>
+                      <li class="header__submenu_list"><a class="header__submenu_link" href="#">Область применения</a></li>
+                      <li class="header__submenu_list"><a class="header__submenu_link" href="#">Инструкция по монтажу</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="header__menu_list has_subnav"><a class="header__menu_link" href="#">Информация</a>
+                  <div class="subWrapper">
+                    <ul class="header__submenu">
+                      <li class="header__submenu_list"><a class="header__submenu_link" href="#">Новости</a></li>
+                      <li class="header__submenu_list"><a class="header__submenu_link" href="#">Документация</a></li>
+                      <li class="header__submenu_list"><a class="header__submenu_link" href="#">Рекламные материалы</a></li>
+                      <li class="header__submenu_list"><a class="header__submenu_link" href="#">Оформление гарантии</a></li>
                     </ul>
                   </div>
                 </li>
@@ -77,7 +77,7 @@
         </div>
         <div class="popup__question js_close">
           <div class="layout">
-            <button class="btn__close is_active"><span></span><span></span><span></span></button>
+            <button class="btn__close"><span></span><span></span><span></span></button>
             <h3 class="title__popup">у вас есть вопрос?</h3>
             <p class="popup__question_desc">наши специалисты рады <wbr> будут помочь</p>
             <form class="popup__question_form" method="post" action="/" name="question" autocomplete="on">
@@ -212,39 +212,7 @@
               </div>
             </div>
           </div>
-          <div class="present">
-            <div class="present__item"><img class="present__pic" src="/static/img/index/gallery/07.jpg" alt="изображение"><strong class="present__label">Цвет:  коралл</strong>
-              <div class="present__text">
-                <p class="present__text_desc">Форма LUXARD Classic создана для искушённых ценителей лучшего. Изящество деталей и плавная форма панели LUXARD Classic идеально дополняет архитектурный ансамбль загородного дома, под крышей которого проходят тихие и уютные семейные вечера, дружеские встречи и званые ужины.</p>
-              </div>
-            </div>
-            <div class="present__item"><img class="present__pic" src="/static/img/index/gallery/04.jpg" alt="изображение"><strong class="present__label">Цвет:  коралл</strong>
-              <div class="present__text">
-                <p class="present__text_desc">Форма LUXARD Classic создана для искушённых ценителей лучшего. Изящество деталей и плавная форма панели LUXARD Classic идеально дополняет архитектурный ансамбль загородного дома, под крышей которого проходят тихие и уютные семейные вечера, дружеские встречи и званые ужины.</p>
-              </div>
-            </div>
-            <div class="present__item"><img class="present__pic" src="/static/img/index/gallery/01.jpg" alt="изображение"><strong class="present__label">Цвет:  коралл</strong>
-              <div class="present__text">
-                <p class="present__text_desc">Форма LUXARD Classic создана для искушённых ценителей лучшего. Изящество деталей и плавная форма панели LUXARD Classic идеально дополняет архитектурный ансамбль загородного дома, под крышей которого проходят тихие и уютные семейные вечера, дружеские встречи и званые ужины.</p>
-              </div>
-            </div>
-            <div class="present__item"><img class="present__pic" src="/static/img/index/gallery/02.jpg" alt="изображение"><strong class="present__label">Цвет:  коралл</strong>
-              <div class="present__text">
-                <p class="present__text_desc">Форма LUXARD Classic создана для искушённых ценителей лучшего. Изящество деталей и плавная форма панели LUXARD Classic идеально дополняет архитектурный ансамбль загородного дома, под крышей которого проходят тихие и уютные семейные вечера, дружеские встречи и званые ужины.</p>
-              </div>
-            </div>
-            <div class="present__item"><img class="present__pic" src="/static/img/index/gallery/08.jpg" alt="изображение"><strong class="present__label">Цвет:  коралл</strong>
-              <div class="present__text">
-                <p class="present__text_desc">Форма LUXARD Classic создана для искушённых ценителей лучшего. Изящество деталей и плавная форма панели LUXARD Classic идеально дополняет архитектурный ансамбль загородного дома, под крышей которого проходят тихие и уютные семейные вечера, дружеские встречи и званые ужины.</p>
-              </div>
-            </div>
-            <div class="present__item"><img class="present__pic" src="/static/img/index/gallery/03.jpg" alt="изображение"><strong class="present__label">Цвет:  коралл</strong>
-              <div class="present__text">
-                <p class="present__text_desc">Форма LUXARD Classic создана для искушённых ценителей лучшего. Изящество деталей и плавная форма панели LUXARD Classic идеально дополняет архитектурный ансамбль загородного дома, под крышей которого проходят тихие и уютные семейные вечера, дружеские встречи и званые ужины.</p>
-              </div>
-            </div>
-          </div>
-          <div class="present js-roof">
+          <div class="present" data-active="tip_roof">
             <div class="present__item"><img class="present__pic" src="/static/img/index/collection/01.jpg" alt="изображение"><strong class="present__label">Цвет:  коралл</strong>
               <div class="present__text">
                 <p class="present__text_desc">Форма LUXARD Classic создана для искушённых ценителей лучшего. Изящество деталей и плавная форма панели LUXARD Classic идеально дополняет архитектурный ансамбль загородного дома, под крышей которого проходят тихие и уютные семейные вечера, дружеские встречи и званые ужины.</p>
@@ -326,13 +294,45 @@
               </div>
             </div>
           </div>
+          <div class="present js-roof" data-active="tip_house">
+            <div class="present__item"><img class="present__pic" src="/static/img/index/gallery/07.jpg" alt="изображение"><strong class="present__label">Цвет:  коралл</strong>
+              <div class="present__text">
+                <p class="present__text_desc">Форма LUXARD Classic создана для искушённых ценителей лучшего. Изящество деталей и плавная форма панели LUXARD Classic идеально дополняет архитектурный ансамбль загородного дома, под крышей которого проходят тихие и уютные семейные вечера, дружеские встречи и званые ужины.</p>
+              </div>
+            </div>
+            <div class="present__item"><img class="present__pic" src="/static/img/index/gallery/04.jpg" alt="изображение"><strong class="present__label">Цвет:  коралл</strong>
+              <div class="present__text">
+                <p class="present__text_desc">Форма LUXARD Classic создана для искушённых ценителей лучшего. Изящество деталей и плавная форма панели LUXARD Classic идеально дополняет архитектурный ансамбль загородного дома, под крышей которого проходят тихие и уютные семейные вечера, дружеские встречи и званые ужины.</p>
+              </div>
+            </div>
+            <div class="present__item"><img class="present__pic" src="/static/img/index/gallery/01.jpg" alt="изображение"><strong class="present__label">Цвет:  коралл</strong>
+              <div class="present__text">
+                <p class="present__text_desc">Форма LUXARD Classic создана для искушённых ценителей лучшего. Изящество деталей и плавная форма панели LUXARD Classic идеально дополняет архитектурный ансамбль загородного дома, под крышей которого проходят тихие и уютные семейные вечера, дружеские встречи и званые ужины.</p>
+              </div>
+            </div>
+            <div class="present__item"><img class="present__pic" src="/static/img/index/gallery/02.jpg" alt="изображение"><strong class="present__label">Цвет:  коралл</strong>
+              <div class="present__text">
+                <p class="present__text_desc">Форма LUXARD Classic создана для искушённых ценителей лучшего. Изящество деталей и плавная форма панели LUXARD Classic идеально дополняет архитектурный ансамбль загородного дома, под крышей которого проходят тихие и уютные семейные вечера, дружеские встречи и званые ужины.</p>
+              </div>
+            </div>
+            <div class="present__item"><img class="present__pic" src="/static/img/index/gallery/08.jpg" alt="изображение"><strong class="present__label">Цвет:  коралл</strong>
+              <div class="present__text">
+                <p class="present__text_desc">Форма LUXARD Classic создана для искушённых ценителей лучшего. Изящество деталей и плавная форма панели LUXARD Classic идеально дополняет архитектурный ансамбль загородного дома, под крышей которого проходят тихие и уютные семейные вечера, дружеские встречи и званые ужины.</p>
+              </div>
+            </div>
+            <div class="present__item"><img class="present__pic" src="/static/img/index/gallery/03.jpg" alt="изображение"><strong class="present__label">Цвет:  коралл</strong>
+              <div class="present__text">
+                <p class="present__text_desc">Форма LUXARD Classic создана для искушённых ценителей лучшего. Изящество деталей и плавная форма панели LUXARD Classic идеально дополняет архитектурный ансамбль загородного дома, под крышей которого проходят тихие и уютные семейные вечера, дружеские встречи и званые ужины.</p>
+              </div>
+            </div>
+          </div>
           <div class="tips">
-            <div class="tip js-filter-roof">
-              <div class="tip_pic"><img class="tip_img" src="/static/img/index/collection/icon-roof.png" alt="черепица"></div>
+            <div class="tip tip_roof js-filter-roof is_active">
+              <div class="tip_pic"></div>
               <div class="tip_desc">текстура черепицы</div>
             </div>
             <div class="tip tip_house js-filter-house">
-              <div class="tip_pic"><img class="tip_img" src="/static/img/index/collection/icon-house.png" alt="черепица на объекте"></div>
+              <div class="tip_pic"></div>
               <div class="tip_desc">черепица на объекте</div>
             </div>
           </div>
@@ -389,38 +389,6 @@
             </div>
           </div>
           <div class="present" dir="rtl">
-            <div class="present__item"><img class="present__pic" src="/static/img/index/gallery/03.jpg" alt="изображение"><strong class="present__label">Цвет:  коралл</strong>
-              <div class="present__text">
-                <p class="present__text_desc">Форма LUXARD Classic создана для искушённых ценителей лучшего. Изящество деталей и плавная форма панели LUXARD Classic идеально дополняет архитектурный ансамбль загородного дома, под крышей которого проходят тихие и уютные семейные вечера, дружеские встречи и званые ужины.</p>
-              </div>
-            </div>
-            <div class="present__item"><img class="present__pic" src="/static/img/index/gallery/08.jpg" alt="изображение"><strong class="present__label">Цвет:  коралл</strong>
-              <div class="present__text">
-                <p class="present__text_desc">Форма LUXARD Classic создана для искушённых ценителей лучшего. Изящество деталей и плавная форма панели LUXARD Classic идеально дополняет архитектурный ансамбль загородного дома, под крышей которого проходят тихие и уютные семейные вечера, дружеские встречи и званые ужины.</p>
-              </div>
-            </div>
-            <div class="present__item"><img class="present__pic" src="/static/img/index/gallery/02.jpg" alt="изображение"><strong class="present__label">Цвет:  коралл</strong>
-              <div class="present__text">
-                <p class="present__text_desc">Форма LUXARD Classic создана для искушённых ценителей лучшего. Изящество деталей и плавная форма панели LUXARD Classic идеально дополняет архитектурный ансамбль загородного дома, под крышей которого проходят тихие и уютные семейные вечера, дружеские встречи и званые ужины.</p>
-              </div>
-            </div>
-            <div class="present__item"><img class="present__pic" src="/static/img/index/gallery/01.jpg" alt="изображение"><strong class="present__label">Цвет:  коралл</strong>
-              <div class="present__text">
-                <p class="present__text_desc">Форма LUXARD Classic создана для искушённых ценителей лучшего. Изящество деталей и плавная форма панели LUXARD Classic идеально дополняет архитектурный ансамбль загородного дома, под крышей которого проходят тихие и уютные семейные вечера, дружеские встречи и званые ужины.</p>
-              </div>
-            </div>
-            <div class="present__item"><img class="present__pic" src="/static/img/index/gallery/04.jpg" alt="изображение"><strong class="present__label">Цвет:  коралл</strong>
-              <div class="present__text">
-                <p class="present__text_desc">Форма LUXARD Classic создана для искушённых ценителей лучшего. Изящество деталей и плавная форма панели LUXARD Classic идеально дополняет архитектурный ансамбль загородного дома, под крышей которого проходят тихие и уютные семейные вечера, дружеские встречи и званые ужины.</p>
-              </div>
-            </div>
-            <div class="present__item"><img class="present__pic" src="/static/img/index/gallery/07.jpg" alt="изображение"><strong class="present__label">Цвет:  коралл</strong>
-              <div class="present__text">
-                <p class="present__text_desc">Форма LUXARD Classic создана для искушённых ценителей лучшего. Изящество деталей и плавная форма панели LUXARD Classic идеально дополняет архитектурный ансамбль загородного дома, под крышей которого проходят тихие и уютные семейные вечера, дружеские встречи и званые ужины.</p>
-              </div>
-            </div>
-          </div>
-          <div class="present js-roof" dir="rtl">
             <div class="present__item"><img class="present__pic" src="/static/img/index/collection/06.jpg" alt="изображение"><strong class="present__label">Цвет:  коралл</strong>
               <div class="present__text">
                 <p class="present__text_desc">Форма LUXARD Classic создана для искушённых ценителей лучшего. Изящество деталей и плавная форма панели LUXARD Classic идеально дополняет архитектурный ансамбль загородного дома, под крышей которого проходят тихие и уютные семейные вечера, дружеские встречи и званые ужины.</p>
@@ -452,13 +420,45 @@
               </div>
             </div>
           </div>
+          <div class="present js-roof" dir="rtl">
+            <div class="present__item"><img class="present__pic" src="/static/img/index/gallery/03.jpg" alt="изображение"><strong class="present__label">Цвет:  коралл</strong>
+              <div class="present__text">
+                <p class="present__text_desc">Форма LUXARD Classic создана для искушённых ценителей лучшего. Изящество деталей и плавная форма панели LUXARD Classic идеально дополняет архитектурный ансамбль загородного дома, под крышей которого проходят тихие и уютные семейные вечера, дружеские встречи и званые ужины.</p>
+              </div>
+            </div>
+            <div class="present__item"><img class="present__pic" src="/static/img/index/gallery/08.jpg" alt="изображение"><strong class="present__label">Цвет:  коралл</strong>
+              <div class="present__text">
+                <p class="present__text_desc">Форма LUXARD Classic создана для искушённых ценителей лучшего. Изящество деталей и плавная форма панели LUXARD Classic идеально дополняет архитектурный ансамбль загородного дома, под крышей которого проходят тихие и уютные семейные вечера, дружеские встречи и званые ужины.</p>
+              </div>
+            </div>
+            <div class="present__item"><img class="present__pic" src="/static/img/index/gallery/02.jpg" alt="изображение"><strong class="present__label">Цвет:  коралл</strong>
+              <div class="present__text">
+                <p class="present__text_desc">Форма LUXARD Classic создана для искушённых ценителей лучшего. Изящество деталей и плавная форма панели LUXARD Classic идеально дополняет архитектурный ансамбль загородного дома, под крышей которого проходят тихие и уютные семейные вечера, дружеские встречи и званые ужины.</p>
+              </div>
+            </div>
+            <div class="present__item"><img class="present__pic" src="/static/img/index/gallery/01.jpg" alt="изображение"><strong class="present__label">Цвет:  коралл</strong>
+              <div class="present__text">
+                <p class="present__text_desc">Форма LUXARD Classic создана для искушённых ценителей лучшего. Изящество деталей и плавная форма панели LUXARD Classic идеально дополняет архитектурный ансамбль загородного дома, под крышей которого проходят тихие и уютные семейные вечера, дружеские встречи и званые ужины.</p>
+              </div>
+            </div>
+            <div class="present__item"><img class="present__pic" src="/static/img/index/gallery/04.jpg" alt="изображение"><strong class="present__label">Цвет:  коралл</strong>
+              <div class="present__text">
+                <p class="present__text_desc">Форма LUXARD Classic создана для искушённых ценителей лучшего. Изящество деталей и плавная форма панели LUXARD Classic идеально дополняет архитектурный ансамбль загородного дома, под крышей которого проходят тихие и уютные семейные вечера, дружеские встречи и званые ужины.</p>
+              </div>
+            </div>
+            <div class="present__item"><img class="present__pic" src="/static/img/index/gallery/07.jpg" alt="изображение"><strong class="present__label">Цвет:  коралл</strong>
+              <div class="present__text">
+                <p class="present__text_desc">Форма LUXARD Classic создана для искушённых ценителей лучшего. Изящество деталей и плавная форма панели LUXARD Classic идеально дополняет архитектурный ансамбль загородного дома, под крышей которого проходят тихие и уютные семейные вечера, дружеские встречи и званые ужины.</p>
+              </div>
+            </div>
+          </div>
           <div class="tips">
-            <div class="tip js-filter-roof">
-              <div class="tip_pic"><img class="tip_img" src="/static/img/index/collection/icon-roof.png" alt="черепица"></div>
+            <div class="tip tip_roof js-filter-roof is_active">
+              <div class="tip_pic"></div>
               <div class="tip_desc">текстура черепицы</div>
             </div>
             <div class="tip tip_house js-filter-house">
-              <div class="tip_pic"><img class="tip_img" src="/static/img/index/collection/icon-house.png" alt="черепица на объекте"></div>
+              <div class="tip_pic"></div>
               <div class="tip_desc">черепица на объекте</div>
             </div>
           </div>
@@ -470,7 +470,7 @@
         <div class="gallery__row"><a class="gallery__item" data-fancybox="gallery" href="/static/img/index/gallery/05.jpg"><img class="gallery__pic" src="/static/img/index/gallery/05.jpg" alt="изображение"></a><a class="gallery__item" data-fancybox="gallery" href="/static/img/index/gallery/06.jpg"><img class="gallery__pic" src="/static/img/index/gallery/06.jpg" alt="изображение"></a><a class="gallery__item" data-fancybox="gallery" href="/static/img/index/gallery/07.jpg"><img class="gallery__pic" src="/static/img/index/gallery/07.jpg" alt="изображение"></a><a class="gallery__item" data-fancybox="gallery" href="/static/img/index/gallery/08.jpg"><img class="gallery__pic" src="/static/img/index/gallery/08.jpg" alt="изображение"></a></div><a class="btn" href="#">перейти в галерею</a>
       </article>
       <article class="magazin is_animated">
-        <div class="magazin__pic"><img class="magazin__img" src="static/img/index/magzin-items.png" alt="изображение"></div>
+        <div class="magazin__pic"><img class="magazin__img" src="static/img/index/magzin-items-01.png" alt="изображение"></div>
         <div class="magazin__content">
           <h3 class="magazin__title">интернет- магазин технониколь</h3>
           <p class="magazin__desc">Изучите полный ассортимент композитной черепицы и комплектующих элементов от ТЕХНОНИКОЛЬ LUXARD в нашем официальном интернет-магазине.</p><a class="btn btn__article" href="#">перейти в магазин</a>
@@ -520,9 +520,9 @@
               <nav class="footerNav">
                 <ul class="footerMenu">
                   <li class="footerMenu__list"><a class="footerMenu__link" href="#">Каталог</a></li>
-                  <li class="footerMenu__list"><a class="footerMenu__link" href="#">Монтаж</a></li>
                   <li class="footerMenu__list"><a class="footerMenu__link" href="#">Фотогалерея</a></li>
-                  <li class="footerMenu__list"><a class="footerMenu__link" href="#">Документация</a></li>
+                  <li class="footerMenu__list"><a class="footerMenu__link" href="#">Монтаж</a></li>
+                  <li class="footerMenu__list"><a class="footerMenu__link" href="#">Информация</a></li>
                   <li class="footerMenu__list"><a class="footerMenu__link" href="#">Где купить?</a></li>
                 </ul>
               </nav>
@@ -530,7 +530,7 @@
             </div>
             <div class="footer__dev">
               <div class="footer__copy">© Композитная черепица ТЕХНОНИКОЛЬ LUXARD, 2017</div>
-              <div class="footer__design">Дизайн сайта<a class="footer__design_link" href="/" target="_blank">
+              <div class="footer__dev_wrap"><a class="footer__design_link" href="#">Разработка сайта</a><a class="footer__design_logo" href="/" target="_blank">
                   <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 101.59 37.39">
                     <path d="M15.09 37.08V25L10.21 37.08H8.6L3.72 25V37.08H0V19.76H5.2L9.4 30.23l4.21-10.47H18.8V37.08Z" fill="#fff"></path>
                     <path d="M22.29 37.08V19.76H26V37.08Z" fill="#fff"></path>

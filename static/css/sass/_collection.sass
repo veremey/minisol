@@ -1,6 +1,8 @@
 .collection
 	padding-top: 80px
 	+clr
+	+r(650)
+		padding-top: 50px
 	.btn
 		background-color: $n
 		&:hover
@@ -12,13 +14,15 @@
 				color: #c7b299
 	&__wrap
 		position: relative
-		height: 725px
+		height: 650px
 		overflow: hidden
 		margin-bottom: 10px
 		+clr
 		+r(1000)
-			height: 1450px
+			height: 1300px
 			margin-bottom: 20px
+		+r(650)
+			height: 1040px
 
 		&.mod_reverse
 			.propose
@@ -27,14 +31,15 @@
 					background: #f9f8f7 url('../img/index/arr-r.png') 0 center no-repeat
 					// background-size: cover
 					transition: background-position .2s ease
-					+r(800)
+					+r(1000)
 						background-image: none
 					&.slick-active
-						background-position: 143% center
-						+r(1600)
-							background-position: 163% center
+						background-position: 185% center
+						+r(160)
+							background-position: 215px center
 						+r(1000)
 							background-position: 180% center
+							background-image: none
 						+r(800)
 							background-position: 280% center
 							background-image: none
@@ -75,7 +80,7 @@
 	+r(1000)
 		width: 100%
 	&__item
-		height: 725px
+		height: 650px
 		position: relative
 		background: #f9f8f7 url('../img/index/arr.png') -215px center no-repeat
 		overflow: hidden
@@ -83,36 +88,40 @@
 		+r(1000)
 			background: #f9f8f7 url('../img/index/arr-r.png') 0% center no-repeat
 			transition: background-position .6s ease
+			background-image: none
 		+r(800)
 			background-image: none
+		+r(650)
+			height: 520px
 		&.yes-slick-current
 			background-position: 200% center
 			+r(1000)
 				background-position: 180% center
+				background-image: none
 			+r(800)
 				background-image: none
 
 	&__wrap
 		position: absolute
-		top: 50%
+		top: 45%
 		left: 60%
 		transform: translate(-50%, -50%)
 		width: 100%
 		+r(1600)
 			left: 50%
-		+r(800)
-			display: flex
-			flex-direction: column
-			height: 90%
+		// +r(800)
+		// 	display: flex
+		// 	flex-direction: column
+		// 	height: 90%
 	&__box
 		+r(800)
-			order: -1
+			// order: -1
 			.btn
 				display: none
 	&__pic
 		margin: 0 auto
-		+r(800)
-			margin-top: auto
+		// +r(800)
+		// 	margin-top: auto
 	&__title
 		font-size: 7rem
 		line-height: 1.5
@@ -138,9 +147,11 @@
 	+r(1000)
 		width: 100%
 	&__item
-		height: 725px
+		height: 650px
 		position: relative
 		overflow: hidden
+		+r(650)
+			height: 520px
 	&__pic
 		position: absolute
 		top: 50%
@@ -261,8 +272,31 @@
 			right: 0
 
 	&_house
-		// background-color: rgba(51, 31, 28, .7)
 		color: #fff
 		.tip
 			&_desc
 				background-color: rgba(51, 31, 28, .7)
+			&_pic
+				background: url('../img/index/collection/icon-house.png') center center no-repeat
+	&_house.is_active
+		color: #000
+		.tip
+			&_desc
+				background-color: rgba(255, 255, 255, .7)
+			&_pic
+				background: url('../img/index/collection/icon-house-black.png') center center no-repeat
+
+	&_roof
+		color: #fff
+		.tip
+			&_desc
+				background-color: rgba(51, 31, 28, .7)
+			&_pic
+				background: url('../img/index/collection/icon-roof-white.png') center center no-repeat
+	&_roof.is_active
+		color: #000
+		.tip
+			&_desc
+				background-color: rgba(255, 255, 255, .7)
+			&_pic
+				background: url('../img/index/collection/icon-roof.png') center center no-repeat

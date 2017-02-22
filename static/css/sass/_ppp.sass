@@ -64,6 +64,13 @@
 					background-color: #efeae4
 					+r(1000)
 						background-color: #FFF
+			span
+				display: inline-block
+				width: 70%
+				white-space: nowrap
+				overflow: hidden
+				text-overflow: ellipsis
+
 		&_img
 			position: absolute
 			top: 50%
@@ -80,7 +87,8 @@
 
 	transform-origin: top center
 	transform: rotateX(90deg)
-	overflow: hidden
+	overflow-y: auto
+
 	+tr(.5s)
 	+r(650)// todo
 		padding: 80px 0
@@ -121,6 +129,8 @@
 		border: 1px solid #cfc4b6
 		padding: 0 20px
 		margin-bottom: 8px
+		line-height: 28px
+		font-size: 18px
 		+placeholder
 			font-size: 16px
 			color: #000
@@ -136,6 +146,7 @@
 			height: 80px
 	&_data
 		width: 49%
+		line-height: 50px
 		+r(650)
 			order: -1
 		&:not(:last-of-type)

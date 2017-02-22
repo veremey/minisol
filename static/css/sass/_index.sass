@@ -41,11 +41,13 @@
 		position: relative
 		width: 62vmin
 		margin: 0 auto
+		+r(400)
+			width: 94%
 		&:before
 			content: ''
 			position: absolute
-			top: 0
-			left: 0
+			top: -5%
+			left: -10%
 			width: 15vmin
 			height: 15vmin
 			background-image: url('../img/stamp.png')
@@ -53,24 +55,32 @@
 			background-repeat: no-repeat
 			z-index: 10
 			+r(1360)
-				width: 12vmin
-				height: 12vmin
+				left: -5%
+				width: 13vmin
+				height: 13vmin
 			+r(800)
-				top: -4vmin
+				left: -3%
+			+r(400)
+				top: -40%
+				width: 96px
+				height: 96px
 		img
 			margin: 0 auto
 			max-width: 100%
 			max-height: 100%
 	&__mark
 		display: inline-block
+		margin: 0 auto
 		position: relative
-		padding: 0 15px
+		padding: 0 30px
 		line-height: 43px
 		white-space: nowrap
 		text-align: center
 		+r(800)
 			line-height: 1.3em
 			padding: 4px 20px
+		+r(350)
+			padding: 4px 12px
 		&:before
 			content: ''
 			position: absolute
@@ -109,15 +119,16 @@
 				top: 15px
 				right: 14px
 	&__title
-		font-size: 7.5vh
+		font-size: 80px
 		letter-spacing: .2em
 		text-transform: uppercase
 		margin-top: .48em
+		white-space: nowrap
 		+cg
-		+r(650)
-			font-size: 5vh
+		+r(1200)
+			font-size: 6.5vw
 		+rh(900)
-			margin: .5em 0
+			margin: .5em 0 1em
 	&__footer
 		display: inline-block
 		margin: 0 auto
@@ -165,13 +176,26 @@
 		padding-top: 45px
 		+r(1000)
 			flex-wrap: wrap
+		+r(650)
+			padding-top: 20px
+	&__icon
+		display: inline-block
+		font-size: 0
+		vertical-align: top
 	&__item
 		width: 40%
 		text-align: center
 		margin-bottom: 80px
+		+r(1000)
+			margin-bottom: 40px
 		+r(650)
-			// width: 80%
 			margin-bottom: 20px
+		+r(620)
+			width: 28vw
+			margin-bottom: 10px
+		+r(400)
+			width: 120px
+
 	&__label
 		display: inline-block
 		width: 100%
@@ -183,6 +207,7 @@
 		+din
 		+r(650)
 			font-size: 14px
+			margin-top: 10px
 	&__desc
 		max-width: 736px
 		width: 60%
@@ -193,6 +218,9 @@
 		+rl
 		+r(800)
 			width: 90%
+		+r(650)
+			font-size: 15px
+			line-height: 24px
 		strong
 			display: inline-block
 			margin: 0 .5em 0 0
@@ -203,6 +231,7 @@
 			height: 45px
 			border-width: 2px
 			line-height: 45px
+			margin-top: 20px
 
 .gallery
 	padding: 80px 0
@@ -232,7 +261,7 @@
 			padding-top: 20vw
 		+r(650)
 			width: 100%
-			padding-top: 50%
+			padding-top: 50vw
 			border: none
 			margin-bottom: 5px
 		&:before
@@ -271,18 +300,15 @@
 		flex-wrap: wrap
 		background-position: 0 top
 		background-size: auto 350px
+		min-height: 0px
 	+r(650)
-		background-position: 00% top
+		background-position: 0% top
 	&:hover
 		background-position: 20% center
 		+r(1000)
 			background-position: 20% top
 		+r(650)
 			background-position: 70% top
-	.btn
-		background-color: $n
-		&:hover
-			background-color: #c7b299
 	&__pic
 		position: relative
 		// background-color: #396
@@ -294,8 +320,7 @@
 			top: 130px
 			left: 50%
 			+trx(-50%)
-			height: 170px
-
+			height: 200px
 	&__img
 		position: absolute
 		right: 2%
@@ -308,14 +333,13 @@
 			min-width: auto
 			right: 50%
 			transform: translate(50%, -50%)
-
 	&__content
 		margin: 0
 		padding: 90px 0 90px 3%
 		width: 50%
 		+r(1000)
 			width: 100%
-			padding: 30px 20px 70px
+			padding: 30px 20px 60px
 	&__title
 		font-size: 5.6rem
 		line-height: 1.15
@@ -339,15 +363,21 @@
 		font-size: 1.6rem
 		line-height: 1.5em
 		+r(1000)
-			margin: 330px 20px 150px
+			margin: 330px 20px 90px
+			font-size: 15px
+			line-height: 24px
 			text-align: center
 			width: auto
 	.btn
 		margin: 5.5rem auto 0
+		background-color: $n
+		&:hover
+			background-color: #c7b299
 		+r(1000)
 			position: absolute
-			bottom: 70px
+			bottom: 60px
 			left: 50%
+			margin-top: 0
 			+trx(-50%)
 
 .news
@@ -385,7 +415,7 @@
 			width: 100%
 			margin-right: 0
 		&:hover
-			box-shadow: 0 0 32px rgba(0, 0, 0, .4)
+			box-shadow: 0 0 32px rgba(131,109,108,0.4)
 			border-bottom: 10px solid #c7b299
 			margin-bottom: 10px
 			z-index: 2
@@ -426,7 +456,8 @@
 		background-color: #f4f0eb
 		transition: padding-top linear .2s
 	&__title
-		height: 5.9rem
+		max-height: 5.9rem
+		height: auto
 		white-space: nowrap
 		text-overflow: ellipsis
 		overflow: hidden
@@ -434,33 +465,34 @@
 		font-size: 1.8rem
 		+rr
 		+r(760)
-			height: 5.6rem
+			max-height: 5.6rem
 		+r(650)
-			height: 6.7rem
+			max-height: 6.7rem
 		+r(400)
-			height: 5.7rem
+			max-height: 5.7rem
 	&__desc
 		white-space: nowrap
 		text-overflow: ellipsis
 		overflow: hidden
 		margin-bottom: 0
-		font-size: 1.4rem
+		font-size: 14px
 		line-height: 1.3
+		max-height: 54px
+		height: auto
 		+rr
 		+r(850)
 			height: 73px
 		+r(650)
 			height: 49px
 	&__time
+		position: absolute
+		bottom: 26px
+		left: 10%
 		display: inline-block
 		font-size: 1.1rem
 		color: #000
-		margin-top: 2em
 		+rr
 		+r(850)
-			position: absolute
-			bottom: 24px
-			left: 10%
-			margin-top: 0
+			font-size: 13px
 		// +r(650)
 		// 	margin-top: 1.4em
