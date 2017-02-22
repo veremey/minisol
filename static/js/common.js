@@ -17,7 +17,7 @@ $(document).ready(function() {
 		'placeholder': '___ __ __ __'
 	});
 
-	//ppp file
+	//ppp input file
 	var inputs = document.querySelectorAll( '.popup__fieldset_file' );
 	Array.prototype.forEach.call( inputs, function( input )
 	{
@@ -43,7 +43,7 @@ $(document).ready(function() {
 	var $window = $(window).height();
 	var $header = $('.header');
 	if($window < $('.popup__question').height() + $header.height()) {
-		var scrollHeight = $window - $header.height()
+		var scrollHeight = $window - $header.height();
 		$('.popup__question').css({
 			'max-height' : scrollHeight
 		});
@@ -98,6 +98,8 @@ $(document).ready(function() {
 		event.stopPropagation();
 	});
 
+	// open question ppp
+
 	$('.js-question').on('click', function () {
 		$('.popup__question').toggleClass('is_opened');
 		return false;
@@ -123,20 +125,9 @@ $(document).ready(function() {
 	// submenu open mobile
 	// -------------------------
 
-	if($(document).width() < 1000 ){
-		$('.has_subnav').on('click', function() {
-			var $this = $(this);
-			var childSubMenu = $this.children('.subWrapper');
+	mobMen();
 
-			$this.siblings('.has_subnav').removeClass('is_open').find('.subWrapper').removeClass('is_open');
-			childSubMenu.toggleClass('is_open');
-			$this.toggleClass('is_open');
-
-			return false;
-		});
-	}
-
-	// magazin width
+	// magazin picture width
 
 	magazinImg();
 	$(window).on('resize', magazinImg);
@@ -158,13 +149,6 @@ $(document).ready(function() {
 	}
 	/* --- slider collection ---*/
 	/*--------------------------------------------------------------------*/
-
-	//  == -  tips
-		// $('.tip').on('click', function () {
-		// 	$(this).addClass('is_active')
-		// 					.closest('tip').removeClass('is_active');
-		// });
-	//  == -
 
 	$('.mod_normal .present').slick({
 	slidesToShow: 1,
@@ -285,6 +269,21 @@ $(document).ready(function() {
 
 
 });
+
+function mobMen() {
+	$('.has_subnav').on('click', function() {
+			var $this = $(this);
+			var childSubMenu = $this.children('.subWrapper');
+		if($(document).width() < 1000 ){
+
+			$this.siblings('.has_subnav').removeClass('is_open').find('.subWrapper').removeClass('is_open');
+			childSubMenu.toggleClass('is_open');
+			$this.toggleClass('is_open');
+
+			return false;
+		}
+	});
+}
 
 function magazinImg() {
 	if($('.magazin__img').width() > $(document).width() || $(document).width() > 1000){
