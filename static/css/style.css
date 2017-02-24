@@ -479,6 +479,7 @@ html:not(.webkit-line-clamp) .news__desc::after { background: #f4f0eb; }
 
 input:-webkit-autofill { background-position: 0 0; -webkit-text-fill-color: #000; -webkit-box-shadow: 0 0 0px 1000px transparent inset; transition: background-color 5000s ease-in-out 0s; background-color: #fff !important; }
 
+.popup__gallery { display: none; }
 .popup__fieldset { position: relative; width: 49%; height: 49px; text-align: left; }
 .popup__fieldset:not(:last-of-type) { margin-right: 2%; }
 .popup__fieldset_tel { height: 100%; margin-left: 15px; border: none; outline: none; background-color: transparent; }
@@ -644,7 +645,7 @@ input:-webkit-autofill { background-position: 0 0; -webkit-text-fill-color: #000
  .jumbotron__figure:before{ left: -3%; }
  .jumbotron__mark{ line-height: 1.3em; padding: 4px 20px; }
  .info__desc{ width: 90%; }
- .info .btn{ height: 45px; border-width: 2px; line-height: 45px; margin-top: 20px; }
+ .info .btn{ height: 45px; border-width: 2px; line-height: 45px; margin-top: 20px; font-size: 12px; }
  .gallery__row{ -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; }
  .gallery__item{ width: 50%; padding-top: 20vw; }
  .collection__wrap.mod_reverse .propose__item.slick-active{ background-position: 280% center; background-image: none; }
@@ -714,6 +715,7 @@ input:-webkit-autofill { background-position: 0 0; -webkit-text-fill-color: #000
  .info__item{ width: 120px; }
  .collection__wrap.mod_reverse .tip:hover .tip_desc{ width: 84px; padding: 0; color: transparent; }
  .tips{ top: 62%; }
+ .tip{ -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
  .tip:hover .tip_desc{ width: 84px; padding: 0; color: transparent; } }
 @media only screen and (max-width: 350px){
  .jumbotron__mark{ padding: 4px 12px; } }

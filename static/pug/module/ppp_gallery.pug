@@ -1,0 +1,48 @@
+- var gal01 = {'/static/img/index/gallery/01.jpg': 'caption1', '/static/img/index/gallery/02.jpg': 'caption2', '/static/img/index/gallery/03.jpg': 'caption3', '/static/img/index/gallery/04.jpg': 'caption4'};
+
+- var gal02 = {'/static/img/index/gallery/08.jpg': 'caption1', '/static/img/index/gallery/07.jpg': 'caption2'};
+
+- var gal03 = {'/static/img/index/gallery/05.jpg': 'caption1'};
+
+- var gal04 = {'/static/img/index/gallery/03.jpg': 'caption1', '/static/img/index/gallery/05.jpg': 'caption2', '/static/img/index/gallery/06.jpg': 'caption3'};
+
+- var gal05 = {'/static/img/index/gallery/01.jpg': 'caption1', '/static/img/index/gallery/02.jpg': 'caption2', '/static/img/index/gallery/03.jpg': 'caption3', '/static/img/index/gallery/04.jpg': 'caption4'};
+
+- var gal06 = {'/static/img/index/gallery/05.jpg': 'caption1', '/static/img/index/gallery/04.jpg': 'caption2', '/static/img/index/gallery/02.jpg': 'caption3', '/static/img/index/gallery/07.jpg': 'caption4'};
+
+- var gal07 = {'/static/img/index/gallery/01.jpg': 'caption1', '/static/img/index/gallery/02.jpg': 'caption2', '/static/img/index/gallery/03.jpg': 'caption3', '/static/img/index/gallery/04.jpg': 'caption4'};
+
+- var gal08 = {'/static/img/index/gallery/01.jpg': 'caption1', '/static/img/index/gallery/02.jpg': 'caption2', '/static/img/index/gallery/03.jpg': 'caption3', '/static/img/index/gallery/04.jpg': 'caption4'};
+
+.popup__gallery
+	each label, picture in gal01
+		a(href=picture, data-fancybox="gallery-01", data-caption=label).subject__pic
+			img(src=picture, alt='изображение')
+
+	each label, picture in gal02
+		a(href=picture, data-fancybox="gallery-02", data-caption=label).subject__pic
+			img(src=picture, alt='изображение')
+
+	each label, picture in gal03
+		a(href=picture, data-fancybox="gallery-03", data-caption=label).subject__pic
+			img(src=picture, alt='изображение')
+
+	each label, picture in gal04
+		a(href=picture, data-fancybox="gallery-04", data-caption=label).subject__pic
+			img(src=picture, alt='изображение')
+
+	each label, picture in gal05
+		a(href=picture, data-fancybox="gallery-05", data-caption=label).subject__pic
+			img(src=picture, alt='изображение')
+
+	each label, picture in gal06
+		a(href=picture, data-fancybox="gallery-06", data-caption=label).subject__pic
+			img(src=picture, alt='изображение')
+
+	each label, picture in gal07
+		a(href=picture, data-fancybox="gallery-07", data-caption=label).subject__pic
+			img(src=picture, alt='изображение')
+
+	each label, picture in gal08
+		a(href=picture, data-fancybox="gallery-08", data-caption=label).subject__pic
+			img(src=picture, alt='изображение')
