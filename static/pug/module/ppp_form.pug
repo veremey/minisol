@@ -7,13 +7,23 @@ div.popup__question.js_close
 		h3.title__popup у вас есть вопрос?
 		p.popup__question_desc наши специалисты рады <wbr> будут помочь
 		form(method='post', action="/" , name='question', autocomplete='on').popup__question_form
-			textarea(name='yourQuestion', placeholder='Ваш вопрос').popup__question_item
-			input(type='text', autocomplete='on', name='name', placeholder='Ваше имя').popup__question_data
-			input(type='email', autocomplete='on', name='email', placeholder='Эл. почта', required).popup__question_data
+			.input
+				textarea(name='yourQuestion', placeholder="Ваш вопрос").popup__question_item
+				//- label(for="yourQuestion").input__label
+				//- 	span Ваш вопрос
+			.popup__question_box
+				.input.input-half
+					input(type='text', name='name', placeholder='').popup__question_data.input__item
+					label(for="name").input__label
+						span Ваше имя
+				.input.input-half
+					input(type='email', name='email', placeholder='', required).popup__question_data.input__item
+					label(for="email").input__label
+						span Эл. почта
 			.popup__question_wrp
 				fieldset.popup__fieldset.mod_tel
 					label(for='tel').popup__fieldset_label Телефон
-					input(type='tel', autocomplete='on', name="tel" placeholder='+7 (___) ___ - __ - __').popup__fieldset_tel
+					input(type='tel', name="tel" placeholder='+7 (___) ___ - __ - __').popup__fieldset_tel
 				fieldset.popup__fieldset
 					input(type="file",name="file", id="file", data-multiple-caption="Выбрано {count} файла" multiple ).popup__fieldset_file
 

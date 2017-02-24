@@ -2,7 +2,7 @@
 <html lang="ru-RU">
   <head>
     <meta charset="utf-8">
-    <title>ТЕХНОНИКОЛЬ LUXARD</title>
+    <title>ТЕХНОНИКОЛЬ LUXARD композитная черепица</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
     <meta content="telephone=no" name="format-detection">
@@ -14,6 +14,7 @@
     <script src="static/js/lib/picturefill.min.js"></script>
     <script src="static/js/lib/jquery.formatter.min.js"></script>
     <script src="static/js/lib/ScrollMagic.min.js"></script>
+    <script src="static/js/lib/classie.js"></script>
     <script src="static/js/lib/slick.min.js"></script>
     <script src="static/js/common.js"></script>
     <script src="static/js/animation.js"></script>
@@ -81,13 +82,23 @@
             <h3 class="title__popup">у вас есть вопрос?</h3>
             <p class="popup__question_desc">наши специалисты рады <wbr> будут помочь</p>
             <form class="popup__question_form" method="post" action="/" name="question" autocomplete="on">
-              <textarea class="popup__question_item" name="yourQuestion" placeholder="Ваш вопрос"></textarea>
-              <input class="popup__question_data" type="text" autocomplete="on" name="name" placeholder="Ваше имя">
-              <input class="popup__question_data" type="email" autocomplete="on" name="email" placeholder="Эл. почта" required>
+              <div class="input">
+                <textarea class="popup__question_item" name="yourQuestion" placeholder="Ваш вопрос"></textarea>
+              </div>
+              <div class="popup__question_box">
+                <div class="input input-half">
+                  <input class="popup__question_data input__item" type="text" name="name" placeholder="">
+                  <label class="input__label" for="name"><span>Ваше имя</span></label>
+                </div>
+                <div class="input input-half">
+                  <input class="popup__question_data input__item" type="email" name="email" placeholder="" required>
+                  <label class="input__label" for="email"><span>Эл. почта</span></label>
+                </div>
+              </div>
               <div class="popup__question_wrp">
                 <fieldset class="popup__fieldset mod_tel">
                   <label class="popup__fieldset_label" for="tel">Телефон</label>
-                  <input class="popup__fieldset_tel" type="tel" autocomplete="on" name="tel" placeholder="+7 (___) ___ - __ - __">
+                  <input class="popup__fieldset_tel" type="tel" name="tel" placeholder="+7 (___) ___ - __ - __">
                 </fieldset>
                 <fieldset class="popup__fieldset">
                   <input class="popup__fieldset_file" type="file" name="file" id="file" data-multiple-caption="Выбрано {count} файла" multiple>
@@ -481,26 +492,26 @@
         <section class="news__section"><a class="news__link" href="#">
             <div class="news__pic"><img class="news__img" src="/static/img/index/news/01.jpg" alt="изображение"></div>
             <div class="news__content">
-              <h4 class="news__title">Новая форма <wbr> композитной <wbr> черепицы <wbr>  LUXARD – ROMAN</h4>
-              <p class="news__desc">В сентябре 2012 г. Корпорация <wbr>  ТехноНИКОЛЬ <wbr> представила <wbr> новую форму <wbr> композитной <wbr> черепицы <wbr> LUXARD – ROMAN.</p>
+              <h4 class="news__title">Новая форма  композитной  черепицы   LUXARD – ROMAN</h4>
+              <p class="news__desc">В сентябре 2012 г. Корпорация   ТехноНИКОЛЬ  представила  новую форму  композитной  черепицы  LUXARD – ROMAN.</p>
               <time class="news__time" datetime="2016-01-01">01.01.2016</time>
             </div></a><a class="news__link" href="#">
             <div class="news__pic"><img class="news__img" src="/static/img/index/news/02-1.jpg" alt="изображение"></div>
             <div class="news__content">
-              <h4 class="news__title">Многоцветная <wbr> палитра <wbr> LUXARD Roman</h4>
-              <p class="news__desc">Корпорация <wbr>ТехноНИКОЛЬ<wbr> представила <wbr> многоцветную <wbr> палитру композитной <wbr>  черепицы LUXARD.</p>
+              <h4 class="news__title">Многоцветная  палитра  LUXARD Roman</h4>
+              <p class="news__desc">Корпорация ТехноНИКОЛЬ представила  многоцветную  палитру композитной   черепицы LUXARD.</p>
               <time class="news__time" datetime="2016-01-01">01.01.2016</time>
             </div></a><a class="news__link" href="#">
             <div class="news__pic"><img class="news__img" src="/static/img/index/news/03.jpg" alt="изображение"></div>
             <div class="news__content">
-              <h4 class="news__title"> Гарантия на <wbr>  LUXARD <wbr> теперь в <wbr> онлайн <wbr> режиме</h4>
-              <p class="news__desc">На нашем <wbr> сайте <wbr> запущен сервис <wbr> для формирования <wbr> гарантийного сертификата <wbr> на материал <wbr> LUXARD</p>
+              <h4 class="news__title"> Гарантия на   LUXARD  теперь в  онлайн  режиме</h4>
+              <p class="news__desc">На нашем  сайте  запущен сервис  для формирования  гарантийного сертификата  на материал  LUXARD</p>
               <time class="news__time" datetime="2016-01-01">01.01.2016</time>
             </div></a><a class="news__link" href="#">
             <div class="news__pic"><img class="news__img" src="/static/img/index/news/04.jpg" alt="изображение"></div>
             <div class="news__content">
-              <h4 class="news__title">Композитная <wbr> черепица <wbr> ТЕХНОНИКОЛЬ  LUXARD <wbr> по специальным <wbr> ценам</h4>
-              <p class="news__desc">ТЕХНОНИКОЛЬ <wbr> LUXARD — <wbr> надежная и <wbr>долговечная композитная <wbr> черепица.</p>
+              <h4 class="news__title">Композитная  черепица  ТЕХНОНИКОЛЬ  LUXARD  по специальным  ценам</h4>
+              <p class="news__desc">ТЕХНОНИКОЛЬ  LUXARD —  надежная и долговечная композитная  черепица.</p>
               <time class="news__time" datetime="2016-01-01">01.01.2016</time>
             </div></a></section><a class="btn" href="#" role="button">архив новостей</a>
       </article>

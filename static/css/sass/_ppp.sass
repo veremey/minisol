@@ -1,3 +1,13 @@
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus
+input:-webkit-autofill
+	background-position: 0 0
+	-webkit-text-fill-color: #000
+	-webkit-box-shadow: 0 0 0px 1000px transparent inset
+	transition: background-color 5000s ease-in-out 0s
+	background-color: #fff !important
+
 .popup
 	&__fieldset
 		position: relative
@@ -12,6 +22,7 @@
 		&.mod_tel
 			+r(800)
 				text-align: center
+				margin-bottom: 8px
 		&_tel
 			height: 100%
 			margin-left: 15px
@@ -19,11 +30,11 @@
 			outline: none
 			background-color: $n
 			+placeholder
+				font-size: 16px
 				color: #000
 				+rl
-
 		&_label
-			font-size: 15px
+			font-size: 16px
 			text-align: left
 			padding-left: 18px
 			display: inline-block
@@ -144,16 +155,11 @@
 		resize: none
 		+r(650)
 			height: 80px
-	&_data
-		width: 49%
-		line-height: 50px
+	&_box
+		display: flex
+		justify-content: space-between
 		+r(650)
 			order: -1
-		&:not(:last-of-type)
-			margin-right: 2%
-		+r(800)
-			width: 100%
-			margin-right: 0
 	&_wrp
 		display: flex
 		flex-wrap: wrap
@@ -200,3 +206,36 @@
 		&.is_active span
 			width: 136%
 			background: $fiolet
+
+.input
+	position: relative
+	width: 100%
+	&-half
+		width: 49%
+		display: inline-block
+	&__item
+		padding: 20px 20px 5px
+		line-height: 1.2
+	&__label
+		position: absolute
+		left: 0px
+		right: 0
+		height: calc(100% - 8px)
+		top: 0px
+		text-align: left
+		padding: 12px 20px
+		pointer-events: none
+		user-select: none
+		span
+			font-size: 16px
+			color: #000
+			+rl
+			+tr(.4s)
+.input--filled .input__label span,
+.input__item:focus + .input__label span
+	font-size: 15px
+	transform: translate3d(0, -50%, 0)
+
+	position: relative
+	display: block
+	width: 100%

@@ -137,7 +137,7 @@
 	+hide-text
 
 =gray
-	filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale")
+	filter: url("data:image/svg+xmlutf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale")
 	// Firefox 10+
 	filter: gray
 	// IE6-9
@@ -147,7 +147,7 @@
 	-ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(grayScale=1)"
 
 =gray-half
-	filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='saturate' values='0.5'/></filter></svg>#grayscale")
+	filter: url("data:image/svg+xmlutf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='saturate' values='0.5'/></filter></svg>#grayscale")
 	// Firefox 10+
 	filter: gray alpha(opacity = 50)
 	// IE6-9
@@ -155,7 +155,7 @@
 	// Chrome 19+ & Safari 6+
 
 =gray-zero
-	filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0'/></filter></svg>#grayscale")
+	filter: url("data:image/svg+xmlutf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0'/></filter></svg>#grayscale")
 	-webkit-filter: grayscale(0%)
 
 =unselectable
@@ -275,3 +275,72 @@
 =fs($sizeValue: 16)
 	font-size: $sizeValue + px
 	font-size: $sizeValue / 10 + rem
+
+
+
+// @import "compass/css3/images"
+=limitLines($maxLinesPortrait, $maxLinesLandscape: $maxLinesPortrait,$fgCol: #000, $bgCol: #fff, $lineHeight: 1.3)
+	position: relative
+	overflow: hidden
+	// root element class added via JS feature detection
+	.webkit-line-clamp &
+		text-overflow: ellipsis
+		display: -webkit-box
+		-webkit-box-orient: vertical
+
+		// always remember:
+		// http://alistapart.com/article/every-time-you-call-a-proprietary-feature-css3-a-kitten-dies
+		-webkit-line-clamp: $maxLinesPortrait
+		@if($maxLinesLandscape != $maxLinesPortrait)
+			-webkit-line-clamp: $maxLinesLandscape
+
+	html:not(.webkit-line-clamp) &
+		max-height: $maxLinesPortrait * $lineHeight * 1em
+		&::before
+			top: ($maxLinesPortrait - 1) * $lineHeight * 1em
+		@if($maxLinesLandscape != $maxLinesPortrait)
+			max-height: $maxLinesLandscape * $lineHeight * 1em
+			&::before
+				top: ($maxLinesLandscape - 1) * $lineHeight * 1em
+		&::before
+			@extend %limit-lines-ellipsis
+			color: transparentize($fgCol, 0.7)
+				background: -ms-linear-gradient(left, transparentize($bgCol, 1), $bgCol 2em)
+			// @include background(linear-gradient(left, transparentize($bgCol, 1), $bgCol 2em))
+		&::after
+			@extend %limit-lines-filler
+			background: $bgCol
+
+%limit-lines-ellipsis
+	min-width: 25%
+	content: "…"
+	position: absolute
+	right: 0
+	bottom: 0
+	// top: 100%
+	padding-left: 2em // for the gradient
+
+%limit-lines-filler
+	$whitespace: ""
+	@for $i from 1 through 1024
+		$whitespace: $whitespace + "  "
+
+	content: $whitespace
+	display: inline
+	letter-spacing: 1em
+	position: relative
+	z-index: 1
+	// make this a bit smaller to avoid cropping of descenders from the line above
+	font-size: 75%
+
+
+// usage
+// p
+//    @include limitLines(
+//     $maxLinesPortrait: 3,
+//     $maxLinesLandscape: 6,
+//     $fgCol: #000,
+//     $bgCol: #fff,
+//     $lineHeight: 1.2
+//   )
+//
