@@ -1,4 +1,5 @@
--var footerMenu = ['Каталог', 'Фотогалерея', 'Монтаж', 'Информация', 'Где купить?'];
+- var menu = [{name : ' Каталог', sub: ['Коллекция Classic', 'Коллекция Roman', 'Комплектующие']}, {name : 'Фотогалерея'},{name : 'Монтаж', sub: ['Область применения', 'Инструкция по монтаж']}, {name : 'Информация', sub: ['Новости', 'Документация', 'Рекламные материалы', 'Оформление гарантии']}, {name: 'Где купить?'}];
+
 footer.footer(data-aos="slide-down", data-aos-duration="800")
 	.footer__wrapper
 		.footer__company
@@ -14,10 +15,11 @@ footer.footer(data-aos="slide-down", data-aos-duration="800")
 		.footer__info
 			.footer__line
 				nav.footerNav
-					ul.footerMenu
-						each menu in footerMenu
-							li.footerMenu__list
-								a(href='#').footerMenu__link= menu
+					ul.menu
+						each item in menu
+							li.menu_list
+								a(href="#").menu_link #{item.name}
+
 				.hotLine
 					small.hotLine__label горячая линия
 					a(href='tel:8800200565', title='Звонки со стационарного телефона бесплатны').hotLine__tel 8 800 200-05-65

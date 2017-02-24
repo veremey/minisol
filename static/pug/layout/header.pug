@@ -1,3 +1,24 @@
+- var menu = [{name : ' Каталог', sub: ['Коллекция Classic', 'Коллекция Roman', 'Комплектующие']}, {name : 'Фотогалерея'},{name : 'Монтаж', sub: ['Область применения', 'Инструкция по монтаж']}, {name : 'Информация', sub: ['Новости', 'Документация', 'Рекламные материалы', 'Оформление гарантии']}, {name: 'Где купить?'}];
+
+mixin list(items)
+	ul.menu
+		each item in items
+			if item.sub
+				li.menu_list.has_subnav
+					a(href="#").menu_link
+						span #{item.name}
+							i.icon-bird
+					.subWrapper
+						ul.submenu
+							each subitem in item.sub
+								li.submenu_list
+									a(href='#').submenu_link #{subitem}
+			else
+				li.menu_list
+					a(href="#").menu_link
+						span #{item.name}
+
+
 header.header.is_animated
 	.layout
 		a(href='/').logo
@@ -24,49 +45,7 @@ header.header.is_animated
 						img(src='/static/img/flag_en.png', alt='ru').lang__img
 						| en
 			nav.header__nav
-				ul.header__menu
-					li.header__menu_list.has_subnav
-						a(href='#').header__menu_link
-							span Каталог
-								i.icon-bird
-						.subWrapper
-							ul.header__submenu
-								li.header__submenu_list
-									a(href='#').header__submenu_link Коллекция Classic
-								li.header__submenu_list
-									a(href='#').header__submenu_link Коллекция Roman
-								li.header__submenu_list
-									a(href='#').header__submenu_link Комплектующие
-					li.header__menu_list
-						a(href='#').header__menu_link
-							span Фотогалерея
-					li.header__menu_list.has_subnav
-						a(href='#').header__menu_link
-							span Монтаж
-								i.icon-bird
-						.subWrapper
-							ul.header__submenu
-								li.header__submenu_list
-									a(href='#').header__submenu_link Область применения
-								li.header__submenu_list
-									a(href='#').header__submenu_link Инструкция по монтажу
-					li.header__menu_list.has_subnav
-						a(href='#').header__menu_link
-							span Информация
-								i.icon-bird
-						.subWrapper
-							ul.header__submenu
-								li.header__submenu_list
-									a(href='#').header__submenu_link Новости
-								li.header__submenu_list
-									a(href='#').header__submenu_link Документация
-								li.header__submenu_list
-									a(href='#').header__submenu_link Рекламные материалы
-								li.header__submenu_list
-									a(href='#').header__submenu_link Оформление гарантии
-					li.header__menu_list
-						a(href='#').header__menu_link
-							span Где купить?
+				+list(menu)
 			.header__info
 				.hotLine
 					small.hotLine__label горячая линия
