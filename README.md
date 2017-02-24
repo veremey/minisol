@@ -14,8 +14,6 @@
 
 * npm
 
-* bower
-
 ### Automatization
 
 * gulp
@@ -35,17 +33,3 @@ Email: [veremey4uk@gmail.com](mailto:veremey4uk@gmail.com)
 Установить плагины
 
 1. *npm install*
-
-s
-
-*Проблема со шрифтами, которые были в атаче - https://yadi.sk/d/pYdtDUaf3D7pMp (Поиск шрифтов) + .5 часа*
-
-*Не все шрифты были данны - пришлось искать + ,5 часа (roboto-light, proxima -semobold -extrsabold -bold)*
-
-*"Трехмерный цвет и фактура" - если добавлять .jumbotron__wrap с контентов внутри/или без  -  блок превращается в слайдер*
-
-
-*1rem = 10px*
-
-
-* картинки сжаты с помощью * [https://tinypng.com/](https://tinypng.com/)
