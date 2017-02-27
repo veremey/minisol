@@ -6,13 +6,6 @@ $(document).ready(function() {
 
 
 
-	appendLink = function() {
-		var link = $('.jumbotron__mark_desc');
-		var text = link.text();
-		text =  text.substr(0,text.length/2)+'<br>'+text.substr(text.length/2,text.length);
-		link.html(text);
-	};
-
 	adaptiveMark();
 	$(window).on('resize', adaptiveMark);
 
@@ -87,15 +80,28 @@ $(document).ready(function() {
 	})();
 
 
-	// -- ppp scroll
+	// -- scroll at popup question mob
 	var $window = $(window).height();
-	var $header = $('.header');
-	if($window < $('.popup__question').height() + $header.height()) {
-		var scrollHeight = $window - $header.height();
-		$('.popup__question').css({
-			'max-height' : scrollHeight
-		});
+	var $header = $('.header').height();
+	function pppQuestionScroll(){
+		var $win = $(window).height();
+		if($win < $('.popup__question').height() + $header) {
+			var scrollHeight = $win - $header;
+			$('.popup__question, .popup__question .mCustomScrollBox.mCS-light.mCSB_vertical.mCSB_inside').css({
+				'max-height' : scrollHeight
+			});
+		} else if ($win > $window){
+			scrollHeight = $win - $header;
+			$('.popup__question, .popup__question .mCustomScrollBox.mCS-light.mCSB_vertical.mCSB_inside').css({
+				'max-height' : scrollHeight
+			});
+		}
 	}
+
+	pppQuestionScroll();
+
+	$(window).on('resize', pppQuestionScroll);
+	// ----------------------------------------------
 
 	$('[data-fancybox]').fancybox({
 		helpers : {
@@ -167,6 +173,8 @@ $(document).ready(function() {
 		$('.menu, .subWrapper').css({
 			'left': ''
 		});
+
+		$('.popup__question').removeClass('is_opened');
 		return false;
 	});
 
