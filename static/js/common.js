@@ -334,6 +334,56 @@ $(document).ready(function() {
 	if (typeof window.document.createElement('div').style.webkitLineClamp !== 'undefined') {
 		document.querySelector('html').classList.add('webkit-line-clamp');
 	}
+	/* --- pre slider---*/
+	$('.pre-left').slick({
+		arrows: false,
+		touchThreshold: 10,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		asNavFor: '.pre-right'
+	});
+	$('.pre-right').slick({
+		arrows: false,
+		touchThreshold: 10,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		asNavFor: '.pre-left'
+	});
+	/*--------------------------------------------------------------------*/
+
+	/* --- catalog bottom slider ---*/
+	$('.component__slider').slick({
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		adaptiveHeight: true,
+		responsive: [
+			{
+				breakpoint: 1200,
+				settings: {
+					slidesToShow: 3
+				}
+			},
+			{
+				breakpoint: 1000,
+				settings: {
+					slidesToShow: 2
+					}
+				},
+			{
+				breakpoint: 800,
+				settings: {
+					slidesToShow: 1
+				}
+			}
+		]
+	});
+	/*--------------------------------------------------------------------*/
+
+
+
+
+
+
 
 });//doc ready
 

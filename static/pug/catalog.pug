@@ -1,0 +1,11 @@
+extends _layout
+block content
+	.out.is_animated
+		include layout/header.pug
+		include module/catalog.pug
+		section.section.is_animated
+			h2.title__article комплектующие
+			article.section-inner.bg-dark.mod_last
+				include module/component__slider.pug
+				a(href='#').btn.mod_offset.mod_change_650 перейти в каталог
+		include layout/footer.pug

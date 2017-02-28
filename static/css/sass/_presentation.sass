@@ -1,0 +1,92 @@
+.presentation
+	+clr
+	.pre-left
+		width: 50%
+		float: left
+		+r(1000)
+			width: 100%
+	.pre-right
+		width: 50%
+		float: right
+		+r(1000)
+			width: 100%
+
+	&__item
+		position: relative
+		height: 720px
+		overflow: hidden
+		text-align: center
+		+r(1000)
+			height: 450px
+
+	&__bg
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate3d(-50%, -50%, 0)
+		min-width: 100%
+		min-height: 100%
+	&__box
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate3d(-50%, -50%, 0)
+		+r(650)
+			width: 100%
+			padding: 0 30px
+		img
+			vertical-align: top
+			display: inline-block
+			max-width: 80%
+			width: auto
+			margin: 0 auto 5%
+			+r(1000)
+				max-width: 400px
+			+r(650)
+				max-width: 90%
+	&__text
+		text-align: center
+		+r(650)
+			width: 100%
+
+	&__title
+		color: #fff
+		font-size: 100px
+		letter-spacing: .1em
+		text-transform: uppercase
+		margin-bottom: 0
+		+cg
+		+r(1000)
+			font-size: 54px
+			letter-spacing: .05em
+			margin-bottom: 10px
+	&__desc
+		font-size: 20px
+		text-transform: uppercase
+		letter-spacing: .5em
+		margin-bottom: 0
+		color: #fff
+		+r(1000)
+			font-size: 16px
+	&__link
+		display: inline-block
+		vertical-align: top
+		background-color: #FFF
+		color: #000
+		font-size: 12px
+		letter-spacing: .1em
+		line-height: 48px
+		padding: 0 40px
+		margin-top: 55px
+		text-transform: uppercase
+		border-radius: 48px
+		+rm
+		+tr(.4s)
+		+r(1000)
+			margin: 30px auto
+		+r(650)
+			width: 100%
+			padding: 0
+		&:hover
+			color: #fff
+			background-color: $gold01

@@ -79,6 +79,7 @@
 	left: 0
 	z-index: 1
 	background: #644650
+	border: none
 	+tr(.4s)
 	&:hover
 		background-color: #46323c
@@ -240,3 +241,52 @@
 		+trx(20%)
 		&:before
 			+s(arrow-next)
+
+.component__slider
+	.slick-list
+		+r(650)
+			margin: 0 -10px
+	.slick-prev,
+	.slick-next
+		width: 30px
+		height: 54px
+		left: -75px
+		background: $n
+		+tr(.4s)
+		+r(650)
+			width: 37px
+			height: 84px
+			top: 230px
+			background-color: #e5dcd1
+			left: -20px
+		&:hover
+			opacity: .8
+		&:hover:after
+			transform: matrix(.8, 0, 0, .8, -15, -26)
+		&:hover:before
+			transform: matrix(.8, 0, 0, .8, -15, -26)
+			+r(650)
+				transform: matrix(.8, 0, 0, .8, -7, -15)
+		&:before
+			content: ""
+			+vcenter
+			transform: matrix(1, 0, 0, 1, -15, -26)
+			+s(slick-prev)
+			+tr(.4s)
+			+r(650)
+				+s(slick-prev-mini)
+				left: 40%
+				transform: matrix(1, 0, 0, 1, -7, -15)
+	.slick-next
+		right: -75px
+		left: auto
+		+r(650)
+			right: -20px
+			left: auto
+		&:before
+			content: ""
+			display: inline-block
+			+s(slick-next)
+			+r(650)
+				left: 60%
+				+s(slick-next-mini)

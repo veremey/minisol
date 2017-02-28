@@ -1,4 +1,27 @@
 /* -- {{hotLIne}} --/
+.bg-dark
+	background-color: #f9f8f7
+
+.section
+	padding-top: 50px
+	text-align: center
+	+r(650)
+		padding-top: 30px
+	&-inner
+		padding: 56px 20px 0
+		margin: 0 auto
+		&.mod_last
+			margin-bottom: 10px
+			padding-bottom: 30px
+
+	&.mod_first
+		padding-top: 165px
+		+r(1000)
+			padding-top: 100px
+		+r(650)
+			padding-top: 90px
+
+
 .hotLine
 	display: flex
 	flex-direction: column
@@ -18,3 +41,70 @@
 		+rb
 		+r(1250)
 			font-size: 2rem
+
+.pagination
+	width: 450px
+	height: 57px
+	margin: 55px auto 50px
+	+clr
+	+r(650)
+		width: 300px
+	&__left,
+	&__right
+		position: relative
+		width: 35px
+		height: 57px
+		float: left
+		margin-right: 75px
+		+r(650)
+			margin: 0
+		&:after
+			content: ""
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: matrix(1, 0, 0, 1, -7, -12)
+			+s(icon-prev)
+			+tr(.4s)
+		&:hover:after
+			transform: matrix(.8, 0, 0, .8, -7, -12)
+
+	&__right
+		float: right
+		margin-right: 0
+		&:after
+			transform: matrix(1, 0, 0, 1, -7, -12)
+			+s(icon-next)
+
+	&__list
+		display: inline-block
+		font-size: 0
+	&__item
+		display: inline-block
+		width: 32px
+		text-align: center
+		+tr(.4s)
+		&.is_active
+			background-color: #eee8e0
+		&:hover
+			background-color: #eee8e0
+			opacity: .8
+	&__link
+		display: block
+		line-height: 57px
+		font-size: 16px
+		color: #000
+		+rr
+
+.component
+	&__slider
+		position: relative
+		max-width: 1180px
+		width: 96%
+		margin: 0 auto
+		+r(1400)
+			width: calc(96% - 150px)
+			padding: 75px 0 0
+		+r(650)
+			width: 100%
+			padding: 0

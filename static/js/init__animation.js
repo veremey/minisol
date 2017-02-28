@@ -168,6 +168,29 @@ $(function () {
 				}
 			}
 		});
+		// comlect
+		Animation.initGlobalAnimations({
+			container: '.complectations',
+			selfTriggeredElems: {
+				el1: {
+					selector: '.title__article',
+					triggerHook: 1,
+					class: 'is_animated'
+				}
+			}
+		});
+
+		// comlect
+		Animation.initGlobalAnimations({
+			container: '.section',
+			selfTriggeredElems: {
+				el1: {
+					selector: '.title__article',
+					triggerHook: 1,
+					class: 'is_animated'
+				}
+			}
+		});
 
 	});
 
