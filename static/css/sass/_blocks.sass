@@ -8,7 +8,7 @@
 	+r(650)
 		padding-top: 30px
 	&-inner
-		padding: 56px 20px 0
+		// padding: 56px 20px 0
 		margin: 0 auto
 		&.mod_last
 			margin-bottom: 10px
@@ -20,7 +20,8 @@
 			padding-top: 100px
 		+r(650)
 			padding-top: 90px
-
+	&.mod_last
+		padding-bottom: 80px
 
 .hotLine
 	display: flex
@@ -108,3 +109,51 @@
 		+r(650)
 			width: 100%
 			padding: 0
+
+.docs
+	position: relative
+	font-size: 0
+.doc
+	width: calc(100% / 3 - 1px)
+	display: inline-block
+	vertical-align: top
+	margin-right: 1px
+	margin-bottom: 20px
+	&__title
+		text-align: left
+		font-size: 18px
+		color: $gold
+		+rr
+	&__pic
+		height: 290px
+		position: relative
+		width: 100%
+		overflow: hidden
+	&__img
+		+vcenter
+		min-height: 100%
+		min-width: 100%
+	&__content
+		width: 100%
+		padding: 20px 35px 30px
+		background-color: #f4f0eb
+	&__table
+		width: 100%
+		margin: 0 0 10px
+		text-align: left
+		td
+			vertical-align: top
+			padding-bottom: 15px
+			font-size: 14px
+			color: #000
+			+rr
+			&.doc__table_title
+				width: 94px
+				padding-right: 5px
+				font-size: 14px
+				+rm
+	.btn
+		background-color: $n
+		&:hover
+			background-color: #FFF
+			color: #000

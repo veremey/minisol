@@ -171,8 +171,12 @@
 	+r(1000)
 		position: static
 		background: #F5F5F5
-		height: 0
+		// height: 0
+		opacity: 1
+		transform: rotateX(0deg)
+		display: none
 		overflow: hidden
+		+tr(0s)
 	&.is_open
 		transform: rotateX(0deg)
 		opacity: 1

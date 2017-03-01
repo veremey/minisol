@@ -132,7 +132,6 @@
 		&:focus
 			outline: none
 
-
 .propose
 	img.propose__pic
 		max-width: 60%
@@ -216,8 +215,10 @@
 				left: 50%
 				+trx(-50%)
 
-.news__section
-	padding-top: 50px
+.news__section,
+.docs
+	+r(1015)
+		padding-top: 50px
 	.slick-prev,
 	.slick-next
 		top: 0
@@ -290,3 +291,41 @@
 			+r(650)
 				left: 60%
 				+s(slick-next-mini)
+
+.presentation
+	.slick-dots
+		display: inline-block
+		width: auto
+		position: absolute
+		top: auto
+		bottom: -150px
+		left: 0
+		+trx(-50%)
+		li
+			display: inline-block
+			width: 100px
+			height: 150px
+			cursor: pointer
+			padding: 25px 15px 15px
+			&.slick-active
+				background-color: #eee8e0
+			a
+				display: block
+				position: relative
+				width: 70px
+				height: 70px
+				border-radius: 70px
+				text-align: center
+				overflow: hidden
+				img
+					+vcenter
+			p
+				font-size: 13px
+				text-transform: uppercase
+				letter-spacing: .05em
+				color: #000
+				margin-top: 15px
+				+rm
+
+
+

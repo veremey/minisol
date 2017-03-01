@@ -10,6 +10,8 @@
 		width: 20%
 		left: .5%
 		background: #f9f8f7 url('../img/index/arr.png') 100% 50% no-repeat
+		+r(800)
+			display: none
 
 	&-right
 		position: absolute
@@ -18,10 +20,15 @@
 		width: 20%
 		right: .5%
 		background: #f9f8f7 url('../img/index/arr-r.png') 0 50% no-repeat
+		+r(800)
+			display: none
 
 	&__wrap
 		width: 460px
 		margin: 0 auto
+		+r(650)
+			width: 100%
+			padding: 0 20px
 	&__title
 		text-align: center
 		font-size: 24px
@@ -29,7 +36,6 @@
 		text-transform: uppercase
 		+cg
 	&__table
-		table-layout: fixed
 		width: 100%
 		tr
 			border-bottom: 1px solid #e0dfde
