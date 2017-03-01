@@ -1,0 +1,62 @@
+extends _layout
+block content
+	.out.is_animated
+		include layout/header.pug
+		.jumbotron.is_animated.mod_short
+			.jumbotron__wrap
+				img(src='/static/img/index/jumb-01.jpg', alt='изображение').jumbotron__img
+				.jumbotron__content
+					.jumbotron__figure
+						img(src='/static/img/index/jumbSmall-01.png', alt='изображение')
+					.jumbotron__subTitle
+						h3.jumbotron__title roman
+						p.jumbotron__desc Коллекция
+					.jumbotron__footer
+						a(href='#').jumbotron__link где купить
+						a(href='#').jumbotron__link найти подрядчика
+			.jumbotron__wrap
+				img(src='/static/img/index/jumb-01.jpg', alt='изображение').jumbotron__img
+				.jumbotron__content
+					.jumbotron__figure
+						img(src='/static/img/index/jumbSmall-01.png', alt='изображение')
+					.jumbotron__subTitle
+						h3.jumbotron__title roman
+						p.jumbotron__desc Коллекция
+					.jumbotron__footer
+						a(href='#').jumbotron__link где купить
+						a(href='#').jumbotron__link найти подрядчика
+		article.info.is_animated
+			.info__header
+				.info__item
+					picture.info__icon
+						source(srcset="/static/img/icon-layouts.png" media="(min-width: 650px)")
+						source(srcset="/static/img/icon-layouts-mini.png" media="(max-width: 649px)")
+						img(src='/static/img/icon-layouts.png', alt='изображение')
+					span.info__label многослойность
+				.info__item
+					picture.info__icon
+						source(srcset="/static/img/icon-3d.png" media="(min-width: 650px)")
+						source(srcset="/static/img/icon-3d-mini.png" media="(max-width: 649px)")
+						img(src='/static/img/icon-3d.png', alt='изображение')
+					span.info__label трёхмерный <br> цвет и фактура
+				.info__item
+					picture.info__icon
+						source(srcset="/static/img/icon-infinity.png" media="(min-width: 650px)")
+						source(srcset="/static/img/icon-infinity-mini.png" media="(max-width: 649px)")
+						img(src='/static/img/icon-infinity.png', alt='изображение')
+					span.info__label долговечность
+				.info__item
+					picture.info__icon
+						source(srcset="/static/img/icon-rock.png" media="(min-width: 650px)")
+						source(srcset="/static/img/icon-rock-mini.png" media="(max-width: 649px)")
+						img(src='/static/img/icon-rock.png', alt='изображение')
+					span.info__label на основе <br> базальта
+			.info__content
+				p.info__desc.
+					Форма композитной черепицы ТЕХНОНИКОЛЬ LUXARD Roman — лаконичные формы натуральной керамической черепицы. Форма ТЕХНОНИКОЛЬ LUXARD Roman создана для изысканных ценителей европейских крыш. Изысканное очарование натуральной черепицы в высокотехнологичном исполнении.
+				p.info__desc.
+					ТЕХНОНИКОЛЬ LUXARD Roman — тонкий штрих, идеально завершающий облик Вашего дома в самых лучших традициях классической архитектуры.
+		include module/prod_roman_sldr.pug
+		include module/specifications_roman.pug
+		include module/doc.pug
+		include layout/footer.pug

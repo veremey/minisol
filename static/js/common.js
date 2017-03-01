@@ -6,7 +6,6 @@ $(document).ready(function() {
 	var widthScreen = $(window).width();
 
 
-
 	adaptiveMark();
 	$(window).on('resize', adaptiveMark);
 
@@ -289,46 +288,7 @@ $(document).ready(function() {
 	// --------------------------------------
 
 	var $carousel = $('.news__section');
-	// showSliderScreen($ws);
 
-
-
-
-
-	// function showSliderScreen($ws) {
-	// 	var $widthScreen = parseInt($ws);
-	// 	console.log($widthScreen + ': ширина окна');
-
-	// 		if ($widthScreen <= 1000) {
-	// 			if (!$carousel.hasClass('slick-initialized')) {
-	// 				$carousel.slick({
-	// 						slidesToShow: 2,
-	// 						slidesToScroll: 1,
-	// 						responsive: [
-	// 						{
-	// 							breakpoint: 650,
-	// 							settings: {
-	// 									slidesToShow: 1
-	// 							}
-	// 						}
-	// 					]
-	// 				});
-	// 			}
-
-	// 		} else {
-	// 			if ($carousel.hasClass('slick-initialized')) {
-	// 				$carousel.slick('unslick');
-	// 			}
-	// 		}
-	// }
-
-
-	// $(window).ready(showSliderScreen(widthScreen)).resize(
-	// 	function () {
-	// 		var widthScreen = $(window).width();
-	// 		showSliderScreen(widthScreen);
-	// 	}
-	// );
 
 	// for current elipsis render
 	if (typeof window.document.createElement('div').style.webkitLineClamp !== 'undefined') {
@@ -398,12 +358,6 @@ $(document).ready(function() {
 	/* --- doc slider ---*/
 	$carousel = $('.docs');
 
-	// $(window).ready(showSliderScreen(widthScreen)).resize(
-	// 	function () {
-	// 		var widthScreen = $(window).width();
-	// 		showSliderScreen(widthScreen);
-	// 	}
-	// );
 	/*--------------------------------------------------------------------*/
 
 

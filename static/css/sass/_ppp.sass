@@ -93,23 +93,20 @@ input:-webkit-autofill
 			+try(-50%)
 
 .popup__question
-	// display: none
 	position: relative
 	text-align: center
-	// padding-top: 60px //todo scroll
 	border-top: 1px solid #dbdbdb
 	background-color: #FFF
 
 	transform-origin: top center
 	transform: rotateX(90deg)
-	// overflow-y: auto
+
 	+tr(.5s)
 	.layout
 		margin-top: 60px
 		+r(650)// todo
 			margin: 80px 0
 	&.is_opened
-		// display: block
 		transform: rotateX(0deg)
 		z-index: 400
 		+r(1000)

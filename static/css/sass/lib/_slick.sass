@@ -259,7 +259,7 @@
 			height: 84px
 			top: 230px
 			background-color: #e5dcd1
-			left: -20px
+			left: -10px
 		&:hover
 			opacity: .8
 		&:hover:after
@@ -282,7 +282,7 @@
 		right: -75px
 		left: auto
 		+r(650)
-			right: -20px
+			right: -10px
 			left: auto
 		&:before
 			content: ""
@@ -318,7 +318,11 @@
 				text-align: center
 				overflow: hidden
 				img
-					+vcenter
+					position: relative
+					top: 70%
+					left: 50%
+					transform: translate(-50%, -50%)
+					height: 200%
 			p
 				font-size: 13px
 				text-transform: uppercase

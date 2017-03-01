@@ -11,8 +11,6 @@ function ScrollClass() {
 		(function($){
 			$(window).on("load",function(){
 				$conteiner.mCustomScrollbar({
-					scrollInertia: 300,
-					autoDraggerLength: false
 				});
 			});
 		})(jQuery);

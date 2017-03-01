@@ -4,4 +4,9 @@ $(function () {
 		conteiner: '.popup__question'
 	});
 
+
+	Scroll.initScroll({
+		conteiner: '.complect__text'
+	});
+
 });
