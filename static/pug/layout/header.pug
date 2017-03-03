@@ -23,9 +23,9 @@ header.header.is_animated
 	.layout
 		a(href='/').logo
 			picture.logo__pic
-				source(srcset="/static/img/logo.svg" media="(min-width: 1361px)")
-				source(srcset="/static/img/logo-min.svg" media="(min-width: 1001px)")
-				img(srcset="/static/img/logo.svg" alt="…")
+				source(srcset="static/img/logo.svg" media="(min-width: 1361px)")
+				source(srcset="static/img/logo-min.svg" media="(min-width: 1001px)")
+				img(srcset="static/img/logo.svg" alt="…")
 		a(href='#').btn__open
 			b меню
 			.btn__open_wrap
@@ -39,10 +39,10 @@ header.header.is_animated
 				input(type="hidden", value="").js-select-input
 				ul.select__list.js-select-list
 					li(data-id="0")
-						img(src='/static/img/flag-ru.jpg', alt='ru').lang__img
+						img(src='static/img/flag-ru.jpg', alt='ru').lang__img
 						| ru
 					li(data-id="1")
-						img(src='/static/img/flag_en.png', alt='ru').lang__img
+						img(src='static/img/flag_en.png', alt='ru').lang__img
 						| en
 			nav.header__nav
 				+list(menu)

@@ -176,16 +176,37 @@ $(function () {
 					selector: '.title__article',
 					triggerHook: 1,
 					class: 'is_animated'
+				},
+				el2: {
+					selector: '.complect',
+					triggerHook: 1,
+					class: 'is_animated'
 				}
 			}
 		});
 
-		// comlect
+		// section
 		Animation.initGlobalAnimations({
 			container: '.section',
 			selfTriggeredElems: {
 				el1: {
 					selector: '.title__article',
+					triggerHook: 1,
+					class: 'is_animated'
+				}
+			}
+		});
+		// specifications
+		Animation.initGlobalAnimations({
+			container: '.specifications',
+			selfTriggeredElems: {
+				el1: {
+					selector: '.specifications__title',
+					triggerHook: 1,
+					class: 'is_animated'
+				},
+				el2: {
+					selector: '.specifications__table tr',
 					triggerHook: 1,
 					class: 'is_animated'
 				}

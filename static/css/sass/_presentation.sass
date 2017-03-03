@@ -10,6 +10,53 @@
 		float: right
 		+r(1000)
 			width: 100%
+	.pre-center
+		position: relative
+		clear: both
+		width: 1000px
+		margin: 0 auto
+		+r(1000)
+			width: calc(100% - 50px)
+		.slick-track
+			margin: 0 auto
+			background-color: #FFF
+			text-align: center
+			&.stop
+				width: 900px !important
+				transform: translate3d(0, 0, 0) !important
+				.presentation
+					&__item
+						float: none
+						display: inline-block
+		.presentation
+			&__item
+				width: 100px
+				height: 150px
+				padding: 25px 15px 15px
+				background-color: #FFF
+			&__pic
+				position: relative
+				width: 70px
+				height: 70px
+				border-radius: 70px
+				overflow: hidden
+				transform: translate3d(0, 0, 0)
+				img
+					height: 100%
+			&__bg
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate3d(-50%, -50%, 0)
+			&__box
+				top: 98px
+				&_title
+					font-size: 13px
+					text-transform: uppercase
+					letter-spacing: .05em
+					color: #000
+					margin-top: 15px
+					+rm
 
 	&__item
 		position: relative
@@ -98,12 +145,29 @@
 			background-color: #9d0667
 
 .presentation-short
-	padding-bottom: 150px
+	//padding-bottom: 150px//product-classic.html
 	.pre-left,
 	.pre-right
 		height: 470px
+		+r(1000)
+			height: 320px
+
+	.pre-left
+		+r(1000)//todo
+			.presentation__content
+				display: none
+
 
 	.pre-right
+		+r(1000)
+			+try(160px)
+		.buy__price
+			display: none
+			+r(1000)
+				display: flex
+				align-items: center
+				justify-content: center
+				flex-grow: 1
 		.presentation
 			&__box
 				img
@@ -112,6 +176,11 @@
 					left: 50%
 					transform: translate3d(-50%, -50%, 0)
 					margin: 0
+					+r(1000)
+						top: 68%
+	.pre-center
+		+r(1000)
+			+try(-315px)
 
 	.presentation
 		&__box
@@ -124,11 +193,18 @@
 			transform: translate3d(0, 0, 0)
 		&__item
 			height: 470px
+			+r(1000)
+				height: 320px
 		&__content
 			position: absolute
 			bottom: 46px
 			right: 0
 			width: 100%
+			+clr
+			+r(1000)
+				bottom: auto
+				top: 70px
+				width: 100%
 			&_head
 				+clr
 			&_title
@@ -149,12 +225,21 @@
 			position: absolute
 			bottom: 0
 			left: 0
+			+r(1000)
+				display: flex
+				height: 50px
+				width: 100%
+
+
 		&__price
 			display: inline-block
 			float: right
 			text-align: right
 			background-color: #FFF
 			padding: 0 20px
+			white-space: nowrap
+			+r(650)
+				padding: 0 10px
 			strong
 				display: inline-block
 				color: #000
@@ -163,6 +248,8 @@
 				letter-spacing: .01em
 				margin: 0 15px
 				+rm
+				+r(650)
+					margin: 0 7px
 			span
 				display: inline-block
 				font-size: 14px
@@ -179,5 +266,10 @@
 			color: #fff
 			text-transform: uppercase
 			font-size: 14px
+			+tr(.4s)
 			background-color: #9d0667
 			+rr
+			&:hover
+				background-color: #672146
+			+r(650)
+				width: 140px

@@ -90,14 +90,14 @@
 	&:before
 		content: ""
 		+vcenter
-		// +s(slide-prev)
+		+s(arrow-prev)
 .slick-next
 	right: 0
 	left: auto
 	&:before
 		content: ""
 		display: inline-block
-		// +s(slide-next)
+		+s(arrow-next)
 .slick-dots
 	text-align: center
 	position: absolute
@@ -232,7 +232,7 @@
 		border-radius: 100%
 		&:hover
 			background-color: #cebba5
-		+r(400)
+		+r(650)
 			top: 20px
 	.slick-prev
 		+trx(-120%)
@@ -330,6 +330,33 @@
 				color: #000
 				margin-top: 15px
 				+rm
-
+	.pre-center
+		.presentation__item.slick-current
+			background-color: #eee8e0
+			&:before
+				content: '\002B'
+				position: absolute
+				top: 40%
+				left: 50%
+				color: #fff
+				font-size: 22px
+				text-transform: uppercase
+				transform: translate(-50%, -50%)
+				+tr(.5s)
+				+cg
+				z-index: 20
+		.slick-prev
+			left: -18px
+			background-color: $n
+			&:before
+				transform: translate(-150%, -50%)
+				+s(icon-prev)
+		.slick-next
+			left: auto
+			right: -18px
+			background-color: $n
+			&:before
+				transform: translate(50%, -50%)
+				+s(icon-next)
 
 
