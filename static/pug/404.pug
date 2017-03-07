@@ -1,0 +1,14 @@
+extends _layout
+block content
+	.out.is_animated
+		header.header-404
+			a(href='/').logo-404
+				img(src='static/img/logo.svg', alt='изображение')
+		.main.main-404
+			.main-404-wrap
+				.main-404-heading
+					h4.title-404 cтраница не найдена
+					p.desc-404 Вы перешли по неправильной ссылке или страница была удалена
+				img(src='static/img/404.png', alt='404').pic-404
+		footer.footer-404
+			a(href='/').btn Перейти на главную

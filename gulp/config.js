@@ -12,6 +12,6 @@ module.exports = {
     css     : '../static/css/',
     html    : '../static/',
     js      : '../static/js/',
-    img     : '../static/img/'
+    img     : '../static/MINIFYpic/'
   }
 };

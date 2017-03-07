@@ -8,25 +8,6 @@
 	+r(650)
 		padding-top: 30px
 
-	&.mod_titleBig
-		.title__article
-			font-size: 70px
-			+r(1000)
-				font-size: 50px
-			+r(650)
-				font-size: 24px
-
-	&-inner
-		margin: 0 auto
-		&.mod_last
-			margin-bottom: 10px
-			padding-bottom: 30px
-	.title__article
-		font-size: 50px
-		margin-bottom: 1em
-		+r(1000)
-			font-size: 24px
-
 	&.mod_first
 		padding-top: 165px
 		+r(1000)
@@ -35,7 +16,46 @@
 			padding-top: 90px
 	&.mod_last
 		padding-bottom: 80px
+	&.mod_titleBig
+		.title__article
+			font-size: 70px
+			+r(1000)
+				font-size: 50px
+			+r(650)
+				font-size: 24px
+	//todo
+	//&.mod_last
+	//	margin-bottom: 10px// where they are&
+	//	padding-bottom: 30px// where they are&
+	&.mod_pages
+		+ .pagination
+			margin: 30px auto 100px
+			+r(650)
+				margin: 20px auto 30px
+	&.mod_short-pt
+		padding-top: 120px
+		+r(1000)
+			padding-top: 80px
 
+	&__inner
+		max-width: 1280px
+		width: calc(100% - 40px)
+		margin: 0 auto
+		font-size: 0
+		+clr
+
+	&__inside
+		max-width: 1040px
+		width: 100%
+		margin: 0 auto
+	.title__article
+		font-size: 50px
+		margin-bottom: 1em
+		+r(1000)
+			font-size: 24px
+
+.text-left
+	text-align: left
 .hotLine
 	display: flex
 	flex-direction: column
@@ -149,16 +169,49 @@
 	vertical-align: top
 	margin-right: 1px
 	margin-bottom: 20px
+	&.shadow-hover
+		+r(1000)
+			width: calc(100% / 2 - 1px)
+		+r(650)
+			width: calc(100%)
+			margin-right: 0
+		.doc__pic
+			+r(650)
+				height: 220px
 	&__title
 		text-align: left
 		font-size: 18px
 		color: $gold
 		+rr
 	&__pic
+		display: block
 		height: 290px
 		position: relative
 		width: 100%
 		overflow: hidden
+		&:before
+			content: ''
+			position: absolute
+			top: 50%
+			bottom: 50%
+			left: 50%
+			right: 50%
+			background-color: rgba(0, 0, 0, .4)
+			z-index: -10
+			+tr(.5s)
+		&:after
+			content: ''
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: scale(.2) translate(-50%, -50%)
+			width: 51px
+			height: 51px
+			background-image: url(../img/icons/lupa.png)
+			z-index: -10
+			+tr(.4s)
+
+
 	&__img
 		+vcenter
 		min-height: 100%
@@ -190,3 +243,179 @@
 		&:hover
 			background-color: #FFF
 			color: #000
+
+
+//  --  404  --
+.header-404
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	height: 146px
+	background-color: #FFF
+	+r(850)
+		height: 80px
+.logo-404
+	width: 287px
+	font-size: 0
+	+r(850)
+		width: 224px
+	img
+		width: 100%
+.main-404
+	position: relative
+	background-color: #f9f8f7
+	padding: 78px 0 580px
+	text-align: center
+	+r(1000)
+		padding-bottom: 60vw
+	+r(850)
+		padding-top: 30px
+	&-wrap
+		width: calc(100% - 40px)
+		margin: 0 auto
+		font-size: 0
+.desc-404
+	font-size: 18px
+	letter-spacing: .025em
+	color: #000
+	margin-bottom: 0
+	+rl
+	+r(850)
+		font-size: 14px
+
+.pic-404
+	vertical-align: top
+	position: absolute
+	left: 50%
+	bottom: -47px
+	+trx(-50%)
+	max-width: calc(100% - 20px)
+	+r(1000)
+		bottom: -5vw
+
+.footer-404
+	background-color: #efebe9
+	text-align: center
+	padding: 78px 0 88px
+	margin-bottom: 74px
+	+r(850)
+		margin-bottom: 0
+		padding: 50px 0
+	.btn
+		background-color: $n
+		&:hover
+			background-color: $gold01
+
+.pagePrev
+	float: left
+	display: inline-block
+	position: relative
+	padding-left: 40px
+	margin-bottom: 40px
+	font-size: 14px
+	line-height: 30px
+	color: $gold
+	+rr
+	+tr(.4s)
+	+r(1000)
+		margin-bottom: 20px
+	&:before
+		content: ''
+		position: absolute
+		left: 0
+		top: 50%
+		+try(-50%)
+		background-image: url('../img/icons/icon-pagePrev.png')
+		width: 6px
+		height: 11px
+		+tr(.4s)
+	&:hover
+		opacity: .8
+
+
+.heading__time
+	font-size: 14px
+	color: #000
+	text-transform: uppercase
+	+rr
+	+r(850)
+		font-size: 13px
+
+
+.shadow-hover
+	position: relative
+	+tr(.4s)
+	&:hover
+		box-shadow: 0 0 0 11px #fff, 0 0 32px 10px rgba(131, 109, 108, 0.4)
+		z-index: 10
+		.doc__pic
+			cursor: pointer
+			&:before
+				content: ''
+				top: 0
+				bottom: 0
+				left: 0
+				right: 0
+				z-index: 10
+			&:after
+				content: ''
+				z-index: 20
+				transform: scale(1) translate(-50%, -50%)
+
+
+.promo
+	@extend .doc
+	&.shadow-hover
+		+r(1000)
+			width: calc(100% / 2 - 1px)
+		+r(650)
+			width: calc(100%)
+			margin-right: 0
+	&__pic
+		display: block
+		height: 290px
+		position: relative
+		width: 100%
+		overflow: hidden
+	&__img
+		@extend .doc__img
+	&__content
+		@extend .doc__content
+	&__title
+		@extend .doc__title
+		text-align: center
+
+
+.variants
+	counter-reset: list
+	text-align: left
+
+.variant
+	position: relative
+	display: inline-block
+	width: calc(50% - 60px)
+	padding-left: 60px
+	text-align: left
+	font-size: 18px
+	line-height: 24px
+	+rl
+	&:before
+		// content:
+		counter-increment: list
+		content: counter(list)' '
+	&:after
+		content: ''
+		position: absolute
+		left: 0
+		top: 0
+		width: 50px
+		height: 50px
+		border: 3px solid #e0d6c8
+		border-radius: 100%
+	&__link
+		display: inline-block
+		color: #754c24
+		border-bottom: 1px solid inherit
+		&:hover
+			opacity: .7

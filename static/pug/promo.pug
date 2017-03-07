@@ -1,0 +1,32 @@
+extends _layout
+block content
+	.out.is_animated
+		include layout/header.pug
+		section.section.is_animated.mod_first.mod_titleBig
+			.section__inner
+				h3.title__article рекламные материалы
+			.section__inner
+				.promo.shadow-hover
+					.promo__pic
+						img(src='static/img/promo/01.jpg', alt='изображение').promo__img
+					.promo__content
+						h6.promo__title Сертификат соответствия ГОСТ Р
+
+						a(href='../img/news/01.jpg', role='button', download).btn Скачать
+				.promo.shadow-hover
+					.promo__pic
+						img(src='static/img/promo/02.jpg', alt='изображение').promo__img
+					.promo__content
+						h6.promo__title Декларация соответствия
+
+						a(href='../img/news/01.jpg', role='button', download).btn Скачать
+				.promo.shadow-hover
+					.promo__pic
+						img(src='static/img/promo/03.jpg', alt='изображение').promo__img
+					.promo__content
+						h6.promo__title Сертификат соответствия ГОСТ Р
+
+						a(href='../img/news/01.jpg', role='button', download).btn Скачать
+
+		include layout/footer.pug
+		include module/ppp_doc.pug

@@ -39,7 +39,7 @@ gulp.task('font', function(){
                 htmlAfter: '"></i>',
                 htmlBr: ''
             }))
-            .pipe(gulp.dest(config.dest.root));
+            .pipe(gulp.dest(config.dest.html));
     })
     .pipe(gulp.dest(config.dest.html+'fonts/'))
     .pipe(reload({stream: true}))

@@ -193,6 +193,11 @@ $(function () {
 					selector: '.title__article',
 					triggerHook: 1,
 					class: 'is_animated'
+				},
+				el2: {
+					selector: '.new',
+					triggerHook: 1,
+					class: 'is_animated'
 				}
 			}
 		});

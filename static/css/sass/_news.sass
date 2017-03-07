@@ -1,0 +1,193 @@
+.news
+	text-align: center
+	padding-bottom: 80px
+	.btn
+		+r(650)
+			font-size: 12px
+			height: 4.6rem
+			line-height: 4.3rem
+	&__section
+		text-align: left
+		height: 500px
+		margin-bottom: 30px
+		+r(1000)
+			height: 560px
+	&__row
+		display: inline-block
+		width: calc(50% - 2px)
+		+r(1000)
+			margin-bottom: 10px
+			height: 515px
+	&__link
+		position: relative
+		display: inline-block
+		vertical-align: top
+		width: calc(25% - 1px)
+		margin-right: 1px
+		text-align: left
+		background-color: #f4f0eb
+		overflow: hidden
+		+r(1000)
+			// width: calc(50% - 1px)
+			margin-bottom: 80px
+			+tr(.4s)
+		+r(650)
+			width: 100%
+			margin-right: 0
+		&:hover
+			box-shadow: 0 0 32px rgba(131,109,108,0.4)
+			border-bottom: 10px solid #c7b299
+			margin-bottom: 20px
+			z-index: 2
+			.news
+				&__pic
+					height: 260px
+	&__pic
+		display: block
+		position: relative
+		width: 100%
+		height: 200px
+		overflow: hidden
+		transition: height linear .4s
+
+		&_title
+			position: absolute
+			top: 50%
+			left: 55%
+			max-width: 100%
+			white-space: nowrap
+			font-size: 3rem
+			letter-spacing: 1.4em
+			color: #fff
+			transform: translate(-50%, -50%)
+			+r(1360)
+				letter-spacing: 1em
+	&__img
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate3d(-50%, -50%, 0)
+		min-width: 100%
+		min-height: 100%
+		+tr(.8s)
+	&__content
+		padding: 7% 10%
+		height: 240px
+		display: flex
+		flex-direction: column
+		background-color: #f4f0eb
+		transition: padding-top linear .2s
+	&__title
+		color: $gold
+		font-size: 1.8rem
+		line-height: 1.2
+		margin: 0 0 0.8em
+		+rr
+		+limitLines($maxLinesPortrait: 3, $maxLinesLandscape: 3, $fgCol: #f4f0eb, $bgCol: #f4f0eb, $lineHeight: 1.8 )
+
+	&__desc
+		margin-bottom: 0
+		font-size: 14px
+		line-height: 1.3
+		max-height: 54px
+		height: auto
+		+rr
+		+limitLines($maxLinesPortrait: 3, $maxLinesLandscape: 3, $fgCol: #f4f0eb, $bgCol: #f4f0eb, $lineHeight: 1.8 )
+	&__time
+		position: absolute
+		bottom: 26px
+		left: 10%
+		display: inline-block
+		font-size: 1.1rem
+		color: #000
+		+rr
+		+r(850)
+			font-size: 13px
+		// +r(650)
+		// 	margin-top: 1.4em
+
+.new
+	width: calc(100%/3 - 1px)
+	position: relative
+	font-size: 0
+	vertical-align: top
+	text-align: left
+	background-color: #f4f0eb
+	overflow: hidden
+	display: inline-block
+	margin-bottom: 20px
+	+tr(.4s)
+	&:not(:last-child)
+		margin-right: 1px
+		+r(650)
+			margin-right: 0
+	&:hover
+		box-shadow: 0 0 32px rgba(131, 109, 108, 0.4)
+		z-index: 2
+		.news__img
+			transform: scaleX(1.1) scaleY(1.1) translate3d(-50%, -50%, 0)
+	+r(1000)
+		width: calc(100%/2 - 1px)
+	+r(650)
+		width: calc(100% + 40px)
+		margin-left: -20px
+		margin-right: 0
+	&__desc
+		font-size: 16px
+		line-height: 2.1
+		color: #000
+		margin: 1em 0 2em
+		+rl
+		+r(850)
+			font-size: 13px
+			line-height: 20px
+	&__box
+		margin-top: 30px
+	.news
+		&__pic
+			height: 290px
+			+r(650)
+				height: 220px
+		&__img
+
+		&__content
+			height: 215px
+			+r(650)
+				height: 195px
+				padding: 15px 20px
+		&__title
+			color: $gold
+			font-size: 18px
+			line-height: 1.1
+			margin: 0 0 0.8em
+			+rr
+			+limitLines($maxLinesPortrait: 2, $maxLinesLandscape: 2, $fgCol: #f4f0eb, $bgCol: #f4f0eb, $lineHeight: 1.8 )
+			+r(650)
+				font-size: 16px
+		&__dec
+			+r(650)
+				font-size: 13px
+		&__time
+			font-size: 14px
+			+r(650)
+				font-size: 13px
+
+.pic-wide
+	width: 100%
+	margin: 60px 0 20px
+	+r(850)
+		margin: 20px 0 10px
+.pic-half
+	position: relative
+	float: left
+	width: calc(50% - 60px)
+	height: 290px
+	margin: 7px 60px 20px 0
+	overflow: hidden
+	img
+		+vcenter
+		min-height: 100%
+		min-width: 100%
+
+
+

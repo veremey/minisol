@@ -1,0 +1,88 @@
+extends _layout
+block content
+	.out.is_animated
+		include layout/header.pug
+		section.section.is_animated.mod_first.mod_titleBig
+			h3.title__article документация
+			.section__inner
+				.doc.shadow-hover
+					a(href='static/img/docs/01.jpg', data-fancybox="gallery-101", data-caption="Название документа").doc__pic
+						img(src='static/img/docs/01.jpg', alt='изображение').doc__img
+					.doc__content
+						h6.doc__title Сертификат соответствия ГОСТ Р
+						table.doc__table
+							tr
+								td.doc__table_title Страна:
+								td Россия
+							tr
+								td.doc__table_title Материал:
+								td Черепица кровельная композитная Luxard и комплектующие к ней
+						a(href='../img/news/01.jpg', role='button', download).btn Скачать
+				.doc.shadow-hover
+					a(href='static/img/docs/02.jpg',data-fancybox="gallery-102", data-caption="Название документа").doc__pic
+						img(src='static/img/docs/02.jpg', alt='изображение').doc__img
+					.doc__content
+						h6.doc__title Декларация соответствия
+						table.doc__table
+							tr
+								td.doc__table_title Страна:
+								td Россия
+							tr
+								td.doc__table_title Материал:
+								td Черепица кровельная композитная Luxard и комплектующие к ней
+						a(href='../img/news/01.jpg', role='button', download).btn Скачать
+				.doc.shadow-hover
+					a(href='static/img/docs/03.jpg',data-fancybox="gallery-103", data-caption="Название документа").doc__pic
+						img(src='static/img/docs/03.jpg', alt='изображение').doc__img
+					.doc__content
+						h6.doc__title Сертификат соответствия ГОСТ Р
+						table.doc__table
+							tr
+								td.doc__table_title Страна:
+								td Россия
+							tr
+								td.doc__table_title Материал:
+								td Черепица кровельная композитная Luxard и комплектующие к ней
+						a(href='../img/news/01.jpg', role='button', download).btn Скачать
+				.doc.shadow-hover
+					a(href='static/img/docs/04.jpg',data-fancybox="gallery-104", data-caption="Название документа").doc__pic
+						img(src='static/img/docs/04.jpg', alt='изображение').doc__img
+					.doc__content
+						h6.doc__title Регистрационное удостоверение
+						table.doc__table
+							tr
+								td.doc__table_title Страна:
+								td Россия
+							tr
+								td.doc__table_title Материал:
+								td Черепица кровельная композитная Luxard и комплектующие к ней
+						a(href='../img/news/01.jpg', role='button', download).btn Скачать
+				.doc.shadow-hover
+					a(href='static/img/docs/05.jpg',data-fancybox="gallery-105", data-caption="Название документа").doc__pic
+						img(src='static/img/docs/05.jpg', alt='изображение').doc__img
+					.doc__content
+						h6.doc__title Сертификат соответствия
+						table.doc__table
+							tr
+								td.doc__table_title Страна:
+								td Россия
+							tr
+								td.doc__table_title Материал:
+								td Черепица кровельная композитная Luxard и комплектующие к ней
+						a(href='../img/news/01.jpg', role='button', download).btn Скачать
+				.doc.shadow-hover
+					a(href='static/img/docs/06.jpg',data-fancybox="gallery-106", data-caption="Caption #1").doc__pic
+						img(src='static/img/docs/06.jpg', alt='изображение').doc__img
+					.doc__content
+						h6.doc__title Сертификат надёжного предприятия
+						table.doc__table
+							tr
+								td.doc__table_title Страна:
+								td Россия
+							tr
+								td.doc__table_title Материал:
+								td Черепица кровельная композитная Luxard и комплектующие к ней
+						a(href='../img/news/01.jpg', role='button', download).btn Скачать
+
+		include layout/footer.pug
+		include module/ppp_doc.pug
