@@ -16,7 +16,7 @@ gulp.task('sprite', function() {
         cssTemplate: config.src.helpers + 'sprite.template.mustache'
     }));
     spriteData.img
-        .pipe(gulp.dest(config.dest.img));
+        .pipe(gulp.dest(config.src.img));
     spriteData.css
         .pipe(gulp.dest(config.src.sass+'lib/'))
         .pipe(notify("New sprite created!"));

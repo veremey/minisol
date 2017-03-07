@@ -390,6 +390,7 @@
 .variants
 	counter-reset: list
 	text-align: left
+	margin: 50px 0 40px
 
 .variant
 	position: relative
@@ -402,6 +403,9 @@
 	+rl
 	&:before
 		// content:
+		position: absolute
+		top: 14px
+		left: 20px
 		counter-increment: list
 		content: counter(list)' '
 	&:after

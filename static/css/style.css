@@ -1013,10 +1013,10 @@ li { list-style: none; }
 .promo__pic { display: block; height: 290px; position: relative; width: 100%; overflow: hidden; }
 .promo__title { text-align: center; }
 
-.variants { counter-reset: list; text-align: left; }
+.variants { counter-reset: list; text-align: left; margin: 50px 0 40px; }
 
 .variant { position: relative; display: inline-block; width: calc(50% - 60px); padding-left: 60px; text-align: left; font-size: 18px; line-height: 24px; font-family: "Roboto-Light", Arial, sans-serif; }
-.variant:before { counter-increment: list; content: counter(list) " "; }
+.variant:before { position: absolute; top: 14px; left: 20px; counter-increment: list; content: counter(list) " "; }
 .variant:after { content: ""; position: absolute; left: 0; top: 0; width: 50px; height: 50px; border: 3px solid #e0d6c8; border-radius: 100%; }
 .variant__link { display: inline-block; color: #754c24; border-bottom: 1px solid inherit; }
 .variant__link:hover { opacity: 0.7; }
