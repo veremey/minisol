@@ -6,14 +6,114 @@ block content
 			.section__inner
 				h3.title__article оформление гарантии
 				.section__inside
-					h6.title__subtitle На данной странице Вы можете оформить гарантию на композитную черепицу ТЕХНОНИКОЛЬ LUXARD. Выберете наиболее удобный для себя способ:
+					h6.title__subtitle На данной странице Вы можете оформить гарантию на композитную черепицу ТЕХНОНИКОЛЬ LUXARD. <br> Выберете наиболее удобный для себя способ:
 					ol.variants
 						li.variant
 							a(href='#').variant__link Скачайте
 							|  и распечатайте форму гарантийного сертификата и заполните её от руки.
 						li.variant
-							a(href='#').variant__link Скачайте
-							|  и распечатайте форму гарантийного сертификата и заполните её от руки.
+							.variant__or или
+							a(href='#').variant__link.border-dotted заполните
+							|  предлагающуюся ниже онлайн форму и получите бланк с данными о Вашей покупке на электронную почту. Затем распечатайте.
+					.liability
+						img(src='static/img/liability-stamp.jpg', alt='изображение').liability__pic
+						.liability__text
+							p.liability_desc Заполненный сертификат действителен при наличии печати продавца, подписи его представителя и указании всей необходимой информации о приобретаемом материале.
+							p.liability_desc После заполнения сертификата нужно обратиться к Продавцу с тем, чтобы его представитель заверил сертификат своей подписью и печатью организации.
+		section.section.is_animated.bg-dark
+			.section__inner
+				h3.title__middle онлайн заявка
+				form(method='post', action='/', autocomplete='on').garant.js-validate
+					fieldset.garant__fieldset
+						input(type='text', name='name', required).garant__inp.garant_name
+						label(for="name").garant__label ФИО
+
+					fieldset.garant__fieldset
+						input(type='text', name='city', required).garant__inp.garant_city
+						label(for="city").garant__label Город
+
+					fieldset.garant__fieldset
+						input(type='text', name='addres', required).garant__inp.garant_addres
+						label(for="addres").garant__label Адрес
+
+					fieldset.garant__fieldset
+						input(type='text', name='objectName').garant__inp.garant_objectName
+						label(for="objectName").garant__label Название объекта
+
+					fieldset.garant__fieldset
+						input(type='tel', name='tel', required).garant__inp.garant_tel
+						label(for="tel").garant__label Телефон
+
+					fieldset.garant__fieldset.mod_b20
+						input(type='email', name='email', required).garant__inp.garant_email
+						label(for="email").garant__label Эл. почта
+
+					fieldset.garant__fieldset
+						input(type='text', name='date', required, placeholder="Дата продажи").garant__inp.garant_date
+						//- label(for="date").garant__label Дата продажи
+
+					fieldset.garant__fieldset
+						input(type='text', name='productCode', required).garant__inp.garant_productCode
+						label(for="productCode").garant__label Производств. код партии (см. на упаковке)
+
+					fieldset.garant__fieldset
+						input(type='text', name='square', required).garant__inp.garant_square
+						label(for="square").garant__label Кол-во материала, м²
+
+					fieldset.garant__fieldset
+						input(type='text', name='sallerName', required).garant__inp.garant_sallerName
+						label(for="sallerName").garant__label Название фирмы-продавца
+
+					fieldset.garant__fieldset
+						input(type='text', name='sallerPost', required).garant__inp.garant_sallerPost
+						label(for="sallerPost").garant__label Адрес фирмы-представителя (с индексом)
+
+					fieldset.garant__fieldset
+						input(type='text', name='sallerTel').garant__inp.garant_sallerTel
+						label(for="sallerTel").garant__label Телефон продавца
+
+					fieldset.garant__fieldset.mod_b20
+						input(type='text', name='sallerFIO').garant__inp.garant_sallerFIO
+						label(for="sallerFIO").garant__label ФИО продавца
+
+					fieldset.garant__fieldset
+						div.select.js-select
+							span.select__text.js-select-text Коллекция
+							input(type="hidden", value="", name="collection", required).js-select-input
+							ul.select__list.js-select-list
+								li(data-id="0") classic
+								li(data-id="1") roman
+
+					fieldset.garant__fieldset.mod_b30
+						div.select.js-select
+							span.select__text.js-select-text Цвет
+							input(type="hidden", value="", name="color", required).js-select-input
+							ul.select__list.js-select-list
+								li(data-id="0") Мокко
+								li(data-id="1") Коррал
+								li(data-id="2") Абсент
+								li(data-id="3") Пробка
+								li(data-id="4") Бордо
+								li(data-id="5") Алланит
+					fieldset.garant__fieldset.mod_b20
+						p.garant__desc Пользуетесь ТЕХНОНИКОЛЬ LUXARD впервые?
+						.garant__choose
+							label.radio
+								input(type="radio", name="client", checked)
+								span да
+							label.radio
+								input(type="radio", name="client")
+								span нет
+
+					fieldset.garant__fieldset.mod_b20
+						textarea(name='garantUserComment', placeholder="Комментарий").garant__textarea
+					fieldset.garant__fieldset.mod_b30
+						.garant__agree
+							label.check
+								input(type='radio', name='agree', required)
+								span Согласен с условиями гарании
+					button(type='submit').btn отправить заявку
+
 
 
 		include layout/footer.pug

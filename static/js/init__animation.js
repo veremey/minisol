@@ -198,6 +198,21 @@ $(function () {
 					selector: '.new',
 					triggerHook: 1,
 					class: 'is_animated'
+				},
+				el3: {
+					selector: '.title__subtitle',
+					triggerHook: 1,
+					class: 'is_animated'
+				},
+				el4: {
+					selector: '.title__middle',
+					triggerHook: 1,
+					class: 'is_animated'
+				},
+				el5: {
+					selector: '.garant__fieldset',
+					triggerHook: 1,
+					class: 'is_animated'
 				}
 			}
 		});

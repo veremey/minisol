@@ -1,3 +1,6 @@
+$(function() {
+	$(".garant_date" ).datepicker();
+});
 $(document).ready(function() {
 
 	var widthScreen = $(window).width();
@@ -8,20 +11,103 @@ $(document).ready(function() {
 
 	picturefill();
 
-	// ppp tel mask
 
-	$('.popup__fieldset_tel').formatter({
-		'pattern': '+7({{999}}) {{999}}-{{99}}-{{99}}',
-		'persistent': false,
-		'placeholder': '___ __ __ __'
-	});
-
-	//ppp email mask
-	$('.popup__fieldset_data').formatter({
-		'pattern': '/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i',
-		'persistent': false,
-		'placeholder': '___ __ __ __'
-	});
+	function validate() {
+			$('.js-validate').each(function(){
+				if ($(this).length > 0) {
+					$(this).validate({
+						errorClass: 'has-error',
+						rules: {
+							name: {
+								minlength: 2
+							},
+							city: {
+								minlength: 2
+							},
+							// password: {
+							// 	minlength: 5
+							// },
+							// confirm_password: {
+							// 	minlength: 5,
+							// 	equalTo: '#password'
+							// },
+							email: {
+								email: true
+							},
+							tel: {
+								minlength: 5,
+								number: true
+							},
+							address: {
+								minlength: 2
+							},
+							message: {
+								minlength: 4
+							},
+							date: {
+								minlength: 4
+							},
+							productCode: {
+								minlength: 2
+							},
+							sallerName: {
+								minlength: 2
+							},
+							sallerPost: {
+								minlength: 2
+							},
+							square: {
+								minlength: 1
+							},
+							garantUserComment:{
+								minlength: 4
+							},
+							client: {
+								required: true
+							},
+							agree: {
+								required: true
+							}
+						},
+						messages: {
+							firstname: '* Вас так зовут?',
+							lastname: '* У вас такая фамилия?',
+							fathername: '* У вас такое отчество?',
+							password: {
+								required: '* Введите пароль',
+								minlength: '* Минимум 5 символов'
+							},
+							confirm_password: {
+								 required: '* Пароли не совпадают',
+								 minlength: '* Минимум 5 символов',
+								 equalTo: '* Пароли не совпадают'
+							},
+							email: '* Неверный формат',
+							address: '* Это Ваш адрес?',
+							any: '* Заполните поле',
+							company: '* Заполните поле',
+							tel: {
+								required: '* Введите Ваш терефон',
+								minlength: '* Минимум 5 символов'
+							},
+							username: {
+								required: '* Введите Ваше имя',
+								minlength: 'Минимум 2 символa'
+							},
+							message: {
+								required: '* Заполните поле',
+								minlength: 'Заполните поле',
+							},
+							text_area: {
+								required: '* Заполните поле',
+								minlength: 'Заполните поле'
+							}
+						}
+					});
+				}
+			});
+		}
+		validate();
 
 	//ppp input file
 	var inputs = document.querySelectorAll( '.popup__fieldset_file' );
@@ -57,7 +143,7 @@ $(document).ready(function() {
 			})();
 		}
 
-		[].slice.call( document.querySelectorAll( 'input.input__item' ) ).forEach( function( inputEl ) {
+		[].slice.call( document.querySelectorAll( 'input.input__item, .garant__inp' ) ).forEach( function( inputEl ) {
 			if( inputEl.value.trim() !== '' ) {
 				classie.add( inputEl.parentNode, 'input--filled' );
 			}
@@ -118,7 +204,7 @@ $(document).ready(function() {
 		$(".js-select").each(function(){
 			var select_list = $(this).parent().find(".js-select-list");
 			var content = select_list.find("li").first().html();
-			$(this).find(".js-select-text").html(content);//.text(text);//content
+			//$(this).find(".js-select-text").html(content);//.text(text);//content
 			$(this).click(function(event){
 				if ($(this).hasClass("is-active")) {
 						$(this).removeClass("is-active");

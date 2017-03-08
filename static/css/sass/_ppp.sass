@@ -17,6 +17,7 @@ input:-webkit-autofill
 		max-width: 49%
 		height: 49px
 		text-align: left
+		+clr
 		&:not(:last-of-type)
 			margin-right: 2%
 		+r(800)
@@ -24,11 +25,14 @@ input:-webkit-autofill
 			max-width: 100%
 			margin: 0
 		&.mod_tel
+			.popup__fieldset_label
+				line-height: 47px
 			+r(800)
 				text-align: center
 				margin-bottom: 8px
 		&_tel
 			height: 100%
+			float: right
 			margin-left: 15px
 			border: none
 			outline: none
@@ -37,6 +41,11 @@ input:-webkit-autofill
 				font-size: 16px
 				color: #000
 				+rl
+			&.has-error
+				color: #f00
+				& ~ .popup__fieldset_label
+					color: #f00
+
 		&_label
 			font-size: 16px
 			text-align: left
@@ -221,6 +230,9 @@ input:-webkit-autofill
 	&__item
 		padding: 20px 20px 5px
 		line-height: 1.2
+		&.has-error
+			border-color: #f00
+			box-shadow: 0 0 12px rgba(255,109,108,0.4)
 	&__label
 		position: absolute
 		left: 0px
