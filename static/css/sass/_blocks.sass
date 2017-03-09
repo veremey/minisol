@@ -696,13 +696,121 @@
 	.has-error + span
 		color: #f00
 
+.filter
+	position: relative
+	width: 100%
+	height: 60px
+	margin-bottom: 40px
+	background-color: #eee8e0
+	+r(650)
+		height: auto
+	&__wrap
+		display: flex
+		align-items: center
+		justify-content: center
+		+r(650)
+			flex-direction: column
+			flex-wrap: wrap
+	&__btn
+		position: relative
+		height: 60px
+		width: 150px
+		text-align: center
+		+tr(.4s)
+		will-change: transform
+		+r(650)
+			width: 100%
+			padding: 0 40px 0 66px
+			text-align: left
+		&:hover
+			opacity: .8
+			span
+				border-color: $n
+				// &:before
+				// 	transform: scale(.8) translateY(-50%)
+		span
+			position: relative
+			line-height: 60px
+			font-size: 14px
+			color: #000
+			letter-spacing: .05em
+			border-bottom: 1px dotted #000
+			+rr
+			+tr(.4s)
+			&:before
+				content: ''
+				position: absolute
+				top: 50%
+				left: -24px
+				+try(-50%)
+				+tr(.4s)
+				+s(icon-cls)
+	.select
+		width: 207px
+		line-height: 60px
+		padding: 0 26px
+		border-left: 1px solid #e0d6c8
+		+r(650)
+			width: 100%
+			border-bottom: 1px solid #e0d6c8
+			border-left: none
+			padding: 0 40px
+			margin: 0
+		&:not(:first-child)
+			border-right: 1px solid #e0d6c8
+			+r(650)
+				border-right: none
+		&:before
+			right: 22px
+		&.is-active
+			z-index: 1000
+		span
+			text-transform: none
+		&__list
+			font-size: 0
+			top: 60px
+			padding: 0
+			left: -1px
+			right: -1px
+		.mod_bdr
+			li:nth-child(1n)
+				border-right: 1px solid #eee8e0
+				border-left: 1px solid #eee8e0
+		li
+			line-height: 40px
+			font-size: 14px
+			letter-spacing: .05em
+			color: #000
+			padding: 0 26px
+			text-transform: none
+			text-align: left
+			+rr
+			+r(650)
+				padding: 0 40px
+			&:nth-child(2n)
+				background-color: #f5f1ec
+			&:hover
+				background-color: #CCC
+
 .collage
 	position: relative
 	display: inline-block
 	width: calc(100% / 3 - 1px)
 	margin-right: 1px
-	height: 426px //(292 + 134)
+	// height: 426px //(292 + 134)
 	background-color: #eee8e0
+	+r(1200)
+		width: calc(100% / 2 - 1px)
+	+r(800)
+		width: calc(100% )
+		margin: 0 0 20px
+	+r(650)
+		width: calc(100% + 40px )
+		margin-left: -20px
+	&.shadow-hover:hover
+		+r(650)
+			box-shadow: none
+
 
 	&__pic
 		display: block
@@ -743,6 +851,8 @@
 		justify-content: space-between
 		padding: 10px 0
 		border-bottom: 1px solid #bebab3
+		+r(650)
+			justify-content: flex-ends
 	&__color
 		display: flex
 		align-items: center
@@ -781,11 +891,20 @@
 	&__collection
 		padding-left: 20px
 		border-left: 1px solid #bebab3
+		+r(650)
+			width: 100px
+		.collage__desc
+			+r(650)
+				display: none
+		.collage__link
+			line-height: 1.2
 	&__footer
 		display: flex
 		align-items: center
 		padding: 10px 0
 		&_info
+			+r(650)
+				width: calc(100% - 66px)
 			strong
 				font-size: 13px
 				letter-spacing: .05em
@@ -797,8 +916,21 @@
 				letter-spacing: .05em
 				color: #000
 				+rr
+			span
+				+r(650)
+					display: none
 
 
 .icon-locate
 	+s(icon-locate)
 	margin: 0 27px 0 15px
+
+
+
+.hide
+	opacity: 0
+	z-index: -30
+.hiden
+	opacity: 0
+	height: 0
+	overflow: hidden

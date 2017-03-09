@@ -1,12 +1,33 @@
 section.section.is_animated.mod_first.mod_titleBig
 	.section__inner
 		h3.title__article фотогалерея
-.filter.bg-dark
+form(method='post', action='/', autocomplete='on').filter
+	.filter__wrap
+		.select.js-select
+			span(vall="Все регионы").select__text.js-select-text Все регионы
+			input(type="hidden", value="", placeholder='Все регионы').js-select-input
+			ul.select__list.js-select-list
+				li(data-id="0") Россия
+				li(data-id="1") Украина
+				li(data-id="2") Белоруссия
+				li(data-id="3") Татарстан
+				li(data-id="4") Казахстан
+
+		.select.js-select
+			span.select__text.js-select-text Все коллекции
+			input(type="hidden", value="", placeholder='Все коллекции').js-select-input
+			ul.select__list.js-select-list.mod_bdr
+				li(data-id="0") LUXARD CLASSIC
+				li(data-id="1") LUXARD ROMAN
+		a(href='#').filter__btn.hiden
+			//- i.icon-cls
+			span сбросить
+
 
 
 .section__inner
 	.collage.shadow-hover
-		a(href='static/img/gallery/01.jpg', data-fancybox="pic-01", data-width="1400", data-height="955", data-caption="#ret").collage__pic
+		.collage__pic(data-overlay="pic-01")
 			img(src='static/img/gallery/01.jpg', alt='изображение')
 		.collage__content
 			.collage__head
@@ -24,6 +45,228 @@ section.section.is_animated.mod_first.mod_titleBig
 				i.icon-locate
 				.collage__footer_info
 					strong Загородный дом
-					p Казахстан. Астана. Посёлок Кордай.
+					p Казахстан. Астана.
+						span Посёлок Кордай.
+	.collage.shadow-hover
+		.collage__pic(data-overlay="pic-01")
+			img(src='static/img/gallery/02.jpg', alt='изображение')
+		.collage__content
+			.collage__head
+				.collage__color
+					.collage__color_info
+						img(src='static/img/gallery/colors/mokko.jpg', alt='изображение')
+					.collage__head_info
+						p.collage__desc цвет
+						a(href='#').collage__link мокко
+				.collage__collection
+					.collage__head_info
+						p.collage__desc коллекция технониколь
+						a(href='#').collage__link luxard classic
+			.collage__footer
+				i.icon-locate
+				.collage__footer_info
+					strong Загородный дом
+					p Казахстан. Астана.
+	.collage.shadow-hover
+		.collage__pic(data-overlay="pic-01")
+			img(src='static/img/gallery/03.jpg', alt='изображение')
+		.collage__content
+			.collage__head
+				.collage__color
+					.collage__color_info
+						img(src='static/img/gallery/colors/mokko.jpg', alt='изображение')
+					.collage__head_info
+						p.collage__desc цвет
+						a(href='#').collage__link мокко
+				.collage__collection
+					.collage__head_info
+						p.collage__desc коллекция технониколь
+						a(href='#').collage__link luxard classic
+			.collage__footer
+				i.icon-locate
+				.collage__footer_info
+					strong Загородный дом
+					p Казахстан. Астана.
+	.collage.shadow-hover
+		.collage__pic(data-overlay="pic-01")
+			img(src='static/img/gallery/04.jpg', alt='изображение')
+		.collage__content
+			.collage__head
+				.collage__color
+					.collage__color_info
+						img(src='static/img/gallery/colors/coral.jpg', alt='изображение')
+					.collage__head_info
+						p.collage__desc цвет
+						a(href='#').collage__link коралл
+				.collage__collection
+					.collage__head_info
+						p.collage__desc коллекция технониколь
+						a(href='#').collage__link luxard roman
+			.collage__footer
+				i.icon-locate
+				.collage__footer_info
+					strong Загородный дом
+					p Россия. Санк-Петербург
+	.collage.shadow-hover
+		.collage__pic(data-overlay="pic-01")
+			img(src='static/img/gallery/05.jpg', alt='изображение')
+		.collage__content
+			.collage__head
+				.collage__color
+					.collage__color_info
+						img(src='static/img/gallery/colors/bordo.jpg', alt='изображение')
+					.collage__head_info
+						p.collage__desc цвет
+						a(href='#').collage__link бордо
+				.collage__collection
+					.collage__head_info
+						p.collage__desc коллекция технониколь
+						a(href='#').collage__link luxard roman
+			.collage__footer
+				i.icon-locate
+				.collage__footer_info
+					strong Загородный дом
+					p Татарстан. Казань
+	.collage.shadow-hover
+		.collage__pic(data-overlay="pic-01")
+			img(src='static/img/gallery/06.jpg', alt='изображение')
+		.collage__content
+			.collage__head
+				.collage__color
+					.collage__color_info
+						img(src='static/img/gallery/colors/allanit.jpg', alt='изображение')
+					.collage__head_info
+						p.collage__desc цвет
+						a(href='#').collage__link алланит
+				.collage__collection
+					.collage__head_info
+						p.collage__desc коллекция технониколь
+						a(href='#').collage__link luxard classic
+			.collage__footer
+				i.icon-locate
+				.collage__footer_info
+					strong Загородный дом
+					p Россия. Московская область
+	.collage.shadow-hover
+		.collage__pic(data-overlay="pic-01")
+			img(src='static/img/gallery/07.jpg', alt='изображение')
+		.collage__content
+			.collage__head
+				.collage__color
+					.collage__color_info
+						img(src='static/img/gallery/colors/mokko.jpg', alt='изображение')
+					.collage__head_info
+						p.collage__desc цвет
+						a(href='#').collage__link мокко
+				.collage__collection
+					.collage__head_info
+						p.collage__desc коллекция технониколь
+						a(href='#').collage__link luxard classic
+			.collage__footer
+				i.icon-locate
+				.collage__footer_info
+					strong Загородный дом
+					p Казахстан. Астана.
+
+	.collage.shadow-hover
+		.collage__pic(data-overlay="pic-01")
+			img(src='static/img/gallery/08.jpg', alt='изображение')
+		.collage__content
+			.collage__head
+				.collage__color
+					.collage__color_info
+						img(src='static/img/gallery/colors/probka.jpg', alt='изображение')
+					.collage__head_info
+						p.collage__desc цвет
+						a(href='#').collage__link пробка
+				.collage__collection
+					.collage__head_info
+						p.collage__desc коллекция технониколь
+						a(href='#').collage__link luxard classic
+			.collage__footer
+				i.icon-locate
+				.collage__footer_info
+					strong Загородный дом
+					p Казахстан. Астана.
+	.collage.shadow-hover
+		.collage__pic(data-overlay="pic-01")
+			img(src='static/img/gallery/09.jpg', alt='изображение')
+		.collage__content
+			.collage__head
+				.collage__color
+					.collage__color_info
+						img(src='static/img/gallery/colors/bordo.jpg', alt='изображение')
+					.collage__head_info
+						p.collage__desc цвет
+						a(href='#').collage__link Бордо
+				.collage__collection
+					.collage__head_info
+						p.collage__desc коллекция технониколь
+						a(href='#').collage__link luxard roman
+			.collage__footer
+				i.icon-locate
+				.collage__footer_info
+					strong Загородный дом
+					p Татарстан. Казань
+	.collage.shadow-hover
+		.collage__pic(data-overlay="pic-01")
+			img(src='static/img/gallery/04.jpg', alt='изображение')
+		.collage__content
+			.collage__head
+				.collage__color
+					.collage__color_info
+						img(src='static/img/gallery/colors/coral.jpg', alt='изображение')
+					.collage__head_info
+						p.collage__desc цвет
+						a(href='#').collage__link коралл
+				.collage__collection
+					.collage__head_info
+						p.collage__desc коллекция технониколь
+						a(href='#').collage__link luxard roman
+			.collage__footer
+				i.icon-locate
+				.collage__footer_info
+					strong Загородный дом
+					p Казахстан. Астана.
+	.collage.shadow-hover
+		.collage__pic(data-overlay="pic-01")
+			img(src='static/img/gallery/05.jpg', alt='изображение')
+		.collage__content
+			.collage__head
+				.collage__color
+					.collage__color_info
+						img(src='static/img/gallery/colors/bordo.jpg', alt='изображение')
+					.collage__head_info
+						p.collage__desc цвет
+						a(href='#').collage__link бордо
+				.collage__collection
+					.collage__head_info
+						p.collage__desc коллекция технониколь
+						a(href='#').collage__link luxard roman
+			.collage__footer
+				i.icon-locate
+				.collage__footer_info
+					strong Загородный дом
+					p Татарстан. Казань
+	.collage.shadow-hover
+		.collage__pic(data-overlay="pic-01")
+			img(src='static/img/gallery/06.jpg', alt='изображение')
+		.collage__content
+			.collage__head
+				.collage__color
+					.collage__color_info
+						img(src='static/img/gallery/colors/allanit.jpg', alt='изображение')
+					.collage__head_info
+						p.collage__desc цвет
+						a(href='#').collage__link алланит
+				.collage__collection
+					.collage__head_info
+						p.collage__desc коллекция технониколь
+						a(href='#').collage__link luxard classic
+			.collage__footer
+				i.icon-locate
+				.collage__footer_info
+					strong Загородный дом
+					p Россия. Московская область
 
 

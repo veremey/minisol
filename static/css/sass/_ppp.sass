@@ -256,3 +256,120 @@ input:-webkit-autofill
 	position: relative
 	display: block
 	width: 100%
+
+
+.overlay
+	position: fixed
+	top: -100px
+	left: 0
+	width: 100vw
+	height: 100vh
+	overflow: hidden
+	background-color: rgba(0, 0, 0, .4)
+	z-index: -60
+	opacity: 0
+	+tr(.8s)
+	&.is_active
+		top: 0
+		opacity: 1
+		z-index: 5000
+	&__wrap
+		+coverdiv
+		cursor: pointer
+
+.bigCarusel
+	position: relative
+	max-width: 96%
+	max-height: 100%
+	width: 1400px
+	height: 100%
+	margin: 0 auto
+	&__item
+		position: relative
+		// max-width: 96%
+		// width: 1400px
+		height: 880px
+		margin: 0 auto
+		width: 100%
+		overflow: hidden
+		&_img
+			+vcenter
+			min-width: 100%
+			min-height: 100%
+
+.fanCaption
+	position: relative
+	display: flex
+	justify-content: flex-start
+	align-items: center
+	height: 80px
+	max-width: 96%
+	width: 1400px
+	padding: 16px 0 15px 20px
+	margin: 0 auto
+	background-color: #eee8e0
+	+clr
+	&__color
+		display: flex
+		width: 205px
+		align-items: center
+		&_pic
+			position: relative
+			width: 50px
+			height: 50px
+			margin-right: 18px
+			border-radius: 100%
+			overflow: hidden
+			img
+				+vcenter
+				min-width: 100%
+				min-height: 100%
+	&__text
+		display: flex
+		flex-wrap: wrap
+		p
+			width: 100%
+			margin-bottom: 0
+			line-height: 1em
+			font-size: 11px
+			text-transform: uppercase
+			color: #000
+			+rr
+		a
+			font-size: 13px
+			color: #754c24
+			line-height: 1em
+			letter-spacing: .05em
+			border-bottom: 1px solid #754c24
+			text-transform: uppercase
+			text-decoration: none
+			+rb
+			+tr(.4s)
+			&:hover
+				opacity: .8
+				border-bottom-color: $n
+
+	&__collection
+		@extend .fanCaption__color
+		.fanCaption__text
+			padding-left: 20px
+			border-left: 1px solid #bebab3
+	&__location
+		@extend .fanCaption__color
+		width: auto
+	&__box
+		display: flex
+		flex-direction: column
+		strong
+			font-size: 13px
+			text-transform: uppercase
+			letter-spacing: .05em
+			line-height: 1em
+			color: #000
+			+rb
+		p
+			font-size: 13px
+			letter-spacing: .05em
+			line-height: 1em
+			color: #000
+			+rr
