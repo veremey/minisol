@@ -1,32 +1,29 @@
-article.news.is_animated
-	h3.title__article новости
-	section.news__section
-		a(href='#').news__link
-			.news__pic
-				img(src='static/img/index/news/01.jpg', alt='изображение').news__img
-			.news__content
-				h4.news__title Новая форма  композитной  черепицы   LUXARD – ROMAN
-				p.news__desc В сентябре 2012 г. Корпорация   ТехноНИКОЛЬ  представила  новую форму  композитной  черепицы  LUXARD – ROMAN.
-				time(datetime="2016-01-01").news__time 01.01.2016
-		a(href='#').news__link
-			.news__pic
-				img(src='static/img/index/news/02-1.jpg', alt='изображение').news__img
-			.news__content
-				h4.news__title Многоцветная  палитра  LUXARD Roman
-				p.news__desc Корпорация ТехноНИКОЛЬ представила  многоцветную  палитру композитной   черепицы LUXARD.
-				time(datetime="2016-01-01").news__time 01.01.2016
-		a(href='#').news__link
-			.news__pic
-				img(src='static/img/index/news/03.jpg', alt='изображение').news__img
-			.news__content
-				h4.news__title  Гарантия на   LUXARD  теперь в  онлайн  режиме
-				p.news__desc На нашем  сайте  запущен сервис  для формирования  гарантийного сертификата  на материал  LUXARD
-				time(datetime="2016-01-01").news__time 01.01.2016
-		a(href='#').news__link
-			.news__pic
-				img(src='static/img/index/news/04.jpg', alt='изображение').news__img
-			.news__content
-				h4.news__title Композитная  черепица  ТЕХНОНИКОЛЬ  LUXARD  по специальным  ценам
-				p.news__desc ТЕХНОНИКОЛЬ  LUXARD —  надежная и долговечная композитная  черепица.
-				time(datetime="2016-01-01").news__time 01.01.2016
-	a(href='#', role='button').btn архив новостей
+section.section.is_animated.mod_first.mod_titleBig
+	.section__inner
+		h3.title__article фотогалерея
+.filter.bg-dark
+
+
+.section__inner
+	.collage.shadow-hover
+		a(href='static/img/gallery/01.jpg', data-fancybox="pic-01", data-width="1400", data-height="955", data-caption="#ret").collage__pic
+			img(src='static/img/gallery/01.jpg', alt='изображение')
+		.collage__content
+			.collage__head
+				.collage__color
+					.collage__color_info
+						img(src='static/img/gallery/colors/allanit.jpg', alt='изображение')
+					.collage__head_info
+						p.collage__desc цвет
+						a(href='#').collage__link алланит
+				.collage__collection
+					.collage__head_info
+						p.collage__desc коллекция технониколь
+						a(href='#').collage__link luxard classic
+			.collage__footer
+				i.icon-locate
+				.collage__footer_info
+					strong Загородный дом
+					p Казахстан. Астана. Посёлок Кордай.
+
+

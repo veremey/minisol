@@ -1,0 +1,116 @@
+//customize thums
+// .fancybox-container--thumbs .fancybox-caption-wrap
+//   top: auto
+//   bottom: 0
+
+.fancybox-thumbs
+  top: auto
+  bottom: 90px // ?
+  width: auto
+  // bottom: 10px
+  left: 0
+  right: 0
+  height: 80px
+  background: transparent
+  > ul
+    text-align: center
+  > ul > li
+    border-color: transparent
+    float: none
+    display: inline-block
+
+.fancybox-container--thumbs
+  .fancybox-caption-wrap, .fancybox-controls, .fancybox-slider-wrap
+    right: 0
+    bottom: 90px
+
+.fancybox-container--thumbs
+  .fancybox-caption-wrap
+    right: 0
+    bottom: 0px
+
+@media all and (max-width: 800px)
+  .fancybox-thumbs
+    display: none !important
+  .fancybox-container--thumbs
+    .fancybox-controls, .fancybox-slider-wrap, .fancybox-caption-wrap
+      bottom: 0
+
+// caption css
+
+.pic-01
+  display: none
+
+.fanCaption
+  position: relative
+  display: flex
+  justify-content: flex-start
+  align-items: center
+  height: 80px
+  padding: 16px 0 15px 20px
+  background-color: #eee8e0
+  +clr
+  &__color
+    display: flex
+    width: 205px
+    align-items: center
+    &_pic
+      position: relative
+      width: 50px
+      height: 50px
+      border-radius: 100%
+      overflow: hidden
+      margin-right: 18px
+      img
+        +vcenter
+        min-width: 100%
+        min-height: 100%
+  &__text
+    display: flex
+    flex-wrap: wrap
+    p
+      width: 100%
+      margin-bottom: 0
+      line-height: 1em
+      font-size: 11px
+      text-transform: uppercase
+      color: #000
+      +rr
+    a
+      font-size: 13px
+      color: #754c24
+      line-height: 1em
+      letter-spacing: .05em
+      border-bottom: 1px solid #754c24
+      text-transform: uppercase
+      text-decoration: none
+      +rb
+      +tr(.4s)
+      &:hover
+        opacity: .8
+        border-bottom-color: $n
+
+  &__collection
+    @extend .fanCaption__color
+    .fanCaption__text
+      padding-left: 20px
+      border-left: 1px solid #bebab3
+  &__location
+    @extend .fanCaption__color
+    width: auto
+  &__box
+    display: flex
+    flex-direction: column
+    strong
+      font-size: 13px
+      text-transform: uppercase
+      letter-spacing: .05em
+      line-height: 1em
+      color: #000
+      +rb
+    p
+      font-size: 13px
+      letter-spacing: .05em
+      line-height: 1em
+      color: #000
+      +rr

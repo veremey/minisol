@@ -346,7 +346,8 @@
 	&:hover
 		box-shadow: 0 0 0 11px #fff, 0 0 32px 10px rgba(131, 109, 108, 0.4)
 		z-index: 10
-		.doc__pic
+		.doc__pic,
+		.collage__pic
 			cursor: pointer
 			&:before
 				content: ''
@@ -697,26 +698,107 @@
 
 .collage
 	position: relative
+	display: inline-block
 	width: calc(100% / 3 - 1px)
 	margin-right: 1px
 	height: 426px //(292 + 134)
 	background-color: #eee8e0
+
 	&__pic
+		display: block
 		position: relative
 		height: 292px
+		width: 100%
+		overflow: hidden
+		&:before
+			content: ''
+			position: absolute
+			top: 50%
+			bottom: 50%
+			left: 50%
+			right: 50%
+			background-color: rgba(0, 0, 0, .4)
+			z-index: -10
+			+tr(.5s)
+		&:after
+			content: ''
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: scale(.2) translate(-50%, -50%)
+			width: 51px
+			height: 51px
+			background-image: url(../img/icons/lupa.png)
+			z-index: -10
+			+tr(.4s)
 		img
 			+vcenter
 			min-height: 100%
 			min-width: 100%
 	&__content
+		padding: 0 20px
 	&__head
-		+clr
+		display: flex
+		align-items: center
+		justify-content: space-between
+		padding: 10px 0
+		border-bottom: 1px solid #bebab3
 	&__color
-		position: relative
-		width: 50px
-		height: 50px
-		border-radius: 100%
-		img
-			+vcenter
-			min-width: 100%
-			min-height: 100%
+		display: flex
+		align-items: center
+		// justify-content: space-between
+		flex-grow: 1
+		&_info
+			position: relative
+			width: 50px
+			height: 50px
+			margin-right: 15px
+			border-radius: 100%
+			overflow: hidden
+			img
+				+vcenter
+				min-width: 100%
+				min-height: 100%
+	&__desc
+		font-size: 11px
+		text-transform: uppercase
+		letter-spacing: .05em
+		margin-bottom: 0
+		color: #000
+		+rr
+	&__link
+		font-size: 13px
+		line-height: 1
+		text-transform: uppercase
+		letter-spacing: 0.05em
+		color: #754c24
+		+rb
+		border-bottom: 1px solid #754c24
+		+tr(.4s)
+		&:hover
+			opacity: .8
+			border-color: $n
+	&__collection
+		padding-left: 20px
+		border-left: 1px solid #bebab3
+	&__footer
+		display: flex
+		align-items: center
+		padding: 10px 0
+		&_info
+			strong
+				font-size: 13px
+				letter-spacing: .05em
+				color: #000
+				text-transform: uppercase
+				+rb
+			p
+				font-size: 13px
+				letter-spacing: .05em
+				color: #000
+				+rr
+
+
+.icon-locate
+	+s(icon-locate)
+	margin: 0 27px 0 15px

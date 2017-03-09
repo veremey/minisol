@@ -107,7 +107,7 @@ $(document).ready(function() {
 				}
 			});
 		}
-		validate();
+	validate();
 
 	//ppp input file
 	var inputs = document.querySelectorAll( '.popup__fieldset_file' );
@@ -186,16 +186,24 @@ $(document).ready(function() {
 	$(window).on('resize', pppQuestionScroll);
 	// ----------------------------------------------
 
-	$('[data-fancybox]').fancybox({
-		helpers : {
-			buttons: {
-				position : 'top'
-			},
-			thumbs: {
-				width  : 50,
-				height : 50
-			}
+	$('[data-fancybox^="gallery"]').fancybox({
+		buttons: {
+			position : 'center'
+		},
+		thumbs: {
+			showOnStart : false
 		}
+	});
+
+	$('[data-fancybox^="pic"]').fancybox({
+		thumbs: {
+			showOnStart : true
+		},
+		caption : function( instance, item ) {
+			var cap = $(this).data('fancybox');
+
+			return $('.' +cap + 'Caption').html();
+			}
 	});
 
 	// check select
