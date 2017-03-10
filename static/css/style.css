@@ -1117,7 +1117,7 @@ html:not(.webkit-line-clamp) .doc__title::after { background: #f4f0eb; }
 .filter .select li:nth-child(2n) { background-color: #f5f1ec; }
 .filter .select li:hover { background-color: #CCC; }
 
-.collage { position: relative; display: inline-block; width: calc(100% / 3 - 1px); margin-right: 1px; background-color: #eee8e0; }
+.collage { position: relative; display: inline-block; width: calc(100% / 3 - 1px); margin: 0 1px 20px 0; background-color: #eee8e0; }
 .collage__pic { display: block; position: relative; height: 292px; width: 100%; overflow: hidden; }
 .collage__pic:before { content: ""; position: absolute; top: 50%; bottom: 50%; left: 50%; right: 50%; background-color: rgba(0, 0, 0, 0.4); z-index: -10; -o-transition: 0.5s; transition: 0.5s; }
 .collage__pic:after { content: ""; position: absolute; top: 50%; left: 50%; -webkit-transform: scale(0.2) translate(-50%, -50%); -ms-transform: scale(0.2) translate(-50%, -50%); -o-transform: scale(0.2) translate(-50%, -50%); transform: scale(0.2) translate(-50%, -50%); width: 51px; height: 51px; background-image: url(../img/icons/lupa.png); z-index: -10; -o-transition: 0.4s; transition: 0.4s; }
