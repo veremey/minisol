@@ -1,13 +1,13 @@
 $(function() {
 	$(".garant_date" ).datepicker();
 });
+
 $(document).ready(function() {
 	/*gallery.html slider hide*/
 	var t = $('.collage__pic').data('overlay');
 	$('.' + t).addClass('hide');
 
 	var widthScreen = $(window).width();
-
 
 
 	adaptiveMark();
@@ -160,7 +160,7 @@ $(document).ready(function() {
 			})();
 		}
 
-		[].slice.call( document.querySelectorAll( 'input.input__item, .garant__inp' ) ).forEach( function( inputEl ) {
+		[].slice.call( document.querySelectorAll( 'input.input__item, .garant__inp, .helpSubsection__inp' ) ).forEach( function( inputEl ) {
 			if( inputEl.value.trim() !== '' ) {
 				classie.add( inputEl.parentNode, 'input--filled' );
 			}
@@ -260,6 +260,7 @@ $(document).ready(function() {
 	$('.btn__close').on('click', function () {
 		$(this).removeClass('is_active');
 		$(this).parents('.js_close').removeClass('is_opened');
+		$('.js-btn__open').toggleClass('is_active');
 		return false;
 	});
 
@@ -273,6 +274,17 @@ $(document).ready(function() {
 		});
 
 		$('.popup__question').removeClass('is_opened');
+		return false;
+	});
+
+	$('.js-btn__open').on('click', function () {
+		$(this).toggleClass('is_active');
+		$(this).parents('.helpSection').find('.js_open').toggleClass('is_opened');
+
+		if($(document).width() <= 800 ) {
+			$('html, body').animate({ scrollTop: $('.helpSubsection').offset().top - 70 }, 800 );
+			return false;
+		}
 		return false;
 	});
 
@@ -698,11 +710,49 @@ $(document).ready(function() {
 		}
 	}
 
-	// touchsliderfour();
-	// // touchsliderone();
-	// $(window).resize(function () {
-	//     touchsliderfour() ;
-	// });
+
+
+	// mount-video.html video
+
+	function videoSize() {
+		if($(window).width() <= 900){
+			var $docWidth = $(window).width() - 40;
+			var $height = $docWidth * 0.56;
+
+			$('.video-youtube').attr({
+				width : $docWidth,
+				height : $height
+			});
+		} else {
+			$('.video-youtube').attr({
+				width : 854,
+				height : 480
+			});
+		}
+	}
+
+	videoSize();
+
+	// $(window).on('resize', videoSize());
+	$(window).on('resize', function () {
+		if($(document).width() <= 900){
+			var $docWidth = $(document).width() - 40;
+			var $height = $docWidth * 0.56;
+
+			$('.video-youtube').attr({
+				width : $docWidth,
+				height : $height
+			});
+		} else {
+			$('.video-youtube').attr({
+				width : 854,
+				height : 480
+			});
+		}
+	});
+
+
+
 
 });//doc ready  < ------- new
 
