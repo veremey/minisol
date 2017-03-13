@@ -79,6 +79,88 @@ body
 	+r(650)
 		display: none
 
+.section
+	padding-top: 55px
+	text-align: center
+	+r(650)
+		padding-top: 30px
+	&.mod_first
+		padding-top: 165px
+		+r(1000)
+			padding-top: 100px
+		+r(650)
+			padding-top: 90px
+	&.mod_last
+		padding-bottom: 80px
+	&.mod_titleBig
+		.title__article
+			font-size: 70px
+			+r(1000)
+				font-size: 50px
+			+r(650)
+				font-size: 24px
+	&.mod_ptzero
+		padding-top: 0
+		padding-bottom: 1px
+	//todo
+	//&.mod_last
+	//	margin-bottom: 10px// where they are&
+	//	padding-bottom: 30px// where they are&
+	&.mod_pages
+		+ .pagination
+			margin: 30px auto 100px
+			+r(650)
+				margin: 20px auto 30px
+	&.mod_short-pt
+		padding-top: 120px
+		+r(1000)
+			padding-top: 80px
+	&.mod_inner
+		padding: 80px 0 10px
+
+	&__inner
+		max-width: 1280px
+		width: calc(100% - 40px)
+		margin: 0 auto
+		font-size: 0
+		+clr
+
+	&__inside
+		max-width: 1040px
+		width: 100%
+		margin: 0 auto
+	&__inland
+		max-width: 1160px
+		width: 96%
+		margin: 0 auto
+
+	&__text
+		max-width: 1000px
+		width: 96%
+		margin: 0 auto
+	&__desc
+		font-size: 18px
+		line-height: 30px
+		letter-spacing: .01em
+		color: #000
+	.title__article
+		font-size: 50px
+		margin-bottom: 1em
+		+r(1000)
+			font-size: 24px
+
+	&__column
+		max-width: 1160px
+		width: 96%
+		margin: 0 auto
+		padding: 40px 0
+		background-color: #FFF
+
+
+.empty-100
+	height: 100px
+	background: #f9f8f7
+
 
 h1, h2, h3, h4, h5, h6
 	margin: 0 0 .8em

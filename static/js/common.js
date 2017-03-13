@@ -2,6 +2,32 @@ $(function() {
 	$(".garant_date" ).datepicker();
 });
 
+$( function() {
+    $( ".tooltip" ).tooltip({
+      show: {
+      	effect: "slideDown"
+      },
+      position: {
+        my: "right-10 top+4",
+        at: "left top"
+      },
+      tooltipClass: "utip"
+    });
+  } );
+
+$( function() {
+    $( ".tooltip-r" ).tooltip({
+      show: {
+      	effect: "slideDown"
+      },
+      position: {
+        my: "left+10 top+4",
+        at: "right top"
+      },
+      tooltipClass: "utip"
+    });
+  } );
+
 $(document).ready(function() {
 	/*gallery.html slider hide*/
 	var t = $('.collage__pic').data('overlay');

@@ -4,75 +4,7 @@
 .bg-darken
 	background-color: #f0ebe5
 
-.section
-	padding-top: 55px
-	text-align: center
-	+r(650)
-		padding-top: 30px
-	&.mod_first
-		padding-top: 165px
-		+r(1000)
-			padding-top: 100px
-		+r(650)
-			padding-top: 90px
-	&.mod_last
-		padding-bottom: 80px
-	&.mod_titleBig
-		.title__article
-			font-size: 70px
-			+r(1000)
-				font-size: 50px
-			+r(650)
-				font-size: 24px
-	&.mod_ptzero
-		padding-top: 0
-		padding-bottom: 1px
-	//todo
-	//&.mod_last
-	//	margin-bottom: 10px// where they are&
-	//	padding-bottom: 30px// where they are&
-	&.mod_pages
-		+ .pagination
-			margin: 30px auto 100px
-			+r(650)
-				margin: 20px auto 30px
-	&.mod_short-pt
-		padding-top: 120px
-		+r(1000)
-			padding-top: 80px
-	&.mod_inner
-		padding: 80px 0 10px
 
-	&__inner
-		max-width: 1280px
-		width: calc(100% - 40px)
-		margin: 0 auto
-		font-size: 0
-		+clr
-
-	&__inside
-		max-width: 1040px
-		width: 100%
-		margin: 0 auto
-	&__inland
-		max-width: 1160px
-		width: 96%
-		margin: 0 auto
-
-	&__text
-		max-width: 1000px
-		width: 96%
-		margin: 0 auto
-	&__desc
-		font-size: 18px
-		line-height: 30px
-		letter-spacing: .01em
-		color: #000
-	.title__article
-		font-size: 50px
-		margin-bottom: 1em
-		+r(1000)
-			font-size: 24px
 
 .text-left
 	text-align: left
@@ -1337,3 +1269,194 @@
 // .video-youtube
 // 	width: 100%
 // 	height: 100%
+
+.use-page
+	.section__text
+		margin-bottom: 93px
+	.section__desc
+		margin-bottom: 1.6em
+
+.system
+	padding: 90px 0 70px
+
+	&-classic
+		background: #f9f8f7 url('../img/use-arrow.png') repeat-x 50% 0
+		+r(1000)
+			background-image: none
+			background-color: #f4f1ed
+
+	&-luxard
+		background: #f9f8f7 url('../img/use-reverse-arrow.png') repeat-x 50% 0
+		+r(1000)
+			background-image: none
+			background-color: #f4f1ed
+
+	&__title
+		font-size: 36px
+		letter-spacing: .1em
+		color: #000
+		text-align: center
+		text-transform: uppercase
+		+cg
+		margin-bottom: 1.2em
+	&__subTitle
+		max-width: 680px
+		width: 90%
+		font-size: 18px
+		line-height: 30px
+		color: #000
+		margin: 0 auto
+		text-align: center
+		+rl
+
+
+// .system-luxard
+
+
+.usage
+	display: flex
+	justify-content: space-between
+	margin-top: 100px
+	+r(1000)
+		flex-wrap: wrap
+		justify-content: center
+		margin-top: 90px
+
+	&__strong
+		display: inline-block
+		margin-bottom: 40px
+		font-size: 16px
+		letter-spacing: .05em
+		color: #000
+		text-transform: uppercase
+		+rm
+		+r(1000)
+			display: block
+			text-align: center
+	&__list
+		font-size: 0
+		padding-top: 34px
+		+r(1000)
+			margin-bottom: 60px
+			order: 1
+	&__item
+		position: relative
+		font-size: 18px
+		line-height: 1.2
+		color: #000
+		padding-left: 30px
+		margin-bottom: 1.2em
+		+rl
+		&:before
+			content: ''
+			position: absolute
+			top: 4px
+			left: 0
+			+s(usage-arrow)
+	&__pic
+		position: relative
+		margin-right: 95px
+		font-size: 20px
+		+r(1000)
+			margin-right: 40px
+		+r(950)
+			margin-right: 0
+
+
+.ui-tooltip
+	width: 600px
+	height: 32px
+	background-color: rgba(255, 255, 255, .8)
+	text-align: center
+	border-radius: 32px
+	line-height: 32px
+	text-transform: uppercase
+	font-size: 12px
+	box-shadow: none !important
+	border: none !important
+	white-space: nowrap
+	+rm
+
+.utip
+	padding: 0 15px
+	margin: 0 10px 0 0
+	width: auto !important
+	min-width: auto !important
+	max-width: none !important
+	overflow: hidden
+
+.tooltip,
+.tooltip-r
+	position: absolute
+	display: inline-block
+	width: 38px
+	height: 38px
+	background-color: #FFF
+	border-radius: 100%
+	text-align: center
+	line-height: 38px
+	&:before
+		content: ''
+		position: absolute
+		bottom: 4px
+		left: 4px
+		height: 1px
+		width: 20px
+		background-color: #000
+		transform-origin: 0 0
+		+rotate(135)
+
+	&-01
+		top: 40px
+		right: 18%
+	&-02
+		top: 56%
+		right: 25%
+	&-03
+		top: -40px
+		right: 34%
+	&-04
+		top: 40%
+		right: 0
+	&-05
+		top: 74%
+		right: 46%
+
+	&-11
+		top: -15px
+		right: 185px
+	&-12
+		top: 200px
+		left: 280px
+	&-13
+		top: 270px
+		left: 300px
+	&-14
+		top: 350px
+		left: 305px
+	&-15
+		top: 114px
+		left: 440px
+	&-16
+		top: 70px
+		left: 400px
+
+	&-17
+		top: 170px
+		left: 470px
+	&-18
+		top: 230px
+		left: 515px
+	&-19
+		top: 320px
+		left: 420px
+
+.column__desc
+	font-size: 16px
+	line-height: 26px
+	color: #000
+	column-gap: 60px
+	column-count: 2
+	+rl
+	+r(1100)
+		column-count: 1
