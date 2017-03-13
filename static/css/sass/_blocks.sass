@@ -1273,11 +1273,15 @@
 .use-page
 	.section__text
 		margin-bottom: 93px
+		+r(1000)
+			margin-bottom: 50px
 	.section__desc
 		margin-bottom: 1.6em
 
 .system
 	padding: 90px 0 70px
+	+r(1000)
+		padding: 50px 0 65px
 
 	&-classic
 		background: #f9f8f7 url('../img/use-arrow.png') repeat-x 50% 0
@@ -1299,6 +1303,8 @@
 		text-transform: uppercase
 		+cg
 		margin-bottom: 1.2em
+		+r(1000)
+			font-size: 24px
 	&__subTitle
 		max-width: 680px
 		width: 90%
@@ -1308,6 +1314,9 @@
 		margin: 0 auto
 		text-align: center
 		+rl
+		+r(1000)
+			font-size: 15px
+			line-height: 24px
 
 
 // .system-luxard
@@ -1333,11 +1342,12 @@
 		+r(1000)
 			display: block
 			text-align: center
+			margin-bottom: 30px
 	&__list
 		font-size: 0
 		padding-top: 34px
 		+r(1000)
-			margin-bottom: 60px
+			margin-bottom: 0px
 			order: 1
 	&__item
 		position: relative
@@ -1353,6 +1363,9 @@
 			top: 4px
 			left: 0
 			+s(usage-arrow)
+			+r(650)
+				+s(usage-arrow-m)
+				left: 10px
 	&__pic
 		position: relative
 		margin-right: 95px
@@ -1361,6 +1374,9 @@
 			margin-right: 40px
 		+r(950)
 			margin-right: 0
+			max-width: 100%
+			img
+				max-width: 100%
 
 
 .ui-tooltip
@@ -1395,6 +1411,12 @@
 	border-radius: 100%
 	text-align: center
 	line-height: 38px
+	cursor: pointer
+	+r(520)
+		font-size: 12px
+		height: 22px
+		width: 22px
+		line-height: 22px
 	&:before
 		content: ''
 		position: absolute
@@ -1405,19 +1427,33 @@
 		background-color: #000
 		transform-origin: 0 0
 		+rotate(135)
+		+r(520)
+			width: 14px
 
 	&-01
 		top: 40px
 		right: 18%
+		+r(520)
+			right: 25%
 	&-02
 		top: 56%
 		right: 25%
 	&-03
 		top: -40px
 		right: 34%
+		+r(520)
+			top: -20px
+			right: 38%
 	&-04
 		top: 40%
 		right: 0
+		+r(520)
+			top: 42%
+			right: 4%
+		+r(400)
+			right: 2%
+		+r(350)
+			right: 0%
 	&-05
 		top: 74%
 		right: 46%
@@ -1425,31 +1461,100 @@
 	&-11
 		top: -15px
 		right: 185px
+		+r(650)
+			right: 34%
+			top: -2%
+		+r(520)
+			right: 39%
+
 	&-12
 		top: 200px
 		left: 280px
+		+r(650)
+			left: 49%
+			top: 42%
+		+r(520)
+			left: 47%
 	&-13
 		top: 270px
 		left: 300px
+		+r(650)
+			left: 54%
+			top: 56%
+
+
 	&-14
 		top: 350px
 		left: 305px
+		+r(650)
+			left: 58%
+			top: 74%
+		+r(350)
+			top: 72%
+
 	&-15
 		top: 114px
 		left: 440px
+		+r(650)
+			left: 75%
+			top: 24%
+		+r(520)
+			top: 27%
+			left: 76%
+		+r(380)
+			top: 25%
+
 	&-16
 		top: 70px
 		left: 400px
+		+r(650)
+			left: 72%
+			top: 16%
+		+r(520)
+			top: 19%
 
 	&-17
 		top: 170px
 		left: 470px
+		+r(650)
+			left: 85%
+			top: 36%
+		+r(520)
+			top: 40%
+			left: 85%
+		+r(420)
+			top: 38%
+		+r(350)
+			top: 36%
+
 	&-18
 		top: 230px
 		left: 515px
+		+r(650)
+			left: 93%
+			top: 51%
+		+r(520)
+			top: 60%
+			left: 94%
+		+r(410)
+			top: 55%
+			left: 94%
+
+
 	&-19
 		top: 320px
 		left: 420px
+		+r(650)
+			left: 76%
+			top: 68%
+		+r(520)
+			top: 71%
+		+r(436)
+			top: 69%
+		+r(350)
+			top: 67%
+
+
 
 .column__desc
 	font-size: 16px
