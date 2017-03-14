@@ -213,6 +213,36 @@ $(function () {
 					selector: '.garant__fieldset',
 					triggerHook: 1,
 					class: 'is_animated'
+				},
+				el6: {
+					selector: '.doc',
+					triggerHook: 1,
+					class: 'is_animated'
+				},
+				el7: {
+					selector: '.promo',
+					triggerHook: 1,
+					class: 'is_animated'
+				},
+				el8: {
+					selector: '.title__subtitle',
+					triggerHook: 1,
+					class: 'is_animated'
+				},
+				el9: {
+					selector: '.variant',
+					triggerHook: 1,
+					class: 'is_animated'
+				},
+				el10: {
+					selector: '.liability',
+					triggerHook: 1,
+					class: 'is_animated'
+				},
+				el11: {
+					selector: '.collage',
+					triggerHook: 1,
+					class: 'is_animated'
 				}
 			}
 		});

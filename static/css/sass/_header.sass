@@ -9,8 +9,9 @@
 	box-shadow: 0 0 20px rgba(0,0,0,0.2)
 	z-index: 5000
 	&.at-top
-		display: none
-
+		opacity: 0
+		transform: translateY(-100px) !important
+		transition: all .3s 0s !important
 	+r(1000)
 		height: 50px
 	.layout
@@ -19,12 +20,37 @@
 		flex-wrap: nowrap
 		justify-content: space-between
 		height: 88px
+		+tr(.4s)
 		+r(1360)
 			padding-right: 30px
 		+r(1250)
 			padding: 0 20px
 		+r(1000)
 			height: 50px
+
+	&.header-small
+		height: 60px
+		+tr(.4s)
+		.layout
+			height: 60px
+			+tr(.4s)
+		.header
+			&__info,
+			&__hide
+				height: 60px
+				+tr(.4s)
+		.logo
+			height: 40px
+			+tr(.4s)
+			&__pic
+				height: 40px
+				+tr(.4s)
+		.hotLine
+			margin: 5px 15px
+			+tr(.4s)
+		.subWrapper
+			top: 60px
+			+tr(.4s)
 
 	&__nav
 		height: 100%
@@ -41,6 +67,7 @@
 		justify-content: space-between
 		height: 88px
 		width: calc(100% - 16%)
+		+tr(.4s)
 		+r(1360)
 			width: calc(100% - 50px)
 		+r(1000)
@@ -61,6 +88,7 @@
 		display: flex
 		flex: 0 0 320px
 		height: 100%
+		+tr(.4s)
 		+r(1360)
 			justify-content: flex-end
 			flex: 0 0 290px
@@ -117,7 +145,7 @@
 			position: relative
 			top: 1px
 			width: 20px
-			height: 16px
+			height: 17px
 			margin-left: 64px
 		b
 			position: absolute

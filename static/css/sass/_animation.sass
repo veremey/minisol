@@ -26,11 +26,11 @@
 
 @mixin fromLeft
 	opacity: 0
-	transform: translateY(-50px)
+	transform: translateX(-50px)
 	transition: transform .5s .3s, opacity .5s .3s
 	&.is_animated
 		opacity: 1
-		transform: translateY(0)
+		transform: translateX(0)
 
 
 .header,
@@ -39,6 +39,14 @@
 .info__content,
 .gallery__item,
 .magazin__content,
+.jumbotron__title,
+.title__article,
+.specifications__table tr,
+.complectations .complect,
+.title__subtitle,
+.liability,
+.variant,
+
 .news__link,
 .specifications__title,
 .title__middle,
@@ -53,8 +61,6 @@
 .collection__wrap
 	@include fromBottom
 
-.jumbotron__title,
-.title__article,
-.specifications__table tr,
-.complectations .complect
+.doc,
+.collage
 	@include fromLeft

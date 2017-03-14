@@ -366,13 +366,23 @@
 		width: 100px
 		height: 100px
 		background-color: rgba(0, 0, 0, .6)
+		+r(1000)
+			width: 80px
+			height: 80px
+		+r(850)
+			width: 30px
+			height: 50px
 		&:before
 			+s(icon-slick-prev)
+			+r(850)
+				+s(icon-pr-mini)
 		&:hover
 			opacity: .8
 	.slick-next
 		&:before
 			+s(icon-slick-next)
+			+r(850)
+				+s(icon-n-mini)
 	.slick-dots
 		top: auto
 		bottom: 20px
@@ -389,6 +399,9 @@
 			overflow: hidden
 			margin: 5px 5px 0
 			padding: 0
+			+r(1000)
+				width: 80px
+				height: 50px
 		a
 			display: block
 			width: 100%

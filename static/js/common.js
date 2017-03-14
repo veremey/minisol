@@ -1,6 +1,3 @@
-$(function() {
-	$(".garant_date" ).datepicker();
-});
 
 $(document).ready(function() {
 
@@ -150,6 +147,12 @@ $(document).ready(function() {
 	// ppp tel mask
 	$('.popup__fieldset_tel').formatter({
 		'pattern': '+7({{999}}) {{999}}-{{99}}-{{99}}',
+		'persistent': false,
+		'placeholder': '___ __ __ __'
+	});
+
+	$('.garant_date').formatter({
+		'pattern': '{{99}}\/{{99}}\/{{9999}}',
 		'persistent': false,
 		'placeholder': '___ __ __ __'
 	});
@@ -605,10 +608,13 @@ $(document).ready(function() {
 
 
 	/* --- gallery.html popup ---*/
-	function galleryPPPHeight() {
-		var shown = $('.collage__pic').data('overlay');
-		var h = $(window).height() - 40 - 80;
 
+	//todo all gallery pooopup
+
+
+	function galleryPPPHeight() {
+		var shown = $('.js-gallery').data('overlay');
+		var h = $(window).width() >= 850 ? $(window).height() - 40 - 80 : $(window).height() - 40 - 140 - 70 ;
 
 		$('.bigCarusel__item').css({
 											'height' : h,
@@ -617,32 +623,30 @@ $(document).ready(function() {
 											'height' : h,
 										});
 	}
-	$(window).on('resize', galleryPPPHeight());
+	galleryPPPHeight();
+	$(window).on('resize', function () {
+		return galleryPPPHeight();
+	});
 
-	if($(document).width() >= 1000){
-		$('.collage__pic').on('click', function() {
+	// if($(document).width() >= 1000){
+		$('.js-gallery').on('click', function() {
 
-			var shown = $('.collage__pic').data('overlay');
-			var h = $(window).height() - 40 - 80;
+			var shown = $('.js-gallery').data('overlay');
+			// var h = $(window).height() - 40 - 80;
+			var h = $(window).width() >= 850 ? $(window).height() - 40 - 80 : $(window).height() - 40 - 140 - 70 ;
 
 
-			$('.' + shown ).removeClass('hide')
-											.css({
-												'height' : h,
-												'marginTop' : '20px'
-											});
-			$('.bigCarusel__item').css({
-												'height' : h,
-											});
-
+			$('.' + shown ).removeClass('hide');
+			$('body, html').addClass('dontMove');
 			$('.overlay').addClass('is_active');
 			$('header').addClass('at-top');
 		});
-	}
+	// }
 
 	$('.overlay__wrap').on('click', function() {
 		$('.overlay').removeClass('is_active');
 		$('header').removeClass('at-top');
+		$('body, html').removeClass('dontMove');
 	});
 
 	$('.bigCarusel').slick({
@@ -655,7 +659,15 @@ $(document).ready(function() {
 		customPaging : function(slider, i) {
 			var thumb = $(slider.$slides[i]).children('.bigCarusel__item_img').attr('src');
 			return '<a><img src="'+thumb+'"></a>';
-		}
+		},
+		responsive: [
+			{
+				breakpoint: 850,
+				settings: {
+					dots: false
+				}
+			}
+		]
 	});
 	$('.bigCarusel').on('click', '.selector', function(event) {
 		event.preventDefault();

@@ -169,9 +169,10 @@
               <label class="garant__label" for="email">Эл. почта</label>
             </fieldset>
             <fieldset class="garant__fieldset">
-              <input class="garant__inp garant_date" type="text" name="date" required placeholder="Дата продажи">
+              <input class="garant__inp garant_date" type="text" name="date" required>
+              <label class="garant__label" for="date">Дата продажи</label>
             </fieldset>
-            <fieldset class="garant__fieldset">
+            <fieldset class="garant__fieldset hide-text">
               <input class="garant__inp garant_productCode" type="text" name="productCode" required>
               <label class="garant__label" for="productCode">Производств. код партии (см. на упаковке)</label>
             </fieldset>
@@ -183,7 +184,7 @@
               <input class="garant__inp garant_sallerName" type="text" name="sallerName" required>
               <label class="garant__label" for="sallerName">Название фирмы-продавца</label>
             </fieldset>
-            <fieldset class="garant__fieldset">
+            <fieldset class="garant__fieldset hide-text">
               <input class="garant__inp garant_sallerPost" type="text" name="sallerPost" required>
               <label class="garant__label" for="sallerPost">Адрес фирмы-представителя (с индексом)</label>
             </fieldset>
@@ -195,30 +196,26 @@
               <input class="garant__inp garant_sallerFIO" type="text" name="sallerFIO">
               <label class="garant__label" for="sallerFIO">ФИО продавца</label>
             </fieldset>
-            <fieldset class="garant__fieldset">
-              <div class="select js-select"><span class="select__text js-select-text">Коллекция</span>
-                <input class="js-select-input" type="hidden" value="" name="collection" required>
-                <ul class="select__list js-select-list">
-                  <li data-id="0">classic</li>
-                  <li data-id="1">roman</li>
-                </ul>
-              </div>
+            <fieldset class="garant__fieldset select js-select"><span class="select__text js-select-text">Коллекция</span>
+              <input class="js-select-input" type="hidden" value="" name="collection" required>
+              <ul class="select__list js-select-list">
+                <li data-id="0">classic</li>
+                <li data-id="1">roman</li>
+              </ul>
             </fieldset>
-            <fieldset class="garant__fieldset mod_b30">
-              <div class="select js-select"><span class="select__text js-select-text">Цвет</span>
-                <input class="js-select-input" type="hidden" value="" name="color" required>
-                <ul class="select__list js-select-list">
-                  <li data-id="0">Мокко</li>
-                  <li data-id="1">Коррал</li>
-                  <li data-id="2">Абсент</li>
-                  <li data-id="3">Пробка</li>
-                  <li data-id="4">Бордо</li>
-                  <li data-id="5">Алланит</li>
-                </ul>
-              </div>
+            <fieldset class="garant__fieldset mod_b30 select js-select"><span class="select__text js-select-text">Цвет</span>
+              <input class="js-select-input" type="hidden" value="" name="color" required>
+              <ul class="select__list js-select-list">
+                <li data-id="0">Мокко</li>
+                <li data-id="1">Коррал</li>
+                <li data-id="2">Абсент</li>
+                <li data-id="3">Пробка</li>
+                <li data-id="4">Бордо</li>
+                <li data-id="5">Алланит</li>
+              </ul>
             </fieldset>
             <fieldset class="garant__fieldset mod_b20">
-              <p class="garant__desc">Пользуетесь ТЕХНОНИКОЛЬ LUXARD впервые?</p>
+              <p class="garant__desc">Пользуетесь ТЕХНОНИКOЛЬ LUXARD впервые?</p>
               <div class="garant__choose">
                 <label class="radio">
                   <input type="radio" name="client" checked><span>да</span>
@@ -234,7 +231,7 @@
             <fieldset class="garant__fieldset mod_b30">
               <div class="garant__agree">
                 <label class="check">
-                  <input type="radio" name="agree" required><span>Согласен с условиями гарании</span>
+                  <input type="checkbox" name="agree" required><span>Согласен с условиями гарании</span>
                 </label>
               </div>
             </fieldset>

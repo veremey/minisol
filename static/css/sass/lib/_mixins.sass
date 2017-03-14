@@ -295,6 +295,7 @@
 			-webkit-line-clamp: $maxLinesLandscape
 
 	html:not(.webkit-line-clamp) &
+		position: relative
 		max-height: $maxLinesPortrait * $lineHeight * 1em
 		&::before
 			top: ($maxLinesPortrait - 1) * $lineHeight * 1em
@@ -304,8 +305,8 @@
 				top: ($maxLinesLandscape - 1) * $lineHeight * 1em
 		&::before
 			@extend %limit-lines-ellipsis
-			color: transparentize($fgCol, 0.7)
-				background: -ms-linear-gradient(left, transparentize($bgCol, 1), $bgCol 2em)
+			//color: transparentize($fgCol, 0.7)
+			background: linear-gradient(to right, transparentize($bgCol, 1), $bgCol 2em)
 			// @include background(linear-gradient(left, transparentize($bgCol, 1), $bgCol 2em))
 		&::after
 			@extend %limit-lines-filler
@@ -313,7 +314,7 @@
 
 %limit-lines-ellipsis
 	min-width: 25%
-	content: "…"
+	content: "..."
 	position: absolute
 	right: 0
 	bottom: 0
