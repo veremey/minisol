@@ -47,6 +47,11 @@
 					left: 40%
 					+r(1600)
 						left: 50%
+				&__box
+					+r(1000)
+						+try(-40px)
+					+r(650)
+						+try(0)
 			.present
 				float: left
 			.tips
@@ -147,6 +152,14 @@
 		+r(650)
 			height: 520px
 	&__pic
+		+coverdiv
+		+r(650)
+			position: relative
+			top: 0
+			left: 50%
+			// height: 270px
+			transform: translate(-50%, 0%)
+	&__img
 		position: absolute
 		top: 50%
 		left: 50%
@@ -154,16 +167,8 @@
 		min-height: 100%
 		transform: translate(-50%, -50%)
 		max-width: none !important
-
-		//experiment
-
 		+r(650)
-			position: relative
-			top: 0
-			left: 50%
-			height: 270px
-			min-height: 270px
-			transform: translate(-50%, 0%)
+			height: 100%
 
 	&__label
 		position: relative

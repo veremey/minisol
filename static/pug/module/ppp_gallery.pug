@@ -1,48 +1,273 @@
-- var gal01 = {'static/img/index/gallery/01.jpg': 'caption1', 'static/img/index/gallery/02.jpg': 'caption2', 'static/img/index/gallery/03.jpg': 'caption3', 'static/img/index/gallery/04.jpg': 'caption4'};
+- var gal01 = ['static/img/index/gallery/01.jpg', 'static/img/index/gallery/02.jpg', 'static/img/index/gallery/03.jpg', 'static/img/index/gallery/04.jpg'];
 
-- var gal02 = {'static/img/index/gallery/08.jpg': 'caption1', 'static/img/index/gallery/07.jpg': 'caption2'};
+- var gal02 = ['static/img/index/gallery/02.jpg', 'static/img/index/gallery/07.jpg'];
 
-- var gal03 = {'static/img/index/gallery/05.jpg': 'caption1'};
+- var gal03 = ['static/img/index/gallery/03.jpg'];
 
-- var gal04 = {'static/img/index/gallery/03.jpg': 'caption1', 'static/img/index/gallery/05.jpg': 'caption2', 'static/img/index/gallery/06.jpg': 'caption3'};
+- var gal04 = ['static/img/index/gallery/04.jpg', 'static/img/index/gallery/05.jpg', 'static/img/index/gallery/06.jpg'];
 
-- var gal05 = {'static/img/index/gallery/01.jpg': 'caption1', 'static/img/index/gallery/02.jpg': 'caption2', 'static/img/index/gallery/03.jpg': 'caption3', 'static/img/index/gallery/04.jpg': 'caption4'};
+- var gal05 = ['static/img/index/gallery/05.jpg', 'static/img/index/gallery/02.jpg', 'static/img/index/gallery/03.jpg', 'static/img/index/gallery/04.jpg'];
 
-- var gal06 = {'static/img/index/gallery/05.jpg': 'caption1', 'static/img/index/gallery/04.jpg': 'caption2', 'static/img/index/gallery/02.jpg': 'caption3', 'static/img/index/gallery/07.jpg': 'caption4'};
+- var gal06 = ['static/img/index/gallery/06.jpg', 'static/img/index/gallery/04.jpg', 'static/img/index/gallery/02.jpg', 'static/img/index/gallery/07.jpg'];
 
-- var gal07 = {'static/img/index/gallery/01.jpg': 'caption1', 'static/img/index/gallery/02.jpg': 'caption2', 'static/img/index/gallery/03.jpg': 'caption3', 'static/img/index/gallery/04.jpg': 'caption4'};
+- var gal07 = ['static/img/index/gallery/07.jpg', 'static/img/index/gallery/02.jpg', 'static/img/index/gallery/03.jpg', 'static/img/index/gallery/04.jpg'];
 
-- var gal08 = {'static/img/index/gallery/01.jpg': 'caption1', 'static/img/index/gallery/02.jpg': 'caption2', 'static/img/index/gallery/03.jpg': 'caption3', 'static/img/index/gallery/04.jpg': 'caption4'};
+- var gal08 = ['static/img/index/gallery/08.jpg', 'static/img/index/gallery/02.jpg', 'static/img/index/gallery/03.jpg', 'static/img/index/gallery/04.jpg'];
 
-.popup__gallery
-	each label, picture in gal01
-		a(href=picture, data-fancybox="gallery-01", data-caption=label).subject__pic
-			img(src=picture, alt='изображение')
+.overlay
+	.overlay__wrap
 
-	each label, picture in gal02
-		a(href=picture, data-fancybox="gallery-02", data-caption=label).subject__pic
-			img(src=picture, alt='изображение')
+	.gallery-01.popPic.hide
+		a(href='#').btn__close
+			span
+			span
+			span
+		.bigCarusel
+			each picture in gal01
+				.bigCarusel__item
+					img(src=picture, alt='изображение').bigCarusel__item_img
 
-	each label, picture in gal03
-		a(href=picture, data-fancybox="gallery-03", data-caption=label).subject__pic
-			img(src=picture, alt='изображение')
+		.fanCaption
+			.fanCaption__color
+				.fanCaption__color_pic
+					img(src='static/img/gallery/colors/allanit.jpg').fanCaption__color_pic-img
+				.fanCaption__text
+					p цвет
+					a(href='#') алланит
+			.fanCaption__collection
+				.fanCaption__text
+					p коллекция технониколь
+					a(href='#') luxard classic
+			.fanCaption__location
+				i.icon-locate
+				.fanCaption__box
+					strong Загородный дом
+					p Казахстан. Астана.
+						span Посёлок Кордай.
 
-	each label, picture in gal04
-		a(href=picture, data-fancybox="gallery-04", data-caption=label).subject__pic
-			img(src=picture, alt='изображение')
+	.gallery-02.popPic.hide
+		a(href='#').btn__close
+			span
+			span
+			span
+		.bigCarusel
+			each picture in gal02
+				.bigCarusel__item
+					img(src=picture, alt='изображение').bigCarusel__item_img
 
-	each label, picture in gal05
-		a(href=picture, data-fancybox="gallery-05", data-caption=label).subject__pic
-			img(src=picture, alt='изображение')
+		.fanCaption
+			.fanCaption__color
+				.fanCaption__color_pic
+					img(src='static/img/gallery/colors/allanit.jpg').fanCaption__color_pic-img
+				.fanCaption__text
+					p цвет
+					a(href='#') алланит
+			.fanCaption__collection
+				.fanCaption__text
+					p коллекция технониколь
+					a(href='#') luxard classic
+			.fanCaption__location
+				i.icon-locate
+				.fanCaption__box
+					strong Загородный дом
+					p Казахстан. Астана.
+						span Посёлок Кордай.
 
-	each label, picture in gal06
-		a(href=picture, data-fancybox="gallery-06", data-caption=label).subject__pic
-			img(src=picture, alt='изображение')
+	.gallery-03.popPic.hide
+		a(href='#').btn__close
+			span
+			span
+			span
+		.bigCarusel
+			each picture in gal03
+				.bigCarusel__item
+					img(src=picture, alt='изображение').bigCarusel__item_img
 
-	each label, picture in gal07
-		a(href=picture, data-fancybox="gallery-07", data-caption=label).subject__pic
-			img(src=picture, alt='изображение')
+		.fanCaption
+			.fanCaption__color
+				.fanCaption__color_pic
+					img(src='static/img/gallery/colors/allanit.jpg').fanCaption__color_pic-img
+				.fanCaption__text
+					p цвет
+					a(href='#') алланит
+			.fanCaption__collection
+				.fanCaption__text
+					p коллекция технониколь
+					a(href='#') luxard classic
+			.fanCaption__location
+				i.icon-locate
+				.fanCaption__box
+					strong Загородный дом
+					p Казахстан. Астана.
+						span Посёлок Кордай.
 
-	each label, picture in gal08
-		a(href=picture, data-fancybox="gallery-08", data-caption=label).subject__pic
-			img(src=picture, alt='изображение')
+	.gallery-04.popPic.hide
+		a(href='#').btn__close
+			span
+			span
+			span
+		.bigCarusel
+			each picture in gal04
+				.bigCarusel__item
+					img(src=picture, alt='изображение').bigCarusel__item_img
+
+		.fanCaption
+			.fanCaption__color
+				.fanCaption__color_pic
+					img(src='static/img/gallery/colors/allanit.jpg').fanCaption__color_pic-img
+				.fanCaption__text
+					p цвет
+					a(href='#') алланит
+			.fanCaption__collection
+				.fanCaption__text
+					p коллекция технониколь
+					a(href='#') luxard classic
+			.fanCaption__location
+				i.icon-locate
+				.fanCaption__box
+					strong Загородный дом
+					p Казахстан. Астана.
+						span Посёлок Кордай.
+
+	.gallery-05.popPic.hide
+		a(href='#').btn__close
+			span
+			span
+			span
+		.bigCarusel
+			each picture in gal05
+				.bigCarusel__item
+					img(src=picture, alt='изображение').bigCarusel__item_img
+
+		.fanCaption
+			.fanCaption__color
+				.fanCaption__color_pic
+					img(src='static/img/gallery/colors/allanit.jpg').fanCaption__color_pic-img
+				.fanCaption__text
+					p цвет
+					a(href='#') алланит
+			.fanCaption__collection
+				.fanCaption__text
+					p коллекция технониколь
+					a(href='#') luxard classic
+			.fanCaption__location
+				i.icon-locate
+				.fanCaption__box
+					strong Загородный дом
+					p Казахстан. Астана.
+						span Посёлок Кордай.
+
+	.gallery-06.popPic.hide
+		a(href='#').btn__close
+			span
+			span
+			span
+		.bigCarusel
+			each picture in gal06
+				.bigCarusel__item
+					img(src=picture, alt='изображение').bigCarusel__item_img
+
+		.fanCaption
+			.fanCaption__color
+				.fanCaption__color_pic
+					img(src='static/img/gallery/colors/allanit.jpg').fanCaption__color_pic-img
+				.fanCaption__text
+					p цвет
+					a(href='#') алланит
+			.fanCaption__collection
+				.fanCaption__text
+					p коллекция технониколь
+					a(href='#') luxard classic
+			.fanCaption__location
+				i.icon-locate
+				.fanCaption__box
+					strong Загородный дом
+					p Казахстан. Астана.
+						span Посёлок Кордай.
+
+	.gallery-07.popPic.hide
+		a(href='#').btn__close
+			span
+			span
+			span
+		.bigCarusel
+			each picture in gal07
+				.bigCarusel__item
+					img(src=picture, alt='изображение').bigCarusel__item_img
+
+		.fanCaption
+			.fanCaption__color
+				.fanCaption__color_pic
+					img(src='static/img/gallery/colors/allanit.jpg').fanCaption__color_pic-img
+				.fanCaption__text
+					p цвет
+					a(href='#') алланит
+			.fanCaption__collection
+				.fanCaption__text
+					p коллекция технониколь
+					a(href='#') luxard classic
+			.fanCaption__location
+				i.icon-locate
+				.fanCaption__box
+					strong Загородный дом
+					p Казахстан. Астана.
+						span Посёлок Кордай.
+
+	.gallery-08.popPic.hide
+		a(href='#').btn__close
+			span
+			span
+			span
+		.bigCarusel
+			each picture in gal08
+				.bigCarusel__item
+					img(src=picture, alt='изображение').bigCarusel__item_img
+
+		.fanCaption
+			.fanCaption__color
+				.fanCaption__color_pic
+					img(src='static/img/gallery/colors/allanit.jpg').fanCaption__color_pic-img
+				.fanCaption__text
+					p цвет
+					a(href='#') алланит
+			.fanCaption__collection
+				.fanCaption__text
+					p коллекция технониколь
+					a(href='#') luxard classic
+			.fanCaption__location
+				i.icon-locate
+				.fanCaption__box
+					strong Загородный дом
+					p Казахстан. Астана.
+						span Посёлок Кордай.
+
+
+	//- .popup__gallery
+
+	//- 	each picture in gal02
+	//- 		a(href=picture, data-fancybox="gallery-02", data-caption=label).subject__pic
+	//- 			img(src=picture, alt='изображение')
+
+	//- 	each picture in gal03
+	//- 		a(href=picture, data-fancybox="gallery-03", data-caption=label).subject__pic
+	//- 			img(src=picture, alt='изображение')
+
+	//- 	each picture in gal04
+	//- 		a(href=picture, data-fancybox="gallery-04", data-caption=label).subject__pic
+	//- 			img(src=picture, alt='изображение')
+
+	//- 	each picture in gal05
+	//- 		a(href=picture, data-fancybox="gallery-05", data-caption=label).subject__pic
+	//- 			img(src=picture, alt='изображение')
+
+	//- 	each picture in gal06
+	//- 		a(href=picture, data-fancybox="gallery-06", data-caption=label).subject__pic
+	//- 			img(src=picture, alt='изображение')
+
+	//- 	each picture in gal07
+	//- 		a(href=picture, data-fancybox="gallery-07", data-caption=label).subject__pic
+	//- 			img(src=picture, alt='изображение')
+
+	//- 	each picture in gal08
+	//- 		a(href=picture, data-fancybox="gallery-08", data-caption=label).subject__pic
+	//- 			img(src=picture, alt='изображение')

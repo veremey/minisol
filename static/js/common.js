@@ -430,6 +430,31 @@ $(document).ready(function() {
 		}
 	);
 
+	// index.html collection slider adaptive pic
+
+	function collectionPicHeight() {
+		if($(document).width() <= 650){
+			var textHeight = parseInt($('.present__text').outerHeight());
+			var picHeight = 520 - textHeight;
+
+			console.log(textHeight);
+
+			$('.present__pic').css({
+				'height' : picHeight
+			});
+		} else {
+			$('.present__pic').css({
+				'height' : ''
+			});
+		}
+	}
+
+	collectionPicHeight();
+
+	$(window).on('resize', function () {
+		return collectionPicHeight();
+	});
+
 	/*--------------------------------------------------------------------*/
 
 	// news section
@@ -616,28 +641,35 @@ $(document).ready(function() {
 		var shown = $('.js-gallery').data('overlay');
 		var h = $(window).width() >= 850 ? $(window).height() - 40 - 80 : $(window).height() - 40 - 140 - 70 ;
 
-		$('.bigCarusel__item').css({
+		$('.bigCarusel__item').each(function() {
+			$(this).css({
 											'height' : h,
 										});
-		$('.' + shown).css({
+		});
+		$('.popPic').each(function() {
+			$(this).css({
 											'height' : h,
 										});
+		});
 	}
 	galleryPPPHeight();
 	$(window).on('resize', function () {
 		return galleryPPPHeight();
 	});
 
+
+
 	// if($(document).width() >= 1000){
 		$('.js-gallery').on('click', function() {
-
-			var shown = $('.js-gallery').data('overlay');
-			// var h = $(window).height() - 40 - 80;
+			event.preventDefault();
+			var shown = $(this).data('overlay');
 			var h = $(window).width() >= 850 ? $(window).height() - 40 - 80 : $(window).height() - 40 - 140 - 70 ;
+
+			console.log('POPUP = '+ shown);
 
 
 			$('.' + shown ).removeClass('hide');
-			$('body, html').addClass('dontMove');
+			// $('body, html').addClass('dontMove');
 			$('.overlay').addClass('is_active');
 			$('header').addClass('at-top');
 		});
@@ -646,7 +678,7 @@ $(document).ready(function() {
 	$('.overlay__wrap').on('click', function() {
 		$('.overlay').removeClass('is_active');
 		$('header').removeClass('at-top');
-		$('body, html').removeClass('dontMove');
+		// $('body, html').removeClass('dontMove');
 	});
 
 	$('.bigCarusel').slick({

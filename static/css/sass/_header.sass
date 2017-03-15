@@ -8,10 +8,11 @@
 	background-color: #FFF
 	box-shadow: 0 0 20px rgba(0,0,0,0.2)
 	z-index: 5000
+	transition: all .4s 0s !important
 	&.at-top
 		opacity: 0
 		transform: translateY(-100px) !important
-		transition: all .3s 0s !important
+		transition: all .4s 0s !important
 	+r(1000)
 		height: 50px
 	.layout
@@ -37,7 +38,6 @@
 		.header
 			&__info,
 			&__hide
-				height: 60px
 				+tr(.4s)
 		.logo
 			height: 40px
@@ -46,7 +46,7 @@
 				height: 40px
 				+tr(.4s)
 		.hotLine
-			margin: 5px 15px
+			margin: 9px 15px
 			+tr(.4s)
 		.subWrapper
 			top: 60px
@@ -65,7 +65,7 @@
 		align-items: center
 		flex-wrap: nowrap
 		justify-content: space-between
-		height: 88px
+		height: 100%
 		width: calc(100% - 16%)
 		+tr(.4s)
 		+r(1360)

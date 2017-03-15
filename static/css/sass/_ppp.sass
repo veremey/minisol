@@ -32,8 +32,10 @@ input:-webkit-autofill
 				margin-bottom: 8px
 		&_tel
 			height: 100%
-			float: right
-			margin-left: 15px
+			width: 190px
+			// float: right
+			// margin-left: 15px
+			padding-left: 15px
 			border: none
 			outline: none
 			background-color: $n
@@ -189,6 +191,7 @@ input:-webkit-autofill
 			display: none
 	.btn
 		margin-top: 5rem
+		background-color: $n
 		+r(650)
 			height: 45px
 			line-height: 1
@@ -220,6 +223,8 @@ input:-webkit-autofill
 		&.is_active span
 			width: 136%
 			background: $fiolet
+		span
+			height: 1px
 
 .input
 	position: relative
@@ -307,6 +312,10 @@ input:-webkit-autofill
 	+r(850)
 		margin-top: 70px
 		width: 100%
+	&.hide
+		position: absolute
+		top: -9999px
+		left: -9999px
 
 .bigCarusel
 	position: relative
