@@ -2,8 +2,6 @@
 $(document).ready(function() {
 
 
-
-
 	// var $content = function () {
 	// 		var el = $( this );
 	// 		return el.attr('title');
@@ -298,6 +296,18 @@ $(document).ready(function() {
 		$(this).removeClass('is_active');
 		$(this).parents('.js_close').removeClass('is_opened');
 		$('.js-btn__open').toggleClass('is_active');
+		return false;
+	});
+
+	$('.js-spec').on('click', function () {
+		if($('.specifications').hasClass('is_active')){
+			$(this).text('Показать технические характеристики');
+			$('.specifications').slideToggle('400').removeClass('is_active');
+		} else {
+			$(this).text('Скрыть технические характеристики');
+			$('.specifications').addClass('is_active').slideToggle('400');
+
+		}
 		return false;
 	});
 

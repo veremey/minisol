@@ -297,6 +297,14 @@
 	html:not(.webkit-line-clamp) &
 		position: relative
 		max-height: $maxLinesPortrait * $lineHeight * 1em
+
+		text-overflow: ellipsis
+		overflow: hidden
+		white-space: nowrap
+		display: block
+
+		//experiment
+
 		&::before
 			top: ($maxLinesPortrait - 1) * $lineHeight * 1em
 		@if($maxLinesLandscape != $maxLinesPortrait)
@@ -305,9 +313,7 @@
 				top: ($maxLinesLandscape - 1) * $lineHeight * 1em
 		&::before
 			@extend %limit-lines-ellipsis
-			//color: transparentize($fgCol, 0.7)
 			background: linear-gradient(to right, transparentize($bgCol, 1), $bgCol 2em)
-			// @include background(linear-gradient(left, transparentize($bgCol, 1), $bgCol 2em))
 		&::after
 			@extend %limit-lines-filler
 			background: $bgCol
