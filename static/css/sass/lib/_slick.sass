@@ -328,20 +328,31 @@
 				margin-top: 15px
 				+rm
 	.pre-center
-		.presentation__item.slick-current
+		.presentation__item
 			background-color: #f9f8f7
+			cursor: pointer
 			&:before
-				content: '\002B'
+				content: ''
 				position: absolute
 				top: 40%
 				left: 50%
-				color: #fff
-				font-size: 22px
-				text-transform: uppercase
 				transform: translate(-50%, -50%)
+				opacity: 0
+				+s(cur-slide)
 				+tr(.5s)
-				+cg
 				z-index: 20
+				// content: '\002B'
+				// position: absolute
+				// top: 40%
+				// left: 50%
+				// color: #fff
+				// font-size: 44px
+				// text-transform: uppercase
+				// transform: translate(-50%, -50%)
+				// +tr(.5s)
+				// +cg
+			&.slick-current:before
+				opacity: 1
 		.slick-prev
 			left: -18px
 			background-color: $n

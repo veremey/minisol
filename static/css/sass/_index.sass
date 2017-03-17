@@ -9,6 +9,11 @@
 	+r(1000)
 		padding-top: 50px
 	&.mod_short
+		.jumbotron__figure
+			padding-top: 20px
+		.jumbotron__subTitle
+			+rh(900)
+				+try(-30px)
 		.jumbotron__title
 			font-size: 158px
 			letter-spacing: .1em
@@ -19,6 +24,9 @@
 				font-size: 100px
 			+r(650)
 				font-size: 60px
+			+rh(900)
+				font-size: 14vh
+
 		.jumbotron__desc
 			font-size: 32px
 			letter-spacing: .5em
@@ -31,6 +39,9 @@
 			+r(650)
 				font-size: 12px
 				margin-bottom: 0
+			+rh(900)
+				font-size: 6vh
+				margin-bottom: 1em
 		.jumbotron__footer
 			+r(650)
 				display: none
@@ -55,7 +66,7 @@
 		position: absolute
 		top: 50%
 		left: 50%
-		max-width: 1280px
+		max-width: 1500px
 		max-height: 76vmin
 		width: 96%
 		margin: 0 auto
@@ -63,6 +74,9 @@
 		text-align: center
 		+r(1000)
 			max-height: 76vmax
+		+r(650)
+			width: calc(100% - 40px)
+
 	&__figure
 		position: relative
 		width: 62vmin
@@ -108,6 +122,8 @@
 		+r(800)
 			line-height: 1.3em
 			padding: 4px 20px
+		+r(650)
+			width: 100%
 		+r(350)
 			padding: 4px 12px
 		&:before
@@ -160,23 +176,23 @@
 		margin-top: .48em
 		white-space: nowrap
 		+cg
-		+r(1200)
-			font-size: 6.5vw
-		+r(650)
-			font-size: 7vw
+		+r(1500)
+			font-size: 4.5vw
 		+rh(900)
 			margin: .5em 0 1em
-			font-size: 8.5vh
-		+rh(550)
-			font-size: 50px
-		+rh(450)
-			font-size: 40px
+			font-size: 3.2vh
+
 	&__footer
 		display: inline-block
 		margin: 0 auto
 		background-color: $fiolet
 		border-radius: 50px
 		overflow: hidden
+		+r(650)
+			// width: 100%
+
+			display: flex
+			justify-content: center
 	&__link
 		display: inline-block
 		position: relative
@@ -187,13 +203,21 @@
 		+tr(.4s)
 		+rm
 		+r(650)
+			display: flex
+			// width: 60%
 			font-size: 1.2rem
+		+r(440)
+			padding: 0 15px
 		+r(400)
 			font-size: 1rem
 			padding: 0 15px
-		+r(400)
 			line-height: 40px
+		+r(350)
+			padding: 0 10px
 		&:not(:last-child)
+			justify-content: flex-end
+			flex-grow: 1
+
 			&:after
 				content: ''
 				position: absolute
@@ -203,7 +227,55 @@
 				width: 1px
 				background-color: #FFF
 		&:hover
-			background-color: #9d0667
+			background-color: #880048
+
+.product-page
+	.jumbotron__figure
+		padding-top: 70px
+		+r(1000)
+			top: 0
+		&:before
+			content: ''
+			top: 2%
+			left: -2%
+			width: 14vmin
+			height: 14vmin
+			+r(1000)
+				left: 2%
+				top: 4%
+			+r(800)
+				left: 6%
+				top: 8%
+			+r(500)
+				left: 9%
+				top: 12%
+			+r(440)
+				left: 6%
+				top: 21%
+
+			+rh(420)
+				left: 6%
+				top: 20%
+			+rh(320)
+				left: 12%
+				top: 19%
+
+
+
+	// .jumbotron__img
+
+	.jumbotron__title
+		margin-top: 0px
+
+	.jumbotron__content
+		+r(1000)
+			top: 44%
+		+r(650)
+			top: 36%
+	.jumbotron__footer
+		+r(720)
+			display: none
+
 
 .info
 	text-align: center

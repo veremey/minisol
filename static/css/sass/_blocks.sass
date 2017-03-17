@@ -138,8 +138,10 @@
 		text-align: left
 		font-size: 18px
 		color: $gold
+		white-space: nowrap
+		text-overflow: ellipsis
+		overflow: hidden
 		+rr
-		+limitLines($maxLinesPortrait: 1, $maxLinesLandscape: 1, $fgCol: #f4f0eb, $bgCol: #f4f0eb, $lineHeight: 1.8 )
 	&__pic
 		display: block
 		height: 290px
@@ -308,9 +310,12 @@
 	position: relative
 	will-change: transform, opacity, border
 	transition: transform .5s .3s, opacity .5s .3s, box-shadow .4s !important
+
 	&:hover
 		box-shadow: 0 0 0 11px #fff, 0 0 32px 10px rgba(131, 109, 108, 0.4)
 		z-index: 10
+		+r(800)
+			box-shadow: none
 		.doc__pic,
 		.collage__pic
 			cursor: pointer
@@ -397,10 +402,10 @@
 		margin-bottom: 0
 	&__or
 		position: absolute
-		top: 0
+		top: 22px
 		left: -80px
 		display: inline-block
-		font-size: 18px
+		font-size: 24px
 		color: #000
 		+rl
 		+r(800)

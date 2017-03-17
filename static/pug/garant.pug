@@ -1,15 +1,18 @@
 extends _layout
+//- block title
+//- 	title ОФОРМЛЕНИЕ ГАРАНТИИ ОН-ЛАЙН
 block content
 	.out.is_animated
 		include layout/header.pug
 		section.section.is_animated.mod_first.mod_titleBig
 			.section__inner
-				h3.title__article оформление гарантии
+				h3.title__article ОФОРМЛЕНИЕ ГАРАНТИИ
+					span  ОН-ЛАЙН
 				.section__inside
 					h6.title__subtitle На данной странице Вы можете оформить гарантию на композитную черепицу ТЕХНОНИКОЛЬ LUXARD. <br> Выберете наиболее удобный для себя способ:
 					ol.variants
 						li.variant
-							a(href='#').variant__link Скачайте
+							a(href='#', download).variant__link Скачайте
 							|  и распечатайте форму гарантийного сертификата и заполните её от руки.
 						li.variant
 							.variant__or или
@@ -95,15 +98,15 @@ block content
 							li(data-id="4") Бордо
 							li(data-id="5") Алланит
 
-					fieldset.garant__fieldset.mod_b20
-						p.garant__desc Пользуетесь ТЕХНОНИКOЛЬ LUXARD впервые?
-						.garant__choose
-							label.radio
-								input(type="radio", name="client", checked)
-								span да
-							label.radio
-								input(type="radio", name="client")
-								span нет
+					//- fieldset.garant__fieldset.mod_b20
+					//- 	p.garant__desc Пользуетесь ТЕХНОНИКOЛЬ LUXARD впервые?
+					//- 	.garant__choose
+					//- 		label.radio
+					//- 			input(type="radio", name="client", checked)
+					//- 			span да
+					//- 		label.radio
+					//- 			input(type="radio", name="client")
+					//- 			span нет
 
 					fieldset.garant__fieldset.mod_b20
 						textarea(name='garantUserComment', placeholder="Комментарий").garant__textarea

@@ -64,7 +64,7 @@
 
 	&__item
 		position: relative
-		height: 720px
+		height: 576px
 		overflow: hidden
 		text-align: center
 		background-color: #363636
@@ -122,7 +122,9 @@
 		text-transform: uppercase
 		letter-spacing: .5em
 		margin-bottom: 0
+		text-shadow: 0 1px 5px rgba(0,0,0,3)
 		color: #fff
+		+rr
 		+r(1000)
 			font-size: 16px
 	&__link
@@ -146,7 +148,16 @@
 			padding: 0
 		&:hover
 			color: #fff
-			background-color: #9d0667
+			background-color: #880048
+
+
+.presentation-right
+	.presentation__text
+		+try(-20px)
+	// +r(1000)
+	// 	.presentation__box img
+	// 		margin-bottom: 0
+
 
 .presentation-short
 	//padding-bottom: 150px//product-classic.html
@@ -164,7 +175,7 @@
 
 	.pre-right
 		+r(1000)
-			+try(160px)
+			+try(162px)
 		.buy__price
 			display: none
 			+r(1000)
@@ -271,9 +282,9 @@
 			text-transform: uppercase
 			font-size: 14px
 			+tr(.4s)
-			background-color: #9d0667
+			background-color: #672146
 			+rr
 			&:hover
-				background-color: #672146
+				background-color: #880048
 			+r(650)
 				width: 140px

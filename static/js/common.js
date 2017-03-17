@@ -447,8 +447,6 @@ $(document).ready(function() {
 			var textHeight = parseInt($('.present__text').outerHeight());
 			var picHeight = 520 - textHeight;
 
-			console.log(textHeight);
-
 			$('.present__pic').css({
 				'height' : picHeight
 			});
@@ -486,7 +484,7 @@ $(document).ready(function() {
 		touchThreshold: 10,
 		slidesToShow: 1,
 		slidesToScroll: 1,
-		asNavFor: '.pre-right'
+		asNavFor: '.pre'
 	});
 	$('.presentation-hide .pre-right').slick({
 		arrows: false,
@@ -494,7 +492,7 @@ $(document).ready(function() {
 		touchThreshold: 10,
 		slidesToShow: 1,
 		slidesToScroll: 1,
-		asNavFor: '.pre-left'
+		asNavFor: '.pre'
 	});
 
 	$('.presentation-short .pre-right').slick({
@@ -522,7 +520,7 @@ $(document).ready(function() {
 					arrows: true,
 					slidesToShow: 3,
 				}
-			},
+			}/*,
 			{
 				breakpoint: 650,
 				settings: {
@@ -530,7 +528,7 @@ $(document).ready(function() {
 					slidesToShow: 3,
 					centerMode: false
 				}
-			}
+			}*/
 		]
 	});
 
