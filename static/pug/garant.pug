@@ -16,14 +16,14 @@ block content
 							|  и распечатайте форму гарантийного сертификата и заполните её от руки.
 						li.variant
 							.variant__or или
-							a(href='#').variant__link.border-dotted заполните
+							a(href='#').variant__link.border-dotted.js-toForm заполните
 							|  предлагающуюся ниже онлайн форму и получите бланк с данными о Вашей покупке на электронную почту. Затем распечатайте.
 					.liability
 						img(src='static/img/liability-stamp.jpg', alt='изображение').liability__pic
 						.liability__text
 							p.liability_desc Заполненный сертификат действителен при наличии печати продавца, подписи его представителя и указании всей необходимой информации о приобретаемом материале.
 							p.liability_desc После заполнения сертификата нужно обратиться к Продавцу с тем, чтобы его представитель заверил сертификат своей подписью и печатью организации.
-		section.section.is_animated.bg-dark
+		section.section.is_animated.bg-dark#application
 			.section__inner
 				h3.title__middle онлайн заявка
 				form(method='post', action='/', autocomplete='on').garant.js-validate

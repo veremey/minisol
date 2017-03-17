@@ -5,20 +5,22 @@ form(method='post', action='/', autocomplete='on').filter
 	.filter__wrap
 		.select.js-select
 			span(vall="Все регионы").select__text.js-select-text Все регионы
-			input(type="hidden", value="", placeholder='Все регионы').js-select-input
+			input(type="hidden", value="0", placeholder='Все регионы').js-select-input
 			ul.select__list.js-select-list
-				li(data-id="0") Россия
-				li(data-id="1") Украина
-				li(data-id="2") Белоруссия
-				li(data-id="3") Татарстан
-				li(data-id="4") Казахстан
+				li(data-id="0") Все регионы
+				li(data-id="1") Россия
+				li(data-id="2") Украина
+				li(data-id="3") Белоруссия
+				li(data-id="4") Татарстан
+				li(data-id="5") Казахстан
 
 		.select.js-select
 			span.select__text.js-select-text Все коллекции
-			input(type="hidden", value="", placeholder='Все коллекции').js-select-input
+			input(type="hidden", value="0", placeholder='Все коллекции').js-select-input
 			ul.select__list.js-select-list.mod_bdr
-				li(data-id="0") LUXARD CLASSIC
-				li(data-id="1") LUXARD ROMAN
+				li(data-id="0") Все коллекции
+				li(data-id="1") LUXARD CLASSIC
+				li(data-id="2") LUXARD ROMAN
 		a(href='#').filter__btn.hiden
 			//- i.icon-cls
 			span сбросить

@@ -335,6 +335,13 @@ $(document).ready(function() {
 		return false;
 	});
 
+	$('.js-toForm').on('click', function () {
+		$('html, body').animate({ scrollTop: $('#application').offset().top - 50 }, 800 );
+		return false;
+	});
+
+
+
 	// header menu
 
 	$(window).on('resize', function() {
@@ -520,15 +527,15 @@ $(document).ready(function() {
 					arrows: true,
 					slidesToShow: 3,
 				}
-			}/*,
+			},
 			{
-				breakpoint: 650,
+				breakpoint: 330,
 				settings: {
 					arrows: true,
-					slidesToShow: 3,
-					centerMode: false
+					slidesToShow: 3/*,
+					centerMode: false*/
 				}
-			}*/
+			}
 		]
 	});
 
@@ -633,7 +640,7 @@ $(document).ready(function() {
 
 		$('.filter .js-select-text').eq(0).text(r);
 		$('.filter .js-select-text').eq(1).text(e);
-		$('.filter .js-select-input').val('');
+		$('.filter .js-select-input').val('0');
 		$(this).addClass('hiden');
 	});
 
