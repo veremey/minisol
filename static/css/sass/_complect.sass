@@ -1,20 +1,21 @@
 .complectations
 	min-height: 100vw
-	padding-top: 165px
+	padding-top: 128px
 	+r(1000)
-		padding-top: 100px
-	+r(650)
-		padding-top: 90px
+		padding-top: 92px
+	+r(800)
+		padding-top: 68px
+
 	&__wrap
 		max-width: 1180px
 		width: 96%
 		margin: 0 auto
 		padding: 79px 0 0
 		+r(1000)
-			padding-top: 40px
+			padding-top: 20px
 		+r(650)
 			width: 100%
-			padding: 40px 20px 0
+			padding: 20px 20px 0
 	&__box
 		margin: -10px
 		display: flex
@@ -88,12 +89,16 @@
 			max-width: 100%
 			max-height: 100%
 			transform: translate(-50%,-50%)
+	&__content
+		position: relative
+		height: 229px
 	&__title
 		font-size: 14px
 		color: #000
 		line-height: 1.1em
 		+rm
-		// height: 30px
+		// height: 30px //old
+		min-height: 26px
 		text-overflow: ellipsis
 		+limitLines($maxLinesPortrait: 2, $maxLinesLandscape: 2, $fgCol: #fff, $bgCol: #fff, $lineHeight: 1.1 )
 	&__text
@@ -124,6 +129,10 @@
 		+rr
 	&__footer
 		margin-top: auto
+		position: absolute
+		bottom: 0
+		left: 0
+		width: 100%
 
 	&__price
 		display: flex

@@ -279,8 +279,8 @@
 	float: left
 	display: inline-block
 	position: relative
-	padding-left: 40px
-	margin-bottom: 40px
+	padding-left: 25px
+	margin-bottom: 45px
 	font-size: 14px
 	line-height: 30px
 	color: $gold
@@ -291,7 +291,7 @@
 	&:before
 		content: ''
 		position: absolute
-		left: 0
+		left: 5px
 		top: 50%
 		+try(-50%)
 		background-image: url('../img/icons/icon-pagePrev.png')
@@ -300,6 +300,8 @@
 		+tr(.4s)
 	&:hover
 		opacity: .8
+		&:before
+			left: 0
 
 .heading__time
 	font-size: 14px
@@ -356,8 +358,8 @@
 		text-align: left
 		font-size: 18px
 		color: $gold
-		+rr
 		text-align: center
+		+rr
 
 .variants
 	counter-reset: list
@@ -697,32 +699,48 @@
 	height: 60px
 	margin-bottom: 40px
 	background-color: #eee8e0
+	text-align: center
+	+r(800)
+		height: auto
 	+r(650)
 		height: auto
+		text-align: left
 	&__wrap
-		display: flex
-		align-items: center
-		justify-content: center
+		display: inline-block
+		text-align: center
+		padding-left: 112px
+		+r(800)
+			display: block
+			padding-left: 0
 		+r(650)
-			flex-direction: column
-			flex-wrap: wrap
+			text-align: left
 	&__btn
 		position: relative
 		height: 60px
 		width: 150px
 		text-align: center
+		padding-left: 50px
 		+tr(.4s)
+		z-index: -2
 		will-change: transform
-		+r(650)
+		+r(800)
+			display: block
 			width: 100%
 			padding: 0 40px 0 66px
 			text-align: left
-		&:hover
-			opacity: .8
-			span
-				border-color: $n
-				// &:before
-				// 	transform: scale(.8) translateY(-50%)
+			+r(650)
+				transform-origin: top center
+				transform: rotateX(90deg)
+		&.is_active
+			opacity: 1
+			z-index: 2
+			transform: rotateX(0deg)
+			&:hover
+				opacity: .8
+				span
+					border-color: $n
+					// &:before
+					// 	transform: scale(.8) translateY(-50%)
 		span
 			position: relative
 			line-height: 60px
@@ -741,6 +759,7 @@
 				+tr(.4s)
 				+s(icon-cls)
 	.select
+		display: inline-block
 		width: 207px
 		line-height: 60px
 		padding: 0 26px
@@ -751,6 +770,7 @@
 			border-left: none
 			padding: 0 40px
 			margin: 0
+			text-align: left
 		&:not(:first-child)
 			border-right: 1px solid #e0d6c8
 			+r(650)

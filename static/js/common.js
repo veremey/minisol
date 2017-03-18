@@ -68,9 +68,11 @@ $(document).ready(function() {
 								email: true
 							},
 							tel: {
-								minlength: 5,
-								number: true
+								minlength: 17
 							},
+							// sallerTel: {
+							// 	minlength: 17
+							// },
 							address: {
 								minlength: 2
 							},
@@ -149,6 +151,18 @@ $(document).ready(function() {
 		'placeholder': '___ __ __ __'
 	});
 
+	$('.garant_tel').formatter({
+		'pattern': '+{{9}}({{999}}) {{999}}-{{99}}-{{99}}',
+		'persistent': false,
+		'placeholder': '___ __ __ __'
+	});
+	// ppp tel mask
+	$('.garant_sallerTel').formatter({
+		'pattern': '+{{9}}({{999}}) {{999}}-{{99}}-{{99}}',
+		'persistent': false,
+		'placeholder': '___ __ __ __'
+	});
+
 	$('.garant_date').formatter({
 		'pattern': '{{99}}\/{{99}}\/{{9999}}',
 		'persistent': false,
@@ -213,6 +227,7 @@ $(document).ready(function() {
 			}
 		}
 	})();
+	// -----------------------
 
 
 	// -- scroll at popup question mob
@@ -256,8 +271,14 @@ $(document).ready(function() {
 			var content = select_list.find("li").first().html();
 			//$(this).find(".js-select-text").html(content);//.text(text);//content
 			$(this).click(function(event){
+					var $self = $(this);
+
 				if ($(this).hasClass("is-active")) {
-						$(this).removeClass("is-active");
+
+						setTimeout(function () {
+							$self.removeClass('is-active');
+						}, 400);
+
 						select_list.slideUp("fast");
 				}
 				else {
@@ -631,7 +652,7 @@ $(document).ready(function() {
 
 	/* --- gallery.html filter ---*/
 	$('.filter .js-select-list li').on('click', function () {
-		$('.filter__btn').removeClass('hiden');
+		$('.filter__btn').removeClass('hiden').addClass('is_active');
 	});
 
 	$('.filter__btn').on('click', function () {
@@ -641,7 +662,7 @@ $(document).ready(function() {
 		$('.filter .js-select-text').eq(0).text(r);
 		$('.filter .js-select-text').eq(1).text(e);
 		$('.filter .js-select-input').val('0');
-		$(this).addClass('hiden');
+		$(this).removeClass('is_active').addClass('hiden');
 	});
 
 	/*--------------------------------------------------------------------*/
