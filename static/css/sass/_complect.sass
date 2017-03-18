@@ -44,6 +44,10 @@
 	text-align: left
 	width: calc(25% - 20px)
 	+tr(.4)
+	// +r(650)
+	// 	margin: 20px 0
+	// 	width: calc(25% - 10px)
+
 	&:after
 		content: ''
 		top: 0
@@ -59,6 +63,8 @@
 		pointer-events: none
 	&:hover::after
 		opacity: 1
+		+r(650)
+			opacity: 0
 	+r(1000)
 		width: calc(33% - 20px)
 	+r(850)
@@ -66,14 +72,15 @@
 	+r(650)
 		width: 100%
 		margin-bottom: 0px// 20px
+
 	&.slick-slide
 		position: relative
 		.complect__content
 			margin-bottom: 115px
 		.complect__footer
 			position: absolute
-			bottom: 20px
-			left: 20px
+			bottom: 0px
+			left: 0px
 			right: 20px
 	&__pic
 		position: relative

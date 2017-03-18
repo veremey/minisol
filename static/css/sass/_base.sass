@@ -84,29 +84,31 @@ body
 		display: none
 
 .section
-	padding-top: 55px
+	padding-top: 50px
 	text-align: center
-	+r(650)
-		padding-top: 30px
+	+r(800)
+		padding-top: 24px
 	&.mod_first
-		padding-top: 165px
+		padding-top: 128px
 		+r(1000)
-			padding-top: 100px
-		+r(650)
 			padding-top: 90px
-		.title__article
-			margin-bottom: 1.6em
+		+r(800)
+			padding-top: 80px
+		// +r(650)
+		// 	padding-top: 90px
+		// .title__article
+		// 	margin-bottom: 1.6em
 	&.mod_last
 		padding-bottom: 80px
 		+r(650)
 			padding-bottom: 30px
-	&.mod_titleBig
-		.title__article
-			font-size: 70px
-			+r(1000)
-				font-size: 50px
-			+r(650)
-				font-size: 24px
+	// &.mod_titleBig
+	// 	.title__article
+	// 		font-size: 70px
+	// 		+r(1000)
+	// 			font-size: 50px
+	// 		+r(650)
+	// 			font-size: 24px
 	&.mod_ptzero
 		padding-top: 0
 		padding-bottom: 1px
@@ -124,7 +126,9 @@ body
 		+r(1000)
 			padding-top: 80px
 	&.mod_inner
-		padding: 80px 0 10px
+		padding: 50px 0 10px
+		+r(800)
+			padding: 24px 0 1px
 
 	&__inner
 		max-width: 1280px
@@ -155,11 +159,11 @@ body
 			font-size: 15px
 			letter-spacing: 0
 			line-height: 24px
-	.title__article
-		font-size: 50px
-		margin-bottom: 1em
-		+r(1000)
-			font-size: 24px
+	// .title__article /// move to title
+	// 	font-size: 50px
+	// 	margin-bottom: 1em
+	// 	+r(1000)
+	// 		font-size: 24px
 
 	&__column
 		max-width: 1160px

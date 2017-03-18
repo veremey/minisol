@@ -350,8 +350,10 @@
 			font-size: 12px
 
 .gallery
-	padding: 80px 0
+	padding: 30px 0 50px
 	text-align: center
+	+r(800)
+		padding: 24px 0 50px
 	.btn
 		margin-top: 50px
 		+r(650)
@@ -406,7 +408,7 @@
 	align-items: stretch
 	height: auto
 	min-height: 610px
-	margin-bottom: 80px
+	margin-bottom: 50px
 	flex-wrap: nowrap
 	background: #f9f8f7 url('../img/index/arr.png') 0 center no-repeat
 	// background-size: cover
@@ -417,6 +419,8 @@
 		background-position: 0 top
 		background-size: auto 350px
 		min-height: 0px
+	+r(800)
+		margin-bottom: 24px
 	+r(650)
 		background-position: 0% top
 	&:hover

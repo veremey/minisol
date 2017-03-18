@@ -89,26 +89,30 @@
 .component
 	&__slider
 		position: relative
-		width: 1204px
-		// width: 96%
+		max-width: 1204px
+		width: 96%
 		margin: 0 auto
 		padding-top: 55px
 		+r(1400)
 			width: calc(96% - 150px)
-			// padding: 75px 0 0
+		+r(1000)
+			width: calc(100% - 160px)
+			padding: 0
 		+r(650)
 			width: calc(100% - 20px)
-			padding: 0
 		.slick-track
 			margin: 0 5px
 			+r(650)
 				margin: 0
 		.slick-list
-			margin-right: -30px
+			//margin-right: -30px// comment 18.03
 			padding: 0 10px 0 0// debag this if neads
 			+r(650)
-				padding: 0 10px
+				padding: 0
 				margin: 0
+		+ .btn
+			+r(800)
+				margin-bottom: 35px
 
 
 .docs
@@ -413,7 +417,7 @@
 		font-size: 24px
 		color: #000
 		+rl
-		+r(800)
+		+r(850)
 			left: 65px
 			top: -40px
 	&__link
@@ -723,14 +727,13 @@
 		+tr(.4s)
 		z-index: -2
 		will-change: transform
-		+r(800)
+		+r(650)
 			display: block
 			width: 100%
 			padding: 0 40px 0 66px
 			text-align: left
-			+r(650)
-				transform-origin: top center
-				transform: rotateX(90deg)
+			transform-origin: top center
+			transform: rotateX(90deg)
 		&.is_active
 			opacity: 1
 			z-index: 2
@@ -1276,8 +1279,8 @@
 	display: flex
 	flex-wrap: wrap
 	justify-content: space-between
-	+r(650)
-		margin: 30px 0
+	+r(800)
+		margin: 24px 0
 	&-wide
 		position: relative
 		width: 100%
@@ -1286,7 +1289,8 @@
 		flex-wrap: wrap
 		justify-content: center
 	&-half
-		width: calc(50% - 30px)
+		// width: calc(50% - 30px)
+		width: 47.7%
 		+r(650)
 			width: 100%
 			&:not(:last-child)

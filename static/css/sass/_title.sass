@@ -1,11 +1,13 @@
 .title
 	&__article
-		font-size: 50px
+		font-size: 34px
 		letter-spacing: .1em
+		line-height: 1.35
+		max-width: 960px
+		margin: 0 auto 1em
 		color: #000
 		text-align: center
 		text-transform: uppercase
-		margin-bottom: 1em
 		+cg
 		+r(800)
 			font-size: 24px
@@ -26,6 +28,10 @@
 			margin-bottom: 1em
 		span
 			white-space: nowrap
+
+		+ .slick-slider
+			+r(800)
+				padding-top: 50px
 
 
 	&__popup
