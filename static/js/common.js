@@ -425,38 +425,43 @@ $(document).ready(function() {
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		speed: 1000,
-		rtl: true,
+		// rtl: true,
 		dots: true,
 		arrows: false,
 		customPaging : function(slider, i) {
-			var itm = $(slider.$slides).length - 1;
-			var thumb = $(slider.$slides[itm - i]).data('thumb');
+			// var itm = $(slider.$slides).length - 1;
+			var thumb = $(slider.$slides[i]).data('thumb');
 			return '<a><img src="'+thumb+'"></a>';
 		},
 		asNavFor: '.mod_normal .present',
 	});
 
-
+	// comment 20.03
 	$('.mod_normal .present').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
-		var activeSlide = $('.mod_normal .propose__item').length - nextSlide - 1;
-		$('.mod_normal .propose').find('.slick-slide').removeClass('yes-slick-current').eq(activeSlide).addClass('yes-slick-current');
+		// var activeSlide = $('.mod_normal .propose__item').length - nextSlide;
+		$('.mod_normal .propose').find('.slick-slide').removeClass('yes-slick-next').eq(nextSlide).addClass('yes-slick-next');
 	});
 
-	if($(document).width() < 1000){
+	$('.mod_reverse .present').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+		var nextActiveSlide = currentSlide + 3;
+		$('.mod_reverse .propose').find('.slick-slide').removeClass('yes-slick-next').eq(nextActiveSlide).addClass('yes-slick-next');
+	});
 
-		$('.mod_normal .present').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
-			var activeSlide = $('.mod_normal .propose__item').length - nextSlide - 2;
-			$('.mod_normal .propose').find('.slick-slide').removeClass('yes-slick-current').eq(activeSlide).addClass('yes-slick-current');
-		});
+	// if($(document).width() < 1000){
 
-	}
+	// 	$('.mod_normal .present').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+	// 		var activeSlide = $('.mod_normal .propose__item').length - nextSlide - 2;
+	// 		$('.mod_normal .propose').find('.slick-slide').removeClass('yes-slick-current').eq(activeSlide).addClass('yes-slick-current');
+	// 	});
+
+	// }
 
 	$('.mod_reverse .present').slick({
 		slidesToShow: 1,
-		slidesToScroll: -1,
+		slidesToScroll: 1,
 		// autoplay: true,
 		speed: 1000,
-		rtl: true,
+		// rtl: true,
 		arrows: false,
 		asNavFor: '.mod_reverse .propose'
 	});

@@ -1004,8 +1004,9 @@ li { list-style: none; }
 .collection__wrap { position: relative; height: 650px; overflow: hidden; margin-bottom: 10px; *zoom: 1; }
 .collection__wrap:after { content: " "; display: table; clear: both; }
 .collection__wrap.mod_reverse .propose { float: right; }
-.collection__wrap.mod_reverse .propose__item { background: #f9f8f7 url("../img/index/arr-r.png") 0 center no-repeat; -o-transition: background-position 0.2s ease; transition: background-position 0.2s ease; }
-.collection__wrap.mod_reverse .propose__item.slick-active { background-position: 185% center; }
+.collection__wrap.mod_reverse .propose__item { background: #f9f8f7 url("../img/index/arr-r.png") 60% center no-repeat; -o-transition: background-position 0.8s ease; transition: background-position 0.8s ease; }
+.collection__wrap.mod_reverse .propose__item.slick-active { background-position: 185% center; -o-transition: background-position 0.8s ease; transition: background-position 0.8s ease; }
+.collection__wrap.mod_reverse .propose__item.yes-slick-next { background-position: 220% center; -o-transition: background-position 0.8s ease; transition: background-position 0.8s ease; }
 .collection__wrap.mod_reverse .propose__wrap { left: 40%; }
 .collection__wrap.mod_reverse .present { float: left; }
 .collection__wrap.mod_reverse .tips { left: auto; right: calc(53% + 30px); }
@@ -1014,8 +1015,9 @@ li { list-style: none; }
 .collection__wrap.mod_reverse .tip_desc { left: auto; right: 0; }
 
 .propose { width: 53%; text-align: center; background-color: #f9f8f7; float: left; }
-.propose__item { height: 650px; position: relative; background: #f9f8f7 url("../img/index/arr.png") -215px center no-repeat; overflow: hidden; -o-transition: background-position 0.4s ease; transition: background-position 0.4s ease; }
-.propose__item.yes-slick-current { background-position: 200% center; }
+.propose__item { height: 650px; position: relative; background: #f9f8f7 url("../img/index/arr.png") -420% center no-repeat; overflow: hidden; -o-transition: background-position 0.8s ease 0.2s; transition: background-position 0.8s ease 0.2s; }
+.propose__item.slick-active { background: #f9f8f7 url("../img/index/arr.png") -50% center no-repeat; -o-transition: background-position 0.8s ease 0.2s; transition: background-position 0.8s ease 0.2s; }
+.propose__item.yes-slick-next { background-position: 20% center; -o-transition: background-position 0.4s ease; transition: background-position 0.4s ease; }
 .propose__wrap { position: absolute; top: 45%; left: 60%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); -o-transform: translate(-50%, -50%); transform: translate(-50%, -50%); width: 100%; }
 .propose__pic { margin: 0 auto; }
 .propose__title { font-size: 7rem; line-height: 1.5; margin-bottom: 0; color: #000; text-transform: uppercase; letter-spacing: 0.1em; font-family: "CenturyGothic", Arial, sans-serif; }
@@ -1600,6 +1602,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 .doc, .promo, .collage { opacity: 0; -webkit-transform: translateX(-50px); -ms-transform: translateX(-50px); -o-transform: translateX(-50px); transform: translateX(-50px); -o-transition: -o-transform 0.5s 0.3s, opacity 0.5s 0.3s; transition: -webkit-transform 0.5s 0.3s, opacity 0.5s 0.3s; transition: transform 0.5s 0.3s, opacity 0.5s 0.3s; }
 .doc.is_animated, .is_animated.promo, .collage.is_animated { opacity: 1; -webkit-transform: translateX(0); -ms-transform: translateX(0); -o-transform: translateX(0); transform: translateX(0); }
 @media only screen and (max-width: 1600px){
+ .collection__wrap.mod_reverse .propose__item.slick-active{ background-position: 215px center; }
  .collection__wrap.mod_reverse .propose__wrap{ left: 50%; }
  .propose__wrap{ left: 50%; } }
 @media only screen and (max-width: 1500px){
@@ -1711,11 +1714,13 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
  .collection__wrap{ height: 1300px; margin-bottom: 20px; }
  .collection__wrap.mod_reverse .propose__item{ background-image: none; }
  .collection__wrap.mod_reverse .propose__item.slick-active{ background-position: 180% center; background-image: none; }
+ .collection__wrap.mod_reverse .propose__item.yes-slick-next{ background-position: 80% center; background-image: none; }
  .collection__wrap.mod_reverse .propose__box{ -webkit-transform: translateY(-40px); -ms-transform: translateY(-40px); -o-transform: translateY(-40px); transform: translateY(-40px); }
  .collection__wrap.mod_reverse .tips{ right: 30px; left: auto; }
  .propose{ width: 100%; }
- .propose__item{ background: #f9f8f7 url("../img/index/arr-r.png") 0% center no-repeat; -o-transition: background-position 0.6s ease; transition: background-position 0.6s ease; background-image: none; }
- .propose__item.yes-slick-current{ background-position: 180% center; background-image: none; }
+ .propose__item{ -o-transition: background-position 0.8s ease 0.2s; transition: background-position 0.8s ease 0.2s; background-image: none; }
+ .propose__item.slick-active{ background-image: none; }
+ .propose__item.yes-slick-next{ background-position: 80% center; background-image: none; }
  .present{ width: 100%; }
  .present__text_desc{ float: left; }
  .tips{ top: 70%; right: 30px; left: auto; }
@@ -1841,7 +1846,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
  .collection{ padding-top: 20px; }
  .collection__wrap.mod_reverse .propose__item.slick-active{ background-position: 280% center; background-image: none; }
  .propose__item{ background-image: none; }
- .propose__item.yes-slick-current{ background-image: none; }
+ .propose__item.yes-slick-next{ background-image: none; }
  .propose__box .btn{ display: none; }
  .complectations{ padding-top: 68px; }
  .pic-half{ width: 100%; margin: 0 0 20px; }
@@ -2061,8 +2066,6 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
  .tooltip-19, .tooltip-r-19{ top: 67%; } }
 @media only screen and (max-height: 320px){
  .product-page .jumbotron__figure:before{ left: 12%; top: 19%; } }
-@media only screen and (max-width: 160px){
- .collection__wrap.mod_reverse .propose__item.slick-active{ background-position: 215px center; } }
 
 
 

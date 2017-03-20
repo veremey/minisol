@@ -28,20 +28,27 @@
 			.propose
 				float: right
 				&__item
-					background: #f9f8f7 url('../img/index/arr-r.png') 0 center no-repeat
+					background: #f9f8f7 url('../img/index/arr-r.png') 60% center no-repeat
 					// background-size: cover
-					transition: background-position .2s ease
+					transition: background-position .8s ease
 					+r(1000)
 						background-image: none
 					&.slick-active
 						background-position: 185% center
-						+r(160)
+						transition: background-position .8s ease
+						+r(1600)
 							background-position: 215px center
 						+r(1000)
 							background-position: 180% center
 							background-image: none
 						+r(800)
 							background-position: 280% center
+							background-image: none
+					&.yes-slick-next
+						background-position: 220% center
+						transition: background-position .8s ease
+						+r(1000)
+							background-position: 80% center
 							background-image: none
 				&__wrap
 					left: 40%
@@ -87,21 +94,31 @@
 	&__item
 		height: 650px
 		position: relative
-		background: #f9f8f7 url('../img/index/arr.png') -215px center no-repeat
+		// background: #f9f8f7 url('../img/index/arr.png') -215px center no-repeat
+		background: #f9f8f7 url('../img/index/arr.png') -420% center no-repeat
 		overflow: hidden
-		transition: background-position .4s ease
+		transition: background-position .8s ease .2s
 		+r(1000)
-			background: #f9f8f7 url('../img/index/arr-r.png') 0% center no-repeat
-			transition: background-position .6s ease
+			// background: #f9f8f7 url('../img/index/arr-r.png') -80% center no-repeat
+			transition: background-position .8s ease .2s
 			background-image: none
 		+r(800)
 			background-image: none
 		+r(650)
 			height: 520px
-		&.yes-slick-current
-			background-position: 200% center
+
+		//new 20.03
+		&.slick-active
+			background: #f9f8f7 url('../img/index/arr.png') -50% center no-repeat
+			transition: background-position .8s ease .2s
 			+r(1000)
-				background-position: 180% center
+				// background: #f9f8f7 url('../img/index/arr-r.png') -20% center no-repeat
+				background-image: none
+		&.yes-slick-next
+			background-position: 20% center
+			transition: background-position .4s ease
+			+r(1000)
+				background-position: 80% center
 				background-image: none
 			+r(800)
 				background-image: none
