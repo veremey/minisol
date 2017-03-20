@@ -2,11 +2,6 @@
 $(document).ready(function() {
 
 
-	// var $content = function () {
-	// 		var el = $( this );
-	// 		return el.attr('title');
-	// 	};
-
 	$( ".tooltip" ).tooltip({
 		show: {
 			effect: "slideDown"
@@ -30,7 +25,28 @@ $(document).ready(function() {
 	});
 
 
+	function usageTips(className) {
 
+		$('.'+ className).on('mouseover', '.tooltip, .tooltip-r', function() {
+			if($(document).width() < 700){
+				var $top = $('.'+ className).offset().top - 80;
+
+				$('.ui-tooltip.ui-corner-all.ui-widget-shadow.ui-widget.ui-widget-content.utip').css({
+					'top': $top,
+					'left': '50%',
+					'transform' : 'translateX(-50%)'
+				});
+
+			}
+		});
+	}
+
+	usageTips('usage-01');
+	usageTips('usage-02');
+
+
+
+	// dumpCSSText('ui-tooltip-content');
 
 	/*gallery.html slider hide*/
 	var t = $('.collage__pic').data('overlay');
@@ -846,6 +862,8 @@ $(document).ready(function() {
 	}
 
 	videoSize();
+
+
 
 	// $(window).on('resize', videoSize());
 	$(window).on('resize', function () {
