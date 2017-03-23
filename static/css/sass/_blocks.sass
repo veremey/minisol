@@ -665,8 +665,9 @@
 		z-index: 2
 		opacity: 0
 		&:checked
-			+ span
+			~ span
 				user-select: none
+				color: #000
 				&:after
 					content: ""
 					position: absolute
@@ -674,7 +675,7 @@
 					left: 1px
 					+s(icon-checked)
 		&:disabled
-			+ span
+			~ span
 				opacity: 1
 	span
 		position: relative
@@ -694,7 +695,7 @@
 			border: 1px solid #c7b299
 			background-color: #FFF
 			cursor: pointer
-	.has-error + span
+	.has-error ~ span
 		color: #f00
 
 .filter
@@ -935,14 +936,11 @@
 				+r(650)
 					display: none
 
-
 .icon-locate
 	+s(icon-locate)
 	margin: 0 27px 0 15px
 	+r(850)
 		margin-right: 20px
-
-
 
 .hide
 	opacity: 0

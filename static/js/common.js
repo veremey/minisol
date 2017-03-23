@@ -118,6 +118,7 @@ $(document).ready(function() {
 							},
 							agree: {
 								required: true
+
 							}
 						},
 						messages: {
@@ -152,6 +153,9 @@ $(document).ready(function() {
 							text_area: {
 								required: '* Заполните поле',
 								minlength: 'Заполните поле'
+							},
+							agree: {
+								presence: {allowEmpty: true}
 							}
 						}
 					});
@@ -719,7 +723,7 @@ $(document).ready(function() {
 
 			console.log('POPUP = '+ shown);
 
-
+			$('.popPic').addClass('hide');
 			$('.' + shown ).removeClass('hide');
 			// $('body, html').addClass('dontMove');
 			$('.overlay').addClass('is_active');
@@ -841,7 +845,20 @@ $(document).ready(function() {
 	}
 
 
+	//mount -tabs
 
+
+	$('.tab').on('click', function () {
+		var activeContainer = $(this).data('tab');
+		console.log(activeContainer);
+
+		$('.tab').removeClass('is_active');
+		$('.mount-content').hide();
+		$(this).addClass('is_active');
+		$('#' + activeContainer).show();
+
+		return false;
+	});
 	// mount-video.html video
 
 	function videoSize() {

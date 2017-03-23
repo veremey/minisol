@@ -1336,12 +1336,12 @@ html:not(.webkit-line-clamp) .doc__table td .doc__table_desc::after { background
 
 .check { position: relative; display: inline-block; }
 .check input { position: absolute; top: 0; left: 0; z-index: 2; opacity: 0; }
-.check input:checked + span { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
-.check input:checked + span:after { content: ""; position: absolute; bottom: 4px; left: 1px; background-image: url("../img/icons.png"); width: 15px; height: 12px; background-position: -187px -148px; }
-.check input:disabled + span { opacity: 1; }
+.check input:checked ~ span { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; color: #000; }
+.check input:checked ~ span:after { content: ""; position: absolute; bottom: 4px; left: 1px; background-image: url("../img/icons.png"); width: 15px; height: 12px; background-position: -187px -148px; }
+.check input:disabled ~ span { opacity: 1; }
 .check span { position: relative; padding-left: 28px; left: 0; top: 0; font-size: 16px; font-family: "Roboto-Light", Arial, sans-serif; z-index: 15; }
 .check span:before { content: ""; position: absolute; top: 0; left: 0; width: 18px; height: 18px; border: 1px solid #c7b299; background-color: #FFF; cursor: pointer; }
-.check .has-error + span { color: #f00; }
+.check .has-error ~ span { color: #f00; }
 
 .filter { position: relative; width: 100%; height: 60px; margin-bottom: 40px; background-color: #eee8e0; text-align: center; }
 .filter__wrap { display: inline-block; text-align: center; padding-left: 112px; }
