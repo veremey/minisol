@@ -717,9 +717,9 @@ $(document).ready(function() {
 			var shown = $(this).data('overlay');
 			var h = $(window).width() >= 850 ? $(window).height() - 40 - 80 : $(window).height() - 40 - 140 - 70 ;
 
-			console.log('POPUP = '+ shown);
+			// console.log('POPUP = '+ shown);
 
-
+			$('.popPic').addClass('hide');
 			$('.' + shown ).removeClass('hide');
 			// $('body, html').addClass('dontMove');
 			$('.overlay').addClass('is_active');

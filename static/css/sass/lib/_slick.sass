@@ -358,16 +358,24 @@
 		.slick-prev
 			left: -18px
 			background-color: $n
+			+r(640)
+				width: 30px
 			&:before
 				transform: translate(-150%, -50%)
 				+s(icon-prev)
+				+r(640)
+					transform: translate(-100%, -50%)
 		.slick-next
 			left: auto
 			right: -18px
 			background-color: $n
+			+r(640)
+				width: 30px
 			&:before
 				transform: translate(50%, -50%)
 				+s(icon-next)
+				+r(640)
+					transform: translate(0%, -50%)
 
 
 .bigCarusel
