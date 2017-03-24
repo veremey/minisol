@@ -1,3 +1,57 @@
+section.section.is_animated.mod_first.mod_titleBig
+	.section__inner
+		h3.title__article Монтаж композитной черепицы
+		.section__text
+			p.section__desc Строительство дома – это тщательное планирование и трепетное отношение к его воплощению от выбора места до отделочных работ. Все безукоризненно продумано и спланировано: проект, стиль, дизайн, материалы. Для того, чтобы кровельный материал выполнял не только эстетическую функцию, нужно помнить, что угол наклона ската кровли при выборе композитной черепицы должен быть более 12 градусов.
+section.helpSection
+	.helpSection__list
+		a(href='#').helpSection__item.js-btn__open
+			.helpSection__text
+				i.icon-q
+				p.helpSection__desc задать вопрос <br> эксперту по кровле
+		a(href='#', download).helpSection__item.in_center
+			.helpSection__text
+				i.icon-instruction
+				p.helpSection__desc скачать инструкцию <br>  по монтажу
+		a(href='#', download).helpSection__item
+			.helpSection__text
+				i.icon-sertificat
+				p.helpSection__desc скачать гарантийный  <br> сертификат
+	.helpSubsection.js_close.js_open
+		.layout
+			.helpSubsection__content
+				button.btn__close
+					span
+					span
+					span
+				.helpSubsection__text
+					h4.helpSubsection__title задайте вопрос эксперту по кровле
+					h6.helpSubsection__subtitle на вопрос ответит эксперт Корпорации ТЕХНОНИКОЛЬ
+
+				form(method='post', action='/', autocomplete='on').js-validate.helpSubsection__form
+					.helpSubsection__row
+						fieldset.helpSubsection__fieldset
+							input(type='text', name='name', required).helpSubsection__inp
+							label(for='name').helpSubsection__label Ваше имя
+						fieldset.helpSubsection__fieldset
+							input(type='text', name='city').helpSubsection__inp
+							label(for='city').helpSubsection__label Ваш город
+					textarea(name='yourQuestion', placeholder="Ваш вопрос", required).helpSubsection__textarea
+					button(type='submit').btn отправить
+		.helpSubsection__footer
+			p Ваш вопрос успешно отправлен!
+
+section.tabs
+	a(href='#').tab
+		span
+			i.icon-photo
+			|  фотоинструкция
+	a(href='#').tab.is_active
+		span
+			i.icon-video
+			|  видеоинструкция
+
+
 .mount__video
 	.mount__video-player
 		iframe(width="854" height="480" src="https://www.youtube.com/embed/E1YAJGmjxXc?showinfo=0" frameborder="0").video-youtube

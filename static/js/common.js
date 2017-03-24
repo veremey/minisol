@@ -118,7 +118,6 @@ $(document).ready(function() {
 							},
 							agree: {
 								required: true
-
 							}
 						},
 						messages: {
@@ -153,9 +152,6 @@ $(document).ready(function() {
 							text_area: {
 								required: '* Заполните поле',
 								minlength: 'Заполните поле'
-							},
-							agree: {
-								presence: {allowEmpty: true}
 							}
 						}
 					});
@@ -723,7 +719,7 @@ $(document).ready(function() {
 
 			console.log('POPUP = '+ shown);
 
-			$('.popPic').addClass('hide');
+
 			$('.' + shown ).removeClass('hide');
 			// $('body, html').addClass('dontMove');
 			$('.overlay').addClass('is_active');
@@ -780,14 +776,14 @@ $(document).ready(function() {
 	}
 
 	function mobMen() {
-		$('.has_subnav').on('click', function() {
+		$('.has_subnav .menu_link').on('click', function() {
 				var $this = $(this);
-				var childSubMenu = $this.children('.subWrapper');
+				var $menuList = $this.parent('.has_subnav');
+				var childSubMenu = $menuList.children('.subWrapper');
 			if($(document).width() <= 1000 ){
-
-				$this.siblings('.has_subnav').removeClass('is_open').find('.subWrapper').removeClass('is_open').slideUp('500');
+				$menuList.siblings('.has_subnav').removeClass('is_open').find('.subWrapper').removeClass('is_open').slideUp('500');
 				childSubMenu.toggleClass('is_open').slideToggle('500');
-				$this.toggleClass('is_open');
+				$menuList.toggleClass('is_open');
 
 				return false;
 			}
@@ -845,7 +841,7 @@ $(document).ready(function() {
 	}
 
 
-	//mount -tabs
+		//mount -tabs
 
 
 	$('.tab').on('click', function () {

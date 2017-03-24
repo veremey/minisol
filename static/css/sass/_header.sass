@@ -126,13 +126,6 @@
 			// right: 24px
 			span
 				background-color: #dc1c23
-				&:nth-child(2)
-					top: 50%
-					-webkit-transform-origin: left center
-					-moz-transform-origin: left center
-					-o-transform-origin: left center
-					transform-origin: left center
-					margin-top: -1px
 		&.is_active
 			z-index: 200
 			.btn__open_wrap
@@ -174,7 +167,7 @@
 	align-items: center
 	height: 100%
 	width: 16%
-	transition: background-color .4s
+	transition: opacity .4s
 	+r(1360)
 		width: 50px
 	+r(1000)
@@ -182,7 +175,7 @@
 		height: 30px
 		justify-content: center
 	&:hover
-		background-color: #f6f6f6
+		opacity: 0.8
 	&__pic
 		font-size: 0
 		max-height: 100%

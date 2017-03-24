@@ -177,7 +177,7 @@
 		min-width: 100%
 	&__content
 		width: 100%
-		padding: 20px 35px
+		padding: 16px 30px 20px
 		background-color: #f4f0eb
 		+r(800)
 			padding: 20px 20px 30px
@@ -202,12 +202,12 @@
 				+rm
 	.btn
 		background-color: $n
-		width: 240px
-		height: 49px
-		line-height: 45px
+		width: 115px
+		height: 35px
+		line-height: 31px
 		font-size: 12px
-		+r(650)
-			width: calc(100% - 40px)
+		// +r(650)
+		//	width: calc(100% - 40px)
 		&:hover
 			background-color: #c7b299
 			color: #fff
@@ -359,8 +359,8 @@
 	&__content
 		@extend .doc__content
 	&__title
-		text-align: left
-		font-size: 18px
+		font-size: 16px
+		line-height: 22px
 		color: $gold
 		text-align: center
 		+rr
@@ -423,17 +423,17 @@
 	&__link
 		display: inline-block
 		position: relative
-		color: #754c24
-		line-height: 1
-		border-bottom: 2px solid #e0d6c8
+		color: rgba(117,76,36,1);
+		line-height: 23px
+		border-bottom: 1px solid rgba(117,76,36,0.7)
 		+tr(.4s)
-		// &:hover
-		// 	opacity: .7
-		// 	border: none
+		&:hover
+			color: rgba(117,76,36,0.7);
+			border-bottom: 1px solid rgba(117,76,36,0.2)
 		&.border-dotted
-			border-bottom-style: dotted
+			border-bottom: 2px dotted rgba(117,76,36,0.7)
 			&:hover
-				border-bottom: 2px solid #e0d6c8
+				border-bottom: 2px dotted rgba(117,76,36,0.2)
 
 
 .liability
@@ -475,10 +475,11 @@
 		// overflow: hidden
 		&.input--filled
 			.garant__label
-				top: 3px
-				font-size: 10px
+				top: 5px
+				font-size: 12px
+				opacity: 0.5
 			.garant__inp
-				padding-top: 5px
+				padding-top: 17px
 		&.hide-text
 			overflow: hidden
 
@@ -511,8 +512,8 @@
 			border: 1px solid #cfc4b6
 			outline: none
 			& + .garant__label
-				top: 3px
-				font-size: 10px
+				top: 5px
+				font-size: 12px
 		&:hover
 			border: 1px solid rgba(0, 0, 0, .4)
 		&.has-error
@@ -525,7 +526,7 @@
 
 	&__label
 		position: absolute
-		top: 15px
+		top: 13px
 		left: 21px
 		font-size: 16px
 		user-select: none
@@ -665,9 +666,8 @@
 		z-index: 2
 		opacity: 0
 		&:checked
-			~ span
+			+ span
 				user-select: none
-				color: #000
 				&:after
 					content: ""
 					position: absolute
@@ -675,7 +675,7 @@
 					left: 1px
 					+s(icon-checked)
 		&:disabled
-			~ span
+			+ span
 				opacity: 1
 	span
 		position: relative
@@ -695,7 +695,7 @@
 			border: 1px solid #c7b299
 			background-color: #FFF
 			cursor: pointer
-	.has-error ~ span
+	.has-error + span
 		color: #f00
 
 .filter
@@ -936,11 +936,14 @@
 				+r(650)
 					display: none
 
+
 .icon-locate
 	+s(icon-locate)
 	margin: 0 27px 0 15px
 	+r(850)
 		margin-right: 20px
+
+
 
 .hide
 	opacity: 0
@@ -1313,6 +1316,10 @@
 		letter-spacing: -.025em
 		color: #000
 		+rl
+		+r(650)
+			font-size: 16px
+			line-height: 24px
+			letter-spacing: 0
 
 	&__video
 		width: 854px
@@ -1349,12 +1356,14 @@
 
 	&-classic
 		background: #f9f8f7 url('../img/arrow-left-transparent.png') repeat-x -50% 0
+		background-size: cover
 		+r(1000)
 			background-image: none
 			background-color: #f4f1ed
 
 	&-luxard
 		background: #f9f8f7 url('../img/arrow-right-transparent.png') repeat-x -50% 0
+		background-size: cover
 		+r(1000)
 			background-image: none
 			background-color: #f4f1ed
@@ -1421,6 +1430,8 @@
 		padding-left: 30px
 		margin-bottom: 1.2em
 		+rl
+		+r(650)
+			font-size: 16px
 		&:before
 			content: ''
 			position: absolute

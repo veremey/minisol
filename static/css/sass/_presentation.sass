@@ -2,14 +2,14 @@
 	+clr
 	.pre-left,
 	.presentation-left
-		background-color: #363636
+		background-color: #f9f8f7
 		width: 50%
 		float: left
 		+r(1000)
 			width: 100%
 	.pre-right,
 	.presentation-right
-		background-color: #363636
+		background-color: #f9f8f7
 		width: 50%
 		float: right
 		+r(1000)
@@ -41,6 +41,8 @@
 				+r(400)
 					width: auto
 					padding: 25px 8px 15px
+				&.slick-current
+					background-color: #eee8e0
 			&__pic
 				position: relative
 				width: 70px
@@ -70,7 +72,7 @@
 		height: 576px
 		overflow: hidden
 		text-align: center
-		background-color: #363636
+		background-color: #f9f8f7
 		+r(1000)
 			height: 450px
 
@@ -83,9 +85,9 @@
 		min-height: 100%
 	&__box
 		position: absolute
-		top: 52%
+		top: 51%
 		left: 50%
-		width: 54%
+		width: 80%
 		transform: translate3d(-50%, -50%, 0)
 		text-align: center
 		+r(650)
@@ -97,7 +99,7 @@
 			max-width: 100%
 			max-height: 242px
 			width: auto
-			margin: 0 auto 5%
+			margin: 0 auto
 			+r(1000)
 				max-width: 400px
 			+r(650)
@@ -140,7 +142,7 @@
 		letter-spacing: .1em
 		line-height: 48px
 		padding: 0 40px
-		margin-top: 55px
+		margin-top: 45px
 		text-transform: uppercase
 		border-radius: 48px
 		+rm
@@ -156,8 +158,8 @@
 
 
 .presentation-right
-	.presentation__text
-		+try(-20px)
+	// .presentation__text
+	//	+try(-20px)
 	// +r(1000)
 	// 	.presentation__box img
 	// 		margin-bottom: 0
@@ -199,7 +201,7 @@
 						top: 68%
 	.pre-center
 		+r(1000)
-			+try(-315px)
+			+try(-320px)
 
 	.presentation
 		&__box
