@@ -35,28 +35,22 @@
       <article class="info is_animated">
         <div class="info__header">
           <div class="info__item">
-            <picture class="info__icon">
-              <source srcset="static/img/icon-layouts.png" media="(min-width: 650px)">
-              <source srcset="static/img/icon-layouts-mini.png" media="(max-width: 649px)"><img src="static/img/icon-layouts.png" alt="Многослойность">
-            </picture><span class="info__label">Многослойность</span>
+            <div class="info__icon"><img src="static/img/weight.svg" alt="изображение"></div><span class="info__label">лёгкий вес</span>
           </div>
           <div class="info__item">
-            <picture class="info__icon">
-              <source srcset="static/img/icon-3d.png" media="(min-width: 650px)">
-              <source srcset="static/img/icon-3d-mini.png" media="(max-width: 649px)"><img src="static/img/icon-3d.png" alt="Трёхмерный цвет и фактура">
-            </picture><span class="info__label">Трёхмерный <br> цвет и фактура</span>
+            <div class="info__icon"><img src="static/img/safe.svg" alt="изображение"></div><span class="info__label">надёжность</span>
           </div>
           <div class="info__item">
-            <picture class="info__icon">
-              <source srcset="static/img/icon-infinity.png" media="(min-width: 650px)">
-              <source srcset="static/img/icon-infinity-mini.png" media="(max-width: 649px)"><img src="static/img/icon-infinity.png" alt="Долговечность">
-            </picture><span class="info__label">Долговечность</span>
+            <div class="info__icon"><img src="static/img/quiet.svg" alt="изображение"></div><span class="info__label">сохраняет <br> тишину</span>
           </div>
           <div class="info__item">
-            <picture class="info__icon">
-              <source srcset="static/img/icon-rock.png" media="(min-width: 650px)">
-              <source srcset="static/img/icon-rock-mini.png" media="(max-width: 649px)"><img src="static/img/icon-rock.png" alt="На основе базальта">
-            </picture><span class="info__label">На основе <br> базальта</span>
+            <div class="info__icon"><img src="static/img/beauty.svg" alt="изображение"></div><span class="info__label">украшение <br> любого здания</span>
+          </div>
+          <div class="info__item">
+            <div class="info__icon"><img src="static/img/temperature.svg" alt="изображение"></div><span class="info__label">стойкость <br> к перепадам <br> температур</span>
+          </div>
+          <div class="info__item">
+            <div class="info__icon"><img src="static/img/picturesque.svg" alt="изображение"></div><span class="info__label">живописная <br> кровля</span>
           </div>
         </div>
         <div class="info__content">

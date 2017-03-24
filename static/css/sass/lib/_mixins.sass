@@ -277,8 +277,6 @@
 	font-size: $sizeValue / 10 + rem
 
 
-
-// @import "compass/css3/images"
 =limitLines($maxLinesPortrait, $maxLinesLandscape: $maxLinesPortrait,$fgCol: #000, $bgCol: #fff, $lineHeight: 1.3)
 	position: relative
 	overflow: hidden
@@ -291,7 +289,7 @@
 		// always remember:
 		// http://alistapart.com/article/every-time-you-call-a-proprietary-feature-css3-a-kitten-dies
 		-webkit-line-clamp: $maxLinesPortrait
-		@if($maxLinesLandscape != $maxLinesPortrait)
+		@if ($maxLinesLandscape != $maxLinesPortrait)
 			-webkit-line-clamp: $maxLinesLandscape
 
 	html:not(.webkit-line-clamp) &
@@ -307,7 +305,7 @@
 
 		&::before
 			top: ($maxLinesPortrait - 1) * $lineHeight * 1em /* - ($maxLinesLandscape - 1) */
-		@if($maxLinesLandscape != $maxLinesPortrait)
+		@if ($maxLinesLandscape != $maxLinesPortrait)
 			max-height: $maxLinesLandscape * $lineHeight * 1em
 			&::before
 				top: ($maxLinesLandscape - 1) * $lineHeight * 1em /* - ($maxLinesLandscape - 1) */

@@ -4,42 +4,43 @@ block content
 		include layout/header.pug
 		.jumbotron.is_animated.mod_short
 			.jumbotron__wrap
-				img(src='static/img/catalog/02.jpg', alt='изображение').jumbotron__img
-				.jumbotron__content
-					.jumbotron__figure
-						img(src='static/img/catalog/02.png', alt='изображение')
+				img(src='static/img/catalog/1-01.jpg', alt='изображение').jumbotron__img
+				.jumbotron__content.mod-at-center
+					.jumbotron__stamp
+						img(src="static/img/stamp.png", alt="изображение")
 					.jumbotron__subTitle
 						h3.jumbotron__title roman
 						p.jumbotron__desc Коллекция
-					.jumbotron__footer
-						a(href='#').jumbotron__link смотреть коллекцию classic
-						a(href='#').jumbotron__link смотреть комплектующие
+						img(src="static/img/catalog/stamp-800.png", alt="").garanty-stamp
+						.jumbotron__footer
+							a(href='#').jumbotron__link смотреть коллекцию ROMAN
+							a(href='#').jumbotron__link смотреть комплектующие
 		article.info.is_animated
 			.info__header
 				.info__item
-					picture.info__icon
-						source(srcset="static/img/icon-layouts.png" media="(min-width: 650px)")
-						source(srcset="static/img/icon-layouts-mini.png" media="(max-width: 649px)")
-						img(src='static/img/icon-layouts.png', alt='изображение')
-					span.info__label многослойность
+					.info__icon
+						img(src='static/img/weight.svg', alt='изображение')
+					span.info__label лёгкий вес
 				.info__item
-					picture.info__icon
-						source(srcset="static/img/icon-3d.png" media="(min-width: 650px)")
-						source(srcset="static/img/icon-3d-mini.png" media="(max-width: 649px)")
-						img(src='static/img/icon-3d.png', alt='изображение')
-					span.info__label трёхмерный <br> цвет и фактура
+					.info__icon
+						img(src='static/img/safe.svg', alt='изображение')
+					span.info__label надёжность
 				.info__item
-					picture.info__icon
-						source(srcset="static/img/icon-infinity.png" media="(min-width: 650px)")
-						source(srcset="static/img/icon-infinity-mini.png" media="(max-width: 649px)")
-						img(src='static/img/icon-infinity.png', alt='изображение')
-					span.info__label долговечность
+					.info__icon
+						img(src='static/img/quiet.svg', alt='изображение')
+					span.info__label сохраняет <br> тишину
 				.info__item
-					picture.info__icon
-						source(srcset="static/img/icon-rock.png" media="(min-width: 650px)")
-						source(srcset="static/img/icon-rock-mini.png" media="(max-width: 649px)")
-						img(src='static/img/icon-rock.png', alt='изображение')
-					span.info__label на основе <br> базальта
+					.info__icon
+						img(src='static/img/beauty.svg', alt='изображение')
+					span.info__label украшение <br> любого здания
+				.info__item
+					.info__icon
+						img(src='static/img/temperature.svg', alt='изображение')
+					span.info__label стойкость <br> к перепадам <br> температур
+				.info__item
+					.info__icon
+						img(src='static/img/picturesque.svg', alt='изображение')
+					span.info__label живописная <br> кровля
 			.info__content
 				p.info__desc.
 					Форма композитной черепицы ТЕХНОНИКОЛЬ LUXARD Roman — лаконичные формы натуральной керамической черепицы. Форма ТЕХНОНИКОЛЬ LUXARD Roman создана для изысканных ценителей европейских крыш. Изысканное очарование натуральной черепицы в высокотехнологичном исполнении.

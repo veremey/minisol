@@ -1,16 +1,13 @@
 <?php include($_SERVER['DOCUMENT_ROOT'].'/partials/header.php'); ?>
 
       <div class="product-page jumbotron is_animated mod_short">
-        <div class="jumbotron__wrap"><img class="jumbotron__img" src="static/img/catalog/02.jpg" alt="изображение">
-          <div class="jumbotron__content">
-            <div class="jumbotron__figure"><img src="static/img/catalog/02.png" alt="изображение"></div>
+        <div class="jumbotron__wrap"><img class="jumbotron__img" src="static/img/catalog/1-01.jpg" alt="изображение">
+          <div class="jumbotron__content mod-at-center">
+            <div class="jumbotron__stamp"><img src="static/img/stamp.png" alt="изображение"></div>
             <div class="jumbotron__subTitle">
-              <h3 class="jumbotron__title">Roman</h3>
-              <p class="jumbotron__desc">Коллекция</p>
-            </div>
-            <div class="jumbotron__footer">
-              <a class="jumbotron__link" href="product-classic.php">Смотреть коллекцию Classic</a>
-              <a class="jumbotron__link" href="complect.php">Смотреть комплектующие</a>
+              <h3 class="jumbotron__title">roman</h3>
+              <p class="jumbotron__desc">Коллекция</p><img class="garanty-stamp" src="static/img/catalog/stamp-800.png" alt="">
+              <div class="jumbotron__footer"><a class="jumbotron__link" href="#">смотреть коллекцию ROMAN</a><a class="jumbotron__link" href="#">смотреть комплектующие</a></div>
             </div>
           </div>
         </div>
@@ -18,28 +15,22 @@
       <article class="info is_animated">
         <div class="info__header">
           <div class="info__item">
-            <picture class="info__icon">
-              <source srcset="static/img/icon-layouts.png" media="(min-width: 650px)">
-              <source srcset="static/img/icon-layouts-mini.png" media="(max-width: 649px)"><img src="static/img/icon-layouts.png" alt="изображение">
-            </picture><span class="info__label">многослойность</span>
+            <div class="info__icon"><img src="static/img/weight.svg" alt="изображение"></div><span class="info__label">лёгкий вес</span>
           </div>
           <div class="info__item">
-            <picture class="info__icon">
-              <source srcset="static/img/icon-3d.png" media="(min-width: 650px)">
-              <source srcset="static/img/icon-3d-mini.png" media="(max-width: 649px)"><img src="static/img/icon-3d.png" alt="изображение">
-            </picture><span class="info__label">трёхмерный <br> цвет и фактура</span>
+            <div class="info__icon"><img src="static/img/safe.svg" alt="изображение"></div><span class="info__label">надёжность</span>
           </div>
           <div class="info__item">
-            <picture class="info__icon">
-              <source srcset="static/img/icon-infinity.png" media="(min-width: 650px)">
-              <source srcset="static/img/icon-infinity-mini.png" media="(max-width: 649px)"><img src="static/img/icon-infinity.png" alt="изображение">
-            </picture><span class="info__label">долговечность</span>
+            <div class="info__icon"><img src="static/img/quiet.svg" alt="изображение"></div><span class="info__label">сохраняет <br> тишину</span>
           </div>
           <div class="info__item">
-            <picture class="info__icon">
-              <source srcset="static/img/icon-rock.png" media="(min-width: 650px)">
-              <source srcset="static/img/icon-rock-mini.png" media="(max-width: 649px)"><img src="static/img/icon-rock.png" alt="изображение">
-            </picture><span class="info__label">на основе <br> базальта</span>
+            <div class="info__icon"><img src="static/img/beauty.svg" alt="изображение"></div><span class="info__label">украшение <br> любого здания</span>
+          </div>
+          <div class="info__item">
+            <div class="info__icon"><img src="static/img/temperature.svg" alt="изображение"></div><span class="info__label">стойкость <br> к перепадам <br> температур</span>
+          </div>
+          <div class="info__item">
+            <div class="info__icon"><img src="static/img/picturesque.svg" alt="изображение"></div><span class="info__label">живописная <br> кровля</span>
           </div>
         </div>
         <div class="info__content">
