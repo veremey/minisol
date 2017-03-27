@@ -234,11 +234,14 @@
 		width: 224px
 	img
 		width: 100%
+.page-404
+	overflow: hidden
 .main-404
 	position: relative
 	background-color: #f9f8f7
 	padding: 78px 0 580px
 	text-align: center
+	// overflow: hidden
 	+r(1000)
 		padding-bottom: 60vw
 	+r(850)
@@ -1232,7 +1235,7 @@
 		border-radius: 0 6px 6px 0
 	+r(800)
 		width: calc(100% - 40px)
-		margin: 0 auto
+		margin: 20px auto 0
 		border-radius: 6px !important
 		font-size: 16px
 		.icon-photo
@@ -1353,6 +1356,7 @@
 	padding: 90px 0 70px
 	+r(1000)
 		padding: 50px 0 65px
+		overflow: hidden
 
 	&-classic
 		background: #f9f8f7 url('../img/arrow-left-transparent.png') repeat-x -50% 0
@@ -1445,6 +1449,7 @@
 		position: relative
 		margin-right: 95px
 		font-size: 20px
+		max-width: 100%
 		+r(1000)
 			margin-right: 40px
 		+r(950)
@@ -1456,6 +1461,10 @@
 
 .ui-tooltip
 	width: 600px
+
+	max-width: 100vw
+	overflow: hidden
+
 	height: 32px
 	background-color: rgba(255, 255, 255, .8)
 	text-align: center
@@ -1467,6 +1476,9 @@
 	border: none !important
 	white-space: nowrap
 	+rm
+	> div
+		overflow: hidden
+		max-width: 100vw
 
 .utip
 	padding: 0 15px

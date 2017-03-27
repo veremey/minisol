@@ -108,6 +108,7 @@
 		padding: 15px 0 0
 		display: flex
 		align-items: center
+		height: 66px
 		+r(1000)
 			padding: 15px 20px 0
 			justify-content: space-between
@@ -255,7 +256,10 @@
 		&_link
 			font-size: 1.8rem
 			color: #fff
+			overflow: visible
 			+rr
 			+tr(.4s)
+			&:after
+				content: none
 			&:hover
 				color: #c7b299

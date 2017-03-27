@@ -1,0 +1,49 @@
+html
+	&.no-flexboxlegacy
+		.header__info
+			flex: 0 1 303px
+		.header.header-small .hotLine
+			+r(800)
+				margin: 0 15px
+		.qustion
+			padding: 0 14px
+		.footer__copy
+			flex: 0 1 auto
+		.footer__design_logo svg
+			height: 37px
+		.usage__pic
+			+r(570)
+				width: 100%
+				overflow: hidden
+	&.no-flexbox
+		*
+			flex: 0 1 auto
+		.logo
+			display: inline-block
+			img
+				height: 88px
+				+r(1000)
+					height: 60px
+				+r(650)
+					height: 40px
+			// padding-top: 2%
+		.hotLine__label
+			display: block
+		.gallery__item
+			width: 25%
+			display: inline-block
+			vertical-align: top
+			+r(800)
+				width: 50%
+			+r(650)
+				width: 100%
+		.footer__company_logo
+			display: inline-block
+			img
+				height: 80px
+		.footer__company_label
+			display: inline-block
+			+r(1000)
+				display: block
+				width: 100%
+				margin-top: 10px
