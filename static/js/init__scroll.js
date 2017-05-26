@@ -10,9 +10,6 @@ $(function () {
 	});
 
 
-
-// $('html, body').animate({ scrollTop: $('.helpSubsection').offset().top - 70 }, 800 );
-
 });
 
 
